@@ -1,14 +1,14 @@
 ---
 dg-publish: true
 ---
-There is a special [[Chapter 2 - Elementary Set Theory|subset]] of the economy dedicated to trading [[Chapter 2 - Financial Instruments and Securities|financial securities]] and other instruments. Mathematically, this can be modeled as an adapted [[Chapter 1 - Vector Space of Linear Maps|vector]] or [[Chapter 1 - Measurable Spaces|probability space]]: 
+There is a special [[Chapter 2 - Naive Set Theory|subset]] of the economy dedicated to trading [[Chapter 2 - Financial Instruments and Securities|financial securities]] and other instruments. Mathematically, this can be modeled as an adapted [[Chapter 1 - Vector Space of Linear Maps|vector]] or [[Chapter 1 - Measurable Spaces|probability space]]: 
 $$
 \begin{gather}
-\textbf{Definition 1: Financial Market} \\[5mm]
-\text{Let }(\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \in [0,T]}, \mathbb{P}) \text{ be a filtered probability space satisfying} \\ \text{ the usual conditions of right-continuity and completeness, where } \\
-\Omega \text{ is the sample space of all possible future states of the world, } \\
-\mathcal{F }\text{ is the global } \sigma\text{-algebra of verifiable economic events up to time horizon } T,  \\
-\{\mathcal{F}_t\}_{t \in [0,T]} \text{is a filtration representing the monotonic flow of market information revealing itself} \\
+\textbf{Definition: Financial Market} \\[5mm]
+\text{Let }(\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \in [0,T]}, \mathbb{P}) \text{ be a filtered probability space satisfying} \\ \text{ the usual conditions of right-continuity and completeness, where } \\[2mm]
+\Omega \text{ is the sample space of all possible future states of the world, } \\[2mm]
+\mathcal{F }\text{ is the global } \sigma\text{-algebra of verifiable economic events up to time horizon } T,  \\[2mm]
+\{\mathcal{F}_t\}_{t \in [0,T]} \text{is a filtration representing the monotonic flow of market information revealing itself} \\[2mm]
 \text{over time, and } \mathbb{P} \text{ is the real-world (physical) probability measure governing state occurences. }
 \end{gather}
 $$
@@ -96,12 +96,12 @@ _Market efficiency_ broadly refers to how effectively a financial market aggrega
 Allocative efficiency concerns the dynamic distribution of financial resources to their most productively beneficial opportunities across time and states of the world: 
 $$
 \begin{gather}  
-\textbf{Definition 2: Allocative Efficiency (Pareto Optimality)} \\[5mm] 
-\text{Let } x^i(\omega) \in \mathbb{R}^n_+ \text{ denote the state-contingent asset allocation or consumption vector} \\
-\text{of agent } i \in {1, \dots, I} \text{ given state } \omega \in \Omega \text{ on a filtered probability space }  \\
+\textbf{Definition: Allocative Efficiency (Pareto Optimality)} \\[5mm] 
+\text{Let } x^i(\omega) \in \mathbb{R}^n_+ \text{ denote the state-contingent asset allocation or consumption vector} \\[2mm]
+\text{of agent } i \in {1, \dots, I} \text{ given state } \omega \in \Omega \text{ on a filtered probability space }  \\[2mm]
 (\Omega, \mathcal{F}, {\mathcal{F}_t}_{t \ge 0}, \mathbb{P}). \ \text{An allocation } {x^i(\omega)}_{i=1}^I \text{ is allocatively efficient (Pareto optimal) 
-if there exists} \\ 
-\text{no alternative feasible allocation } {\hat{x}^i(\omega)}_{i=1}^I \text{ such that} \\[2.5mm] \mathbb{E}^{\mathbb{P}}\left[ U^i(\hat{x}^i) \right] \ge \mathbb{E}^{\mathbb{P}}\left[ U^i(x^i) \right] \quad \forall i \in {1, \dots, I} \\[2.5mm] \text{with a strict inequality holding for at least one economic agent } k: \\[2.5mm] \mathbb{E}^{\mathbb{P}}\left[ U^k(\hat{x}^k) \right] > \mathbb{E}^{\mathbb{P}}\left[ U^k(x^k) \right]  
+if there exists} \\[2mm]
+\text{no alternative feasible allocation } {\hat{x}^i(\omega)}_{i=1}^I \text{ such that} \\[3.5mm] \mathbb{E}^{\mathbb{P}}\left[ U^i(\hat{x}^i) \right] \ge \mathbb{E}^{\mathbb{P}}\left[ U^i(x^i) \right] \quad \forall i \in {1, \dots, I} \\[3.5mm] \text{with a strict inequality holding for at least one economic agent } k: \\[3.5mm] \mathbb{E}^{\mathbb{P}}\left[ U^k(\hat{x}^k) \right] > \mathbb{E}^{\mathbb{P}}\left[ U^k(x^k) \right]  
 \end{gather}
 $$
 
@@ -110,20 +110,20 @@ $$
 Productive efficiency measures the transaction cost structure and operational friction involved in executing financial transfers and market-making operations: 
 $$
 \begin{gather} 
- \textbf{Definition 3: Productive (Operational) Efficiency} \\[5mm] \text{Let } C(v) \text{ denote the total transaction friction cost incurred when executing a trading volume } v, \\ 
-\text{incorporating explicit fees, bid-ask spreads } \mathcal{S}_{\text{bid-ask}}, \text{ and price impact } \Delta P(v): \\[2.5mm] C(v) = \text{Commissions} + v \cdot \left( \frac{P_{\text{ask}} - P_{\text{bid}}}{2} \right) + f(\Delta P(v)) \\[2.5mm] \text{A financial market mechanism is productively efficient if, given technology and market architecture,} \\ \text{the expected transaction cost per unit volume is minimized across all feasible market mechanisms:} \\[2.5mm] \min_{\text{Mechanism}} \mathbb{E}\left[ C(v) \right] \end{gather}
+ \textbf{Definition: Productive (Operational) Efficiency} \\[5mm] \text{Let } C(v) \text{ denote the total transaction friction cost incurred when executing a trading volume } v, \\[2mm]
+\text{incorporating explicit fees, bid-ask spreads } \mathcal{S}_{\text{bid-ask}}, \text{ and price impact } \Delta P(v): \\[3.5mm] C(v) = \text{Commissions} + v \cdot \left( \frac{P_{\text{ask}} - P_{\text{bid}}}{2} \right) + f(\Delta P(v)) \\[3.5mm] \text{A financial market mechanism is productively efficient if, given technology and market architecture,} \\ \text{the expected transaction cost per unit volume is minimized across all feasible market mechanisms:} \\[3.5mm] \min_{\text{Mechanism}} \mathbb{E}\left[ C(v) \right] \end{gather}
 $$
 
 ### Informational Efficiency
 $$
 \begin{gather}
-\textbf{Definition 6: Informational Efficiency} \\[5mm]
-\text{Let } \mathcal{H}_t \text{ denote the information filtration available to market participants at time } t, \text{ and let } S_j(t)  \\
-\text{be the price process of asset } j. \text{ A market is informationally efficient with respect to } \mathcal{H}_t \text{ if the } \\
-\text{discounted price process } \frac{S_j(t)}{S_0(t)} \text{ follows a martingale under the equivalent risk-neutral measure } \mathbb{P}:  \\[2.5mm]
-S_j(t) = \mathbb{E}^{\mathbb{P}} \left[ \frac{S_0(t)}{S_0(T)} S_j(T) ,\Bigg|, \mathcal{H}_t \right]  \\[2.5mm]
-\text{Equivalently, under measure } \mathbb{P}, \text{ the excess return process } e_{j, t+1} = R_{j, t+1} - r_{j, t+1}  \\
-\text{satisfies a fair game: } \\[2.5mm] 
+\textbf{Definition: Informational Efficiency} \\[5mm]
+\text{Let } \mathcal{H}_t \text{ denote the information filtration available to market participants at time } t, \text{ and let } S_j(t)  \\[2mm]
+\text{be the price process of asset } j. \text{ A market is informationally efficient with respect to } \mathcal{H}_t \text{ if the } \\[2mm]
+\text{discounted price process } \frac{S_j(t)}{S_0(t)} \text{ follows a martingale under the equivalent risk-neutral measure } \mathbb{P}:  \\[3.5mm]
+S_j(t) = \mathbb{E}^{\mathbb{P}} \left[ \frac{S_0(t)}{S_0(T)} S_j(T) ,\Bigg|, \mathcal{H}_t \right]  \\[3.5mm]
+\text{Equivalently, under measure } \mathbb{P}, \text{ the excess return process } e_{j, t+1} = R_{j, t+1} - r_{j, t+1}  \\[2mm]
+\text{satisfies a fair game: } \\[3.5mm] 
 \mathbb{E}^{\mathbb{P}}\left[ e_{j, t+1} \mid \mathcal{H}_t \right] = 0
 \end{gather}
 $$
@@ -173,8 +173,8 @@ In addition to the three basic order types the investor can execute, they can al
 
 ### Margin Long Positions
 For *long positions*, _margin_ is defined as the proportion of total asset market value provided by equity:
-$$\begin{align}  \\
-&\textbf{Definition 2: Margin on Long Position} \\[5mm] \text{Margin} & = \frac{\text{Market Value of Assets} - \text{Amount Borrowed}}{\text{Market Value of Assets}}  \\
+$$\begin{align} 
+&\textbf{Definition: Margin on Long Position} \\[5mm] \text{Margin} & = \frac{\text{Market Value of Assets} - \text{Amount Borrowed}}{\text{Market Value of Assets}}  \\[2mm]
 & = \frac{\text{equity}}{\text{Market value of assets}}
 \end{align}$$
 
@@ -194,8 +194,8 @@ The long position of a margin position has three main components
 For short positions, margin is calculated relative to the market value of the shorted securities:
 $$
 \begin{align} 
-& \textbf{Definition 2: Margin on Short Position} \\[5mm] 
-\text{Margin} &= \frac{\text{Total Account Assets} - \text{Market Value of Short Securities}}{\text{Market Value of Short Securities}}  \\
+& \textbf{Definition: Margin on Short Position} \\[5mm] 
+\text{Margin} &= \frac{\text{Total Account Assets} - \text{Market Value of Short Securities}}{\text{Market Value of Short Securities}}  \\[2mm]
 &= \frac{\text{Equity}}{\text{Market Value of Short Securities}}
 \end{align}
 $$
