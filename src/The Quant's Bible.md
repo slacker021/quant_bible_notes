@@ -75,3 +75,16 @@ To maintain this mission of open access, the author doesn't solicit funds nor ac
 - Mathematical notation is rendered with LaTex. .
 - Visualizations are first rendered via a Tikz editor before being exported as images that're then included in the website. 
 - Publishing control is handled with the use of the [Digital Garden](https://docs.forestry.md/) plugin for [Obsidian](https://obsidian.md/). 
+
+---
+# Philosophy of the Quant's Bible
+This repository of notes follows a very different learning trajectory from most curricula presented by boot camps and university programs. Most curricula follow the *Early Transcendental* paradigm of mathematics pedagogy and education. This method of learning is primarily top-down, with an emphasis on building intuition and applying facts learned early on. Meanwhile, the rigor is usually an afterthought, and even when it's taught—it comes much later in the learner's journey. Such a method of learning is problematic because it requires the learner to pick up on the knowledge quickly and perform lots of memorization. While this works for child prodigies and other individuals who pick up on patterns quickly, other learners experience trouble and're discouraged to continue learning. 
+
+Another paradigm of learning, which is a form of *Late Transcendental* education, takes the opposite approach: A bottom-up approach that stresses strong formalism and absolute rigor. This is the *Soviet* tradition of mathematics pedagogy that was characterized by a slow pace of learning in exchange for analytical breadth and depth. Such a paradigm ensured that the learner knew exactly what they're reading and can explain the underlying concepts. However, this paradigm easily leads to information overload. Additionally, the instructors didn't bother showing all the proofs due to the massive amount of work that entails. 
+
+This repository aims to provide an updated version of the Soviet tradition:
+- **All Proofs Shown:** All proofs are shown to ensure zero abstraction. This makes having to prove already-proven statements redundant, and instead enables the learner to focus on using these proven facts to prove more interesting facts, apply them to problems, or even make entirely new discoveries. 
+- **Visual Aids:** The modules are accompanied by various graphs and visualizations to help learners picture what the phenomenon in question may look like. 
+- In addition to providing readers with a rigorous but accessible mathematical foundation, such pedagogy also applies to the segments dedicated to finance, economics, computer science, and statistics. The various facts presented under them are written in the language of pure mathematics, which provides a consistent pedagogical feel as well as clear definitions for the different facts that can be deduced in these disciplines.
+
+It's crucial to note that these notes don't attempt to reinvent the wheel or discover anything new. Instead, these notes simply aggregate already-verified facts in a coherent manner. The goal of these notes is to provide these first principles with zero abstraction so the learner can spend more time applying these concepts, and perhaps even making novel discoveries on their own. Technologies may change, markets may adapt, and new discoveries may be minted—but the foundations remain timeless. 
