@@ -9,26 +9,24 @@ Due to the iterative nature of this knowledgebase, the works cited are to increa
 # Primary Sources
 These are the sources that various volumes and their respective modules are based on. *Primary Sources* provide not only the information but the framework upon which the topics are built on, including details such as the order of topics introduced and the pedagogy used. 
 
-### Mathematics
+### Pure and Applied Mathematics
 ##### Real Analysis
 - **Volume 1 - Classical Elementary Analysis:** *Mathematical Analysis 1: Second Edition* by *Vladimir Antonovich Zorich*, published by *Springer* as part of *Universitext*
 - **Volume 2 -  Classical Intermediate and Advanced Calculus:** *Mathematical Analysis 2: Second Edition* by *Vladimir Antonovich Zorich*, published by *Springer* as part of *Universitext* 
 - **Volume 3 - Abstract Analysis, Measure Theory, and Integration:** *Real Analysis: Measures, Integrals, and Applications* by *Makarov* and *Podkoryov*, published by *Springer* as part of *Universitext* 
-
 **Supplementary Literature**
 * *Calculus: Ninth Edition* by *James Stewart*, published by *Cengage*
 
-**Stochastic Analysis**
+##### Stochastic Analysis
 - **Volume 1 - Random Variables and Distributions:** *Probability Theory 1: Random Variables and Distrubutions* by *Andrea Pascucci*, published by *Springer* as part of *Universitext* 
 - **Volume 2 - Stochastic Calculus:** *Probability Theory 2: Stochastic Calculus* by *Andrea Pascucci*, published by *Springer* as part of *Universitext*
 
-**Linear Analysis**
+##### Linear Analysis
 - **Volume 1 - Elementary Linear Algebra:** *Linear Algebra Done Right: Fourth Edition* by *Sheldon Axler*, published by *Springer* as part of *Undergraduate Texts in Mathematics*
 
 ##### Numerical Analysis
 - **Volume 1 - Elementary Numerical Analysis:** *Theoretical Numerical Analysis: A Functional Analysis Framework (Third Edition)* by *Atkinson* and *Han*, published by *Springer* as part of *Texts in Applied Mathematics*
-
-**Supplementary Literature**: 
+**Supplementary Literature**
 - *Numerical Analysis: Third Edition* by *Timothy Sauer*, published by *Pearson*
 - *Numerical Recipes: The Art of Scientific Computing (Third Edition)*, published by *Cambridge University Press*
 
@@ -36,7 +34,6 @@ These are the sources that various volumes and their respective modules are base
 ##### Data Structures and Algorithms
 - **Volume 1 - Foundational Computer Science:** *Introduction to Algorithms: Fourth Edition* by *Cormen, Leierson, Rivest*, and *Stein*, published by *Massachusetts Institute of Technology Press*
 - **Volume 2 - Algorithm Complexity:** *Beyond the Worst-Case Analysis of Algorithms* edited by *Tim Roughgarden*, published by *Cambridge University Press*
-
 **Supplementary Literature**
 - *The Art of Computer Programming: Volume 1, Fundamental Algorithms (Third Edition)* by *Donald E. Knuth*, published by *Addison-Weasley*
 
