@@ -14,8 +14,8 @@ These are the sources that various volumes and their respective modules are base
 - **Volume 1 - Classical Elementary Analysis:** *Mathematical Analysis 1: Second Edition* by *Vladimir Antonovich Zorich*, published by *Springer* as part of *Universitext*
 - **Volume 2 -  Classical Intermediate and Advanced Calculus:** *Mathematical Analysis 2: Second Edition* by *Vladimir Antonovich Zorich*, published by *Springer* as part of *Universitext* 
 - **Volume 3 - Abstract Analysis, Measure Theory, and Integration:** *Real Analysis: Measures, Integrals, and Applications* by *Makarov* and *Podkoryov*, published by *Springer* as part of *Universitext* 
-**Supplementary Literature**
-* *Calculus: Ninth Edition* by *James Stewart*, published by *Cengage*
+	**Supplementary Literature**
+	* *Calculus: Ninth Edition* by *James Stewart*, published by *Cengage*
 
 ##### Stochastic Analysis
 - **Volume 1 - Random Variables and Distributions:** *Probability Theory 1: Random Variables and Distrubutions* by *Andrea Pascucci*, published by *Springer* as part of *Universitext* 
@@ -26,18 +26,18 @@ These are the sources that various volumes and their respective modules are base
 
 ##### Numerical Analysis
 - **Volume 1 - Elementary Numerical Analysis:** *Theoretical Numerical Analysis: A Functional Analysis Framework (Third Edition)* by *Atkinson* and *Han*, published by *Springer* as part of *Texts in Applied Mathematics*
-**Supplementary Literature**
-- *Numerical Analysis: Third Edition* by *Timothy Sauer*, published by *Pearson*
-- *Numerical Recipes: The Art of Scientific Computing (Third Edition)*, published by *Cambridge University Press*
+	**Supplementary Literature**
+	- *Numerical Analysis: Third Edition* by *Timothy Sauer*, published by *Pearson*
+	- *Numerical Recipes: The Art of Scientific Computing (Third Edition)*, published by *Cambridge University Press*
 
 ##### Partial Differential Equations
 - **Volume 1 - Basic Theory:** *Partial Differential Equations 1: Basic Theory (Third Edition)* by *Michael E. Taylor*, published by Springer as part of *Applied Mathematics Series*
 - **Volume 2 - Linear Equations:** *Partial Differential Equations 2: Qualitative Studies of Linear Equations (Third Edition)* by *Michael E. Taylor*, published by Springer as part of *Applied Mathematics Series*
 - **Volume 3 - Nonlinear Equations:** *Partial Differential Equations 3: Nonlinear Equations (Third Edition)* by *Michael E. Taylor*, published by Springer as part of *Applied Mathematics Series*
-**Supplementary Literature:**
-- *Handbook of Linear Partial Differential Equations for Engineers and Scientists: Second Edition* by *Polyanin* and *Nazaikinskii*, published by *CRC Press* as part of *Handbooks of Mathematical Equations*
-- *Handbook of Nonlinear Partial Differential Equations: Second Edition* by *Polyanin* and *Zaitsev*, published by *CRC Press* as part of *Handbooks of Mathematical Equations*
-- *Handbook of Integral Equations: Second Edition* by *Polyanin* and *Manzhirov*, published by *CRC Press* as part of *Handbooks of Mathematical Equations*
+	**Supplementary Literature**
+	- *Handbook of Linear Partial Differential Equations for Engineers and Scientists: Second Edition* by *Polyanin* and *Nazaikinskii*, published by *CRC Press* as part of *Handbooks of Mathematical Equations*
+	- *Handbook of Nonlinear Partial Differential Equations: Second Edition* by *Polyanin* and *Zaitsev*, published by *CRC Press* as part of *Handbooks of Mathematical Equations*
+	- *Handbook of Integral Equations: Second Edition* by *Polyanin* and *Manzhirov*, published by *CRC Press* as part of *Handbooks of Mathematical Equations*
 
 ##### Dynamical Systems
 - **Volume 1 - Ordinary Differential Equations:** *Dynamical Systems 1: Ordinary Differential Equations and Smooth Dynamical Systems* edited by *D.V. Anosov* and *V.I. Arnold*, published by *Springer* as part of *Encyclopedia of Mathematical Sciences: Volume 1*
@@ -48,8 +48,8 @@ These are the sources that various volumes and their respective modules are base
 ##### Data Structures and Algorithms
 - **Volume 1 - Foundational Computer Science:** *Introduction to Algorithms: Fourth Edition* by *Cormen, Leierson, Rivest*, and *Stein*, published by *Massachusetts Institute of Technology Press*
 - **Volume 2 - Algorithm Complexity:** *Beyond the Worst-Case Analysis of Algorithms* edited by *Tim Roughgarden*, published by *Cambridge University Press*
-**Supplementary Literature**
-- *The Art of Computer Programming: Volume 1, Fundamental Algorithms (Third Edition)* by *Donald E. Knuth*, published by *Addison-Weasley*
+	**Supplementary Literature**
+	- *The Art of Computer Programming: Volume 1, Fundamental Algorithms (Third Edition)* by *Donald E. Knuth*, published by *Addison-Weasley*
 
 ##### Julia Programming
 - **Design Patterns:** *Hands-On Design Patterns and Best Practices with Julia: Proven Solutions to Common Problems in Software Design for Julia 1.x*, published by *Packt*
@@ -57,8 +57,8 @@ These are the sources that various volumes and their respective modules are base
 ### Finance and Economics
 ##### Portfolio Management
 - **Volume 1 - Modern Portfolio Theory:** *Modern Portfolio Theory and Investment Analysis: Ninth Edition* by *Elton, Gruber, Brown*, and *Goetzmann*, published by *John Wiley & Sons*
-**Supplementary Literature**
-- *Stochastic Finance: A Numeraire Approach* by *Jan Vercer*, published by *Chapman & Hall* under *CRC Press* as part of *Financial Mathematics Series*
+	**Supplementary Literature**
+	- *Stochastic Finance: A Numeraire Approach* by *Jan Vercer*, published by *Chapman & Hall* under *CRC Press* as part of *Financial Mathematics Series*
 
 ### Statistics
 - **Volume 1 - Elementary Mathematical Statistics:** *Mathematical Statistics, Basic Ideas and Selected Topics: Volume 1*, published by *CRC Press* as part of *Texts in Statistical Science*
