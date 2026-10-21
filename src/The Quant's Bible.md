@@ -2,19 +2,11 @@
 dg-publish: true
 dg-home: true
 ---
-This repository is meant for independent quant researchers desiring a bottom-up exploration of the quantitative finance as an interdisciplinary social science incorporating principles from four main fields of study:
-- *Pure and Applied Mathematics*
-- *Theoretical Computer Science, Software Engineering, Machine Intelligence, and Information Systems*
-- *Finance, Economics, and Econometrics*
-- *Mathematical Measure-Theoretic Statistical Inference*
-
-Instead of treating quantitative finance as a collection of disparate tricks, this repository uses the language of pure mathematics to rigorously define and analyze the four main fields of study. These four pillars are interconnected with one another, with each important fact being based on previously-defined facts. This ensures zero abstraction since every step can be traced and derived. 
-
-Given the ever-expanding field of study that is quantitative finance, many individuals from diverse fields of research—such as but not limited to business, operations research, engineering, physics, biology, chemistry, pure mathematics, applied mathematics, economics, statistics, software development, accounting, and information technology—are interested in entering the field as either a 
-- *Quant Trader*
-- *Quant Developer*
-- *Quant Researcher*
-Before entering the field, however, the prospective entrant requires a firm foundation. While the field is wide, and the entrant must decide what skills they are to prioritize, these notes aim to offer a well-rounded general approach. This is especially well-suited to independent quant researchers who are interested in developing the strong theoretical basis needed to perform and publish meaningful research that advances quantitative finance as a dynamic social science. 
+This repository is meant for independent quant researchers desiring a bottom-up exploration of the quantitative finance as an interdisciplinary social science that is formed as a combination of four fields of study:
+- *Pure and Applied Mathematics, Operations Research, and Quantitative Methods*
+- *Theoretical Computer Science, Software Engineering, Machine Intelligence, and Information Systems Technologies*
+- *Finance, Economics, Econometrics, and Political Economy*
+- *Mathematical Measure-Theoretic Statistical Inference for Data*
 
 ---
 # Disclaimers and Notices
@@ -67,3 +59,11 @@ This repository aims to provide an updated version of the Soviet tradition:
 - In addition to providing readers with a rigorous but accessible mathematical foundation, such pedagogy also applies to the segments dedicated to finance, economics, computer science, and statistics. The various facts presented under them are written in the language of pure mathematics, which provides a consistent pedagogical feel as well as clear definitions for the different facts that can be deduced in these disciplines.
 
 It's crucial to note that these notes don't attempt to reinvent the wheel or discover anything new. Instead, these notes simply aggregate already-verified facts in a coherent manner. The goal of these notes is to provide these first principles with zero abstraction so the learner can spend more time applying these concepts, and perhaps even making novel discoveries on their own. Technologies may change, markets may adapt, and new discoveries may be minted—but the foundations remain timeless. 
+
+### On Abstraction
+Much of modern quantitative research has been abstracted away by simpler and more elegant mathematical explanations and powerful software packages. Additionally, the advent of generative AI has enabled novice independent quant researchers to learn at a faster pace and experienced independent quant researchers to match the output of entire teams. However, abstraction presents the problem of models, methodologies, and technologies as black boxes that simply ought to be trusted by the user. This is exemplified in the open source community, where contemporary packages have been iterated on so many times that they're seemingly perfect to those who use them. 
+
+However, certain individuals—like the author of these notes—struggles to properly comprehend the inner workings of these models and technologies. There may be times when one begins to wonder as to why something works in a specific manner or why it fails when conditions are not met. They may even go as far as to take a quick look online or ask AI these sorts of concerns... only to be met with even more questions as the intuitive explanation falls flat. 
+
+Individuals experiencing a learning crisis, especially in quantitative skills and deductive reasoning, are vulnerable to the dangers of being too trustworthy of an idea just because it's already well-established. One might even be ridiculed for questioning the idea and attempting to probe further. However, it is exactly this blind trust that has led to many quantitative professionals utilizing methodologies and tools that work great in theory but blow up in practice. It isn't because they lack intelligence or they did not try hard enough, but because they never truly understood the limitations of whatever tools they're working with. Ergo, one shall not confuse the map for the territory. 
+
