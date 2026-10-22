@@ -1,190 +1,56 @@
 ---
 dg-publish: true
 ---
-Let $x,y,w,z$ be real numbers. 
+The interaction between the order relation $\le$ and the arithmetic operations on $\mathbb{R}$ is governed by the two Compatibility Axioms of an ordered field: $$ \begin{gather} \forall x, y, z \in \mathbb{R}, \quad (x \le y) \implies (x + z \le y + z) \tag{1} \\ \forall x, y \in \mathbb{R}, \quad (0 \le x) \wedge (0 \le y) \implies (0 \le x \cdot y) \tag{2} \end{gather} $$Strict inequality $x < y$ is defined as $(x \le y) \wedge (x \ne y)$. The following propositions detail the algebraic consequences of these compatibility rules. 
 
+---
 # Proposition 1
-Let $x < y$. By definition of strict inequality, as seen in axioms 1 and 3 of the principle of ordering:
-$$
-(x < y) \implies (x \leq y) \implies (x + z) \leq (y + z) \tag{1}
-$$
-It remains to be verified that $x + z \neq y + z$. Indeed, 
-$$
-\left((x + z) = (y + z) \right) \implies (x = (y + z) - z = y + (z - z) = y) \tag{2}
-$$
-Step 2 contradicts the assumption that $x < y$. Therefore, the assumption must be true. 
+Assume that $x < y$. By definition of strict inequality, $x \le y$ and $x \ne y$. Applying the additive compatibility axiom in step 1 to the weak inequality $x \le y$ ensures that $x + z \le y + z$. 
+
+It remains to demonstrate that $x + z \ne y + z$. Assume for the purpose of contradiction that $x + z = y + z$. Adding the additive inverse $-z$ to both sides and invoking the associativity and identity axioms yields $$ (x + z) + (-z) = (y + z) + (-z) \implies x + 0 = y + 0 \implies x = y \tag{3} $$ This equality directly contradicts the initial condition that $x \ne y$. Therefore, $x + z \ne y + z$, which together with $x + z \le y + z$ establishes that $x + z < y + z$.  
 
 ---
 # Proposition 2
-Let $0 < x$, which implies that $x$ is negative. It was shown in a previous [[Proof of the Consequences of the Connection Axioms|proof]] that negating a negative number makes it positive. Therefore, negating the premise would alter both the inequality and value of $x$—yielding the conclusion that $0 > -x$. 
+Assume that $0 < x$. Applying proposition 1 by adding the unique additive inverse $-x$ to both sides of the strict inequality yields $$ 0 + (-x) < x + (-x) \tag{4} $$By the additive identity axiom, the left-hand side evaluates to $-x$. By the additive inverse axiom, the right-hand side evaluates to $0$. Substituting these values into the inequality of step 4 produces $-x < 0$. 
 
 ---
 # Proposition 3
-Let $x \leq y$ and $z \leq w$. By definition, 
-$$
-\begin{gather}
-x \leq y \iff (x = y) \lor (x < y) \\
-z \leq w \iff (z = w) \lor (z < w) \tag{3}
-\end{gather}
-$$
-This leads to four cases:
-1. If $x = y$ and $z = w$, then $x + z = y + w$. This is a condition that satisfies the conclusion that $x + z \leq y + w$. 
-2. If $x = y$ but $z < w$, then $x + z < y + w$. This is a condition that satisfies the conclusion that $x + z \leq y + w$. 
-3. If $x < y$ but $z = w$, then $x + z < y + w$. This is a condition that satisfies the conclusion that $x + z \leq y + w$.  
-4. If $x < y$ and $z < w$, then $x + z < y + w$. This is a condition that satisfies the conclusion that $x + z \leq y + w$.  
-In all cases, the conclusion $x + z \leq y + w$ holds true. Therefore, 
-$$
-(x \leq y) \wedge (z \leq w) \implies (x + z) \leq (y + w) \tag{4}
-$$
+Assume that $x \le y$ and $z \le w$. Adding $z$ to both sides of the inequality $x \le y$ via compatibility axiom (1) gives $x + z \le y + z$. Similarly, adding $y$ to both sides of the inequality $z \le w$ gives $z + y \le w + y$. By the commutativity of addition, this second inequality is rewritten as $y + z \le y + w$. Combining both results produces the chain $$ x + z \le y + z \le y + w \tag{5} $$ Applying the Transitivity Axiom of the order relation to the chain of step 5 yields $x + z \le y + w$. 
 
 ---
 # Proposition 4
-Let $x \leq y$ but $z < w$. By definition, 
-$$
-\begin{gather}
-x \leq y \iff x < y \lor x = y \\
-z < w \iff z \leq w \wedge z  \neq w \tag{5}
-\end{gather}
-$$
-This leads to two cases: 
-1. If $x < y$, then case 4 of proposition 3 would show that $x + z < y + w$. 
-2. If $x = y$, then case 2 of proposition 4 would show that $x + z < y + w$. 
-In both cases, the conclusion $x + z < y + w$ holds true. Therefore, 
-$$
-(x \le y) \wedge (z < w) \implies (x + z < y + w) \tag{6}
-$$
+Assume that $x \le y$ and $z < w$. By the compatibility axiom of step 1, adding $z$ to both sides of $x \le y$ produces $x + z \le y + z$. Concurrently, proposition 1 allows $y$ to be added to both sides of the strict inequality $z < w$, yielding $z + y < w + y$, which by commutativity states that $y + z < y + w$. One now has the simultaneous conditions $x + z \le y + z$ and $y + z < y + w$. By the transitivity of strict inequalities established as a consequence of the order axioms, this conjunction implies $x + z < y + w$. 
 
 ---
 # Proposition 5
-Let $0 < x$ and $0 < y$. There are three possibilities: 
-1. If $x \cdot y = 0$, then $x$ or $y$ must be zero. However, this cannot be because of the premise. 
-2. If $x \cdot y < 0$, then $x$ or $y$ must be negative. However, this cannot be because of the premise. 
-3. If $x \cdot y > 0$, then this leads to two cases for this possibility: 
-	1. If $x$ and $y$ are both negative numbers, then their product is a positive number. However, this cannot be because of the premise. 
-	2. If $x$ and $y$ are both positive numbers, then their product is a positive number. This holds as per the premise. 
-Therefore, 
-$$
-0 < x \wedge 0 < y \implies  (0 < xy) \tag{7}
-$$
->[!info]+ Remark: Law of Trichotomy
->The three possibilities mentioned form the *Law of Trichotomy*. 
+Assume that $0 < x$ and $0 < y$. By definition of strict inequality, these assumptions imply that $0 \le x$ and $0 \le y$, while $x \ne 0$ and $y \ne 0$. Applying the multiplicative compatibility axiom seen in step 2 guarantees that $0 \le xy$. 
+It remains to verify that $xy \ne 0$. By proposition 2 of the connection axioms, a product of two real numbers equals zero if and only if at least one factor is zero. Because both $x \ne 0$ and $y \ne 0$, it follows that $xy \ne 0$. Because $0 \le xy$ and $xy \ne 0$, one concludes by definition that $0 < xy$. 
 
 ---
 # Proposition 6
-Let $x < 0$ and $y < 0$. The first subcase of case 3 in proposition 5 shows that the product of two negative numbers is positive. The premise implies that $x$ and $y$ are both negative numbers. Therefore, 
-$$0 < x \wedge 0 < y \implies  (0 < xy) \tag{8}$$
+Assume that $x < 0$ and $y < 0$. By proposition 2, inverting the sign of these negative quantities establishes that their additive inverses are strictly positive, so that $0 < -x$ and $0 < -y$. Applying proposition 5 to these positive quantities demonstrates that their product is strictly positive: $$ 0 < (-x)(-y) \tag{6} $$According to proposition 5 of the connection axioms, the product of two additive inverses satisfies $(-x)(-y) = xy$. Substituting this identity into the inequality of step 6 immediately yields $0 < xy$. 
+
 ---
 # Proposition 7
-Let $x < 0$ and $0 < y$. The second possibility of the Law of Trichotomy states that the product of a negative and positive number is negative. $x < 0$ implies that $x$ is negative and $0 < y$ implies that $y$ is positive. Therefore, $xy$ must be negative and hence, less than zero. 
+ Assume that $x < 0$ and $0 < y$. By proposition 2, $x < 0$ implies that $0 < -x$. Because $-x$ and $y$ are both strictly positive elements, proposition 5 dictates that their product is strictly positive: $$ 0 < (-x)y \tag{7} $$By Proposition 5 of the connection axioms, $(-x)y = -(xy)$. Substituting this into the inequality of step 14 gives $0 < -(xy)$. Applying proposition 2 to this positive quantity inverts the sign again, showing that $-(-(xy)) < 0$. Because $-(-(xy)) = xy$, this concludes that $xy < 0$. 
 
 ---
 # Proposition 8
-Let $x < y$ and $0 < z$. By definition,
-$$
-\begin{gather}
-x < y \iff x \le y \wedge x \ne y \\
-0 < z \iff 0 \le y \wedge 0 \ne z \tag{9}
-\end{gather}
-$$
-Additionally, assume the following: 
-1. $z > 0 \iff -z < 0$, which is proven true by proposition 2. 
-2. $(-a)b = -(ab)$, which is proven true by proposition 7. 
-3. $0 \cdot b = 0$, which is a [[Proof of the Consequences of the Connection Axioms|consequence of the connection axioms]] that is proven true. 
-With these facts established, the following chain of implications shows that
-$$
-\begin{gather}
-x(−z)<y(−z)⟹ \\
-−xz<−yz⟹ \\
-−xz+xz<−yz+xz⟹ \\
-0<−yz+xz⟹ \\
-yz<xz \tag{10}
-\end{gather}
-$$
+Assume that $x < y$ and $0 < z$. Adding $-x$ to both sides of the inequality $x < y$ via proposition 1 yields $0 < y - x$. Because both $y - x$ and $z$ are strictly positive elements, proposition 5 guarantees that their product is strictly positive: $$ 0 < (y - x)z \tag{8} $$Distributing $z$ across the difference produces $0 < yz - xz$. Adding the term $xz$ to both sides of this strict inequality via proposition 1 yields $xz < yz$. 
 
 ---
-# Proposition 9
-Let $x < y$ and $z < 0$. By definition, 
-$$
-\begin{gather}
-x < y \iff x \le y \wedge x \ne y \\
-z < 0 \iff z \le 0 \wedge z \ne 0 \tag{11}
-\end{gather}
-$$
-Additionally, assume the following:
-1. $z > 0 \iff -z < 0$, which is proven true by proposition 2. 
-2. $(-a)b = -(ab)$, which is proven true by proposition 7. 
-3. $0 \cdot b = 0$, which is a [[Proof of the Consequences of the Connection Axioms|consequence of the connection axioms]] that is proven true. 
-With these facts established, the following chain of implications shows that
-$$
-\begin{gather}
-(x)(-z) > y(-z) \implies \\
--xz > -yz \implies  \\
--xz + yz > -yz + yz \implies \\
--xz + yz > 0 \implies \\
--xz > -yz \implies \\
-xz < yz 
-\end{gather}
-$$
+# Proposition 9 
+Assume that $x < y$ and $z < 0$. Adding $-x$ to both sides of $x < y$ yields $0 < y - x$. Because $y - x$ is strictly positive and $z$ is strictly negative, proposition 7 requires their product to be strictly negative: $$ (y - x)z < 0 \tag{9} $$Applying the distributive law transforms the inequality of step 9 into $yz - xz < 0$. Adding $xz$ to both sides via proposition 1 establishes the reversed inequality $yz < xz$. 
 
 ---
-# Proposition 10 
-Assume that $x > 0$. By proposition 2, this results in $-x < 0$. Combining both results leads to a combined inequality of 
-$$
--x < 0 < x \tag{12}
-$$
-Substituting $1$ for $x$ shows that 
-$$
--1 < 0 < 1 \tag{13}
-$$
+# Proposition 10
+The non-triviality axiom of multiplication dictates that $1 \ne 0$. By the Law of Trichotomy established under the order axioms, exactly one of the two relations $0 < 1$ or $1 < 0$ must hold. Assume for the purpose of contradiction that $1 < 0$. Setting $x = 1$ and $y = 1$ in proposition 6 demonstrates that the product of two negative numbers is strictly positive, which implies that $1 \cdot 1 > 0$. However, by the multiplicative identity axiom, $1 \cdot 1 = 1$, which forces the conclusion that $1 > 0$. This directly contradicts the assumption that $1 < 0$. Because $1 < 0$ leads to a contradiction, the only remaining possibility permitted by trichotomy is $0 < 1$. 
 
 ---
 # Proposition 11
-Let $0 < x$. Multiplying both sides by $1/x$ shows that 
-$$
-\frac{1}{x} \cdot 1 > \frac{1}{x} \cdot 0 \implies \frac{1}{x} > \frac{1}{x} \cdot 0 \tag{14}
-$$
-The third assumption of proposition 9 shows that any number multiplied by zero results in a product of zero, as well as the fact that $x$ being greater than zero implies it's positive. Therefore, 
-$$
-\frac{1}{x} > \frac{1}{x} \cdot 0 \implies \frac{1}{x} > 0 \tag{15}
-$$
+
+Assume that $0 < x$. The reciprocal $x^{-1}$ cannot equal zero, because if $x^{-1} = 0$, then $x \cdot x^{-1} = x \cdot 0 = 0$, which contradicts the defining identity $x \cdot x^{-1} = 1$ since $1 \ne 0$. By the Law of Trichotomy, either $0 < x^{-1}$ or $x^{-1} < 0$. Assume for the purpose of contradiction that $x^{-1} < 0$. Because $0 < x$ and $x^{-1} < 0$, proposition 7 dictates that their product must be strictly negative, which means that $x \cdot x^{-1} < 0$. However, $x \cdot x^{-1} = 1$, which requires $1 < 0$. This directly contradicts Proposition 10, which proved that $0 < 1$. Therefore, $x^{-1} < 0$ is impossible, leaving $0 < x^{-1}$ as the only valid relation. 
 
 ---
 # Proposition 12
-Assume $0 < x$ and $x < y$. By definition, 
-$$
-\begin{gather}
-0 < x \iff 0 \le x \wedge 0 \ne x \\
-x < y \iff x \le y \wedge x \ne y \tag{16}
-\end{gather}
-$$
-Given that $x$ is positive and the transitive nature of the ordering axioms, $0 \le y$ but $0 \ne y$. If $0 < y$ and with proposition 11, it can be shown that
-$$
-0 < \frac{1}{y} \tag{17}
-$$
-Moving onto the second statement of step 16, $x^{-1} > 0$ can be multiplied by $x^{-1}$ without changing the inequality sign: 
-$$
-\begin{gather}
-x \cdot x^{-1} < y \cdot x^{-1} \implies \\
-1 < y \cdot x^{-1} \tag{18}
-\end{gather}
-$$
-Since $y^{-1} > 0$, both sides of the inequality at step 18 can be multiplied by $y^{-1}$ without changing the sign: 
-$$
-1 \cdot y^{-1} < (y \cdot x^{-1}) \cdot y^{-1} \tag{19}
-$$
-The associative and commutative properties of multiplication would show that 
-$$
-\begin{gather}
-y^{-1} < (y \cdot y^{-1}) \cdot x^{-1} \\
-y^{-1} < 1 \cdot x^{-1} \\
-y^{-1} < x^{-1} \tag{20}
-\end{gather}
-$$
-Both results can be combined to give the final desired result of: 
-$$
-0 < \frac{1}{y} < \frac{1}{x} \tag{21}
-$$
-$$
-\textbf{Q.E.D}
-$$
-
+Assume that $0 < x$ and $x < y$. By transitivity of strict inequalities, $0 < y$. Applying proposition 11 to both positive numbers establishes that their reciprocals are also strictly positive, so that $0 < x^{-1}$ and $0 < y^{-1}$. Applying proposition 5 to these two positive reciprocals ensures that their product is strictly positive: $$ 0 < x^{-1} \cdot y^{-1} \tag{10} $$ Because $x^{-1} \cdot y^{-1}$ is strictly positive, proposition 8 allows the inequality $x < y$ to be multiplied by this product without changing the direction of the inequality: $$ x \cdot (x^{-1} \cdot y^{-1}) < y \cdot (x^{-1} \cdot y^{-1}) \tag{11} $$Utilizing the associativity and commutativity of multiplication, the left-hand side simplifies to $$ (x \cdot x^{-1}) \cdot y^{-1} = 1 \cdot y^{-1} = y^{-1} \tag{12} $$ while the right-hand side simplifies to $$ (y \cdot y^{-1}) \cdot x^{-1} = 1 \cdot x^{-1} = x^{-1} \tag{13} $$ Substituting these simplified expressions into the inequality of step 13 yields $y^{-1} < x^{-1}$. Combined with the positivity condition $0 < y^{-1}$, one concludes that $0 < y^{-1} < x^{-1}$. $$ \textbf{Q.E.D} $$
