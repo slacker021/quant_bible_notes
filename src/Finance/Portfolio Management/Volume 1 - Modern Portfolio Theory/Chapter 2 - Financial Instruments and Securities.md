@@ -175,7 +175,11 @@ In addition to fungibility, securities also exhibit increased *liquidity*. Liqui
 Due to the vast amount of securities in existence, this chapter'll only focus on securities traded in modern financial marketplaces.  
 ### Types of Marketable Securities
 An investor can choose to purchase directly any one of a number of different securities, many of which represent a type of claim on a private or government entity. Alternatively, the investor can opt to purchase securities through an intermediary, which bundles a set of direct investments and then sells the shares in the portfolio of financial instruments it holds. Below is a visual aid in helping remember the structure of marketable securities: 
+<<<<<<< HEAD
 ![[visual_aid_for_family_of_securities.png]]
+=======
+![[visual_aid_securities.png]]
+>>>>>>> 631f700 (* Corrected tikz figures)
 Investments in debt that have a maturity of less than one year are *money market securities*, which can be issued by a government or private entity. Investments with maturities of a year or longer are *capital market* instruments, which come in the form of equity or credit. In the case of credit-based capital market instruments, these can be issued by government or private entities. The final category of security are derivative instruments. In the case of securities, the four derivative classes are *forwards, futures, options, and swaps.*
 
 Below are notable examples of securities that make the bulk of financial activity in modern markets: 
