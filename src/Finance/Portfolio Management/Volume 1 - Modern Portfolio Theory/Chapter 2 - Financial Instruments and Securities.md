@@ -175,7 +175,7 @@ In addition to fungibility, securities also exhibit increased *liquidity*. Liqui
 Due to the vast amount of securities in existence, this chapter'll only focus on securities traded in modern financial marketplaces.  
 ### Types of Marketable Securities
 An investor can choose to purchase directly any one of a number of different securities, many of which represent a type of claim on a private or government entity. Alternatively, the investor can opt to purchase securities through an intermediary, which bundles a set of direct investments and then sells the shares in the portfolio of financial instruments it holds. Below is a visual aid in helping remember the structure of marketable securities: 
-![[Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Figures/Chapter 2/figure_1.png]]
+![[visual_aid_for_family_of_securities.png]]
 Investments in debt that have a maturity of less than one year are *money market securities*, which can be issued by a government or private entity. Investments with maturities of a year or longer are *capital market* instruments, which come in the form of equity or credit. In the case of credit-based capital market instruments, these can be issued by government or private entities. The final category of security are derivative instruments. In the case of securities, the four derivative classes are *forwards, futures, options, and swaps.*
 
 Below are notable examples of securities that make the bulk of financial activity in modern markets: 
@@ -312,7 +312,7 @@ While there're many collective investment vehicles, below are currently the most
 ---
 # Return Characteristics of Assets
 One of the core tenets of portfolio management are risk and return, where investors like high return but dislike high risk. The tradeoff between risk and return is complex, requiring a rigorous and un-ambiguous definition of both terms, but a simple way to visualize the relationship with risk and return is through the following diagram:
-![[Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Figures/Chapter 2/figure_2.png]]
+![[risk_return_matrix.png]]
 
 When discussing the tradeoff between potential risk and return, it's important to understand what is meant by "return." There are many ways to measure return but in most cases, the following definition of return will be used: 
 $$
@@ -345,8 +345,7 @@ $$
 \end{gather}
 $$
 
-The weight $w_{i,t}$ assigned to constituent security $i$ at time $t$ dictates how idiosyncratic price shocks transmit to aggregate index performance. Broadly speaking, there're three main types of indices: 
-*Price-weighted, value-weighted,* and **
+The weight $w_{i,t}$ assigned to constituent security $i$ at time $t$ dictates how idiosyncratic price shocks transmit to aggregate index performance. Broadly speaking, there're three main types of indices: *Price-weighted, value-weighted, and Equal-Weighted*
 ###### Price-Weighted Index
 $$
 \begin{gather}

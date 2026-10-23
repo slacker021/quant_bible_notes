@@ -63,9 +63,8 @@ In other words, the utility function takes in two or more arguments, which are t
 > - $B:$ The investor can opt to save nothing and consume $20,000$ of income and $50,000$ of their initial capital, in the first period. By the second period, the investor earns $20,000$ in income. In total, the investor spends $90,000$
 > - $C:$ The investor can opt to consume $20,000$ of income and $50,000$ of initial capital in the first period. Furthermore, the investor decides to borrow $20,000$ at a cost of $5 \%$ interest at the same period. By the first period's end, the investor'll have consumed $89,047.6191$. Because they borrowed against the future, they have nothing to spend in the second period. 
 >   The opportunity set can be visualized as
-![[figure_1.png]]
+>![[lending_and_borrowing.png]]
 > In the figure above, the utility function takes the form of the function $u(x_{1},x_{2}) = -1.05x + 93.5$, which shows the whole range of possible combinations of consumption the investor can make. 
-
 ### Indifference Curves
 Although the investor has many choices to make concerning the combination of two (or more) assets, not all those combinations are made equal. If there're one or two outputs of the function that are said to yield the same level of utility. Determining the bundle combinations that yield the same level of satisfaction can be done with *indifference curves*. The curves are "indifferent" because it's assumed that everywhere along the same curve, the investor is assumed to be equally satisfied: 
 $$
@@ -89,7 +88,6 @@ The indifference curves and opportunity set represent the tools necessary for th
 
 An indifference curve that crosses the utility line twice isn't optimal because the investor has two choices. This means the investor'll have to decide as to what they deem to be more optimal, which defeats the purpose of this framework. On the contrary, an indifference curve that doesn't intersect the utility line at all represents decisions that don't even fit into the investor's constraints. 
 
-
 > [!example]- Example: Purchasing Candy
 > Rose is walking down an unfamiliar street one day, and she comes across an old-fashioned candy store. They have red hots, which cost $0.01$ for five pieces, and rock candy, which costs $0.01$ for a single piece. She decides to purchase some for herself and friends, but realizes that she only has $1$ to spend.  
 > 
@@ -108,7 +106,7 @@ An indifference curve that crosses the utility line twice isn't optimal because 
 > - $C:$ Rose purchases zero red hots and $100$ pieces of rock candy. 
 >   
 >   This opportunity set and its corresponding indifference curves can be visualized as
-![[Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Figures/Chapter 1/figure_2.png]]
+![[candy_for_rose.png]]
 > Rose can select consumption pattern 1 or 2, given that both intersect the utility line. However, consumption pattern 1 crosses the utility line twice, which implies that the second point of intersection of indifference curve 1 undersatisfies Rose. Indifference curve 2, on the other hand, represents the precise boundary where the Rose maximizes her satisfaction. Lastly, indifference curve 3 represents decisions that're beyond Rose's budget.  
 
 > [!example]- Example: Patrick Visits the Krusty Krab
@@ -119,4 +117,4 @@ An indifference curve that crosses the utility line twice isn't optimal because 
 > $B:$ Patrick orders two'n half slices of pizza for five dollars and two Krabby Patties for five dollars. This leaves a single dollar unspent. 
 > $C:$ Patrick orders four Krabby Patties for ten dollars but have no pizza to consume. This means all ten dollars he came with are consumed. 
 > This can be graphically modeled as
-![[Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Figures/Chapter 1/figure_3.png]]
+![[patrick_orders.png]]
