@@ -66,7 +66,7 @@ In other words, the utility function takes in two or more arguments, which are t
 >![[lending_and_borrowing.png]]
 > In the figure above, the utility function takes the form of the function $u(x_{1},x_{2}) = -1.05x + 93.5$, which shows the whole range of possible combinations of consumption the investor can make. 
 ### Indifference Curves
-Although the investor has many choices to make concerning the combination of two (or more) assets, not all those combinations are made equal. If there're one or two outputs of the function that are said to yield the same level of utility. Determining the bundle combinations that yield the same level of satisfaction can be done with *indifference curves*. The curves are "indifferent" because it's assumed that everywhere along the same curve, the investor is assumed to be equally satisfied: 
+Although the investor has many choices to make concerning the combination of two (or more) assets, not all those combinations are made equal. If there're one or two outputs of the function that are said to yield the same level of utility. Determining the bundle combinations that yield the same level of satisfaction can be done with *indifference curves*. The curves are "indifferent" because it is assumed that everywhere along the same curve, the investor is assumed to be equally satisfied: 
 $$
 \begin{gather}
 \textbf{Definition: Indifference Curve} \\[5mm]
@@ -84,9 +84,9 @@ $$
 $$
 (see [[Chapter 1 - Definition of Continuity at a Point|definition of continuity]] and [[Chapter 2 - Differentiation of Multivariate Functions|multivariate derivatives]] for more information)
 
-The indifference curves and opportunity set represent the tools necessary for the investor to reach a solution. The optimum pattern for the investor is determined by the point at which a number of the set of indifference curves is tangent to the opportunity set. The investor ought to select the bundle corresponding to the point of tangency between the budget line and an indifference curve, rather than a curve that intersects the utility line at two points or a curve that doesn't intersect the line at all. When an indifference curve crosses a linear budget line at one point, this one point represents the option the investor is most satisfied with. 
+The indifference curves and opportunity set represent the tools necessary for the investor to reach a solution. The optimum pattern for the investor is determined by the point at which a number of the set of indifference curves is tangent to the opportunity set. The investor ought to select the bundle corresponding to the point of tangency between the budget line and an indifference curve, rather than a curve that intersects the utility line at two points or a curve that does not intersect the line at all. When an indifference curve crosses a linear budget line at one point, this one point represents the option the investor is most satisfied with. 
 
-An indifference curve that crosses the utility line twice isn't optimal because the investor has two choices. This means the investor'll have to decide as to what they deem to be more optimal, which defeats the purpose of this framework. On the contrary, an indifference curve that doesn't intersect the utility line at all represents decisions that don't even fit into the investor's constraints. 
+An indifference curve that crosses the utility line twice isn't optimal because the investor has two choices. This means the investor shall have to decide as to what they deem to be more optimal, which defeats the purpose of this framework. On the contrary, an indifference curve that doesn't intersect the utility line at all represents decisions that don't even fit into the investor's constraints. 
 
 > [!example]- Example: Purchasing Candy
 > Rose is walking down an unfamiliar street one day, and she comes across an old-fashioned candy store. They have red hots, which cost $0.01$ for five pieces, and rock candy, which costs $0.01$ for a single piece. She decides to purchase some for herself and friends, but realizes that she only has $1$ to spend.  
@@ -114,7 +114,7 @@ An indifference curve that crosses the utility line twice isn't optimal because 
 > 
 > Patrick's opportunity set can be constructed by first describing three decisions, among the many bundles, that he can make:
 > $A:$ Patrick orders five slices of pizza but has no Krabby Patties to consume. This means all ten dollars he came with are spent. 
-> $B:$ Patrick orders two'n half slices of pizza for five dollars and two Krabby Patties for five dollars. This leaves a single dollar unspent. 
+> $B:$ Patrick orders two and a half half slices of pizza for five dollars and two Krabby Patties for five dollars. This leaves a single dollar unspent. 
 > $C:$ Patrick orders four Krabby Patties for ten dollars but have no pizza to consume. This means all ten dollars he came with are consumed. 
 > This can be graphically modeled as
 ![[patrick_orders.png]]
