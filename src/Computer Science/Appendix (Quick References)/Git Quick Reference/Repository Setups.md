@@ -19,7 +19,7 @@ git config --system core.editor "editor_name --wait" # applied to all users on s
 git config --global core.editor "editor_name --wait" # applied to all repositories for the current user
 git config --local core.editor "editor_name --wait" # applied to current repo only
 ```
-There's sometimes an error that causes git to abort commits prematurely. Once that's been settled, the step is to set up the identity of the user: 
+There's sometimes an error that causes git to abort commits prematurely. Once the error has been settled, the next step is to set up the identity of the user: 
 ```powershell
 git config --system user.name "name of dev" # applied to all users on system
 git config --global user.name "name of dev" # applied to all repositories for the current user
@@ -29,7 +29,6 @@ git config --system user.email "user.email@example.com" # applied to all users o
 git config --global user.email "user.email@example.com" # applied to all repositories for the current user
 git config --local user.email "user.email@example.com" # applied to current repo only
 ```
-
 
 ### Recommended
 While the code above is what the user must do to get the setup running, the code below is recommended so as to greatly improve workflow: 
@@ -77,7 +76,6 @@ Setting up a remote git repository can be done by first doing to a remote reposi
 git remote add origin https://github.com/OWNER/REPOSITORY.git # for connecting to repository
 git remote -v # verify connection
 ```
-
 Once the connection has been made, the user can then push whatever changes they made in their local repository to the remote: 
 ```powershell
 git push

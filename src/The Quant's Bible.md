@@ -2,7 +2,7 @@
 dg-publish: true
 dg-home: true
 ---
-This repository is meant for independent quant researchers desiring a bottom-up exploration of the quantitative finance as an interdisciplinary social science that is formed as a combination of four fields of study:
+This repository is meant for independent quant researchers exploring quantitative finance as an interdisciplinary social science that is formed as the apex of four fields of study:
 - *Pure and Applied Mathematics, Operations Research, and Quantitative Methods*
 - *Theoretical Computer Science, Software Engineering, Machine Intelligence, and Information Systems Technologies*
 - *Finance, Economics, Econometrics, and Political Economy*

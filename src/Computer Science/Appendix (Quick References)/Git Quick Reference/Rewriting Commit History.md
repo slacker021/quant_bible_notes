@@ -1,8 +1,6 @@
 ---
 dg-publish: true
 ---
-
-
 > [!warning]+ Warning: On Shared Repositories
 > Rewriting commit history isn't recommended on repositories being worked on by many developers. Doing so can confuse others working on their project. However, doing this is fine on a solo project. 
 # Rebasing
@@ -11,12 +9,10 @@ dg-publish: true
 2. Temporarily “saving” all the unique commits that belong only to `FeatureA`.
 3. Moving the base of `FeatureA` forward to a new starting point on the target branch (e.g., the absolute latest commit of `main`).
 4. Re-applying every saved commit, one by one, onto this new, advanced historical baseline.
-
 The result is a perfectly linear history where it looks as if the work after all the commits that were previously on the target branch had already been implemented. 
 
 ### Common Ways of Rebasing
 There are two primary ways of rebasing: The standard rebase for alignment, and the interactive rebase for deep structural cleanup.
-
 >[!warning]+ Warning: Current Branch
 >Before using `git rebase`, the user must know what branch they are on. Once the rebase is performed, Git takes all commits in the target branch against the current branch, which is where the user is, then places them on top of the branch whose history is going to be altered. 
 

@@ -64,14 +64,13 @@ This is a two-directional implication where it is true if and only if both state
 - $A$ if and only if $B$. 
 - $A$ is equivalent to $B$. 
 
-
 ---
 # Proofs
-When it comes to showing that a lemma, proposition, or theorem is true when its premises are true, these must be proven. When proving a proposition, the proposition usually takes the form of $A \implies B$, where $A$ is the assumption and $B$ is the conclusion. A proof may be considered a convincing argument that shows why a certain claim backed by certain assumptions holds true. It's impossible to show, at least in the context of mathematical sciences, that a certain claim holds true even if one were to show many examples that demonstrate its truth. Instead, a single argument must be provided. 
+When it comes to showing that a lemma, proposition, or theorem is true when its premises are true, these must be proven. When proving a proposition, the proposition usually takes the form of $A \implies B$, where $A$ is the assumption and $B$ is the conclusion. A proof may be considered a convincing argument that shows why a certain claim backed by certain assumptions holds true. It is impossible to show, at least in the context of mathematical sciences, that a certain claim holds true even if one were to show many examples that demonstrate its truth. Instead, a single argument must be provided. 
 ### Direct Proof
 The proof of a proposition usually involves constructing a chain of arguments $A \implies C_{1} \implies \dots \implies C_{n} \implies  B$, where each element of the argument is either an axiom or proposition that has already been shown to be true. In the context of direct proofs, an important rule to take note of is the *classical rule of inference:* If $A$ is true and $A \implies B$ is true, then $B$ is also true. This is the most common way of demonstrating that a certain claim holds true. 
 ### Proof by Contradiction
-There are cases where directly proving something is true is difficult. Another way to show that something is true is to assume that the conclusion is false, which is then followed by an explanation as to why it can't be false. 
+There are cases where directly proving something is true is difficult. Another way to show that something is true is to assume that the conclusion is false, which is then followed by an explanation as to why it cannot be false. 
 ### Proof by the Contrapositive
 An alternative to directly proving something is to assume to negate both the premise and conclusion, where they are then swapped in the implication. Thus, the contrapositive of $A \implies B$ is $\neg B \implies \neg A.$ This works because both the implication and its contrapositive are logically equivalent. 
 ### Useful Relations

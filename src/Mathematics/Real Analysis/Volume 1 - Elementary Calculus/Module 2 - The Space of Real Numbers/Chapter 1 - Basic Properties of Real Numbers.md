@@ -10,7 +10,7 @@ The concept of numbers is fundamental, yet achieving a rigorous understanding re
 ---
 # Definition of the Set of Real Numbers
 
-$$\begin{gather} \textbf{Definition: The Set of Real Numbers} \\[5mm] \text{A set } \mathbb{R} \text{ is called the set of real numbers, and its elements are real numbers,} \\ \text{if it satisfies the axioms of addition, multiplication, order, and completeness.} \end{gather}$$
+$$\begin{gather} \textbf{Definition: The Set of Real Numbers} \\[5mm] \text{A set } \mathbb{R} \text{ is called the set of real numbers, and its elements are real numbers,} \\[2mm] \text{if it satisfies the axioms of addition, multiplication, order, and completeness.} \end{gather}$$
 
 In the realm of real numbers, *addition* and *multiplication* form the two basic operations that can be performed on the numbers. 
 
@@ -20,20 +20,20 @@ The *field axioms* of the real numbers are a set of fundamental rules that provi
 $$
 \begin{gather}
 \textbf{Axioms of Addition} \\[5mm]
-\text{An operation } \\[2.5mm] +:\mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}, \\[2.5mm] \text{which is the operation of addition, is defined, assigning to each} 
-\text{ordered pair } (x,y) \\ \text{ of elements } x,y \in \mathbb{R} \text{ a certain element } x + y \in \mathbb{R}\text{, which is the sum of } x \text{ and } y\text{.} \\
+\text{An operation } \\[2mm] +:\mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}, \\[2mm] \text{which is the operation of addition, is defined, assigning to each} 
+\text{ordered pair } (x,y) \\[2mm] \text{ of elements } x,y \in \mathbb{R} \text{ a certain element } x + y \in \mathbb{R}\text{, which is the sum of } x \text{ and } y\text{.} \\[2mm]
 \text{This operation satisfies the following conditions: }
 \end{gather}
 $$
 $$
 \begin{align}
-& \text{1. There is a neutral element or identity element } 0 \text{, which is zero, such that } \forall x \in \mathbb{R}: \\[2.5mm]
-& \qquad x + 0 = 0 + x = x \\[2.5mm]
-& \text{2. For every element } x \in \mathbb{R}\text{, there is an element } -x \in \mathbb{R} \text{ such that } \\[2.5mm]
-& \qquad x + (-x) = (-x) + x = 0 \\[2.5mm] 
-& \text{3. The operation } + \text{ is associative, that is, } \forall x,y,z \in \mathbb{R}: \\[2.5mm]
-& \qquad x + (y + z) = (x + y) + z \\[2.5mm] 
-& \text{4. The operation } + \text{ is commutative, that is, } \forall x,y \in \mathbb{R}: \\[2.5mm]
+& \text{1. There is a neutral element or identity element } 0 \text{, which is zero, such that } \forall x \in \mathbb{R}: \\[3.5mm]
+& \qquad x + 0 = 0 + x = x \\[3.5mm]
+& \text{2. For every element } x \in \mathbb{R}\text{, there is an element } -x \in \mathbb{R} \text{ such that } \\[3.5mm]
+& \qquad x + (-x) = (-x) + x = 0 \\[3.5mm] 
+& \text{3. The operation } + \text{ is associative, that is, } \forall x,y,z \in \mathbb{R}: \\[3.5mm]
+& \qquad x + (y + z) = (x + y) + z \\[3.5mm] 
+& \text{4. The operation } + \text{ is commutative, that is, } \forall x,y \in \mathbb{R}: \\[3.5mm]
 & \qquad x + y = y + x
 \end{align}
 $$
@@ -49,25 +49,25 @@ $$
 $$
 \begin{gather}
 \textbf{Axioms of Multiplication} \\[5mm]
-\text{An operation } \\[2.5mm]
-\cdot : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R},  \\[2.5mm]
-\text{which is the operation of multiplication, is defined, assigning to each ordered } \\
-\text{pair } (x,y) \text{ of elements } x \text{ and } y \text{ of } \mathbb{R} \text{ a certain element } x \cdot y \in \mathbb{R}, \text{ which is the } \\
+\text{An operation } \\[3.5mm]
+\cdot : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R},  \\[3.5mm]
+\text{which is the operation of multiplication, is defined, assigning to each ordered } \\[2mm]
+\text{pair } (x,y) \text{ of elements } x \text{ and } y \text{ of } \mathbb{R} \text{ a certain element } x \cdot y \in \mathbb{R}, \text{ which is the } \\[2mm]
 \text{product of } x \text{ and } y\text{. This operation satisfies the following conditions: }
 \end{gather}
 $$
 $$
 \begin{align}
-& \text{1. There is a neutral element or identity element } 1 \in \mathbb{R} \setminus \{0\} \text{, which is one, such that } \forall x \in \mathbb{R}: \\[2.5mm]
-& \qquad x \cdot 1 = 1 \cdot x = x \\[2.5mm]
-& \text{2. For every element } x \in \mathbb{R} \setminus \{0\}\text{, there is an element } x^{-1} \in \mathbb{R} \text{, which is the reciprocal } \\[2.5mm] 
-& \text{or multiplicative inverse of } x \text{ such that } \\[2.5mm]
-& \qquad x \cdot x^{-1} = x^{-1} \cdot x = 1 \\[2.5mm] 
-& \text{3. The operation } \cdot \text{ is associative, that is, } \forall x,y,z \in \mathbb{R}: \\[2.5mm]
-& \qquad x \cdot (y \cdot z) = (x \cdot y ) \cdot z \\[2.5mm] 
-& \text{4. The operation } \cdot \text{ is commutative, that is, } \forall x,y \in \mathbb{R}: \\[2.5mm]
-& \qquad x \cdot y = y \cdot x \\[2.5mm]
-& \text{5. The identity elements are non-trivial:} \\[2.5mm]
+& \text{1. There is a neutral element or identity element } 1 \in \mathbb{R} \setminus \{0\} \text{, which is one, such that } \forall x \in \mathbb{R}: \\[3.5mm]
+& \qquad x \cdot 1 = 1 \cdot x = x \\[3.5mm]
+& \text{2. For every element } x \in \mathbb{R} \setminus \{0\}\text{, there is an element } x^{-1} \in \mathbb{R} \text{, which is the reciprocal } \\[3.5mm] 
+& \text{or multiplicative inverse of } x \text{ such that } \\[3.5mm]
+& \qquad x \cdot x^{-1} = x^{-1} \cdot x = 1 \\[3.5mm] 
+& \text{3. The operation } \cdot \text{ is associative, that is, } \forall x,y,z \in \mathbb{R}: \\[3.5mm]
+& \qquad x \cdot (y \cdot z) = (x \cdot y ) \cdot z \\[3.5mm] 
+& \text{4. The operation } \cdot \text{ is commutative, that is, } \forall x,y \in \mathbb{R}: \\[3.5mm]
+& \qquad x \cdot y = y \cdot x \\[3.5mm]
+& \text{5. The identity elements are non-trivial:} \\[3.5mm]
 & \qquad 1 \ne 0
 \end{align}
 $$
@@ -137,16 +137,16 @@ In addition to the basic operations of multiplication and addition, two values o
 $$
 \begin{gather}
 \textbf{Axioms of Ordering: } \\[5mm]
-\text{Between elements of } \mathbb{R} \text{ there is a relation } \leq, \text{ that is, for elements }  \\
-x,y \in \mathbb{R} \text{ one can determine whether } x \leq y \text{ or not. For this to be true, } \\
+\text{Between elements of } \mathbb{R} \text{ there is a relation } \leq, \text{ that is, for elements }  \\[2mm]
+x,y \in \mathbb{R} \text{ one can determine whether } x \leq y \text{ or not. For this to be true, } \\[2mm]
 \text{the following conditions must hold: }
 \end{gather}
 $$
 $$
 \begin{align}
-\text{1. } & \forall x \in \mathbb{R} \ (x \leq x) \\
-\text{2. } & (x \le y) \wedge (y \le x) \implies (x = y) \\
-\text{3. } & (x \le y) \wedge (y \le z) \implies (x \le z) \\
+\text{1. } & \forall x \in \mathbb{R} \ (x \leq x) \\[2mm]
+\text{2. } & (x \le y) \wedge (y \le x) \implies (x = y) \\[2mm]
+\text{3. } & (x \le y) \wedge (y \le z) \implies (x \le z) \\[2mm]
 \text{4. } & \forall x \in \mathbb{R} \ \forall y \in \mathbb{R} \ ((x \le y) \lor (y \le x))
 \end{align}
 $$
@@ -157,7 +157,7 @@ The algebraic operations of addition and multiplication are linked to the order 
 $$
 \begin{gather}
 \textbf{Axioms: Connection of Order with Addition and Multiplication} \\[5mm]
-\text{1. } \forall x, y, z \in \mathbb{R}, \quad (x \le y) \implies (x + z \le y + z) \\[2.5mm]
+\text{1. } \forall x, y, z \in \mathbb{R}, \quad (x \le y) \implies (x + z \le y + z) \\[2mm]
 \text{2. } \forall x, y \in \mathbb{R}, \quad (0 \le x) \wedge (0 \le y) \implies (0 \le x \cdot y)
 \end{gather}
 $$
@@ -170,8 +170,8 @@ The final axiom of real numbers deals with *continuity*, which implies the absen
 $$
 \begin{gather}
 \textbf{Axiom of Completeness (Dedekind Continuity): } \\[5mm]
-\text{If } X \text{ and } Y \text{ are non-empty subsets of } \mathbb{R} \text{ having the property } \\
-\text{that } x \leq y \text{ for all } x \in X \text{ and all } y \in Y\text{, then there exists } c \in \mathbb{R} \\
+\text{If } X \text{ and } Y \text{ are non-empty subsets of } \mathbb{R} \text{ having the property } \\[2mm]
+\text{that } x \leq y \text{ for all } x \in X \text{ and all } y \in Y\text{, then there exists } c \in \mathbb{R} \\[2mm]
 \text{such that } x \leq c \leq y \text{ for all } x \in X \text{ and all } y \in Y.
 \end{gather}
 $$
@@ -186,9 +186,9 @@ $$
 >Here, uniqueness must be understood as follows: If two people $A$ and $B$ construct models independently, say of number systems $\mathbb{R}_{A}$ and $\mathbb{R}_{B}$, satisfying the axioms, then a bijective correspondence can be established between the systems $\mathbb{R}_{A}$ and $\mathbb{R}_{B}$, say $f : \mathbb{R}_{A} \rightarrow \mathbb{R}_{B}$, preserving the arithmetic operations and the order, that is, 
 >$$
 >\begin{gather}
->f(x + y) = f(x) + f(y), \\
->f(x \cdot y) = f(x) \cdot f(y), \\
->x \leq y \iff f(x) \leq f(y).
+>f(x + y) = f(x) + f(y), \\[2mm]
+>f(x \cdot y) = f(x) \cdot f(y), \\[2mm]
+>x \leq y \iff f(x) \leq f(y). \tag{7}
 >\end{gather}
 >$$
 >In this case, from the mathematical point of view, $\mathbb{R}_{A}$ and $\mathbb{R}_{B}$ are merely distinct but equally valid realizations of the real numbers. For example, $\mathbb{R}_{A}$ might be the set of infinite decimal fractions and $\mathbb{R}_{B}$ the set of points on the real number line. Such realizations are *isomorphic* and the mapping $f$ is an *isomorphism*. The result of this mathematical activity is not about any particular realization, but about each model in the class of isomorphic models of the given axiom system. The rest of this module will not focus on discussing the questions posed above, but instead confine itself to giving informative answers to them. 
@@ -207,7 +207,7 @@ $$
 >Assume that for each commodity, Merchant B maintains an individual price markup such that the retail selling price is greater than or equal to the wholesale procurement price:
 >$$
 >\begin{gather}
->c_A \le s_A \quad \text{and} \quad c_O \le s_O
+>c_A \le s_A \quad \text{and} \quad c_O \le s_O \tag{8}
 >\end{gather}
 >$$
 >
@@ -217,20 +217,20 @@ $$
 >According to the multiplicative compatibility axiom, the product of non-negative elements remains non-negative:
 >$$
 >\begin{gather}
->(0 \le x) \wedge (0 \le y) \implies 0 \le x \cdot y
+>(0 \le x) \wedge (0 \le y) \implies 0 \le x \cdot y \tag{9}
 >\end{gather}
 >$$
 >Because the markup margin $(s_A - c_A)$ is non-negative and the purchased mass $q_A$ is non-negative, the scaling property ensures that the total revenue generated by apples dominates total acquisition cost:
 >$$
 >\begin{align}
 >0 \le s_A - c_A \quad \wedge \quad 0 \le q_A &\implies 0 \le q_A(s_A - c_A) \\[2mm]
->&\implies q_A c_A \le q_A s_A
+>&\implies q_A c_A \le q_A s_A \tag{10}
 >\end{align}
 >$$
 >Applying the identical axiom to the orange inventory:
 >$$
 >\begin{gather}
->q_O c_O \le q_O s_O
+>q_O c_O \le q_O s_O \tag{11}
 >\end{gather}
 >$$
 >This step guarantees that scaling an inequality by a non-negative quantity preserves the direction of the inequality.
@@ -241,25 +241,25 @@ $$
 >According to the additive compatibility axiom:
 >$$
 >\begin{gather}
->(x \le y) \implies x + z \le y + z \quad \forall x,y,z \in \mathbb{R}
+>(x \le y) \implies x + z \le y + z \quad \forall x,y,z \in \mathbb{R} \tag{12}
 >\end{gather}
 >$$
 >A direct consequence of this axiom is the addition of simultaneous inequalities:
 >$$
 >\begin{gather}
->(x_1 \le y_1) \wedge (x_2 \le y_2) \implies x_1 + x_2 \le y_1 + y_2
+>(x_1 \le y_1) \wedge (x_2 \le y_2) \implies x_1 + x_2 \le y_1 + y_2 \tag{13}
 >\end{gather}
 >$$
 >Setting $x_1 = q_A c_A$, $y_1 = q_A s_A$, $x_2 = q_O c_O$, and $y_2 = q_O s_O$, the combined expenditure and revenue across both fruit lines satisfy:
 >$$
 >\begin{gather}
->q_A c_A + q_O c_O \le q_A s_A + q_O s_O
+>q_A c_A + q_O c_O \le q_A s_A + q_O s_O \tag{14}
 >\end{gather}
 >$$
 >Furthermore, suppose Merchant A charges a mandatory flat transportation surcharge $F \ge 0$ (in dollars) that Merchant B absorbs into the purchase cost and transfers to the customer. Adding $F$ to both sides preserves the inequality:
 >$$
 >\begin{gather}
->(q_A c_A + q_O c_O) + F \le (q_A s_A + q_O s_O) + F
+>(q_A c_A + q_O c_O) + F \le (q_A s_A + q_O s_O) + F \tag{15}
 >\end{gather}
 >$$
 >Total gross expenditure never exceeds total gross revenue.
@@ -280,7 +280,7 @@ $$
 >\$180.00 &\le \$270.00 \\[4mm]
 >\text{Orange Wholesale Cost:} \quad q_O c_O &= 80\text{ kg} \cdot \$2.00 /\text{kg} = \$160.00 \\[2mm]
 >\text{Orange Retail Revenue:} \quad q_O s_O &= 80\text{ kg} \cdot \$3.10 /\text{kg} = \$248.00 \\[2mm]
->\$160.00 &\le \$248.00
+>\$160.00 &\le \$248.00 \tag{16}
 >\end{align}
 >$$
 >
@@ -288,19 +288,19 @@ $$
 >Summing the wholesale acquisition outlays paid to Merchant A:
 >$$
 >\begin{gather}
->\text{Total Fruit Cost} = \$180.00 + \$160.00 = \$340.00
+>\text{Total Fruit Cost} = \$180.00 + \$160.00 = \$340.00 \tag{17}
 >\end{gather}
 >$$
 >Summing the retail cash inflows received by Merchant B:
 >$$
 >\begin{gather}
->\text{Total Fruit Revenue} = \$270.00 + \$248.00 = \$518.00
+>\text{Total Fruit Revenue} = \$270.00 + \$248.00 = \$518.00 \tag{18}
 >\end{gather}
 >$$
->Since $\$180.00 \le \$270.00$ and $\$160.00 \le \$248.00$:
+>Since $\$180.00 \le \$270.00$ and $\$160.00 \le \$248.00$: 
 >$$
 >\begin{gather}
->\$340.00 \le \$518.00
+>\$340.00 \le \$518.00 \tag{19}
 >\end{gather}
 >$$
 >
@@ -310,13 +310,13 @@ $$
 >\begin{align}
 >\text{Total Outlay} &= \$340.00 + \$35.00 = \$375.00 \\[2mm]
 >\text{Total Inflow} &= \$518.00 + \$35.00 = \$553.00 \\[2mm]
->\$375.00 &\le \$553.00
+>\$375.00 &\le \$553.00 \tag{20}
 >\end{align}
 >$$
 >The net operating profit realized by Merchant B:
 >$$
 >\begin{gather}
->\Pi = \$553.00 - \$375.00 = \$178.00 \ge 0
+>\Pi = \$553.00 - \$375.00 = \$178.00 \ge 0 \tag{21}
 >\end{gather}
 >$$
 >This confirms that under non-negative procurement quantities and non-negative markups, the compatibility axioms of an ordered field guarantee that bilateral trade yields non-negative profit.
@@ -324,19 +324,19 @@ $$
 ---
 # General Algebraic Properties of Real Numbers
 Now that the axioms of addition, multiplication, order, and continuity have been established, useful facts can be deduced from these axioms that enable easier computation of real numbers. Beginning with useful facts for addition: 
-$$\begin{gather} \textbf{Proposition: Consequences of the Addition Axioms} \\[5mm] \text{1. There is only one zero in the set of real numbers.} \\ \text{2. Each element of the set of real numbers has a unique negative.} \\ \text{3. In the set } \mathbb{R}, \text{ the equation } a + x = b \text{ has the unique solution } x = b + (-a) =: b - a. \end{gather}$$
+$$\begin{gather} \textbf{Proposition: Consequences of the Addition Axioms} \\[5mm] \text{1. There is only one zero in the set of real numbers.} \\[2mm] \text{2. Each element of the set of real numbers has a unique negative.} \\[2mm] \text{3. In the set } \mathbb{R}, \text{ the equation } a + x = b \text{ has the unique solution } x = b + (-a) =: b - a. \end{gather}$$
 (see [[Proof of Consequences of Addition Axioms|proof]])
 
-$$\begin{gather} \textbf{Proposition: Consequences of the Multiplication Axioms} \\[5mm] \text{1. There is only one multiplicative unit (one) in the real numbers.} \\ \text{2. For each } x \ne 0, \text{ there is only one reciprocal } x^{-1}. \\ \text{3. For } a \in \mathbb{R} \setminus \{0\}, \text{ the equation } a \cdot x = b \text{ has the unique solution } x = b \cdot a^{-1} =: \frac{b}{a}. \end{gather}$$
+$$\begin{gather} \textbf{Proposition: Consequences of the Multiplication Axioms} \\[5mm] \text{1. There is only one multiplicative unit (one) in the real numbers.} \\[2mm] \text{2. For each } x \ne 0, \text{ there is only one reciprocal } x^{-1}. \\ [2mm] \text{3. For } a \in \mathbb{R} \setminus \{0\}, \text{ the equation } a \cdot x = b \text{ has the unique solution } x = b \cdot a^{-1} =: \frac{b}{a}. \end{gather}$$
 (see [[Proof of Consequences of Multiplication Axioms|proof]])
 
-$$\begin{gather} \textbf{Proposition: Consequences of the Connection Axiom} \\[5mm] \text{For any } x, y \in \mathbb{R}: \\ \text{1. } x \cdot 0 = 0 \cdot x = 0. \\ \text{2. } (x \cdot y = 0) \implies (x = 0) \lor (y = 0). \\ \text{3. } -x = (-1) \cdot x. \\ \text{4. } (-1)(-x) = x. \\ \text{5. } (-x) \cdot y = -(x \cdot y) \text{ and } (-x) \cdot (-y) = x \cdot y. \end{gather}$$
+$$\begin{gather} \textbf{Proposition: Consequences of the Connection Axiom} \\[5mm] \text{For any } x, y \in \mathbb{R}: \\[3.5mm] \text{1. } x \cdot 0 = 0 \cdot x = 0. \\ \text{2. } (x \cdot y = 0) \implies (x = 0) \lor (y = 0). \\ \text{3. } -x = (-1) \cdot x. \\ \text{4. } (-1)(-x) = x. \\ \text{5. } (-x) \cdot y = -(x \cdot y) \text{ and } (-x) \cdot (-y) = x \cdot y. \end{gather}$$
 (see [[Proof of Consequences of Order Axioms|proof]])
 
-$$\begin{gather} \textbf{Proposition: Consequences of the Order Axioms} \\[5mm] \text{Strict inequality } x < y \text{ denotes } (x \le y) \wedge (x \ne y). \\ \text{1. For any } x, y \in \mathbb{R}, \text{ precisely one relation holds: } x < y, \, x = y, \, x > y. \\ \text{2. For any } x, y, z \in \mathbb{R}: \\ (x < y) \wedge (y \le z) \implies (x < z), \\ (x \le y) \wedge (y < z) \implies (x < z). \end{gather}$$
+$$\begin{gather} \textbf{Proposition: Consequences of the Order Axioms} \\[5mm] \text{Strict inequality } x < y \text{ denotes } (x \le y) \wedge (x \ne y). \\[3.5mm] \text{1. For any } x, y \in \mathbb{R}, \text{ precisely one relation holds: } x < y, \, x = y, \, x > y. \\[2mm] \text{2. For any } x, y, z \in \mathbb{R}: \\[2mm] (x < y) \wedge (y \le z) \implies (x < z), \\[2mm] (x \le y) \wedge (y < z) \implies (x < z). \end{gather}$$
 (see [[Proof of Consequences of Order Axioms|proof]])
 
-$$\begin{gather} \textbf{Proposition: Consequences of Order with Addition and Multiplication} \\[5mm] \text{For any } x, y, z, w \in \mathbb{R}: \\ \text{1. } (x < y) \implies (x + z < y + z) \\ \text{2. } (0 < x) \implies (-x < 0) \\ \text{3. } (x \le y) \wedge (z \le w) \implies (x + z \le y + w) \\ \text{4. } (x \le y) \wedge (z < w) \implies (x + z < y + w) \\ \text{5. } (0 < x) \wedge (0 < y) \implies (0 < xy) \\ \text{6. } (x < 0) \wedge (y < 0) \implies (0 < xy) \\ \text{7. } (x < 0) \wedge (0 < y) \implies (xy < 0) \\ \text{8. } (x < y) \wedge (0 < z) \implies (xz < yz) \\ \text{9. } (x < y) \wedge (z < 0) \implies (yz < xz) \\ \text{10. } 0 < 1 \\ \text{11. } (0 < x) \implies (0 < x^{-1}) \\ \text{12. } (0 < x) \wedge (x < y) \implies (0 < y^{-1}) \wedge (y^{-1} < x^{-1}) \end{gather}$$
+$$\begin{gather} \textbf{Proposition: Consequences of Order with Addition and Multiplication} \\[5mm] \text{For any } x, y, z, w \in \mathbb{R}: \\[3.5mm] \text{1. } (x < y) \implies (x + z < y + z) \\[2mm] \text{2. } (0 < x) \implies (-x < 0) \\[2mm] \text{3. } (x \le y) \wedge (z \le w) \implies (x + z \le y + w) \\[2mm] \text{4. } (x \le y) \wedge (z < w) \implies (x + z < y + w) \\[2mm] \text{5. } (0 < x) \wedge (0 < y) \implies (0 < xy) \\[2mm] \text{6. } (x < 0) \wedge (y < 0) \implies (0 < xy) \\[2mm] \text{7. } (x < 0) \wedge (0 < y) \implies (xy < 0) \\[2mm] \text{8. } (x < y) \wedge (0 < z) \implies (xz < yz) \\[2mm] \text{9. } (x < y) \wedge (z < 0) \implies (yz < xz) \\[2mm] \text{10. } 0 < 1 \\[2mm] \text{11. } (0 < x) \implies (0 < x^{-1}) \\[2mm] \text{12. } (0 < x) \wedge (x < y) \implies (0 < y^{-1}) \wedge (y^{-1} < x^{-1}) \end{gather}$$
 (see [[Proof of Consequences of Order with Addition and Multiplication|proof]])
 
 ---
@@ -345,14 +345,14 @@ While the set of real numbers is infinite, it is nonetheless possible to constru
 $$
 \begin{gather}  
 \textbf{Definition: Bounded Sets} \\[5mm]
-\text{A set } X \subset \mathbb{R} \text{ is bounded above (respectively, bounded below) if there} \\ \text{exists a number } c \in \mathbb{R} \text{ such that } x \le c \text{ (respectively, } c \le x \text{) for all } x \in X. \\ \text{The number } c \text{ is called an upper bound (majorant) or lower bound (minorant).} \\ \text{A set bounded both above and below is called bounded.} 
+\text{A set } X \subset \mathbb{R} \text{ is bounded above (respectively, bounded below) if there} \\[2mm] \text{exists a number } c \in \mathbb{R} \text{ such that } x \le c \text{ (respectively, } c \le x \text{) for all } x \in X. \\[2mm] \text{The number } c \text{ is called an upper bound (majorant) or lower bound (minorant).} \\[2mm]\text{A set bounded both above and below is called bounded.} 
 \end{gather}
 $$
 Intuitively, the concept of bounded sets implies that some of them have a "largest" or "least" element that bounds the subset from above or below. This calls for the description of a *minimal* or *maximal* element that bounds said subset:
 $$
 \begin{gather}  
 \textbf{Definition: Maximal and Minimal Elements} \\[5mm] 
-\text{An element } a \in X \text{ is the largest or maximal element (} \max X \text{) if } x \le a \text{ for all } x \in X: \\[2.5mm] (a = \max X) := (a \in X) \wedge \forall x \in X \, (x \le a). \\[2.5mm] \text{Similarly, for the minimal element (} \min X \text{):} \\[2.5mm] (a = \min X) := (a \in X) \wedge \forall x \in X \, (a \le x). 
+\text{An element } a \in X \text{ is the largest or maximal element (} \max X \text{) if } x \le a \text{ for all } x \in X: \\[3.5mm] (a = \max X) := (a \in X) \wedge \forall x \in X \, (x \le a). \\[3.5mm] \text{Similarly, for the minimal element (} \min X \text{):} \\[3.5mm] (a = \min X) := (a \in X) \wedge \forall x \in X \, (a \le x). 
 \end{gather}
 $$
 
@@ -362,9 +362,9 @@ $$
 $$
 \begin{gather}
 \textbf{Definition: Least Upper Bound and Greatest Lower Bound} \\[5mm]
-\text{The least upper bound (supremum) of a set } X \text{ bounded above is denoted } \sup X: \\[2.5mm]
-(s = \sup X) := \forall x \in X \, (x \le s) \wedge \forall s' < s \ \exists x' \in X \, (s' < x'). \\[2.5mm]
-\text{The greatest lower bound (infimum) of a set } X \text{ bounded below is denoted } \inf X: \\[2.5mm]
+\text{The least upper bound (supremum) of a set } X \text{ bounded above is denoted } \sup X: \\[3.5mm]
+(s = \sup X) := \forall x \in X \, (x \le s) \wedge \forall s' < s \ \exists x' \in X \, (s' < x'). \\[3.5mm]
+\text{The greatest lower bound (infimum) of a set } X \text{ bounded below is denoted } \inf X: \\[3.5mm]
 (i = \inf X) := \forall x \in X \, (i \le x) \wedge \forall i' > i \ \exists x' \in X \, (x' < i').
 \end{gather}
 $$
@@ -372,7 +372,7 @@ The notation used for defining the least upper bound and greatest lower bound is
 $$
 \begin{gather}
 \textbf{Definition: Least Upper and Greatest Lower Bound (Concise Version)} \\[5mm]
-\sup X := \min \{ c \in \mathbb{R} \mid \forall x \in X \, (x \le c) \} \\[2.5mm]
+\sup X := \min \{ c \in \mathbb{R} \mid \forall x \in X \, (x \le c) \} \\[3.5mm]
 \inf X := \max \{ c \in \mathbb{R} \mid \forall x \in X \, (c \le x) \}
 \end{gather}
 $$
@@ -380,7 +380,7 @@ Given that not every set has a minimal or maximal element, the definitions provi
 $$
 \begin{gather}
 \textbf{Lemma: The Least Upper Bound Principle} \\[5mm]
-\text{Every non-empty set of real numbers that is bounded from above has a} \\
+\text{Every non-empty set of real numbers that is bounded from above has a} \\[2mm]
 \text{unique least upper bound.}
 \end{gather}
 $$
@@ -390,7 +390,7 @@ Naturally, the existence and uniqueness of the greatest lower bound of a non-emp
 $$
 \begin{gather} 
 \textbf{Lemma: The Greatest Lower Bound Principle} \\[5mm]
-\text{Every non-empty set of real numbers that is bounded from below has a} \\
+\text{Every non-empty set of real numbers that is bounded from below has a} \\[2mm]
 \text{unique greatest lower bound.}
 \end{gather}
 $$

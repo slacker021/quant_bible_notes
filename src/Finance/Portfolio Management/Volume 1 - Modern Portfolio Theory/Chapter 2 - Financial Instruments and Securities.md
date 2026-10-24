@@ -10,13 +10,13 @@ In any economy, the purchase of a good or service comes with a *price*. Intuitiv
 $$
 \begin{gather}
 \textbf{Definition: Relative Asset Price} \\[5mm]
-\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \ge 0}, \mathbb{P}) \text{ be a filtered probability space representing the} \\
-\text{stochastic environment and information flow of a financial economy over a time horizon } \\
-t \in [0,T]. \text{ Additionally, let } \mathcal{A} \text{ denote the set of strictly positive non-worthless} \\
-\text{financial assets available in the economy. For any two assets } X \text{ and } Y \in \mathcal{A},  \\
-\text{the asset } Y \text{ is selected to serve as the reference asset or numeraire. } \\
+\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \ge 0}, \mathbb{P}) \text{ be a filtered probability space representing the} \\[2mm]
+\text{stochastic environment and information flow of a financial economy over a time horizon } \\[2mm]
+t \in [0,T]. \text{ Additionally, let } \mathcal{A} \text{ denote the set of strictly positive non-worthless} \\[2mm]
+\text{financial assets available in the economy. For any two assets } X \text{ and } Y \in \mathcal{A},  \\[2mm]
+\text{the asset } Y \text{ is selected to serve as the reference asset or numeraire. } \\[2mm]
 \text{The price process of asset } X \text{ relative to numeraire } Y \text{ at time } t \text{ is defined as an } \\ \mathcal{F}_t\text{-adapted strictly positive stochastic process denoted by } X_{Y}(t). \text{ Formally, } X_{Y}(t) \\
-\text{represents the number of units of asset Y required to acquire one unit of asset } X \text{ at time } t:  \\[2.5mm]
+\text{represents the number of units of asset Y required to acquire one unit of asset } X \text{ at time } t:  \\[3.5mm]
 
 \text{1 unit of } X = X_{Y}(t) \text{ units of Y } \iff X_{t} = X_{Y}(t) \cdot Y_{t} \text{ for } X_{Y}(t)
 \end{gather}
@@ -28,19 +28,18 @@ From this pairwise algebraic definition arises several structural properties. Th
 $$
 \begin{gather}
 \textbf{Axiom: Inverse Price Symmetry (Reciporocal Relation)} \\[5mm]
-\text{If neither asset } X \text{ nor asset } Y \text{ is worthless } (0 < X_{Y}(t) < \infty), \text{ the price of asset } Y  \\
-\text{using asset } X \text{ as the numeraire, } \text{ denoted by } Y_{X}(t), \text{ is the multiplicative inverse of } X_{Y}(t):  \\[2.5mm]
-
+\text{If neither asset } X \text{ nor asset } Y \text{ is worthless } (0 < X_{Y}(t) < \infty), \text{ the price of asset } Y  \\[2mm]
+\text{using asset } X \text{ as the numeraire, } \text{ denoted by } Y_{X}(t), \text{ is the multiplicative inverse of } X_{Y}(t):  \\[3.5mm]
 Y_{X}(t) = \frac{1}{X_{Y}(t)}
 \end{gather}
 $$
-To prevent risk-free *arbitrage* opportunities between economic participants, the identity $X_Y(t) \cdot Y_X(t) = 1$ must hold almost surely at all times $t$. 
+To prevent risk-free *arbitrage* opportunities between economic participants, the identity $X_Y(t) \cdot Y_X(t) = 1$ must hold almost surely at all times $t$.
 
 $$
 \begin{gather}
 \textbf{Axiom: Change of Numeraire (Transitivity): } \\[5mm]
-\text{For any valid non-zero assets } X,Y,Z \in \mathcal{A}, \text{ the price of asset } X \text{ in terms of } \\
-\text{numeraire } Y \text{ can be decomposed through an intermediate reference asset } Z:  \\[2.5mm]
+\text{For any valid non-zero assets } X,Y,Z \in \mathcal{A}, \text{ the price of asset } X \text{ in terms of } \\[2mm]
+\text{numeraire } Y \text{ can be decomposed through an intermediate reference asset } Z:  \\[3.5mm]
 X_Y(t) = X_Z(t) \cdot Z_Y(t) = \frac{X_Z(t)}{Y_Z(t)}
 \end{gather}
 $$
@@ -49,9 +48,9 @@ This coordinate transformation relation allows for the translation of pricing pr
 $$
 \begin{gather}
 \textbf{Axiom: Linearity of Asset Combinations} \\[5mm]
-\text{Let } P_{t} = \sum_{i = 1}^N \Delta^i(t) \cdot X^i \text{ represent a portfolio formed by linear combinations of assets } \\
-X^i \in \mathcal{A} \text{ held in quantities } \Delta^i(t). \text{ The price process of the portfolio } P \text{ relative to }\ \\
-\text{numeraire } Z \text{ exhibits linearity: } \\[2.5mm]
+\text{Let } P_{t} = \sum_{i = 1}^N \Delta^i(t) \cdot X^i \text{ represent a portfolio formed by linear combinations of assets } \\[2mm]
+X^i \in \mathcal{A} \text{ held in quantities } \Delta^i(t). \text{ The price process of the portfolio } P \text{ relative to }\ \\[2mm]
+\text{numeraire } Z \text{ exhibits linearity: } \\[3.5mm]
 P_Z(t) = \left[ \sum_{i=1}^N \Delta^i(t) \cdot X^i \right]_Z (t) = \sum_{i=1}^N \Delta^i(t) \cdot X_Z^i(t)
 \end{gather}
 $$
@@ -101,12 +100,12 @@ Alas, doing one of two of these steps is easier said than done. In such a circum
 $$
 \begin{gather} \textbf{Definition: Credit} \\[5mm] 
 \text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \ge 0}, \mathbb{P}) \text{ be a filtered probability space governing the economy.} \\ \text{Credit is an intertemporal financial contract wherein a borrower acquires immediate}
-\\ \text{spot numeraire at time } t \text{ by issuing an enforceable liability process } L_t \text{ against}  \\
-\text{their stochastic future cash flows or wealth endowment } \mathcal{F}_T. \\
-\text{Formally, credit is represented as a short position in a no-arbitrage reference asset—}  \\
-\text{either a zero-coupon bond } B^T \text{ or a money market account } M(t) \text{ satisfying } \\[2.5mm]
-dM_{\$}(t) = r(t) M_{\$}(t) \, dt, \\[2.5mm]
-\text{requiring the future delivery of } (1 + \delta L(t,T)) \text{ units of numeraire at maturity } T, \\
+\\ \text{spot numeraire at time } t \text{ by issuing an enforceable liability process } L_t \text{ against}  \\[2mm]
+\text{their stochastic future cash flows or wealth endowment } \mathcal{F}_T. \\[2mm]
+\text{Formally, credit is represented as a short position in a no-arbitrage reference asset—}  \\[2mm]
+\text{either a zero-coupon bond } B^T \text{ or a money market account } M(t) \text{ satisfying } \\[3.5mm]
+dM_{\$}(t) = r(t) M_{\$}(t) \, dt, \\[3.5mm]
+\text{requiring the future delivery of } (1 + \delta L(t,T)) \text{ units of numeraire at maturity } T, \\[2mm]
 \text{priced under the appropriate martingale measure } \mathbb{P}^T \text{ adjusted for default risk.} 
 \end{gather}
 $$
@@ -128,14 +127,14 @@ Formally speaking, equity can be formally defined as
 $$
 \begin{gather}
 \textbf{Definition: Equity } \\[5mm]
-\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_{t} \}_{t \geq 0}, \mathbb{P}) \text{ be a filtered probability space representing the economy. } \\
-\text{Equity is a perpetual and subordinated financial claim } S_{t} \text{ representing the residual } \\
-\text{ownership interest in an economic asset process } A_{t} \text{ after satisfying all senior credit } \\
-\text{liabilities } L_{t}. \text{ Formally, over a liability settlement horizon } T \text{ with total debt obligation } D,  \\
-\text{equity is a continuous contingent claim whose terminal value relative to numeraire } Y \text{ is } \\
-\text{given by } \\[2.5mm]
-S_{Y}(T) = \text{max}(A_{Y}(T) - D \cdot Y_{Y}(T), 0) \\[2.5mm]
-\text{and whose price process}\textemdash\text{when adjusted for reinvested cash yields } \tilde{S}_{t}\textemdash\text{serves as a valid } \\
+\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_{t} \}_{t \geq 0}, \mathbb{P}) \text{ be a filtered probability space representing the economy. } \\[2mm]
+\text{Equity is a perpetual and subordinated financial claim } S_{t} \text{ representing the residual } \\[2mm]
+\text{ownership interest in an economic asset process } A_{t} \text{ after satisfying all senior credit } \\[2mm]
+\text{liabilities } L_{t}. \text{ Formally, over a liability settlement horizon } T \text{ with total debt obligation } D,  \\[2mm]
+\text{equity is a continuous contingent claim whose terminal value relative to numeraire } Y \text{ is } \\[2mm]
+\text{given by } \\[3.5mm]
+S_{Y}(T) = \text{max}(A_{Y}(T) - D \cdot Y_{Y}(T), 0) \\[3.5mm]
+\text{and whose price process}\textemdash\text{when adjusted for reinvested cash yields } \tilde{S}_{t}\textemdash\text{serves as a valid } \\[2mm]
 \text{reference asset generating the equivalent of stock measure } \mathbb{P}^{S}. 
 \end{gather}
 $$
@@ -175,11 +174,7 @@ In addition to fungibility, securities also exhibit increased *liquidity*. Liqui
 Due to the vast amount of securities in existence, this chapter'll only focus on securities traded in modern financial marketplaces.  
 ### Types of Marketable Securities
 An investor can choose to purchase directly any one of a number of different securities, many of which represent a type of claim on a private or government entity. Alternatively, the investor can opt to purchase securities through an intermediary, which bundles a set of direct investments and then sells the shares in the portfolio of financial instruments it holds. Below is a visual aid in helping remember the structure of marketable securities: 
-<<<<<<< HEAD
-![[visual_aid_for_family_of_securities.png]]
-=======
 ![[visual_aid_securities.png]]
->>>>>>> 631f700 (* Corrected tikz figures)
 Investments in debt that have a maturity of less than one year are *money market securities*, which can be issued by a government or private entity. Investments with maturities of a year or longer are *capital market* instruments, which come in the form of equity or credit. In the case of credit-based capital market instruments, these can be issued by government or private entities. The final category of security are derivative instruments. In the case of securities, the four derivative classes are *forwards, futures, options, and swaps.*
 
 Below are notable examples of securities that make the bulk of financial activity in modern markets: 
@@ -317,7 +312,6 @@ While there're many collective investment vehicles, below are currently the most
 # Return Characteristics of Assets
 One of the core tenets of portfolio management are risk and return, where investors like high return but dislike high risk. The tradeoff between risk and return is complex, requiring a rigorous and un-ambiguous definition of both terms, but a simple way to visualize the relationship with risk and return is through the following diagram:
 ![[risk_return_matrix.png]]
-
 When discussing the tradeoff between potential risk and return, it's important to understand what is meant by "return." There are many ways to measure return but in most cases, the following definition of return will be used: 
 $$
 \begin{gather}
@@ -344,8 +338,8 @@ With the many types of assets available for investing in the market, there comes
 $$
 \begin{gather}
 \textbf{Definition: Index} \\[5mm]
-\text{An index represents a standardized and quantifiable proxy for measuring the} \\
-\text{continuous price or tota return dynamics of a defined basket of financial securities. } \\
+\text{An index represents a standardized and quantifiable proxy for measuring the} \\[2mm]
+\text{continuous price or tota return dynamics of a defined basket of financial securities. }
 \end{gather}
 $$
 
@@ -354,11 +348,11 @@ The weight $w_{i,t}$ assigned to constituent security $i$ at time $t$ dictates h
 $$
 \begin{gather}
 \textbf{Definition: Price-Weighted Index} \\[5mm]
-\text{If } P_{i,t} \text{ is the price of an asset, then the individual weight of each} \\
-\text{asset is measured as } \\[2.5mm]
-w_{i,t} = \frac{P_{i,t}}{\sum^N_{j=1} P_{j,t}} \\[2.5mm]
-\text{The index level } I_{t} \text{ at time } t \text{is expressed as an adjusted advisor that absorbs corporate} \\
-\text{actions such as stock splits, reverse splits, and constituent replacements: } \\[2.5mm]
+\text{If } P_{i,t} \text{ is the price of an asset, then the individual weight of each} \\[2mm]
+\text{asset is measured as } \\[3.5mm]
+w_{i,t} = \frac{P_{i,t}}{\sum^N_{j=1} P_{j,t}} \\[3.5mm]
+\text{The index level } I_{t} \text{ at time } t \text{is expressed as an adjusted advisor that absorbs corporate} \\[2mm]
+\text{actions such as stock splits, reverse splits, and constituent replacements: } \\[2mm]
 I_t = \frac{\sum_{i=1}^N P_{i,t}}{D_t}
 \end{gather}
 $$
@@ -368,10 +362,10 @@ One notable characteristic of a price-weighted index is that a higher-priced ass
 $$
 \begin{gather}
 \textbf{Definition: Value-Weighted Index} \\[5mm]
-\text{If } P_{i,t} \text{ is the price of an asset and } Q_{i,t} \text{ is the total number of units of the asset in the economy, } \\
-\text{then the individual weight of each asset is measured as} \\[2.5mm]
-w_{i,t} = \frac{P_{i,t} \, Q_{i,t}}{\sum_{j=1}^N P_{j,t} \, Q_{j,t}} \\[2.5mm]
-\text{The index relative to a base data value } I_{0} \text{ is } \\[2.5mm]
+\text{If } P_{i,t} \text{ is the price of an asset and } Q_{i,t} \text{ is the total number of units of the asset in the economy, } \\[2mm]
+\text{then the individual weight of each asset is measured as} \\[2mm]
+w_{i,t} = \frac{P_{i,t} \, Q_{i,t}}{\sum_{j=1}^N P_{j,t} \, Q_{j,t}} \\[2mm]
+\text{The index relative to a base data value } I_{0} \text{ is } \\[2mm]
 I_t = \frac{\sum_{i=1}^N P_{i,t} \, Q_{i,t}}{\sum_{i=1}^N P_{i,0} \, Q_{i,0}} \times I_0
 \end{gather}
 $$
@@ -384,7 +378,7 @@ This index has three primary characteristics:
 $$
 \begin{gather}
 \textbf{Definition: Equal-Weighted Indices} \\[5mm]
-\text{An index where every asset is assigned an identical portfolio weight},  \\
+\text{An index where every asset is assigned an identical portfolio weight},  \\[2mm]
 \text{where } w_{i,t} = \frac{1}{N} \text{at each balancing interval. }
 \end{gather}
 $$
@@ -397,10 +391,10 @@ In the architecture of index construction and quantitative benchmark design, the
 $$
 \begin{gather}
 \textbf{Definition: Arithmetic Averaging} \\[5mm]
-\text{Measures the additing relative performance of constituent security } \\
-\text{prices or total capitalization of an asset across a single period. } \\
+\text{Measures the additing relative performance of constituent security } \\[2mm]
+\text{prices or total capitalization of an asset across a single period. } \\[2mm]
 \text{The index value at a specific time } t \text{ is defined as 
-} \\[2.5mm]
+} \\[3.5mm]
 I_{t} = I_{t-1} \cdot \left(\sum^N_{i=1} w_{i,t} \frac{P_{i,t}}{P_{i,t-1}}\right)
 \end{gather}
 $$
@@ -410,9 +404,9 @@ Arithmetic value-weighted indices provide an accurate representation of aggregat
 $$
 \begin{gather}
 \textbf{Definition: Geometric Averaging} \\[5mm]
-\text{Measures relative performance via multiplicative compounding across } \\
-\text{constituent price relatives. It calculates the } N\text{th root of the product of } \\
-\text{relative price changes. } \\[2.5mm]
+\text{Measures relative performance via multiplicative compounding across } \\[2mm]
+\text{constituent price relatives. It calculates the } N\text{th root of the product of } \\[2mm]
+\text{relative price changes. } \\[3.5mm]
  I_t = I_{t-1} \times \left( \prod_{i=1}^N \frac{P_{i,t}}{P_{i,t-1}} \right)^{\frac{1}{N}}
 \end{gather}
 $$

@@ -5,7 +5,7 @@ Users can pull the latest changes from the remote git repository using `git pull
 
 ---
 # Fetching
-One option the user has is *fetching*, which is done via `git fetch`.  This is purely a download operation that reaches out to the remote repository and downloads only the latest information about what exists on that server. This doesn't modify any of the local branches that the information is downloaded to, nor does it perform a merge commit or attempt to solve any conflicts within the working directory. It simply  updates the user's local repository’s knowledge of the remote state, typically storing these incoming references under names like `origin/main` (the version of main as seen by the remote).
+One option the user has is *fetching*, which is done via `git fetch`.  This is purely a download operation that reaches out to the remote repository and downloads only the latest information existing on that server. This does not modify any of the local branches that the information is downloaded to, nor does it perform a merge commit or attempt to solve any conflicts within the working directory. It simply updates the user's local repository’s knowledge of the remote state, typically storing these incoming references under names like `origin/main` (the version of main as seen by the remote).
 
 >[!warning]+ Warning: Inspect before Doing
 >This is critical for allowing the user to decide what to do before pulling changes. By fetching first, the user can determine what changes may conflict with local files. This is recommended as being the first thing the user does before *pulling*. 
