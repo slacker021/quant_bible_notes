@@ -1,33 +1,50 @@
 ---
 dg-publish: true
 ---
-Users can pull the latest changes from the remote git repository using `git pull`. This is simply a `git fetch` followed by a `git merge`. 
+Remote changes are integrated into a local repository using `git pull`. Conceptually, this operation executes a `git fetch` to download upstream objects, followed immediately by an integration step (typically `git merge` or `git rebase`) into the active branch.
 
 ---
 # Fetching
-One option the user has is *fetching*, which is done via `git fetch`.  This is purely a download operation that reaches out to the remote repository and downloads only the latest information existing on that server. This does not modify any of the local branches that the information is downloaded to, nor does it perform a merge commit or attempt to solve any conflicts within the working directory. It simply updates the user's local repository’s knowledge of the remote state, typically storing these incoming references under names like `origin/main` (the version of main as seen by the remote).
+Fetching is executed via `git fetch`. This is strictly a read-only transport operation that queries the remote repository and downloads new commits, trees, and refs without modifying the active working tree or altering local branch pointers. 
 
->[!warning]+ Warning: Inspect before Doing
->This is critical for allowing the user to decide what to do before pulling changes. By fetching first, the user can determine what changes may conflict with local files. This is recommended as being the first thing the user does before *pulling*. 
+Incoming references are written to remote-tracking branches (such as `origin/main`), updating the local repository's knowledge of the upstream state. Because local branches remain untouched, no merge conflicts can occur during a fetch.
+
+>[!warning]+ Warning: Inspection Prior to Integration
+>Fetching prior to merging enables inspection of upstream divergence. By evaluating diffs between `HEAD` and the updated remote-tracking branch (e.g., `git log HEAD..origin/main`), developers can identify structural conflicts before altering local working files.
 
 ---
 # Pulling
- `pull` is a convenient, two-step shortcut that combines two distinct operations: `git fetch` followed by `git merge`. This is often convenient as it automatically attempts to perform the merge. While there are many ways of pulling, the three most common ways are as follows: 
-
-### Rebasing
-`git pull --rebase` pulls all the latest commits from the remote repository and layers them on top of the latest commit of the local repository. This is a clean and convenient option that eliminates the need to merge manually. 
-
-### Standard Pull
-`git pull` or `git pull --ff-only` is the standard means of pulling information from the remote repository. This results in an automatic merge commit, which prompts the user to enter a commit message before finalizing the merge. 
+`git pull` combines `git fetch` with an automated history reconciliation step. Depending on project workflow conventions and repository configuration, integration is executed through three standard strategies:
 
 ### Fast-Forward Only
-`git pull -ff-only` is similar to standing pulling but will immediately stop the merge attempt, simply updating the branch pointer. Instead of generating an unexpected merge commit, which can result in merge conflicts, it immediately aborts the process. This gives the user the change to inspect the changes and manually decide if they want to merge it as normal, or rebase it. 
+Executing `git pull --ff-only` integrates upstream commits only if the active branch has not diverged from the remote tracking branch. If local commits exist that do not exist upstream, Git immediately aborts the operation without generating a merge commit:
+```powershell
+git pull --ff-only
+```
+This strategy prevents accidental merge commits and preserves repository topology, prompting manual inspection if histories have diverged.
 
->[!info]+ Remark: Self-Pacing
->This is ideal for beginners or those who want to inspect the code at their own pace. Note that its possible to alter the default pulling behavior via the CLI: 
+### Standard Integration (Three-Way Merge)
+A standard `git pull` fetches remote references and initiates a merge. If a linear fast-forward is possible, Git advances the branch pointer directly. If histories have diverged, Git creates a dedicated three-way merge commit combining both lines of development:
+```powershell
+git pull
+```
+
+To mandate the creation of an integration merge commit even when a fast-forward is possible, the `--no-ff` flag is specified:
+```powershell
+git pull --no-ff
+```
+
+### Rebasing
+Invoking `git pull --rebase` fetches remote commits and temporarily shelves local unpushed commits. Git resets the local branch pointer to match the upstream tip, then replays each local commit sequentially on top of the remote changes:
+```powershell
+git pull --rebase
+```
+This eliminates redundant merge commits and maintains a linear project history. If conflicts arise, Git pauses at the problematic commit to allow manual resolution before continuing the rebase.
+
+>[!info]+ Remark: Configuring Default Pull Behavior 
+>Modern versions of Git require an explicit integration reconciliation strategy. The default behavior for the local or global environment is configured via the CLI:
 >```powershell
->git config pull.rebase false # merge
->git config pull.rebase # rebase
->git config pull.ff only # fast-forward only
+>git config pull.rebase false # Standard merge (fast-forward if possible)
+>git config pull.rebase true  # Rebase local commits onto upstream
+>git config pull.ff only      # Fast-forward only; abort if divergent
 >```
->Newer versions of git even require users to set the default behavior. 

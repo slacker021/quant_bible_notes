@@ -1,34 +1,45 @@
 ---
 dg-publish: true
 ---
-`git merge` can be used to take two separate lines of development, which are represented by two distinct branches, and calculates the minimal set of changes necessary to reconcile both histories into a single unified branch history. Git's repository control system can be viewed as a *Direct Acyclic Graph*, where when a user creates a secondary branch from another branch, Git creates snapshot at a specific point in time, allowing development to proceed on an alternate path. `git merge` allows for the secondary branch to be stitched back into its origin branch, ensuring that no changes are lost during transition. 
+`git merge` reconciles two separate lines of development—represented by distinct branches—by computing the minimal changeset required to integrate their independent histories into a single unified branch. Git models repository history as a *Directed Acyclic Graph* (DAG). When a branch diverges from an existing line of development, Git captures commit snapshots along that alternate path. `git merge` provides the topological mechanism to rejoin that divergent history into the parent lineage, ensuring that changes are preserved without regression.
 
 ---
 # The Main Use of Merging
-The primary function of the merge commit is threefold: 
-1. **Historical Record:** It explicitly documents where and when two branches were intended to meet. The parent pointers of a merge commit point back to the tips of both converging branches, rather than just one. This creates a non-linear graph structure that tells users exactly which independent streams of work contributed to this specific integrated state.
-2. **Non-Destructive Integration:** It provides an audit trail. If something breaks after the merge, users can always point back to the merge commit and examine the inputs from both parent histories. This is paramount for debugging complex systems or analyzing systemic failures in a branch as it shows users which components came from which development path.
-3. **Clarity of Intent:** It signifies a conscious decision in the development lifecycle that declares that these two sets of changes are now considered stable and integrated. 
+The primary function of a merge commit is threefold: 
+1. **Historical Record:** It explicitly documents where and when two branches converged. The parent pointers of a merge commit reference the tips of both converging branches rather than a single predecessor. This preserves a non-linear graph structure that records which independent streams of work produced the integrated repository state.
+2. **Non-Destructive Integration:** It establishes a traceable audit trail. If regressions emerge following an integration, the merge commit allows developers to inspect the discrete inputs from both parent histories, isolating root causes in complex multi-developer systems.
+3. **Clarity of Intent:** It demarcates a stable integration milestone in the development lifecycle, formalizing that two sets of independent changes have satisfied testing and review contracts.
 
 ---
-# Three Common Ways to Merge
-There are many ways to perform commits but below are the most common and standard ways of doing so: 
->[!warning]+ Warning: Current Branch
->Before using `git merge`, the user must know what branch they are on, which should be the branch that's to be committed against. Once the merge is performed, Git takes all changes from the target branch onto the current branch. 
+# Three Common Ways to Integrate Changes
+Branch changes can be reconciled into a target line of development through three primary integration strategies:
+
+>[!warning]+ Warning: Active Working Branch (`HEAD`)
+>Before invoking `git merge`, verify the active working branch. The current branch (`HEAD`) must be the receiving branch (the merge destination). Upon execution, Git applies all incoming changes from the source branch into the active branch.
+
 ### Standard Integration Merge
-- **Use Case:** This is the default, most robust method that involves merging an entire branch’s history into their current branch (e.g., merging `feature/auth` into `develop`).
-- **What it does:** Git identifies a Common Ancestor Point and then fast-forwards or creates a merge commit incorporating all unique commits from the source branch that haven’t been integrated yet.
-- **When to use it:** Whenever the user wants the full unedited history of the feature development preserved in their project’s timeline. This is the safest, most traceable method.
-- Standard syntax is `git merge <branch_name>`
+- **Use Case:** Merging a completed feature or release branch into an integration line (e.g., merging `feature/order-routing` into `develop`).
+- **Mechanism:** Git identifies the merge base (the common ancestor commit of both branches) and executes either a fast-forward (advancing the pointer if no divergence occurred) or a three-way merge commit that incorporates all intermediate commits from the source branch.
+- **When to Use:** When the entire unedited development history, commit granularities, and author metadata must be preserved intact.
+```Powershell
+git merge <branch_name>
+```
 
-### The Squashed Merge
-- **Use Case:** When a feature branch has many small iterative “work-in-progress” commits (e.g., `fix typo`, `oops revert`, `almost there`). Bringing all these messy commits into `main` makes it noisy and unreadable.
-- **What it does:** Instead of creating a merge commit that brings in all individual commits, this command gathers the net changes from the entire source branch and stages them as if they were one single, monolithic change set. This requires the user to manually create a clean and meaningful commit message for this combined work.
-- **When to use it:** When the user wants the effect of merging (all code is now together) but only want to record the _semantic unit of work_ (one clean commit) on their main branch history. This keeps the core development graph elegant and focused.
-- Standard syntax is `git merge --squash <branch_name>`
+### Squashed Merge
+- **Use Case:** Integrating feature branches that contain numerous local, work-in-progress, or checkpoint commits that would introduce noise into the core repository history.
+- **Mechanism:** Instead of creating a merge commit with multiple parent pointers, Git aggregates the cumulative diff of the source branch, stages the result in the working tree as a single combined changeset, and prompts the user for a single semantic commit message.
+- **When to Use:** When the project demands that the mainline history record only cohesive, discrete units of work without intermediate trial-and-error commits.
 
-### Targeted Commits
-- **Use Case:** When the user discovers a single, critical fix or function developed in one area that belongs in another area right now, but it isn’t part of any larger branch integration yet.
-- **What it does:** It takes the exact changes introduced by a single commit (identified by its unique SHA hash) and applies those patch changes onto the user's current working state, creating a brand-new commit with those changes. The history is kept clean because only one specific unit of work was moved.
-- **When to use it:** This is useful for hotfixes or cherry-picking essential fixes from development branches back into release branches without merging the entire messy feature set.
-- Standard syntax is `git cherry-pick <commit_hash>` 
+```Powershell
+git merge --squash <branch_name>
+```
+
+
+### Cherry-Picking
+- **Use Case:** Transplanting an isolated fix, security patch, or utility function from one branch directly onto another without integrating the remainder of the source branch.
+- **Mechanism:** Git extracts the patch introduced by a specific commit hash and applies it cleanly onto the current `HEAD`, creating a brand-new commit with identical diff semantics but an independent commit identifier and timestamp.
+- **When to Use:** When backporting hotfixes from development into production release branches, or extracting specific bug fixes from experimental branches without merging unverified features.
+
+```Powershell
+git cherry-pick <commit_hash>
+```

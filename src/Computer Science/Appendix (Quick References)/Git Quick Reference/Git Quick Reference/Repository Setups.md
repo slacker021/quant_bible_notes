@@ -1,95 +1,115 @@
 ---
 dg-publish: true
 ---
-After creating the *repository* using `git init`, users must set up several global configurations for smoother workflows. While Git allows users to setup their workflows with hundreds of combinations, majority of them are irrelevant and exist merely for niche purposes. Below are the most important setups users must take note of when setting up their git repositories: 
+After creating a repository using `git init`, developers establish baseline configurations to standardize commit metadata, editor integration, and line-ending handling across environments. While Git provides hundreds of configuration options, a small subset of core settings ensures operational stability and cross-platform compatibility.
 
 ---
-# Local Git 
+# Local Git Configuration
 
-### Minimum
-The user may first specify their preferred text editor: 
+### Minimum Required Settings
+Specifying the default text editor for authoring commit messages and resolving interactive rebases:
 ```powershell
-git config --system core.editor editor_name
-git config --global core.editor editor_name
-git config --local core.editor editor_name
-```
-Next thing to ensure is that the user's chosen text editor is allowed to wait while a commit message is being written:
-```powershell
-git config --system core.editor "editor_name --wait" # applied to all users on system
-git config --global core.editor "editor_name --wait" # applied to all repositories for the current user
-git config --local core.editor "editor_name --wait" # applied to current repo only
-```
-There's sometimes an error that causes git to abort commits prematurely. Once the error has been settled, the next step is to set up the identity of the user: 
-```powershell
-git config --system user.name "name of dev" # applied to all users on system
-git config --global user.name "name of dev" # applied to all repositories for the current user
-git config --local user.name "name of dev" # applied to current repo only
-
-git config --system user.email "user.email@example.com" # applied to all users on system
-git config --global user.email "user.email@example.com" # applied to all repositories for the current user
-git config --local user.email "user.email@example.com" # applied to current repo only
+git config --system core.editor "<editor_name>" # Applied system-wide to all users
+git config --global core.editor "<editor_name>" # Applied to the active user account
+git config --local core.editor "<editor_name>"  # Applied exclusively to the active repository
 ```
 
-### Recommended
-While the code above is what the user must do to get the setup running, the code below is recommended so as to greatly improve workflow: 
+For external GUI editors (such as VS Code or Sublime Text), the `--wait` flag must be passed to prevent Git from completing the commit before the editor window closes:
 ```powershell
-git config --global init.defaultBranch master_branch_name # state main branch
-```
-The user may also dictate the behavior of *line endings*, which vary depending on the user's operating system: 
-```powershell
-git config --global core.autocrlf true # for Linux or Mac
-git config --global core.autocrlf true # for Windows
+git config --global core.editor "<editor_name> --wait"
 ```
 
-Git configuration settings can be viewed using
-```julia
-git config --list # list all settings
-git config --list --show-origin # show locations of where changes are stored
+Configuring author identity metadata attached to every generated commit:
+```powershell
+# Global configuration (user-level)
+git config --global user.name "Developer Name"
+git config --global user.email "developer.email@example.com"
+
+# Local repository overrides
+git config --local user.name "Developer Name"
+git config --local user.email "developer.email@example.com"
 ```
-Specific settings may be viewed using lines like
+
+### Recommended Workflow Settings
+Configuring the initial branch name for newly initialized repositories (`git init`):
+```powershell
+git config --global init.defaultBranch main
+```
+
+Standardizing line-ending normalization (`core.autocrlf`) to prevent cross-platform CRLF/LF churn:
+```powershell
+# Windows (converts LF to CRLF on checkout, CRLF to LF on commit)
+git config --global core.autocrlf true
+
+# Linux and macOS (converts CRLF to LF on commit; retains LF on checkout)
+git config --global core.autocrlf input
+```
+
+Inspecting active configuration values:
+```powershell
+git config --list              # List all resolved configuration entries
+git config --list --show-origin # List entries along with their origin file paths
+```
+
+Querying specific configuration keys:
 ```powershell
 git config user.name
 git config user.email
 git config core.editor
 ```
 
-### Advanced Configurations
-More advanced configurations can be set up using the following: 
+### Advanced Configurations and Aliases
+Enabling terminal color formatting:
 ```powershell
-git config --global color.ui # enable colorful output
+git config --global color.ui auto
+```
 
-# below are some examples of ways to set aliases (abreviations) for common commands:
+Defining command aliases to streamline frequent command sequences:
+```powershell
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
-git config --global alias.st
+git config --global alias.st status
+git config --global alias.unstage "reset HEAD --"
+git config --global alias.last "log -1 HEAD"
+```
 
-# configure pull behavior
+Enforcing rebase workflows as the default integration behavior for `git pull`:
+```powershell
 git config --global pull.rebase true
 ```
 
 ---
-
-# Remote Git
-Setting up a remote git repository can be done by first doing to a remote repository hoster, such as *Github*, *Bitbucket*, or *GitLab*. Once there, the user can navigate the GUI to create the empty repository on the server. After the remote repository has been set up, the user can link their local repository to the git repository. This is done by first establishing the remote connection: 
+# Remote Repositories
+To synchronize local development with a remote hosting platform (such as GitHub, GitLab, or Bitbucket), create an empty repository on the remote platform and establish the upstream link:
 ```powershell
-git remote add origin https://github.com/OWNER/REPOSITORY.git # for connecting to repository
-git remote -v # verify connection
+git remote add origin https://github.com/<owner>/<repository>.git
+git remote -v # Verify configured remote URLs
 ```
-Once the connection has been made, the user can then push whatever changes they made in their local repository to the remote: 
+
+Publishing the active local branch and setting up tracking against the upstream remote:
+```powershell
+git push -u origin main
+```
+
+Subsequent pushes on the tracked branch require only:
 ```powershell
 git push
 ```
 
 ---
-# Cloning
-An alternative to starting one's own repository is to clone an already-existing repository off the internet. This is first done by first going to the server site hosting the repository and copying the URL or SSH key. Once the URL or SSH key has been copied, the user can then open their CLI and enter the following: 
+# Cloning Existing Repositories
+When participating in an existing line of development, copy the repository URL (HTTPS or SSH) and invoke:
 ```powershell
-git clone https://github.com/USERNAME/REPOSITORY
-```
-Note that this option clones all branches from the repository. This can be verified by using `git branch -a` to list all downloaded remote-tracking branches. Should the user decide that they only need one branch, they can specify it:
-```powershell
-git clone -b <target_branhc> --single-branch <repository_url>
+git clone https://github.com/<owner>/<repository>.git
 ```
 
+By default, this clones the complete history and creates tracking branches for all remote branches. Inspecting all local and remote branches:
+```powershell
+git branch -a
+```
 
+To optimize storage and transfer times when only a single branch history is required:
+```powershell
+git clone -b <target_branch> --single-branch https://github.com/<owner>/<repository>.git
+```
