@@ -36,4 +36,4 @@ In the pursuit of quantitative research, identifying and extracting empirical da
 
 ---
 # Disclaimer
-The data providers and APIs cited in this page are meant purely for pointing the researcher to places they can look when trying to extract empirical data for quantitative modeling. These providers haven't paid or requested to be featured in this page, and their inclusion does not constitute an endorsement of their platform's absolute epistemic reliability.
+The data providers and APIs cited in this page are meant purely for pointing the researcher to places they can look when trying to extract empirical data for quantitative modeling. These providers have not paid nor requested to be featured in this page, and their inclusion does not constitute an endorsement of their platform's absolute epistemic reliability.
