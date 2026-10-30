@@ -1,23 +1,79 @@
 ---
 dg-publish: true
 ---
-There are instances when the user may not want to commit whatever unstaged changes they've done, but also do not want to delete theses changes. `git stash` allows users to do just that by stashing whatever transient or uncommitted changes have been done. The stash serves as a temporary storage for uncommitted working changes, taking all unstaged and uncommitted changes into an easily retrievable stack. Its primary utility is enabling context switching, which allows users to focus on other task or checkout to other branches. 
+Circumstances frequently arise in development workflows where in-progress modifications in the working tree must be set aside without generating an incomplete commit or discarding the modified state. The `git stash` command records the current state of the working directory and index, reverting the local tree to match the `HEAD` commit. Stashed changes are stored in a Last-In, First-Out (LIFO) stack of serialized patches, enabling developers to switch branch contexts, integrate upstream updates, or resolve urgent defects without carrying uncommitted changes across branches.
 
 ---
 # Mechanics and Workflow
-The process involves three conceptual steps:
-1. **Saving (Pushing):** The user execute `git stash push`. Git takes everything in the user's working directory, cleans up the branch to a known good state (the HEAD), and places all the modified files into the private stash stack.
-2. **Context Switch:** Now that the user has a clean slate, they can safely switch branches or pull new upstream updates without worrying about committing incomplete work.
-3. **Restoring (Popping/Applying):** When the user returns to their original context, they can retrieve the shelved changes using `git stash pop` (which retrieves and removes the stash from the stack) or `git stash apply` (which retrieves but leaves the stash intact for potential double use).
+The stash lifecycle operates through three primary phases:
+1. **Shelving (Pushing):** Invoking `git stash push` serializes uncommitted modifications, reverts the working tree to the state of the current `HEAD` commit, and pushes the changes onto the stash reference stack.
+2. **Context Switching:** With the working tree restored to a clean state, the developer can checkout alternative branches, apply hotfixes, or pull remote updates without conflict.
+3. **Reconstitution (Applying or Popping):** Upon returning to the original development branch, the shelved modifications are restored to the working tree. Executing `git stash apply` reapplies the state while retaining the entry in the stash stack, whereas `git stash pop` reapplies the changeset and removes it from the stack upon successful reinstatement.
 
-### Methods of Stashing
+---
+# Methods of Stashing
 
-##### `git stash push`
-Saves all uncommitted changes onto the stash stack. This is done before switching branches or pulling remote updates the user's current work is complete. 
+### Shelving Working State
 
-##### `git stash list`
-Shows a list of all saved stashes (`stash@{0}`, `stash@{1}`, etc.). This is used to see what partial works-in-progress are available to retrieve. The user can then decide to check what is in their selected stashed change via `git stash show -u <diff-options> <stash_code>`. If the user knows what they want to take out of the stash, the user can then use either of the following to retrieve the stored uncommitted changes: 
+Recording tracked modifications onto the stash stack:
 ```powershell
-git stash pop # unstash last uncommitted change
-git stash pop stash@{n} unstash nth stash
+git stash push
+```
+
+Annotating a stash with an explicit descriptive message:
+```powershell
+git stash push -m "wip: prototype 1"
+```
+
+Including untracked files along with tracked modifications:
+```powershell
+git stash push -u
+```
+
+By default, Git does not track newly created files that have not been registered with `git add`. The `-u` (or `--include-untracked`) flag forces Git to include these files in the serialized stash object.
+Stashing all files, including untracked and ignored files (`.gitignore`):
+```powershell
+git stash push -a
+```
+
+Staging-only stash (preserving unstaged modifications in the working tree):
+```powershell
+git stash push --staged
+```
+
+### Inspecting Stashed Changes
+Displaying the chronological list of shelved stashes:
+```powershell
+git stash list
+```
+
+Each entry in the list is indexed by a reference pointer (`stash@{0}`, `stash@{1}`, etc.), where `stash@{0}` denotes the most recently pushed modification set. Inspecting a diff summary of the latest stash:
+```powershell
+git stash show
+```
+
+Inspecting the full patch diff of a specific stash entry:
+```powershell
+git stash show -p stash@{0} # Note: the most recent stash has index 0, followed by 1,2,3...
+```
+
+### Restoring and Clearing Stashes
+Restoring the latest stash and immediately dropping it from the stack:
+```powershell
+git stash pop
+```
+
+Restoring an arbitrary stash by index without dropping it from the stack:
+```powershell
+git stash apply stash@{1}
+```
+
+Removing an explicit stash entry from the stack without applying it:
+```powershell
+git stash drop stash@{0}
+```
+
+Purging all stored stashes from the repository stack:
+```
+git stash clear
 ```
