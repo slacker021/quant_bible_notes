@@ -107,5 +107,5 @@ In helping independent researchers seek inspiration from academia and industry, 
 
 ---
 # Disclaimer
-The publications cited in this page are meant purely for pointing the researcher to places they can look when trying to find useful citations. These publications haven't paid or requested to be featured in this page. 
+The publications cited in this page are meant purely for pointing the researcher to places they can look when trying to find useful citations. These publications have not paid nor requested to be featured in this page. 
 
