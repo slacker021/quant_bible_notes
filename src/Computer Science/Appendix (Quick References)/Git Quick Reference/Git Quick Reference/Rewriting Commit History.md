@@ -1,35 +1,78 @@
 ---
 dg-publish: true
 ---
-> [!warning]+ Warning: On Shared Repositories
-> Rewriting commit history isn't recommended on repositories being worked on by many developers. Doing so can confuse others working on their project. However, doing this is fine on a solo project. 
+>[!warning]+ Warning: History Mutation on Shared Remotes
+>Rewriting published commit history on shared remote branches disrupts upstream synchronization for other collaborators, causing diverging reference graphs and duplicate commits upon synchronization. History alteration should be restricted strictly to local, unpublished feature branches prior to integration.
+
+---
 # Rebasing
-`git rebase` allows users to integrate changes from one commit to another, similar to [[Merging|merging]]. However, this involves rewriting commit history because the project the target branch's changes are added onto the origin branch such that it seems as if there was no divergence between the two branches. This makes the history look like one clean progression of development.  Simply put, it takes a series of commits and reapplies them onto a different base commit or branch tip. The mechanism works by:
-1. Identifying where the user's current feature branch (`FeatureA`) diverged from its primary source (say, `main`).
-2. Temporarily “saving” all the unique commits that belong only to `FeatureA`.
-3. Moving the base of `FeatureA` forward to a new starting point on the target branch (e.g., the absolute latest commit of `main`).
-4. Re-applying every saved commit, one by one, onto this new, advanced historical baseline.
-The result is a perfectly linear history where it looks as if the work after all the commits that were previously on the target branch had already been implemented. 
+The `git rebase` command integrates changes from one line of development onto another by recalculating the commit base. Unlike `git merge`, which preserves historical divergence via a dedicated merge commit, rebasing extracts the unique commits of an active branch and replays them sequentially onto the tip of the upstream branch. This produces a linear commit progression without structural divergence.
 
-### Common Ways of Rebasing
-There are two primary ways of rebasing: The standard rebase for alignment, and the interactive rebase for deep structural cleanup.
->[!warning]+ Warning: Current Branch
->Before using `git rebase`, the user must know what branch they are on. Once the rebase is performed, Git takes all commits in the target branch against the current branch, which is where the user is, then places them on top of the branch whose history is going to be altered. 
+The mechanical execution proceeds in four phases:
+1. Git identifies the common ancestor commit between the active feature branch (`HEAD`) and the designated upstream branch.
+2. The commits unique to the active feature branch are temporarily serialized into patch files and held in memory.
+3. The pointer of the active feature branch is reset to the tip of the designated upstream branch.
+4. Each serialized commit patch is sequentially re-applied onto the updated baseline, generating new commit hashes with updated parent pointers.
 
-##### Standard Rebase 
-- **Command Form:** `git rebase <target-branch>` (e.g., `git checkout feature-x` then `git rebase main`)
-- **Purpose:** This is used to take your local, private development branch and pull it forward onto the latest state of a shared mainline branch. It ensures that before the user submits their work, all the commits on the target branch have been accounted for in their history.
-- **Use Case:** Whenever the user wants to update their feature branch with upstream changes without creating an extra merge commit that clutters their local development view. This keeps their feature’s history pristine and linear relative to its starting point.
+The resulting topological graph is strictly linear, indicating that feature development proceeded directly after the latest state of the upstream branch.
 
-##### Interactive Rebasing
-- **Command Form:** `git rebase -i <commit-hash>` or `git rebase -i HEAD~N` (where `N` is the number of commits).
-- **Purpose:** This is used for cleaning up local history. It presents an interactive list of all the last `N` commits and allows the user to choose how they should be treated before being reapplied.
-- **Use Cases (The Core Commands):**
-    - **`squash`:** Combining multiple, minor, iterative commits into a single meaningful commit. 
-    - **`pick`:** The default action; keeping the commit exactly as is.
-    - **`edit` (or `e`):** Stopping the rebase process temporarily so the user can manually amend a commit, modify files, or change structure before continuing. This is vital for fixing subtle errors deep in the history that only become apparent when the code runs against the new base.
-    - **`drop`:** Removing an unnecessary commit entirely from the historical record.
+---
+# Common Rebase Workflows
+Branch rebasing is predominantly deployed for upstream baseline synchronization or granular history sanitation.
+
+>[!warning]+ Warning: Active Working Branch Verification
+>Prior to invoking `git rebase`, verify that `HEAD` references the divergent branch whose commits are to be replayed. Executing `git rebase <upstream>` while pointing to the incorrect branch alters branch lineage and re-parents unrelated commits.
+
+### Standard Upstream Rebase
+A standard rebase pulls an active local branch forward onto the latest commit of an upstream integration branch (such as `main`):
+```powershell
+git checkout feature-routing
+git rebase main
+```
+- **Operational Purpose:** Updates the feature branch with upstream modifications without introducing extraneous merge commits into the local development view.
+- **Topological Outcome:** Preserves a clean linear lineage relative to the current upstream reference point.
+
+### Interactive Rebasing
+Interactive rebasing allows granular history auditing, allowing developers to reorder, combine, edit, or eliminate commits before submitting code for review:
+```powershell
+git rebase -i <base-commit-hash>
+# Alternatively, inspect the last N commits from HEAD:
+git rebase -i HEAD~N
+```
+The interactive editor displays commits in chronological order from oldest (top) to newest (bottom), which is the reverse order of `git log`.
+
+### Core Interactive Actions
+- **`pick` (`p`):** Retains the commit unmodified (the default instruction).
+- **`reword` (`r`):** Retains the commit contents while pausing execution to edit the commit message.
+- **`edit` (`e`):** Halts the rebase process at the specified commit, allowing file modifications, staging adjustments, or commit splitting before resuming via `git rebase --continue`.
+- **`squash` (`s`):** Melds the commit into its immediate predecessor, prompting the developer to combine both commit messages into a single summary.
+- **`fixup` (`f`):** Melds the commit into its immediate predecessor while completely discarding the child commit message, ideal for minor linting or syntax fixes.
+- **`drop` (`d`):** Completely excises the commit and its corresponding patch from the project history.
 
 ---
 # Minor Commit Alterations
-Interactive rebasing may be too much if the user simply wants to perform a minor change on a single commit. The last commit's message and contents can be altered by entering `git commit --amend`, which allows the user to not only change its message but to also add in the latest uncommitted changes. Note that the user must add the latest commits into the staging area first before doing this, if they intend to include said latest uncommitted changes. 
+When alterations involve only the most recent commit on the branch (`HEAD`), invoking an interactive rebase is superfluous. Single-commit adjustments are executed directly using `git commit --amend`.
+
+### Modifying the Commit Message
+Reopening the text editor to rewrite the most recent commit message:
+```powershell
+git commit --amend
+```
+
+Overriding the commit message directly via the CLI:
+```powershell
+git commit --amend -m "refactor(core): update order matching algorithm"
+```
+
+### Amending Content Without Message Alteration
+To incorporate new modifications or staged files into the tip commit without altering the original commit log entry:
+```powershell
+git add <modified-file>
+git commit --amend --no-edit
+```
+This amends the staged diff directly into the previous commit snapshot and generates a new SHA-1/SHA-256 identifier, maintaining atomic commit integrity.
+
+
+
+
+

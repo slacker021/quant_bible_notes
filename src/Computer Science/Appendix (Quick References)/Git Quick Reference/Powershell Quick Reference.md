@@ -1,125 +1,133 @@
 ---
 dg-publish: true
 ---
-PowerShell is a CLI offered by Windows that enables users to navigate their computer without the need for a GUI. This can help save time and resources, especially on machines that lack the necessary power to help run many Windows Explorer tabs at once. Furthermore, certain functionality may be easier via PowerShell. This is a quick reference that contains the essentials of PowerShell. 
+*PowerShell* is a CLI offered by *Windows* that enables users to navigate their computer without the need for a GUI. This can help save time and resources, especially on machines that lack the necessary power to help run many Windows Explorer tabs at once. Furthermore, certain functionality may be easier via PowerShell. This is a quick reference that contains the essentials of PowerShell. 
 
+---
 # Key Components of PowerShell Commands 
 
 ### PowerShell Cmdlets: Verb-Noun Structure
 PowerShell commands use a verb-noun syntax. The verb part specifies the action to be performed, and the noun part of the command defines the object on which the action will be performed. Common verbs include:
-- `Get`: Retrieves data
-- `Set`: Modifies the properties of an object
-- `Add`: Adds an item to a collection
-- `Stop`: Stops a process or service
-- `Start`: Starts a process or service
-- `Clear`: Removes all the items from a collection
+- `Get`: Retrieves data
+- `Set`: Modifies the properties of an object
+- `Add`: Adds an item to a collection
+- `Stop`: Stops a process or service
+- `Start`: Starts a process or service
+- `Clear`: Removes all the items from a collection
 
 ### PowerShell Aliases: Shortcuts and Legacy Support
-Aliases are short names for cmdlets, functions and scripts. Aliases are used for typing efficiency and to support legacy versions. All aliases defined in the current PowerShell session can be shown by entering `Get-Alias`. Below are commonly used aliases: 
-- `Ls`: Alias for `Get-ChildItem`. This is commonly used for showing all files and directories within the current folder. 
-- `Gci`: Another alias for `Get-ChildItem`
-- `Gc`: Alias for `Get-Content`
-- `Rm`:  Alias for `Remove-Item`
-- `Cd`: Alias for `Set-Location`
-- `Cls`: Alias for `Clear-Host`
-- `Dir`: Alias for `Get-ChildItem`
+Aliases are short names for cmdlets, functions, and scripts. Aliases are used for typing efficiency and to support legacy environments. All aliases defined in the current PowerShell session can be displayed by entering `Get-Alias`. Below are commonly used aliases: 
+- `ls`: Alias for `Get-ChildItem`. Commonly used for listing files and directories within the current folder. 
+- `gci`: Another alias for `Get-ChildItem`
+- `gc`: Alias for `Get-Content`
+- `rm`: Alias for `Remove-Item`
+- `cd`: Alias for `Set-Location`
+- `cls`: Alias for `Clear-Host`
+- `dir`: Alias for `Get-ChildItem`
+
 ---
 # Essential PowerShell Commands
-One of the basic PowerShell commands to become familiar with is `Get-Help`, which will display information about a cmdlet that the user inquires about. Another useful cmdlet is `Get-Command`, which lists all available built-in commands installed in the user's system. This includes native cmdlets, aliases, functions, scripts, filters, and standard executable applications. 
+One of the basic PowerShell commands to become familiar with is `Get-Help`, which displays documentation about a specified cmdlet. Another essential cmdlet is `Get-Command`, which lists all available commands installed in the system. This includes native cmdlets, aliases, functions, scripts, filters, and standard executable applications. 
 
-### `Get-Command Filtering`
-The user can target their command searches using specific parameters to filer through PowerShell's vast library. 
+### `Get-Command` Filtering
+Command discovery can be targeted using specific parameters to filter through PowerShell's library. 
 
-Searching for commands containing specific keywords, such as filtering by name or by Wildcard: 
+Searching for commands containing specific keywords or wildcard patterns: 
 ```powershell
 Get-Command -Name *process*
 ```
 
-Filtering by PowerShell Verbs can be done by isolating commands that perform a specific type of actions (like `Get`, `Set`, or `New`). 
+Filtering by PowerShell verbs isolates commands performing a specific category of action (such as `Get`, `Set`, or `New`):
 ```powershell
 Get-Command -Verb Get
 ```
 
-Specific system resources or object categories can be done by filtering by PowerShell Noun: 
+Targeting specific system resources or object categories can be performed by filtering by noun:
 ```powershell
 Get-Command -Noun Service
 ```
 
-If too much information is shown with more top-level commands, then only the commands included within a specific module package can be requested:
+Limiting output to commands provided by a specific module package:
 ```powershell
 Get-Command -Module Microsoft.PowerShell.Management
 ```
 
-An alternative to displaying specific commands is to filter them by command type, such as aliases or applications: 
+Filtering discovered commands by command type, such as aliases or applications:
 ```powershell
 Get-Command -CommandType Alias
 ```
 
->[!info] Remark: Useful Pro-Tips
->**View Command Syntax**: To quickly view a command's parameter sets and structure without looking up full documentation, use the `-Syntax` parameter: 
+>[!info]+ Remark: Useful Pro-tips
+>**View Command Syntax:** To quickly inspect parameter sets and syntax structure without opening the full help manual, use the `-Syntax` parameter:
 >```powershell
 >Get-Command Get-Process -Syntax
 >```
->**Count System Commands:** The total amount of commands currently available in the environment can be be determined by piping output to `Measure-Object`:
+>**Count System Commands:** The total number of commands currently available in the active session can be determined by piping output to `Measure-Object`:
 >```powershell
 >Get-Command | Measure-Object
 >```
 
 ---
 # Directory Navigation
-Navigating to a specific documentary on the local machine can be done using `Set-Location`: 
+Navigating to a specific directory on the local machine is performed using `Set-Location`:
 ```powershell
 Set-Location -Path "C:\Path\to\directory\project"
 ```
-Once the specific directory has been entered into, the contents of the documentary can be shown:
+
+Once the target directory has been entered, the contents of the directory can be listed using `Get-ChildItem` or its standard aliases:
 ```powershell
-Get-ChildItem, dir, ls
+Get-ChildItem
+dir
+ls
 ```
-Alternatively, files and folders in the project directory can be shown:
+
+Alternatively, files and folders in an explicit path can be inspected directly:
 ```powershell
-Get-ChildItem "C:\Path\to\directory\project"dir  "C:\Path\to\directory\project"
+Get-ChildItem -Path "C:\Path\to\directory\project"
+dir "C:\Path\to\directory\project"
 ```
-And files as well as folders can be listed in the `project` directory:
+
+Filtering for files or directories exclusively:
 ```powershell
-Get-ChildItem "D:\Office\Project" -file
-dir  "D:\Office\Project" -directory
+Get-ChildItem -Path "D:\Office\Project" -File
+Get-ChildItem -Path "D:\Office\Project" -Directory
 ```
 
 ### Creating, Copying, and Deleting Files
 
-This command will create the text file `myfile.txt` in the `Project` folder:
+Creating a text file `myfile.txt` in the target folder:
 ```powershell
-New-Item -Path "D:\Office \Project\myfile.txt" -ItemType File
+New-Item -Path "D:\Office\Project\myfile.txt" -ItemType File
 ```
 
-This command will copy `myfile.txt` from the `Project` folder to the `startup` folder:
+Copying `myfile.txt` from the `Project` folder to the `startup` folder:
 ```powershell
-Copy-Item -Path "D:\Office \Project\myfile.txt" -Destination "D:\Office \Project\startup\myfile.txt"
+Copy-Item -Path "D:\Office\Project\myfile.txt" -Destination "D:\Office\Project\startup\myfile.txt"
 ```
 
-This command will delete `myfile.txt` from the `Project` folder:
+Deleting `myfile.txt` from the `Project` folder:
 ```powershell
-Remove-Item -Path "D:\Office \Project\myfile.txt"
+Remove-Item -Path "D:\Office\Project\myfile.txt"
 ```
 
-The command below will delete the `Project` folder, including all its contents:
+Deleting the `Project` folder along with all nested contents:
 ```powershell
-Remove-Item -Path "D:\Office \Project" -Recurse
+Remove-Item -Path "D:\Office\Project" -Recurse
 ```
 
-### Checking Folder Contents and Searching: `Get-ChildItem`, `Select-String`
+# Checking Folder Contents and Searching
 
-This command will list all files with type `.txt`:
+Listing all files matching the `.txt` extension:
 ```powershell
 Get-ChildItem -Path "D:\Office\Project" -Filter "*.txt"
 ```
 
-The following command will list all hidden files:
+Listing hidden files within a directory:
 ```powershell
 Get-ChildItem -Path "D:\Office\Project" -Hidden
 ```
 
-This command will search for string error in the file `Projectlogs.txt`:
+Searching for the string "error" within the file `projectlogs.txt`:
 ```powershell
 Select-String -Path "D:\Office\Project\projectlogs.txt" -Pattern "error"
 ```
@@ -128,122 +136,133 @@ Select-String -Path "D:\Office\Project\projectlogs.txt" -Pattern "error"
 # Data Handling
 
 ### Displaying Content
-The information a file holds can be displayed onto the CLI:
+The contents of a file can be read and printed directly to standard output:
 ```powershell
-Get-Content -Path "D:\Office\Project\myfile.txt" # standard way of doing it
-Get-Content -Path "D:\Office\Project\myfile.txt" -TotalCount 5 # show first five lines only
+Get-Content -Path "D:\Office\Project\myfile.txt"
+Get-Content -Path "D:\Office\Project\myfile.txt" -TotalCount 5 # Display the first five lines only
 ```
-To avoid cluttering the CLI, the following can be used, which outputs the file information to another file:
+
+Writing string data or pipeline output into a target file:
 ```powershell
-"Hello, World!" | Out-File -FilePath "D:\Office\Project\myfile.txt "
+"Hello, World!" | Out-File -FilePath "D:\Office\Project\myfile.txt"
 ```
 
 ### File Exports
-This command will get information on the process **notepad** for the specified parameters and export it to the file **processes.csv**:
+Retrieving process metrics for **notepad** and exporting selected properties to a CSV file:
 ```powershell
 Get-Process -Name notepad | Select-Object Name, Id, CPU | Export-Csv -Path "D:\Office\Project\Processes.csv" -NoTypeInformation
 ```
 
-To import a `csv` file, use **Import-Csv.** This command imports the CVS file that was just created into another cmdlet, which iterates through the objects and gets the process by the Id column:
+Importing and iterating over records from a CSV file:
 ```powershell
 Import-Csv -Path "D:\Office\Project\Processes.csv" | ForEach-Object { Get-Process -Id $_.Id }
 ```
 
 ### Data Conversions
-The following command will get information about two running processes and convert it into `HTML` format:
+Converting process data to an HTML report and persisting to disk:
 ```powershell
-Get-Process -Name "notepad" , "chrome" | Select-Object Name, Id, CPU | ConvertTo-Html -Property Name, Id, CPU -Title "Process Report" | Out-File "D:\Office\Project\ProcessReport.html"
+Get-Process -Name "notepad", "chrome" | Select-Object Name, Id, CPU | ConvertTo-Html -Property Name, Id, CPU -Title "Process Report" | Out-File "D:\Office\Project\ProcessReport.html"
 ```
-Similarly, the following commands will export the information into JSON format:
+
+Exporting structured process data to JSON format:
 ```powershell
-Get-Process -Name "notepad" , "chrome"  | Select-Object Name, Id, CPU, StartTime| ConvertTo-Json -Depth 2 | Out-File "D:\Office\Project\Processes.json"
+Get-Process -Name "notepad", "chrome" | Select-Object Name, Id, CPU, StartTime | ConvertTo-Json -Depth 2 | Out-File "D:\Office\Project\Processes.json"
 ```
 
 ---
-# Custom Aliases
-The user can specify their own custom commands that make using PowerShell easier to use. This is done via the `Alias` keyword:
+# Custom Aliases and Functions
+Custom shortcuts can be defined during a session using `New-Alias`:
 ```powershell
 New-Alias -Name p -Value Get-Process
 ```
-Multiple commands can be bundled into a single command with the use of `function`: 
+
+Multiple operations can be encapsulated into reusable commands via functions:
 ```powershell
-function ListAndCountFiles {    param (        [string]$directory    )    Get-ChildItem -Path $directory    $fileCount = (Get-ChildItem -Path $directory).Count    Write-Host "Total files in $($directory): $fileCount"}
+function Get-DirectorySummary {
+    param (
+        [string]$Directory
+    )
+    Get-ChildItem -Path $Directory
+    $fileCount = (Get-ChildItem -Path $Directory).Count
+    Write-Host "Total items in ${Directory}: $fileCount"
+}
 ```
-where this sample function can later be used:
+
+Invoking the custom function: 
 ```powershell
-ListAndCountFiles -directory "C:\Temp"
+Get-DirectorySummary -Directory "C:\Temp"
 ```
 
-
-
+---
 # Rename Files and Folders
 
 ### Standard Renaming
-Files can be renamed in multiple ways. The main method of doing so is
+The primary cmdlet for renaming items is `Rename-Item`:
 ```powershell
-Rename-item -Path "C:\path\to\file.ext" -NewName "new_name.ext" # primary syntax
-# use this if the item is read-only or hidden
-Rename-Item -Path "report.txt" -NewName "archive.txt" -Force
+Rename-Item -Path "C:\path\to\file.ext" -NewName "new_name.ext"
+Rename-Item -Path "report.txt" -NewName "archive.txt" -Force # Overwrite if item is read-only or hidden
 ```
->[!warning]+ Warning: `-NewName` Parameter Syntax
->The `-NewName` parameter must only contain the new name, not the full file path. 
 
-This can also be applied to folders/directories: 
+>[!warning]+ Warning: `-NewName` Parameter Syntax 
+>The `-NewName` parameter must contain only the target name, not a fully qualified file path.
+
+Renaming directories follows the identical syntax:
 ```powershell
 Rename-Item -Path "C:\Projects\OldFolder" -NewName "NewFolder"
 ```
 
 ### Bulk Renaming
-Multiple Items can be renamed at once using `Get-ChildItem`: 
+Multiple items can be renamed dynamically across the pipeline using script blocks:
 ```powershell
 Get-ChildItem *.txt | Rename-Item -NewName { $_.Name -replace "Draft", "Final" }
 ```
-This example replaces the word "Draft" with "Final" in all text files. 
 
-File extensions can also be swapped in bulk: 
+Replacing file extensions in bulk across a directory:
 ```powershell
 Get-ChildItem *.log | Rename-Item -NewName { $_.Name -replace '\.log$', '.txt' }
 ```
-This example changes all `.log` items in a folder to `.txt` files. 
 
 ---
 # Move Items
-The **`Move-Item`** cmdlet is the primary tool used to move files, folders, and registry keys from one location to another in PowerShell. It transfers the items completely, deleting them from the source once the relocation is finished.
+The `Move-Item` cmdlet transfers files, directories, and registry containers between locations, removing them from the source path upon completion.
 
 ### Standard Moving
-The primary way of moving a file from one directory to another is
+Moving a file into a destination directory:
 ```powershell
 Move-Item -Path "C:\source\file.txt" -Destination "C:\destination\"
 ```
-This moves the target file from the root directory to a sub-directory `destination`.  This can also be used on a folder and its contents: 
+
+Moving an entire directory tree to a new location:
 ```powershell
 Move-Item -Path "C:\SourceFolder" -Destination "D:\TargetFolder"
 ```
-All files of a specific type can be moved using wildcards `*`: 
-```Julia
+
+Moving all files matching a specific extension using wildcards:
+```powershell
 Move-Item -Path "C:\SourceFolder\*.pdf" -Destination "C:\TargetFolder\"
 ```
-Lastly, a file can be moved and renamed simultaneously: 
+
+Moving and renaming an item in a single operation:
 ```powershell
 Move-Item -Path "C:\Source\oldname.txt" -Destination "C:\Destination\newname.txt"
 ```
 
 ---
-
 # Removals
 
 ### Removing Directories
-To delete a folder, along with all its subfolders and files:
+Recursively removing a folder along with all child files and subdirectories:
 ```powershell
-Remove-Item -Path "C:\path\to\your\folder" -Recurse -Force
-```
-Additionally, the folder's contents can be wiped without deleting the folder itself: 
-```powershell
-Remove-Item -Path "C:\path\to\your\folder\*" -Recurse -Force
+Remove-Item -Path "C:\path\to\target\folder" -Recurse -Force
 ```
 
->[!warning]+ Warning: "Folder Not Empty" Bug
->A known issue in PowerShell can sometimes cause `Remove-Item -Recurse` to fail or skip files when deleting deeply nested directories. The most reliable workaround is to pipe the contents directly into the delete command:
+Emptying folder contents while leaving the root container intact:
+```powershell
+Remove-Item -Path "C:\path\to\target\folder\*" -Recurse -Force
+```
+
+>[!warning]+ Warning: "Folder Not Empty" Workaround 
+>Deeply nested file trees on Windows can occasionally encounter issues with `Remove-Item -Recurse`. Piping child objects directly into the deletion cmdlet provides a reliable bypass:
 >```powershell
->Get-ChildItem -Path "C:\path\to\your\folder" -Recurse | Remove-Item -Force
+>Get-ChildItem -Path "C:\path\to\target\folder" -Recurse | Remove-Item -Force
 >```
