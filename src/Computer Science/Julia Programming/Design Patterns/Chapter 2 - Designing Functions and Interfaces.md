@@ -302,17 +302,8 @@ slippage = cost_calibrated(0.1, 0.05, 50_000.0)
 ---
 # Understanding Multiple Dispatch and Ambiguities
 Multiple dispatch is Julia's fundamental execution mechanism. While single-dispatch languages determine method execution based solely on the runtime type of the object preceding the dot (`object.method()`), Julia inspects the types of **all positional arguments** simultaneously.
-
-```
-       Function Call: cross_orders(engine, instrument)
-                           │
-       ┌───────────────────┴───────────────────┐
-       ▼                                       ▼
-Engine Type Matrix                    Instrument Taxonomy
-├── LitBookExecution                  ├── SpotEquity
-└── DarkPoolExecution                 ├── EuropeanOption
-                                      └── CreditDefaultSwap
-```
+![[multiple_dispatch_engine_instrument.png]]
+(see [[Tikz Code - Multiple Dispatch Across Engine Matrix and Instrument Taxonomy]])
 
 The compiler selects the method from the function's method table whose signature represents the most specific match within the type lattice:
 ```julia

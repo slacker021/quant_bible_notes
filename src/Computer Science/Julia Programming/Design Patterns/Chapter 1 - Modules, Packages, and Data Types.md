@@ -22,14 +22,8 @@ Entities defined within a module—including abstract types, composite structure
 
 ### Lexical Module Hierarchy and Path Resolution
 Julia organizes modules into a hierarchical tree starting from the root environment `Main`. The path resolution rules dictate how symbols and submodule definitions are located across physical and logical boundaries: 
-```
-       Main (Root Environment)
-      /    \
-  ModuleA   ModuleB
-  /     \
-SubA1   SubA2
-```
-
+![[module_environment_hierarchy.png]]
+(see [[Tikz Code - Module and Environment Hierarchy]])
 ##### Absolute Resolution (No Leading Dots)
 When a `using` or `import` statement is executed without leading dots, Julia initiates an absolute top-level lookup:
 ```julia
@@ -359,24 +353,9 @@ Beginning in Julia 1.11, the runtime recognizes version-specific manifests (e.g.
 
 ### The Acyclic Dependency Principle
 Julia's compilation model mandates that module dependency topologies form a Directed Acyclic Graph (DAG). If `ModuleA` imports `ModuleB`, `ModuleB` cannot directly or transitively import `ModuleA`: 
-```
-    Cyclic Dependency (Illegal)
-       ┌──────────┐
-       ▼          │
-  ModuleA ────► ModuleB
-  
-  
-    Acyclic Resolution via Shared Abstraction (Compliant)
-       ┌──────────┐
-       │ Common   │
-       │ Abstract │
-       │ Types    │
-       └────▲─────┘
-            │
-     ┌──────┴──────┐
-     │             │
-  ModuleA       ModuleB
-```
+![[module_dependency graph.png]]
+(see [[Tikz Code - Directed Acyclic Graph Resolution of Module Dependencies]])
+
 Circular references prevent static compilation, invalidate method specialization trees, and induce precompilation deadlocks. When two modules require mutual awareness, the structural solution requires factoring the shared abstract types and protocol definitions into a lightweight third foundation module.
 
 ---
@@ -501,7 +480,7 @@ A `Memory{T}` instance represents a contiguous, non-resizable, 1D heap allocatio
 This decoupling reduces structural memory footprint, accelerates garbage collection traversals, and permits custom allocator integration for latency-sensitive financial order routing.
 
 ---
-### Explicit Type Coercion and the Four Automatic Conversion Boundaries
+# Explicit Type Coercion and the Four Automatic Conversion Boundaries
 Type conversion in Julia is non-magical and explicit. Unlike languages that automatically cast floating-point numbers to integers, Julia avoids automatic coercion during standard function calls. Explicit conversion is invoked via constructors `T(x)` or the `convert(T, x)` interface:
 ```julia
 integer_shares = 100
@@ -510,20 +489,7 @@ converted_shares = convert(Float64, integer_shares) # Direct conversion protocol
 ```
 
 Automatic conversion via `convert` is restricted to four specific language evaluation boundaries:
-```
-                      Conversion Boundaries
-                                │
-       ┌────────────────────────┼────────────────────────┐
-       ▼                        ▼                        ▼
- 1. Array Element         2. Struct Field          3. Declared Return
-    Assignment               Assignment               Type Boundary
-    A[i] = v                 obj.field = v            f()::T = v
-                                │
-                                ▼
-                         4. Typed Global / Local
-                            Assignment
-                            x::T = v
-```
+![[conversion_function.png]]
 
 1.  **Array Assignment:** Assigning a value into a typed array:
 ```julia
