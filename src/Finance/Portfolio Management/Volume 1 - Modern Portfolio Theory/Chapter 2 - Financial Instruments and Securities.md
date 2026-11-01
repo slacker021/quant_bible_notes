@@ -1,413 +1,568 @@
 ---
 dg-publish: true
 ---
-[[Chapter 1 - The Theory of Choices|Chapter 1 demonstrates]], a core part of making decisions is the selection of assets. While there're numerous types of assets, both *tangible* (real, material, and capable of being physically perceived) and *tangible* assets (lacks physical substance), most economies revolve around four fundamental instruments: *Cash, Credit, Equity, and Derivative*. 
+# The Architecture of Financial Claims
+In classical economic theory, decision problems under certainty focus on the allocation of endowment capital across consumption horizons. When uncertainty is introduced, decision-making necessarily expands to the selection and valuation of financial assets. While tangible assets consist of physical, material property (such as real estate, machinery, and physical commodities), financial assets represent intangible, legally enforceable claims to future economic benefits or cash flow streams.
+
+Modern capitalist economies coordinate the allocation of capital, intertemporal consumption smoothing, and risk transfer through four fundamental financial instruments: *Cash, Credit, Equity, and Derivatives*. When these contracts are standardized, fungible, and freely traded across secondary liquid marketplaces, they constitute *Securities*.
 
 ---
-# Asset Pricing
-### Concept of Price
-In any economy, the purchase of a good or service comes with a *price*. Intuitively speaking, the price is the cost of acquiring the good or service that someone in the economy is providing. Due to the many forms of goods and services being available in the economy, it's often possible to price these goods and services in terms of one another. Formally, this can be defined as *relative asset price:*
+# Relative Asset Pricing and Numeraire Mechanics
+
+### The Concept of Relative Price
+In an exchange economy devoid of an exogenous, absolute metric of value, the price of an asset can be expressed only relative to another asset chosen as the benchmark or accounting coordinate. Formally, this framework is established on a filtered probability space: 
 $$
 \begin{gather}
-\textbf{Definition: Relative Asset Price} \\[5mm]
-\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \ge 0}, \mathbb{P}) \text{ be a filtered probability space representing the} \\[2mm]
-\text{stochastic environment and information flow of a financial economy over a time horizon } \\[2mm]
-t \in [0,T]. \text{ Additionally, let } \mathcal{A} \text{ denote the set of strictly positive non-worthless} \\[2mm]
-\text{financial assets available in the economy. For any two assets } X \text{ and } Y \in \mathcal{A},  \\[2mm]
-\text{the asset } Y \text{ is selected to serve as the reference asset or numeraire. } \\[2mm]
-\text{The price process of asset } X \text{ relative to numeraire } Y \text{ at time } t \text{ is defined as an } \\ \mathcal{F}_t\text{-adapted strictly positive stochastic process denoted by } X_{Y}(t). \text{ Formally, } X_{Y}(t) \\
-\text{represents the number of units of asset Y required to acquire one unit of asset } X \text{ at time } t:  \\[3.5mm]
-
-\text{1 unit of } X = X_{Y}(t) \text{ units of Y } \iff X_{t} = X_{Y}(t) \cdot Y_{t} \text{ for } X_{Y}(t)
+\textbf{Definition: Relative Asset Price Process} \\[5mm]
+\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \in [0, T]}, \mathbb{P}) \text{ be a filtered probability space satisfying the usual conditions,} \\[2mm]
+\text{modeling the stochastic environment and information filtration of a financial market} \\[2mm]
+\text{over the finite investment horizon } [0, T]. \text{ Let } \mathcal{A} \text{ denote the collection of strictly positive,} \\[2mm]
+\text{non-worthless financial assets available in the economy. For any chosen reference asset } \\[2mm]
+Y \in \mathcal{A} \text{ acting as the numeraire, the relative price process of an asset } X \in \mathcal{A} \\[2mm]
+\text{denominated in units of } Y \text{ at time } t \in [0, T] \text{ is an } \mathcal{F}_t\text{-adapted, strictly positive stochastic process} \\[2mm]
+X_Y(t): \Omega \times [0, T] \to \mathbb{R}_{>0}. \text{ Formally, } X_Y(t) \text{ defines the exchange ratio:} \\[3.5mm]
+1 \text{ unit of } X \text{ at time } t \equiv X_Y(t) \text{ units of numeraire } Y \text{ at time } t
 \end{gather}
 $$
-(See [[Chapter 1 - Measurable and Probability Spaces|probability spaces]] for more information)
+(see [[Probability Spaces and Filtrations]])
 
-### Foundational Axioms
-From this pairwise algebraic definition arises several structural properties. These properties are considered to be the fundamental [[Chapter 1 - Basic Rules of Logic|assumptions]] of financial mathematics that provide a non-ambiguous and grounded approach to understanding pricing:  
+If the economy possesses an abstract, unobservable unit of account wherein nominal spot price processes are denoted by $S^X(t)$ and $S^Y(t)$, the relative price process evaluates to the algebraic ratio:
 $$
 \begin{gather}
-\textbf{Axiom: Inverse Price Symmetry (Reciporocal Relation)} \\[5mm]
-\text{If neither asset } X \text{ nor asset } Y \text{ is worthless } (0 < X_{Y}(t) < \infty), \text{ the price of asset } Y  \\[2mm]
-\text{using asset } X \text{ as the numeraire, } \text{ denoted by } Y_{X}(t), \text{ is the multiplicative inverse of } X_{Y}(t):  \\[3.5mm]
-Y_{X}(t) = \frac{1}{X_{Y}(t)}
+X_Y(t) = \frac{S^X(t)}{S^Y(t)} \tag{1}
 \end{gather}
 $$
-To prevent risk-free *arbitrage* opportunities between economic participants, the identity $X_Y(t) \cdot Y_X(t) = 1$ must hold almost surely at all times $t$.
+
+### Foundational Pricing Axioms
+To eliminate structural internal contradictions and prevent trivial, riskless money-pumps between market participants, the relative pricing operator must satisfy three core algebraic axioms:
+$$
+\begin{gather}
+\textbf{Axiom: Inverse Price Symmetry (Reciprocal Relation)} \\[5mm]
+\text{For any two strictly positive assets } X, Y \in \mathcal{A}, \text{ the price of numeraire } Y \text{ denominated} \\[2mm]
+\text{in units of asset } X \text{ at time } t \text{ is the exact multiplicative inverse of } X_Y(t)\text{:} \\[3.5mm]
+Y_X(t) = \frac{1}{X_Y(t)}
+\end{gather}
+$$
+
+The identity $X_Y(t) \cdot Y_X(t) = 1$ must hold $\mathbb{P}$-almost surely for all $t \in [0, T]$. If $X_Y(t) \cdot Y_X(t) > 1$, an agent could simultaneously purchase $X$ using $Y$ and sell $X$ for $Y$, generating unbounded, riskless spot arbitrage: 
+$$
+\begin{gather}
+\textbf{Axiom: Numeraire Transitivity (Chain Rule of Relative Prices)} \\[5mm]
+\text{For any triplet of non-worthless financial assets } X, Y, Z \in \mathcal{A}, \text{ the relative price of } X \\[2mm]
+\text{in terms of } Y \text{ can be factored through an arbitrary intermediate asset } Z\text{:} \\[3.5mm]
+X_Y(t) = X_Z(t) \cdot Z_Y(t) = \frac{X_Z(t)}{Y_Z(t)} 
+\end{gather}
+$$
+
+The *Axiom of Numeraire Transitivity* guarantees triangular consistency across decentralized exchange networks, ensuring that currency cross-rates and relative valuation metrics are invariant to the sequence of intermediate transaction pairs.
 
 $$
 \begin{gather}
-\textbf{Axiom: Change of Numeraire (Transitivity): } \\[5mm]
-\text{For any valid non-zero assets } X,Y,Z \in \mathcal{A}, \text{ the price of asset } X \text{ in terms of } \\[2mm]
-\text{numeraire } Y \text{ can be decomposed through an intermediate reference asset } Z:  \\[3.5mm]
-X_Y(t) = X_Z(t) \cdot Z_Y(t) = \frac{X_Z(t)}{Y_Z(t)}
+\textbf{Axiom: Linearity of Asset Portfolios} \\[5mm]
+\text{Let a portfolio } P \text{ consist of a linear combination of } N \text{ underlying assets } \{X^i\}_{i=1}^N \subset \mathcal{A} \\[2mm]
+\text{held in predictable, self-financing quantities } \{\Delta^i(t)\}_{i=1}^N. \text{ The relative price process} \\[2mm]
+\text{of portfolio } P \text{ relative to numeraire } Z \in \mathcal{A} \text{ satisfies linear additivity:} \\[3.5mm]
+P_Z(t) = \left[ \sum_{i=1}^N \Delta^i(t) X^i \right]_Z (t) = \sum_{i=1}^N \Delta^i(t) X_Z^i(t) 
 \end{gather}
 $$
-This coordinate transformation relation allows for the translation of pricing problems across arbitrary reference frames. 
+
+(see [[Vector Spaces and Linear Maps]])
+
+---
+# The Fundamental Theorems of Asset Pricing
+The foundational axioms of relative pricing provide an algebraic baseline for spot transactions. However, pricing contracts across time and resolving future uncertainty require dynamic stochastic principles. Modern mathematical finance links the economic concept of no-arbitrage to the probabilistic concept of a [[martingale]]: 
+$$
+\begin{gather}
+\textbf{Theorem: The First Fundamental Theorem of Asset Pricing (FTAP)} \\[5mm]
+\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \in [0, T]}, \mathbb{P}) \text{ be a filtered probability space governing the financial economy.} \\[2mm]
+\text{Assume that the market model admits a strictly positive, tradeable numeraire asset } Y \in \mathcal{A}. \\[2mm]
+\text{The market satisfies the condition of No Free Lunch with Vanishing Risk (NFLVR)} \\[2mm]
+\text{if and only if there exists a probability measure } \mathbb{P}^Y \text{ equivalent to the physical measure } \mathbb{P} \\[2mm]
+(\mathbb{P}^Y \sim \mathbb{P}) \text{ such that the discounted relative price process } X_Y(t) \text{ is a local martingale} \\[2mm]
+\text{under } \mathbb{P}^Y \text{ for every admissible, tradeable asset } X \in \mathcal{A}.
+\end{gather}
+$$
+(see [[Proof of the First Fundamental Theorem of Asset Pricing]])
+
+Under the equivalent martingale measure $\mathbb{P}^Y$, for any evaluation dates $0 \le s \le t \le T$, the relative price process satisfies the conditional expectation:
+$$
+\begin{gather}
+X_Y(s) = \mathbb{E}^{\mathbb{P}^Y} \left[ X_Y(t) \mid \mathcal{F}_s \right] \quad \mathbb{P}\text{-almost surely} \tag{2}
+\end{gather}
+$$
+
+>[!danger]+ Intuition: Martingales vs. Economic Equilibrium
+>Absence of arbitrage is strictly a statement about the impossibility of self-financing "free lunches"; it does not imply Walrasian or general economic equilibrium (where aggregate supply equals aggregate demand). An economy with severe market clearing frictions, excess supply, or capital rationing can remain entirely free of pure arbitrage as long as instantaneous price dislocations cannot be converted into riskless profits. Under the risk-neutral measure $\mathbb{P}^Y$, probabilities do not measure historical occurrence frequencies; they represent normalized state prices (Arrow-Debreu prices) that discount future states of nature according to their marginal utility of wealth.
 
 $$
 \begin{gather}
-\textbf{Axiom: Linearity of Asset Combinations} \\[5mm]
-\text{Let } P_{t} = \sum_{i = 1}^N \Delta^i(t) \cdot X^i \text{ represent a portfolio formed by linear combinations of assets } \\[2mm]
-X^i \in \mathcal{A} \text{ held in quantities } \Delta^i(t). \text{ The price process of the portfolio } P \text{ relative to }\ \\[2mm]
-\text{numeraire } Z \text{ exhibits linearity: } \\[3.5mm]
-P_Z(t) = \left[ \sum_{i=1}^N \Delta^i(t) \cdot X^i \right]_Z (t) = \sum_{i=1}^N \Delta^i(t) \cdot X_Z^i(t)
+\textbf{Theorem: The Second Fundamental Theorem of Asset Pricing} \\[5mm]
+\text{Assume that the financial market satisfies NFLVR (the set of equivalent local martingale} \\[2mm]
+\text{measures } \mathcal{M}^e(Y) \text{ is non-empty). The market is complete (every contingent claim } H \in L^1(\Omega, \mathcal{F}_T, \mathbb{P}^Y) \\[2mm]
+\text{can be perfectly replicated by an admissible self-financing trading strategy) if and only if} \\[2mm]
+\text{the equivalent martingale measure } \mathbb{P}^Y \text{ is strictly unique: } |\mathcal{M}^e(Y)| = 1.
 \end{gather}
 $$
-(see [[Chapter 2 - Finite-Dimensional Vector Spaces|linear combinations]] for more information)
+(see [[Proof of The Second Fundamental Theorem of Asset Pricing]])
 
-### The Fundamental Theorem of Asset Pricing
-These three axioms, along with the definition of a [[Chapter 4 - Filtrations and Martingales|martingale]], can be used to construct an important fact: 
-$$
-\begin{gather}
-\textbf{Theorem: The Fundmental Theorem of Asset Pricing (Part 1)} \\[5mm]
-\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \ge 0}, \mathbb{P}) \text{ be a filtered probabiblity space governing the financial economy over a } \\
-\text{finite time horizon } t \in [0,T]. \text{ Let } Y \text{ be a strictly positive, non-worthless no-arbitrage reference asset.} \\[2.5mm]
-
-\text{If there exists a probability measure } \mathbb{P}^Y \text{ (equivalent to the real-world measure } \mathbb{P}) \text{ under which the } \\
-\text{relative prices processes } X_Y(t) \text{ are } \mathbb{P}^Y\text{-martingales for every valid no-arbitrage asset } X,  \\
-\text{then the financial economy contains no arbitrage opportunities. } 
-\end{gather}
-$$
-(see [[Chapter 1 - Measurable Spaces|measure theory]] for more information and [[Proof of the Fundamental Theorem of Asset Pricing|proof]])
-
-In formal measure-theoretic notation, for any time $s \le t \le T$, the normalized price process satisfies the conditional expectation:
-$$X_Y(s) = \mathbb{E}^{\mathbb{P}^Y} \left[ X_Y(t) \mid \mathcal{F}_s \right] \quad \text{almost surely} \tag{1}$$
-This theorem establishes an equivalence between the economic concept of economic equilibrium, which is an economic state where supply and demand for a specific asset are equal, and the mathematical concept of a martingale, which is a "fair game."
-
-In real-world economies, assets carry risk premia, causing prices to drift upwards over time under the physical probability measure $\mathbb{P}$. However, adjusting the probability weights placed on future states of the world, shifting from the real-world measure $\mathbb{P}$ to a numeraire-specific martingale measure $\mathbb{P}^Y$, all expected excess returns are systematically neutralized. Under $\mathbb{P}^Y$, probabilities do not represent the physical likelihood of an event occurring. Instead, $\mathbb{P}^Y(A)$ represents the **state price** or economic cost (measured in units of numeraire $Y$) required today to deliver one unit of $Y$ at maturity $T$ if event $A$ occurs. If asset prices follow a martingale under this adjusted probability measure, future expected relative values equal current relative values. Consequently, no economic participant can construct a trading strategy that guarantees a risk-free profit out of nothing.
-
-In other words, prices in the economy are based off some sorta benchmark. A relative price is the price of a good or service in terms of another good or service. This is the foundation of *barter*, which is trading goods or services directly for other goods or services. It's the oldest form of commerce that forms the foundation of trade. However, the fundamental flaw barter is the *lack of a double coincidence of wants*. This is further complicated by the absence of a common measure of value and the indivisibility of goods. 
+If the equivalent martingale measure is unique, all derivative claims possess a single, unambiguous no-arbitrage price. If multiple equivalent martingale measures exist, the market is incomplete, and contingent claims possess an interval of viable no-arbitrage prices bounded by super-hedging and sub-hedging costs.
 
 ---
 # The Four Fundamental Financial Instruments
-### The Need for Cash
-While the aforementioned axioms and theorems provide an un-ambiguous and useful means of comparing the values of other goods based on an asset, as relative pricing suggest, this comparison doesn't always work. It would be much easier if there was a universal and common measure of value that could be utilized as a universal financial solvent of sorts. While cash is often seen as an intuitive economic concept, it could also be given an un-ambiguous definition that fits in a precise mathematical framework: 
-$$\begin{gather}
-\textbf{Definition: Cash} \\[5mm]
-\text{Cash is a spot reference coordinate and arbitrage asset exhibiting a non-zero rate } \\
-\text{of time depreciation. While it serves as an immediate liquid unit of account for spot transactions, } \\
-\text{it lacks an independent pricing martingale measure } \mathbb{P} \text{ across time.}
-\end{gather}
-$$
-In social science and political economy, cash is legal tender used for purchasing goods, receiving services, and paying off debts. For cash to have value, the economy its operating in must recognize it to be the universal store of value. It's cash that also provides the base unit of value that other financial instruments are to be measured under. 
-
-### Credit: Borrowing Against the Future
-Acquiring goods and services, in the hypothetical economy that this framework cooked up, is done with cash. Acquiring more goods and services is as simple as forking over more cash to spend. However, the economic agent may not always have the needed cash on hand. In a cash-based society, the only way for the agent to acquire more goods and services is to come up with more cash. The agent can achieve this in one of two ways: 
-1. Increase the amount of effort they put into their work. In some economies, more input yields more output. The more output they provide, the more cash they're given as compensation. 
-2. Increase the amount of assets they own, especially of the cash-generating sort. These assets can bring in extra income or be sold at a higher price. 
-Alas, doing one of two of these steps is easier said than done. In such a circumstance, the agent may opt for a third option: Credit-fueled spending: 
-$$
-\begin{gather} \textbf{Definition: Credit} \\[5mm] 
-\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \ge 0}, \mathbb{P}) \text{ be a filtered probability space governing the economy.} \\ \text{Credit is an intertemporal financial contract wherein a borrower acquires immediate}
-\\ \text{spot numeraire at time } t \text{ by issuing an enforceable liability process } L_t \text{ against}  \\[2mm]
-\text{their stochastic future cash flows or wealth endowment } \mathcal{F}_T. \\[2mm]
-\text{Formally, credit is represented as a short position in a no-arbitrage reference asset—}  \\[2mm]
-\text{either a zero-coupon bond } B^T \text{ or a money market account } M(t) \text{ satisfying } \\[3.5mm]
-dM_{\$}(t) = r(t) M_{\$}(t) \, dt, \\[3.5mm]
-\text{requiring the future delivery of } (1 + \delta L(t,T)) \text{ units of numeraire at maturity } T, \\[2mm]
-\text{priced under the appropriate martingale measure } \mathbb{P}^T \text{ adjusted for default risk.} 
-\end{gather}
-$$
-In simpler terms, credit extends the agent's purchasing power by enabling them to borrow money against the future. However, this requires the agent to pay back the original cash they borrowed, *principal*, along with the cost, *interest.* 
-
-###### Lending and Borrowing
-In a deal involving credit, there're two sides of the agreement: *Lender* and *borrower:*
-- **Lender:** The lender provides the cash, along with the interest policy. The lender takes on the risk of *default*, which is the risk that the borrower fails to pay back the credit. 
-- **Borrower:** The borrower promises to pay the lender the principal and interest. The borrower runs the risk of failing to repay the lender. 
-
-### Equity: A Form of Ownership
-Most economies have some idea of ownership in something. In political economy, ownership refers to having legal rights over some resource or asset. It includes the right to use, exclude others, and benefit from property. Ownership structures differ by economic systems, and the type of ownership shapes incentives, control, and wealth distribution. 
-
-In modern financial markets, there is a unique form of ownership that enables enterprises to operate as a dynamic nexus of contracts. This is referred to as *equity*, which is the difference between an entity's assets and liabilities. Equity occupies the lowest tier of the capital structure because it's subordinated to all credit obligations. 
-
-Equity holders assume the ultimate downside risk caused by the value of their equity dropping. In exchange for this, equity holders retain perpetual un-capped claim on all excess returns and capital appreciation generated by the equity. 
-
-Formally speaking, equity can be formally defined as
+Every complex security in modern financial markets represents a contractual combination or structural derivative of four foundational instruments: **Cash, Credit, Equity, and Derivatives**:
+![[four_fundamental_instruments.png]]
+(see [[Tikz Code - Taxonomy of the Four Fundamental Financial Instruments]])
+### 1. Cash and the Money Market Numeraire
+In modern monetary theory and stochastic finance, cash is the *spot reference asset* serving as the immediate liquid unit of account: 
 $$
 \begin{gather}
-\textbf{Definition: Equity } \\[5mm]
-\text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_{t} \}_{t \geq 0}, \mathbb{P}) \text{ be a filtered probability space representing the economy. } \\[2mm]
-\text{Equity is a perpetual and subordinated financial claim } S_{t} \text{ representing the residual } \\[2mm]
-\text{ownership interest in an economic asset process } A_{t} \text{ after satisfying all senior credit } \\[2mm]
-\text{liabilities } L_{t}. \text{ Formally, over a liability settlement horizon } T \text{ with total debt obligation } D,  \\[2mm]
-\text{equity is a continuous contingent claim whose terminal value relative to numeraire } Y \text{ is } \\[2mm]
-\text{given by } \\[3.5mm]
-S_{Y}(T) = \text{max}(A_{Y}(T) - D \cdot Y_{Y}(T), 0) \\[3.5mm]
-\text{and whose price process}\textemdash\text{when adjusted for reinvested cash yields } \tilde{S}_{t}\textemdash\text{serves as a valid } \\[2mm]
-\text{reference asset generating the equivalent of stock measure } \mathbb{P}^{S}. 
+\textbf{Definition: Money Market Account (Cash Process)} \\[5mm]
+\text{Let } r(t) \ge 0 \text{ be an } \mathcal{F}_t\text{-adapted, locally integrable short-rate process. The continuous} \\[2mm]
+\text{money market account } M(t) \text{ represents the risk-free cash accumulation process:} \\[3.5mm]
+M(t) := \exp\left( \int_0^t r(s) \, ds \right), \quad M(0) = 1  \\[3.5mm]
+dM(t) = r(t) M(t) \, dt 
 \end{gather}
 $$
 
-### Derivative: A Zero-Sum Game
-Derivatives are by far the most complex financial instrument among the four, with these having an esoteric reputation. At its core, however, a financial derivative is an agreement entailing the transfer of economic risk from the physical ownership of the asset. 
+While nominal physical currency yields a nominal interest rate of zero ($dC(t) = 0$), fiat currency in an inflationary economy experiences continuous purchasing power depreciation. Let $\Pi(t)$ denote the price level of a standardized basket of consumption goods, governed by $d\Pi(t) = \pi(t) \Pi(t) dt + \sigma_\Pi(t) \Pi(t) dW_t^\Pi$. The real purchasing power of cash $C_{\text{real}}(t) := \frac{C(t)}{\Pi(t)}$ follows:
+$$
+\begin{gather}
+dC_{\text{real}}(t) = -\pi(t) C_{\text{real}}(t) \, dt - \sigma_\Pi(t) C_{\text{real}}(t) \, dW_t^\Pi + \sigma_\Pi^2(t) C_{\text{real}}(t) \, dt \tag{3}
+\end{gather}
+$$
 
-A financial derivative contract is a legally enforceable agreement between two counterparties: A *long* position, which is the position expecting the price of the underlying asset to rise, and the *short* position, which is the position expecting the price of the underlying asset to decline. Both have their future cash flows, obligations, or value are from or contingent upon the price, rate, or performance of one or more specified reference variables or underlying instruments, which is denoted by $S_{t}$. 
+Cash serves as an immediate, friction-free medium of exchange, yet holding non-interest-bearing currency incurs an opportunity cost equal to the forgone short rate $r(t)$ plus the purchasing power erosion of inflation $\pi(t)$.
 
-Mathematically, if $S_T$ represents the terminal price of the underlying asset at expiration date $T$, the value or payoff of a general derivative claim $V_T$ at maturity is a deterministic or state-contingent function $f(S_T)$ of the underlying instrument:
-$$V_T = f(S_T) \tag{2}$$
+### 2. Credit: Intertemporal Debt Contracts
+Credit is an intertemporal financial contract where a borrower obtains immediate spot capital at time $t$ by issuing a legally binding, senior liability promising the delivery of specified cash flows at future horizons $\{T_k\}_{k=1}^K$.
 
-###### Key Structural Elements
-While there are a wide variety of classes of financial derivatives, every financial derivative possesses five fundamental characteristics: 
-1. **Underlying Reference Variable**
-	- The asset, rate, benchmark, or event from which the contract extracts its economic value. 
-	- Underlyings span equities, credit, cash instruments. 
-2. **Notional Amount** $(N)$
-	The agreed-upon quantitative scale or principle units upon which intermediate or terminal cash flow calculations are determined. 
-3. **Delayed Performance/Temporal Disconnection**
-	Unlike *spot transactions*, where agreement, payment, and asset transfer occur concurrently, a derivative contract establishes economic terms today for an exchange or settlement that occurs at a pre-specified future date $T$. 
-4. **Unfunded**
-	- Zero or small amounts of capital is required to acquire the underlying asset outright at the time the contract is created or entered to, which is denoted by $t=0$. 
-	- Certain derivative contract may enforce a *premium*, which is the cost of entering the contract. 
-	- Consequently, derivatives are considered *contingent claims*. 
-5. **Settlement Mechanics**
-	- Contract maturity, which is denoted by $T$, dictates when the contract is to take place. 
-	- One way for the contract to mature is via **physical delivery** of the underlying asset, which involves the transfer of the physical asset in exchange for the contract price. 
-	- Another way for the contract to mature is via **cash settlement**, which involves the net payment of the profit or loss $f(S_{T})$ between the counterparties. 
+The elementary building block of all credit and fixed-income contracts is the *default-free zero-coupon bond*: 
+$$
+\begin{gather}
+\textbf{Definition: Zero-Coupon Bond} \\[5mm]
+\text{A zero-coupon bond } P(t, T) \text{ is a contract that guarantees the delivery of exactly} \\[2mm]
+1 \text{ unit of nominal cash at maturity } T \ge t, \text{ with zero intermediate cash flows.} \\[3.5mm]
+\text{Under the risk-neutral measure } \mathbb{Q} \text{ with cash numeraire } M(t)\text{:} \\[3.5mm]
+P(t, T) = \mathbb{E}^{\mathbb{Q}}\left[ \exp\left( -\int_t^T r(s) \, ds \right) \;\middle|\; \mathcal{F}_t \right] 
+\end{gather}
+$$
+
+In corporate and sovereign debt markets, credit contracts incorporate **default risk**. Let $\tau: \Omega \to [0, \infty)$ denote a random stopping time representing the default event of the issuer, governed by a hazard rate process $\lambda(t)$. If default occurs at $\tau \le T$, the creditor recovers a fractional recovery rate $R \in [0, 1)$ of the par value. The defaultable bond price $P^d(t, T)$ satisfies:
+$$
+\begin{gather}
+P^d(t, T) = \mathbb{E}^{\mathbb{Q}}\left[ \exp\left( -\int_t^T (r(s) + (1 - R)\lambda(s)) \, ds \right) \;\middle|\; \mathcal{F}_t \right] \tag{4}
+\end{gather}
+$$
+
+Credit obligations occupy the most senior position in corporate capital structure: creditors must be paid in full prior to any distribution of cash or assets to equity owners.
+
+### 3. Equity: Subordinated Residual Claims
+Equity represents perpetual, residual ownership of an enterprise. Unlike credit, equity contracts specify no fixed coupon obligations and have no maturity date. Equity holders assume the primary downside risk of the operating enterprise; in return, they retain an uncapped legal claim to all residual cash flows (earnings, liquidating dividends) and voting governance rights.
+
+Under *Robert Merton*'s (1974) structural model of corporate capital structure, corporate equity is modeled analytically as a contingent claim on total firm assets.
+$$
+\begin{gather}
+\textbf{Definition: Merton's Structural Formulation of Corporate Equity} \\[5mm]
+\text{Let } V(t) \text{ denote the total unobserved enterprise value of a firm at time } t, \text{ and let the firm} \\[2mm]
+\text{be financed by a single class of zero-coupon debt with face value } D \text{ maturing at horizon } T. \\[2mm]
+\text{Under limited liability, the equity value } E(T) \text{ at maturity is an exact European call option} \\[2mm]
+\text{on firm assets with strike price equal to the debt face value } D\text{:} \\[3.5mm]
+E(T) = \max(V(T) - D, \, 0) \\[3.5mm]
+\text{The value of corporate debt at maturity satisfies the conservation of enterprise value:} \\[3.5mm]
+D(T) = \min(V(T), \, D) = D - \max(D - V(T), \, 0)
+\end{gather}
+$$
+
+The second equation in the definition above demonstrates that holding defaultable corporate debt is economically equivalent to holding risk-free sovereign debt while writing an unhedged put option on the firm's assets to the equity holders.
+
+>[!warning]+ Warning: Equity as a Pricing Numeraire
+>While dividend-reinvested equity indices are often deployed as numeraires in derivative pricing (such as the *share measure* $\mathbb{P}^S$), an asset can serve as a valid numeraire only if its price process remains strictly positive almost surely: $S_t > 0$ $\mathbb{P}$-a.s. For defaultable corporations modeled by step 12, if $V(T) \le D$, equity value collapses to zero ($E(T) = 0$). Because $\mathbb{P}(E(T) = 0) > 0$, the Radon-Nikodym derivative $\frac{d\mathbb{P}^E}{d\mathbb{Q}}$ is non-invertible, destroying measure equivalence. Equity in a defaultable entity cannot serve as an equivalent martingale numeraire across states of bankruptcy.
+
+### 4. Financial Derivatives: Pure Contingent Claims
+A *financial derivative* is a bilateral contractual agreement whose economic value and future cash flows derive entirely from the price level, rate, or performance of an external reference variable (the underlying instrument $S_t$).
+
+Unlike spot cash, credit, or equity, financial derivatives are primarily unfunded or require an initial margin fraction strictly smaller than the underlying notional value: 
+$$
+\begin{gather}
+\textbf{Definition: General Contingent Claim Payoff Functional} \\[5mm]
+\text{Let } \{S(t)\}_{t \in [0, T]} \text{ be the adapted price path of an underlying reference security. The terminal} \\[2mm]
+\text{payoff of a European path-dependent contingent claim } V(T) \text{ is an } \mathcal{F}_T\text{-measurable functional } \Phi\text{:} \\[3.5mm]
+V(T) = \Phi\left( \{S(u)\}_{0 \le u \le T} \right)
+\end{gather}
+$$
+
+The taxonomy of derivatives spans several fundamental settlement geometries:
+1. **Vanilla European Claims:** Payoff depends exclusively on the terminal spot price at horizon $T$: $V(T) = f(S(T))$. Examples include European calls ($f(S) = \max(S - K, 0)$) and puts ($f(S) = \max(K - S, 0)$).
+2. **Path-Dependent Exotic Claims:** Payoff depends on the historical trajectory across $[0, T]$. For continuous Asian options, the payoff evaluates to $f\left(\frac{1}{T}\int_0^T S(u) du\right)$; for barrier options, payoff depends on the first passage time $\tau_B := \inf\{t \ge 0 \mid S(t) = B\}$.
+3. **American and Bermudan Contingent Claims:** The holder possesses the legal right to exercise the contract at an optimal stopping time $\tau \in \mathcal{T}_{[0, T]}$ prior to or at maturity:
+   $$V(t) = \operatorname{ess\,sup}_{\tau \in \mathcal{T}_{[t, T]}} \mathbb{E}^{\mathbb{Q}}\left[ \exp\left(-\int_t^\tau r(s) ds\right) f(S(\tau)) \;\middle|\; \mathcal{F}_t \right] \tag{5}$$
+
+Derivatives are zero-sum in nominal cash flow settlement between counterparties: every dollar of profit realized by the long counterparty is offset by a dollar of loss incurred by the short counterparty. However, in economic welfare, derivatives are non-zero-sum: they enable the unbundling, trading, and transfer of specific market risks (e.g., interest rate duration, currency exposure, equity volatility) from risk-averse agents to entities capable of absorbing them.
 
 ---
-# Securities
-It was initially established that an asset is anything of economic value that is owned or can be controlled. Modern financial markets, however, mostly function on a unique form of financial claim: *Security*. While an asset can be tangible or intangible, a security is a specific category of financial asset that represents a *fungible* claim. Fungibility means identical units that can be exchanged without loss of value, enabling ownership to be exchanged effortlessly with another item of the same kind and value. 
+# Taxonomy of Marketable Financial Securities
+Marketable financial securities are categorized according to their term to maturity, legal structure, and priority of claim: 
+![[maturity_structure_of_securities.png]]
+(see [[Tikz Code - Taxonomy and Maturity Structure of Marketable Securities]])
+### Money Market Instruments
 
-In addition to fungibility, securities also exhibit increased *liquidity*. Liquidity refers to the ease with which an asset can be converted into cash without a loss in value. 
+Money market instruments are short-term debt obligations characterized by maturities of one year or less, high liquidity, large institutional transaction denominations, and minimal default risk.
+* **Treasury Bills (T-Bills):** Short-term promissory obligations issued by sovereign governments (commonly at 4, 13, 26, and 52-week auctions). T-bills pay no explicit periodic coupons; they are issued at a discount to face value and mature at par, serving as the empirical proxy for the risk-free asset $R_F$.
+* **Certificates of Deposit (CDs):** Time deposits issued by commercial banks that restrict early withdrawal but offer fixed or floating yields above baseline sovereign debt.
+* **Commercial Paper:** Unsecured short-term promissory notes issued by large corporations to finance immediate operating working capital, typically maturing within 270 days to avoid formal registration requirements.
+* **Repurchase Agreements (Repos):** Short-term collateralized loans wherein an institution sells a high-grade security (such as government debt) to a cash provider with an agreement to repurchase the security at a slightly higher price at a specified future date. The price differential determines the repo rate.
 
-Due to the vast amount of securities in existence, this chapter'll only focus on securities traded in modern financial marketplaces.  
-### Types of Marketable Securities
-An investor can choose to purchase directly any one of a number of different securities, many of which represent a type of claim on a private or government entity. Alternatively, the investor can opt to purchase securities through an intermediary, which bundles a set of direct investments and then sells the shares in the portfolio of financial instruments it holds. Below is a visual aid in helping remember the structure of marketable securities: 
-![[visual_aid_securities.png]]
-Investments in debt that have a maturity of less than one year are *money market securities*, which can be issued by a government or private entity. Investments with maturities of a year or longer are *capital market* instruments, which come in the form of equity or credit. In the case of credit-based capital market instruments, these can be issued by government or private entities. The final category of security are derivative instruments. In the case of securities, the four derivative classes are *forwards, futures, options, and swaps.*
+### Capital Market Debt Instruments
+Capital market instruments possess maturities exceeding one year, trading across medium-term and long-term investment horizons.
+* **Treasury Notes and Bonds:** Sovereign coupon-bearing debt. Medium-term notes mature between 1 and 10 years; long-term bonds mature between 10 and 30 years. These instruments pay semi-annual coupons and return par value at maturity.
+* **Corporate Bonds:** Debt instruments issued by private corporations, rated by credit agencies according to default likelihood (investment grade versus high-yield/junk). Corporate bonds carry higher risk premiums (credit spreads) over sovereign baselines and frequently contain embedded optionality (call provisions allowing the corporation to retire debt early when interest rates drop).
+* **Municipal Bonds:** Debt obligations issued by regional or local state entities (states, cities, school districts). Municipal debt is typically exempt from federal (and often state) income taxation.
 
-Below are notable examples of securities that make the bulk of financial activity in modern markets: 
-###### Money Market Securities
-- Short-term debt instruments
-- Offered by governments, financial institutions, and corporations
-- Have maturities of one year or less
-- Relatively large minimum transaction sizes
-- Some money market securities may not be publicly traded
-- Doesn't promise significant return
-- Considered safe and liquid
-- Offer higher interest rates than default savings account
-- Common examples are *Certificates of Deposits, Municipal notes,* and *Treasury Bills or Bonds*
+##### Municipal Bond Taxable Equivalent Yield
+Because municipal bond interest is exempt from income taxation, an investor must evaluate the security on an after-tax equivalent basis to compare its return to taxable sovereign or corporate bonds: 
+$$
+\begin{gather}
+\textbf{Proposition: Taxable Equivalent Yield (Par Bond)} \\[5mm]
+\text{Let } Y_m \text{ denote the nominal yield on a tax-exempt municipal bond selling at par value,} \\[2mm]
+\text{and let } t_m \in [0, 1) \text{ denote the investor's marginal income tax rate. The taxable equivalent} \\[2mm]
+\text{yield } Y_t \text{ that leaves the investor indifferent between the two assets is:} \\[3.5mm]
+Y_t = \frac{Y_m}{1 - t_m}
+\end{gather}
+$$
 
-###### Short-Term Treasury Bills
-- Short-term IOUs offered by a government
-- Usually offered in 91, 182, and 365-day maturities
-- Has a *face value*, which is the amount of cash the investor receives at maturity
-- Has a *coupon rate*, which is the interest received during the interest payoff interval
-- Considered a proxy for *risk-free* investment due to having a low rate of default
+>[!warning]+ Warning: Discount Municipal Bonds and Capital Gains Taxation
+>The relation in step 16 holds strictly if and only if the municipal bond sells at par value ($P = F$) and the yield curve is flat. If a municipal bond trades at a market discount ($P < F$), only the periodic coupon cash flow $C$ remains tax-exempt. The accretion of the market discount to par $(F - P)$ over the holding period is classified under tax law as a capital gain or ordinary income, taxed at the capital gains tax rate $t_{cg}$. For a discount bond maturing in one period:
+>
+>$$P = \frac{C + F - t_{cg}(F - P)}{1 + Y_{\text{after-tax}}} \tag{6}$$
+>
+>Failing to account for the taxation of the discount accretion overstates the after-tax yield of deep-discount municipal bonds.
 
-###### Interbank Offered Rate
-- Interest rate for short-term loans between banks to manage liquidity
-- Interbank lending usually occurs overnight
-- Primarily determined by *commercial banks*
-- In foreign exchange, the *interbank rate* is the currency exchange rate between banks, often including a premium for consumers. 
-- Usually reserved for large credit-worthy institutions
-
-###### Treasury Notes or Bonds
-- Broad range of maturity premium
-- Can last from one to ten years for medium-term notes, and ten years or longer for long-term bonds
-- Most notes and bonds pay interest twice a year and repay principal on the maturity date
-- The government can force the note/bondholder to sell it back to the government, which usually occurs in the last five years of the bond or note's life. This is referred to as *callability.*
-- Generally considered safe from default
-
-###### Municipal Bonds
-- Generally sold by political entities such as states, counties, airport authorities, school districts, and other entities who form a smaller part of the government
-- Higher risk of default
-- Tends to be tax-exempt, which means they tend to sell at a lower promised yield than nonmunicipals of the same risk. The equivalent yield, the discounted value of after-tax cash flows must be compared with pre-tax cash flows. The following simple formula can be used to approximate the taxable equivalent yield: 
-$$ \text{Taxable equivalent yield } = \frac{\text{Tax-exempt municipal yield}}{1 - \text{marginal tax rate}} \tag{3}$$
-This approximation holds exactly only if municipal bonds sell at par, the treasuries they are
-being compared to sell at par, and the yield curve is flat. This method of taxable yield estimation should be used carefully for municipal bonds selling at below par since the *capital gains* may be subject to taxation. 
-
-###### Corporate Bonds
-- Issued by corporate for-profit entities
-- Have a relatively high risk of default
-- Creditworthiness of issuer is usually rated by dedicated agencies
-- The nature of their claims tend to differ from corporation to corporation
-- Are callable
-
-###### Preferred Stock
-- A major form of equity
-- Pays shareholders periodic payments in the form of *dividends*
-- Return on principal is usually nonexistent
-- Failure to repay dividends doesn't imply bankruptcy or default
-- First class of shareholders to be paid off
-- Paid off after creditholders
-
-###### Common Stock
-- Represents ownership claim on earnings and assets of a corporation
-- Corporation can choose to pay dividends to common stock holders or reinvest earnings
-- Holder of common stock has *limited liability*, which shields them from bankruptcy. The most the common stockholder can lose is whatever they put in. 
-- One of the riskiest securities one can buy
+### Equity Securities
+* **Preferred Stock:** A hybrid equity security with statutory characteristics of both debt and common stock. Preferred stock pays a specified periodic dividend (fixed dollar amount or percentage of par). In exchange for dividend priority over common stock, preferred shares usually surrender voting control and do not participate in operating profit growth beyond the fixed dividend. Unpaid preferred dividends accumulate if specified as cumulative preferred.
+* **Common Stock:** Represents the core residual ownership of a corporation. Holders possess voting rights to elect the board of directors and approve major corporate actions. Dividends on common stock are discretionary, declared by the board of directors out of free cash flow. In return for bearing junior subordination risk in corporate bankruptcy, common shareholders retain limited liability: the maximum financial loss is strictly bounded by the initial capital invested.
 
 ---
-# Indirect Investing
-While an investor can directly purchase the instruments mentioned in this chapter, as well as many other investment options not mentioned here, doing so may be difficult. Research, funding, and effort are required to make an informed investing decision that investors may not have the time or willingness for. In these cases, the investor may opt to indirectly invest through various means. 
+# Empirical Risk and Return: The Historical Baseline
+To ground theoretical asset pricing in empirical reality, consider the historical long-term return and risk data that tracks annualized performance across major asset classes from 1926 through 2011, within the context of the US securities market:
+$$
+\begin{gather}
+\textbf{Table: Historical Return and Risk Across Asset Classes (1926–2011)} \\
+\begin{array}{lcc}
+\hline
+\textbf{Asset Class} & \textbf{Arithmetic Mean Return (\%)} & \textbf{Standard Deviation (\%)} \\
+\hline
+\text{U.S. Treasury Bills} & 3.6 & 3.1 \\
+\text{Long-Term Government Bonds} & 6.1 & 9.8 \\
+\text{Long-Term Corporate Bonds} & 6.4 & 8.4 \\
+\text{Large Company Common Stocks} & 11.8 & 20.3 \\
+\text{Small Company Common Stocks} & 16.5 & 32.5 \\
+\text{Consumer Price Index (Inflation)} & 3.1 & 4.2 \\
+\hline
+\end{array}
+\end{gather}
+$$
 
-Most collective indirect investing vehicles fall under two categories: *Actively Managed* and *Passively-Managed*: 
-1. **Actively Managed**
-	- Aims to outperform a benchmark
-	- Strategically purchases securities that may outperform other
-	- Focused on generating *alpha*, which are excess returns above a benchmark
-	- Adjust holdings based on economic trends, sector shifts, or company fundamentals
-	- Take calculated risk to deliver superior performance
-	- Charges relatively higher fees
-2. **Passively Managed**
-	- Replicates the performance of a benchmark by mimicking their makeup
-	- Delivers returns based on said benchmark 
-	- Minimizes trading and turnover of underlying assets
-	- Keep costs low and through automation and rule-based investing
-	- Provide diversification aligned with the benchmark's composition 
-	- Charges relatively lower expense ratios and fees, as well as being more tax-efficient
-
-While there're many collective investment vehicles, below are currently the most popular investment vehicles for both retail and institutional investors:
-
-###### Mutual Funds
-- Takes on the form of investment companies with shares that can be purchased
-- Holds on to a portfolio of securities in line with a policy and objective
-- Usually focus on a single strategy and time horizon, rather than focusing on utilizing many strategies at once
-- *Open-Ended* funds are purchased (and sold) directly from (and to) the mutual fund. They're purchased (and sold) at the value of the net assets standing behind each share, where the *net asset value* is determined once a day, at a stated time. 
-- *Closed-Ended* funds sell a predetermined number of shares in the fund, where the proceeds (minus the cost) are taken to purchase the underlying assets. Owning shares in a closed-end fund is like owning a share in a corporation, but the assets of the corporation are equity and credit securities. The shares of a closed-end fund tend to sell at a discount or premium to their net asset value due to the perceived quality of management and certain tax liabilities. 
-- Charges moderate fees
-- Can be actively or passively managed
-
-###### Hedge Funds
-- Actively managed
-- Uses a wider range of strategies that aren't available to public investment schemes
-- Can opt to invest in esoteric assets that are difficult to value or are illiquid
-- Requires a high minimum investment or net worth
-- Usually targets wealthy investors or those with specific accreditation
-- Private and doesn't accept funds from the public
-- Hedge fund compensation usually includes a singe-digit percent management fee and a double-digit incentive fee. The incentive fee usually only applies if the fund meets a return threshold
-- Highly illiquid and requires investors to keep their funds locked in for relatively long periods of time
-- Not as strictly regulated by the government as opposed to public investment schemes
-- The managers and executives themselves are usually investors and have a major stake in the enterprise
-- Returns are based on the ability of the manager to make returns regardless of market conditions
-
-###### Private Equity
-- Actively managed
-- Focuses on private and assets not listed on public exchanges
-- Caters to wealthy investors and institutions
-- Esoteric fee structure
-- Illiquid and requires investors to keep their cash locked in for long periods
-
-###### Pension Funds
-- Catered towards employees for retirement savings, and therefore, aren't open to investment for the public
-- More common in the public than private sector
-- Uses a wide variety of assets and strategies to make returns 
-- Very long time horizon
-- Pension guarantee is based on salary and years of service
-- Early withdrawals are usually impossible
-- Inflation protection is usually poor, leading to a decline in purchasing power over the years
-
-###### Sovereign Wealth Funds
-- State-owned investment vehicles
-- Invests primarily in assets located in the home country, but can also include assets outside of the home state
-- Not open to the public, with the government being the only entity who can invest
-- Aims to boost the host country's economy through strategic investments
-- Uses a wide variety of investment strategies and assets
-- Funds are often drawn from surplus reserves
-- Near-infinite time horizon
+Three empirical facts emerge from the historical records above:
+1. **The Equity Risk Premium:** Large company common stocks delivered an average nominal return of $11.8\%$ compared to $3.6\%$ for Treasury bills, establishing an average historical equity risk premium of:
+   $$\mathbb{E}[R_M - R_F] \approx 11.8\% - 3.6\% = 8.2\% \tag{7}$$
+2. **The Size Premium:** Small capitalization stocks exhibited higher average returns ($16.5\%$) alongside higher dispersion ($\sigma = 32.5\%$), reflecting compensation for liquidity risk and higher distress exposure.
+3. **Purchasing Power Preservation:** U.S. Treasury bills generated an average return of $3.6\%$ against an inflation rate of $3.1\%$, yielding a modest historical real risk-free rate of approximately $0.5\%$. Fixed-income instruments with longer duration (government and corporate bonds) delivered positive real returns, compensating investors for maturity and credit risks.
 
 ---
-# Return Characteristics of Assets
-One of the core tenets of portfolio management are risk and return, where investors like high return but dislike high risk. The tradeoff between risk and return is complex, requiring a rigorous and un-ambiguous definition of both terms, but a simple way to visualize the relationship with risk and return is through the following diagram:
-![[risk_return_matrix.png]]
-When discussing the tradeoff between potential risk and return, it's important to understand what is meant by "return." There are many ways to measure return but in most cases, the following definition of return will be used: 
+# Collective Investment Vehicles and Indirect Investing
+Direct investment in individual capital market instruments requires research overhead, monitoring costs, and capital scale to achieve diversification. Consequently, modern financial systems utilize collective investment vehicles to pool capital.
+
+### Structure of Investment Companies
+* **Open-End Mutual Funds:** Issue and redeem shares directly with investors continuously at the fund's **Net Asset Value (NAV)** calculated once daily at market close:
+  $$\text{NAV}_t = \frac{\text{Market Value of Fund Assets}_t - \text{Total Liabilities}_t}{\text{Total Shares Outstanding}_t} \tag{8}$$
+  Open-end funds face redemption liquidity risk: sudden outflows force portfolio managers to liquidate underlying securities, potentially generating adverse price impact.
+* **Closed-End Investment Companies:** Issue a fixed number of shares via an initial public offering (IPO), after which shares trade on secondary stock exchanges like common equity. The market price $P_t$ of a closed-end share is determined by supply and demand, frequently trading at a persistent discount or premium to its Net Asset Value:
+  $$\text{Discount}_t = \frac{\text{NAV}_t - P_t}{\text{NAV}_t} \tag{9}$$
+  This persistent deviation is the "closed-end fund puzzle," driven by managerial expense drag, unrealized tax liabilities, and noise trader sentiment.
+* **Exchange-Traded Funds (ETFs):** Investment companies that trade on secondary exchanges throughout the trading day at market-determined prices, but incorporate a continuous creation and redemption arbitrage mechanism. Authorized Participants (APs) exchange baskets of underlying securities for creation units of ETF shares (and vice versa). If an ETF trades at a discount to NAV, APs purchase the discounted ETF shares, redeem them for the underlying basket, and sell the underlying assets, keeping the market price close to the intrinsic NAV.
+
+### Alternative Investment Structures
+* **Hedge Funds:** Private investment partnerships unconstrained by public mutual fund regulatory limits. Hedge funds can utilize leverage, execute short sales, trade exotic derivatives, and invest in illiquid assets. Fee structures commonly follow the "2 and 20" model: a $2\%$ annual management fee on total assets under management (AUM) combined with a $20\%$ incentive fee on net profits above a hurdle rate, subject to a high-water mark.
+* **Private Equity and Venture Capital:** Pooled funds that purchase controlling equity stakes in private operating companies or early-stage startups. Capital is committed for long lock-up periods (typically 7 to 10 years). Value creation relies on financial restructuring, operational improvements, and strategic exits via IPO or corporate acquisition.
+* **Sovereign Wealth Funds (SWFs):** State-owned investment vehicles funded by national foreign exchange surpluses, commodity exports (e.g., petroleum), or fiscal reserves. Characterized by long investment horizons, SWFs act as countercyclical macro allocators in global financial markets.
+
+---
+# Mathematical Foundations of Market Indexes
+Market indexes serve as benchmarks for evaluating active investment performance, calculating systematic risk parameters ($\beta$), and constructing passive replication products.
+
+### Weighting Methodologies
+An index of $N$ constituent assets at time $t$ has constituent prices $\{P_{i,t}\}_{i=1}^N$ and shares outstanding $\{Q_{i,t}\}_{i=1}^N$. The index level $I_t$ is determined by the allocation weight $w_{i,t}$ assigned to each constituent.
+
+##### 1. Price-Weighted Index
+In a price-weighted index (e.g., the Dow Jones Industrial Average, Nikkei 225), the weight assigned to each security is proportional strictly to its nominal per-share market price:
 $$
 \begin{gather}
-\textbf{Definition: Holding Period Return} \\[5mm]
-\text{The sum of the change in the market price of a security and } \\
-\text{any income received over a period, divided by the price of the security at the start } \\
-\text{of the holding period. }
+w_{i,t} = \frac{P_{i,t}}{\sum_{j=1}^N P_{j,t}} \tag{10} \\[3.5mm]
+I_t = \frac{\sum_{i=1}^N P_{i,t}}{D_t} \tag{11}
 \end{gather}
 $$
-In describing securities, there are several factors that should affect risk. These included
-- The maturity of the investment, where longer investments tend to be riskier
-- Risk characteristic and creditworthiness of the issuer or guarantor of the investment
-- Nature and priority of the claims the investment has on income and assets
-- Liquidity of the instrument and type of economy it's traded in
-# Indexes
 
-### Three Classes of Indices
-With the many types of assets available for investing in the market, there comes many ways to track their performance. While one manner of tracking their performance is through measuring returns, this method of tracking falls short for understanding the evolution of their asset prices changing overtime, especially when multiple assets are tracked together as a whole. Therefore, better means of tracking the evolution of asset prices are required. When tracking the performance of an asset or group of assets, their performance can be measured in the form of an *index*. Indices can be categorized along four primary structural dimensions: 
-1. **Weighting Methodology**
-2. **Mathematical Aggregation**
-3. **Underlying Asset Class Coverage**
-4. **Cash-Flow Accounting**
+where $D_t$ represents the index **divisor**. A price-weighted index mirrors the performance of a portfolio containing exactly one share of each constituent stock. 
+
+A stock trading at $\$200$ per share exerts ten times the influence of a stock trading at $\$20$, regardless of total market capitalization.
+
+When a stock undergoes an $m$-for-1 split or a constituent is replaced, the nominal sum of constituent prices shifts abruptly from $\sum P_{\text{old}}$ to $\sum P_{\text{new}}$. To ensure index continuity ($I_{t+} = I_{t-}$), the divisor must adjust recursively:
+$$
+\begin{gather}
+\frac{\sum_{i=1}^N P_{i,t}^{\text{old}}}{D_{t-}} = \frac{\sum_{i=1}^N P_{i,t}^{\text{new}}}{D_{t+}} \implies D_{t+} = D_{t-} \cdot \frac{\sum_{i=1}^N P_{i,t}^{\text{new}}}{\sum_{i=1}^N P_{i,t}^{\text{old}}} \tag{12}
+\end{gather}
+$$
+
+##### 2. Value-Weighted (Market-Capitalization-Weighted) Index
+In a value-weighted index (e.g., *S&P 500, MSCI World*), the weight of each security is proportional to its aggregate market capitalization:
+$$
+\begin{gather}
+w_{i,t} = \frac{P_{i,t} Q_{i,t}}{\sum_{j=1}^N P_{j,t} Q_{j,t}} = \frac{M_{i,t}}{\sum_{j=1}^N M_{j,t}} \tag{13} \\[3.5mm]
+I_t = \frac{\sum_{i=1}^N P_{i,t} Q_{i,t}}{\sum_{i=1}^N P_{i,0} Q_{i,0}} \times I_0 = \frac{M_t}{B_t} \times I_0 \tag{14}
+\end{gather}
+$$
+
+where $M_t := \sum_{i=1}^N P_{i,t} Q_{i,t}$ is total market capitalization and $B_t$ is the base market value divisor.
+
+Value-weighted indexes are **macroconsistent**: they reflect the aggregate market portfolio held by all investors in macroeconomic equilibrium. A value-weighted index is naturally self-rebalancing: as asset prices fluctuate, the market capitalization shifts in proportion to price changes, requiring zero transaction turnover for a buy-and-hold strategy.
+
+Modern indexes commonly employ **free-float adjustments**, scaling $Q_{i,t}$ by a float factor $f_i \in (0, 1]$ to exclude illiquid insider stakes, sovereign holdings, and cross-corporate ownership.
+
+##### 3. Equal-Weighted Index
+In an equal-weighted index, an identical dollar amount is allocated to each constituent security at every rebalancing interval $t$:
+$$
+\begin{gather}
+w_{i,t} = \frac{1}{N} \quad \forall i \in \{1, 2, \dots, N\} \tag{15}
+\end{gather}
+$$
+
+An equal-weighted index de-emphasizes mega-cap companies and tilts aggregate exposure toward smaller-capitalization firms. Maintaining equal weights requires periodic portfolio rebalancing: the portfolio manager must sell shares of outperforming assets and purchase shares of underperforming assets, generating transaction costs.
+
+---
+# Mathematical Aggregation: Arithmetic vs. Geometric Compounding
+The choice of mathematical aggregation scheme determines the return dynamics of an index.
+
+### Arithmetic Aggregation
+An arithmetically compounded index traces the value of a physical, buy-and-hold basket of assets:
+$$
+\begin{gather}
+I_t^{\text{arith}} = I_{t-1}^{\text{arith}} \sum_{i=1}^N w_{i,t-1} \left( \frac{P_{i,t}}{P_{i,t-1}} \right) \tag{16}
+\end{gather}
+$$
+
+Arithmetic aggregation preserves value-additivity: the dollar value of the index corresponds to the sum of the dollar values of its constituent holdings.
+
+### Geometric Aggregation
+A geometrically compounded index calculates the geometric mean of constituent price changes:
+$$
+\begin{gather}
+I_t^{\text{geom}} = I_{t-1}^{\text{geom}} \prod_{i=1}^N \left( \frac{P_{i,t}}{P_{i,t-1}} \right)^{w_{i,t-1}} \tag{17}
+\end{gather}
+$$
+
+For an equal-weighted geometric index ($w_i = \frac{1}{N}$):
+$$
+\begin{gather}
+I_t^{\text{geom}} = I_{t-1}^{\text{geom}} \left( \prod_{i=1}^N \frac{P_{i,t}}{P_{i,t-1}} \right)^{\frac{1}{N}} \tag{18}
+\end{gather}
+$$
 
 $$
 \begin{gather}
-\textbf{Definition: Index} \\[5mm]
-\text{An index represents a standardized and quantifiable proxy for measuring the} \\[2mm]
-\text{continuous price or tota return dynamics of a defined basket of financial securities. }
+\textbf{Theorem: Jensen's Volatility Drag in Geometric Indexing} \\[5mm]
+\text{For any set of positive constituent price returns } R_{i,t} := \frac{P_{i,t}}{P_{i,t-1}} - 1, \text{ the return of a} \\[2mm]
+\text{geometrically aggregated index is strictly less than or equal to the return of an arithmetically} \\[2mm]
+\text{aggregated index:} \\[3.5mm]
+R_t^{\text{geom}} \le R_t^{\text{arith}} \tag{31} \\[3.5mm]
+\text{with equality holding if and only if all constituent returns are identical: } R_{1,t} = R_{2,t} = \dots = R_{N,t}. \\[2mm]
+\text{Under lognormal continuous-time diffusion with average constituent variance } \bar{\sigma}^2\text{:} \\[3.5mm]
+\mathbb{E}[R_t^{\text{arith}}] - \mathbb{E}[R_t^{\text{geom}}] \approx \frac{1}{2} \operatorname{Var}(R_i) 
 \end{gather}
 $$
+(see [[Proof of Jensen's Inequality for Geometric Indices]])
 
-The weight $w_{i,t}$ assigned to constituent security $i$ at time $t$ dictates how idiosyncratic price shocks transmit to aggregate index performance. Broadly speaking, there're three main types of indices: *Price-weighted, value-weighted, and Equal-Weighted*
-###### Price-Weighted Index
+Because the natural logarithm is strictly concave ($\frac{d^2 \ln x}{dx^2} = -\frac{1}{x^2} < 0$), Jensen's inequality dictates:
 $$
 \begin{gather}
-\textbf{Definition: Price-Weighted Index} \\[5mm]
-\text{If } P_{i,t} \text{ is the price of an asset, then the individual weight of each} \\[2mm]
-\text{asset is measured as } \\[3.5mm]
-w_{i,t} = \frac{P_{i,t}}{\sum^N_{j=1} P_{j,t}} \\[3.5mm]
-\text{The index level } I_{t} \text{ at time } t \text{is expressed as an adjusted advisor that absorbs corporate} \\[2mm]
-\text{actions such as stock splits, reverse splits, and constituent replacements: } \\[2mm]
-I_t = \frac{\sum_{i=1}^N P_{i,t}}{D_t}
+\ln\left( \frac{1}{N}\sum_{i=1}^N \frac{P_{i,t}}{P_{i,t-1}} \right) > \frac{1}{N}\sum_{i=1}^N \ln\left( \frac{P_{i,t}}{P_{i,t-1}} \right) = \ln\left[ \left( \prod_{i=1}^N \frac{P_{i,t}}{P_{i,t-1}} \right)^{\frac{1}{N}} \right] \tag{19}
 \end{gather}
 $$
-One notable characteristic of a price-weighted index is that a higher-priced asset exerts a disproportionate influence on total performance regardless of the asset's underlying enterprise value. 
 
-###### Value-Weighted Index
-$$
-\begin{gather}
-\textbf{Definition: Value-Weighted Index} \\[5mm]
-\text{If } P_{i,t} \text{ is the price of an asset and } Q_{i,t} \text{ is the total number of units of the asset in the economy, } \\[2mm]
-\text{then the individual weight of each asset is measured as} \\[2mm]
-w_{i,t} = \frac{P_{i,t} \, Q_{i,t}}{\sum_{j=1}^N P_{j,t} \, Q_{j,t}} \\[2mm]
-\text{The index relative to a base data value } I_{0} \text{ is } \\[2mm]
-I_t = \frac{\sum_{i=1}^N P_{i,t} \, Q_{i,t}}{\sum_{i=1}^N P_{i,0} \, Q_{i,0}} \times I_0
-\end{gather}
-$$
-This index has three primary characteristics: 
-1. This form of indexing is macroconsistent because it reflects aggregate investor holdings in equilibrium. However, *concentration risk* can emerge from when a large asset dominates the index weight. 
-2. This excludes closely-held assets, such as government holdings and insider stakes, to prevent market distortions during passive replication. 
-3. Can be used to implement upper limits on single-asset weights to satisfy regulatory diversification constraints for collective investment schemes. 
+Exponentiating both sides proves step 31. A geometric index understates the long-term wealth created by holding an actual portfolio of securities.
 
-###### Equal-Weighted (Unweighted) Indices
-$$
-\begin{gather}
-\textbf{Definition: Equal-Weighted Indices} \\[5mm]
-\text{An index where every asset is assigned an identical portfolio weight},  \\[2mm]
-\text{where } w_{i,t} = \frac{1}{N} \text{at each balancing interval. }
-\end{gather}
-$$
-This is useful for de-emphasizing securities with large weights and amplifies exposure to smaller entities relative to capitalization weighting. This form of indexing requires periodic portfolio rebalancing, including higher transaction turnover. 
+---
+# Computational Implementation in Julia
+The following production-grade Julia implementation demonstrates:
+1. Municipal bond after-tax equivalent yield calculation across par and discount regimes.
+2. Price-weighted index construction with automated divisor adjustments following stock splits.
+3. Market-capitalization-weighted and equal-weighted index simulation.
+4. Numerical proof of Jensen's volatility drag in geometric vs. arithmetic aggregation.
 
-### Classification by Mathematical Aggregation 
-In the architecture of index construction and quantitative benchmark design, the choice of aggregation scheme is a fundamental structural decision. It dictates not only how constituent price shocks propagate through the index, but also what economic or mathematical reality the benchmark represents. There are two main ways of aggregation across modern index construction: *Arithmetic mean compounding* and *geometric averaging*. 
+```julia
+# ==============================================================================
+# Quant's Bible: Financial Instruments, Securities, and Index Engineering
+# Language: Julia 1.x
+# Packages: LinearAlgebra, Statistics, DataFrames
+# ==============================================================================
 
-###### Arithmetic Averaging
-$$
-\begin{gather}
-\textbf{Definition: Arithmetic Averaging} \\[5mm]
-\text{Measures the additing relative performance of constituent security } \\[2mm]
-\text{prices or total capitalization of an asset across a single period. } \\[2mm]
-\text{The index value at a specific time } t \text{ is defined as 
-} \\[3.5mm]
-I_{t} = I_{t-1} \cdot \left(\sum^N_{i=1} w_{i,t} \frac{P_{i,t}}{P_{i,t-1}}\right)
-\end{gather}
-$$
-Arithmetic value-weighted indices provide an accurate representation of aggregate market value and total changes in sectoral wealth over time. This is critical in value-weighted indices, where arithmetic averaging preserves direct proportional mapping to aggregate market capitalization and total corporate wealth. Arithmetically averaged value-weighted indices are the only benchmarks that're macroconsistent. Macroconsistency guarantees that all market participants can hold the index portfolio simultaneously in aggregate equilibrium without forcing artificial trade flows. (see [[Chapter 2 - Expected Value|arithmetic averaging]]) for more information)
+using LinearAlgebra
+using Statistics
+using DataFrames
 
-###### Geometric Averaging
-$$
-\begin{gather}
-\textbf{Definition: Geometric Averaging} \\[5mm]
-\text{Measures relative performance via multiplicative compounding across } \\[2mm]
-\text{constituent price relatives. It calculates the } N\text{th root of the product of } \\[2mm]
-\text{relative price changes. } \\[3.5mm]
- I_t = I_{t-1} \times \left( \prod_{i=1}^N \frac{P_{i,t}}{P_{i,t-1}} \right)^{\frac{1}{N}}
-\end{gather}
-$$
-This means of measuring the average down-weights high-growth assets and overweights slower-growth assets, systematically understating true long-term price appreciation relative to arithmetic measures. This method of averaging incorporates continuous rebalancing or substitution. 
+"""
+    municipal_taxable_equivalent_yield(Y_m, tax_rate; P=100.0, F=100.0, t_cg=0.20)
+
+Computes the taxable equivalent yield for municipal debt.
+Handles both par bonds and market-discount bonds subject to capital gains tax.
+"""
+function municipal_taxable_equivalent_yield(
+    Y_m::T, 
+    tax_rate::T; 
+    P::T = 100.0, 
+    F::T = 100.0, 
+    t_cg::T = 0.20
+) where {T<:AbstractFloat}
+    @assert 0.0 <= tax_rate < 1.0 "Income tax rate must reside in [0, 1)."
+    @assert P > 0.0 && F > 0.0 "Prices and face values must be strictly positive."
+
+    if P >= F
+        # Standard par or premium tax-exempt formula
+        return Y_m / (one(T) - tax_rate)
+    else
+        # Discount bond: Accretion of discount (F - P) is subject to capital gains tax
+        # Approximate single-period yield adjustment
+        capital_gain = F - P
+        taxable_capital_gain = capital_gain * t_cg
+        after_tax_cash_flow = (P * Y_m) + F - taxable_capital_gain
+        after_tax_yield = (after_tax_cash_flow - P) / P
+        return after_tax_yield / (one(T) - tax_rate)
+    end
+end
+
+"""
+    struct StockState{T<:AbstractFloat}
+
+Holds the nominal state of a single stock constituent.
+"""
+struct StockState{T<:AbstractFloat}
+    price::T
+    shares::T
+end
+
+"""
+    simulate_price_weighted_index(prices_pre, split_ratios, prices_post)
+
+Calculates a price-weighted index with exact recursive divisor updates
+following stock splits and corporate actions.
+"""
+function simulate_price_weighted_index(
+    prices_pre::Vector{T},
+    split_ratios::Vector{T},
+    prices_post::Vector{T};
+    initial_divisor::T = T(length(prices_pre))
+) where {T<:AbstractFloat}
+
+    sum_pre = sum(prices_pre)
+    index_pre = sum_pre / initial_divisor
+
+    # Adjusted post-split prices before trading day dynamics
+    prices_adjusted_split = prices_pre ./ split_ratios
+    sum_split = sum(prices_adjusted_split)
+
+    # Divisor update relation: preserves index continuity
+    updated_divisor = initial_divisor * (sum_split / sum_pre)
+
+    # Final post-market session index level
+    sum_post = sum(prices_post)
+    index_post = sum_post / updated_divisor
+
+    return (
+        initial_index   = index_pre,
+        updated_divisor = updated_divisor,
+        final_index     = index_post
+    )
+end
+
+"""
+    compare_aggregation_schemes(price_matrix, weights)
+
+Demonstrates the Jensen's Inequality gap between Arithmetic
+and Geometric compounding across an N-asset universe over T periods.
+"""
+function compare_aggregation_schemes(
+    price_matrix::Matrix{T},
+    weights::Vector{T}
+) where {T<:AbstractFloat}
+
+    T_periods, N_assets = size(price_matrix)
+    @assert length(weights) == N_assets "Weight vector dimension mismatch."
+    @assert isapprox(sum(weights), one(T)) "Weights must sum to unity."
+
+    arith_index = zeros(T, T_periods)
+    geom_index  = zeros(T, T_periods)
+
+    arith_index[1] = 100.0
+    geom_index[1]  = 100.0
+
+    for t in 2:T_periods
+        price_relatives = price_matrix[t, :] ./ price_matrix[t - 1, :]
+        
+        # Arithmetic aggregation
+        arith_return = dot(weights, price_relatives)
+        arith_index[t] = arith_index[t - 1] * arith_return
+        
+        # Geometric aggregation
+        log_relatives = log.(price_relatives)
+        geom_return = exp(dot(weights, log_relatives))
+        geom_index[t] = geom_index[t - 1] * geom_return
+    end
+
+    return DataFrame(
+        Period = 1:T_periods,
+        Arithmetic_Index = arith_index,
+        Geometric_Index = geom_index,
+        Drag = arith_index .- geom_index
+    )
+end
+
+# ------------------------------------------------------------------------------
+# Numerical Execution and Demonstration
+# ------------------------------------------------------------------------------
+
+# 1. Municipal Bond Equivalent Yield Demonstration
+Y_muni = 0.045       # 4.50% tax-exempt yield
+tax_marginal = 0.35  # 35% marginal bracket
+equiv_par = municipal_taxable_equivalent_yield(Y_muni, tax_marginal, P=100.0, F=100.0)
+equiv_disc = municipal_taxable_equivalent_yield(Y_muni, tax_marginal, P=85.0, F=100.0, t_cg=0.20)
+
+println("Municipal Bond Taxable Equivalent Yield Analysis:")
+println("Par Bond Equivalent Yield:      ", round(equiv_par * 100, digits=3), "%")
+println("Discount Bond Equivalent Yield: ", round(equiv_disc * 100, digits=3), "%\n")
+
+# 2. Price-Weighted Divisor Adjustment
+# 3-stock universe: Stock 1 splits 2-for-1
+p_pre = Float64[100.0, 50.0, 30.0]
+splits = Float64[2.0, 1.0, 1.0]     # Asset 1 executes 2:1 split
+p_post = Float64[55.0, 52.0, 29.0]  # Next-day realized prices
+
+pw_results = simulate_price_weighted_index(p_pre, splits, p_post)
+println("Price-Weighted Index Divisor Adjustment:")
+println("Initial Index:   ", round(pw_results.initial_index, digits=3))
+println("Updated Divisor: ", round(pw_results.updated_divisor, digits=4))
+println("Final Index:     ", round(pw_results.final_index, digits=3), "\n")
+
+# 3. Arithmetic vs. Geometric Compounding Drag
+# Synthesize 5 periods of volatile price evolution across 3 assets
+P_history = Float64[
+    100.0  100.0  100.0;
+    120.0   90.0  105.0;
+    110.0  115.0   95.0;
+    135.0   80.0  110.0;
+    125.0  105.0  115.0
+]
+w_equal = fill(1.0 / 3.0, 3)
+drag_df = compare_aggregation_schemes(P_history, w_equal)
+
+println("Empirical Verification of Jensen's Inequality Drag in Indexing:")
+println(drag_df)
+```
