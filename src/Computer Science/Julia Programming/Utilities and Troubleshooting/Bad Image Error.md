@@ -64,7 +64,6 @@ When a corrupted package image blocks process initialization, the corrupted cach
 ```
 
 ### Remediation Protocol via Terminal
-
 The most reliable resolution involves deleting the compiled artifacts directly from the shell before launching Julia.
 
 ##### Method 1: Remediation via PowerShell (Windows)
@@ -84,7 +83,6 @@ if (Test-Path $CachePath) {
 ```
 
 ##### Method 2: Remediation via POSIX Shell (Linux / macOS)
-
 In distributed Linux compute environments or cluster nodes, execute the following removal:
 ```bash
 # Purge compiled cache directory for target package
@@ -92,7 +90,6 @@ rm -rf ~/.julia/compiled/v1.11/TargetPackage/
 ```
 
 ### Executing a Forced Precompilation Pass
-
 Following cache removal, launch Julia within the relevant project environment and trigger a synchronous precompilation sweep:
 ```julia
 using Pkg

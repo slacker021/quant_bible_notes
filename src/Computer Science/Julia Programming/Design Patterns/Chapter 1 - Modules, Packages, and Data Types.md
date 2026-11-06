@@ -22,8 +22,33 @@ Entities defined within a module—including abstract types, composite structure
 
 ### Lexical Module Hierarchy and Path Resolution
 Julia organizes modules into a hierarchical tree starting from the root environment `Main`. The path resolution rules dictate how symbols and submodule definitions are located across physical and logical boundaries: 
-![[module_environment_hierarchy.png]]
-(see [[Tikz Code - Module and Environment Hierarchy]])
+```easy-tikz
+title $\text{Module and Environment Hierarchy}$
+show x from -7.0 to 7.0 and y from -3.5 to 3.5
+axes on the edges
+set show_axis_label = false
+size 14 x 8
+set displayAlign = "right"
+R_main: shade where x >= -3.2 and x <= 3.2 and y >= 1.6 and y <= 2.6, in teal, opacity 0.18, outlined
+R_modA: shade where x >= -5.6 and x <= -1.4 and y >= -0.3 and y <= 0.7, in orange, opacity 0.18, outlined
+R_modB: shade where x >= 1.4 and x <= 5.6 and y >= -0.3 and y <= 0.7, in green, opacity 0.18, outlined
+R_subA1: shade where x >= -6.2 and x <= -3.8 and y >= -2.6 and y <= -1.6, in red, opacity 0.18, outlined
+R_subA2: shade where x >= -3.2 and x <= -0.8 and y >= -2.6 and y <= -1.6, in teal, opacity 0.18, outlined
+draw a segment from (0, 1.6) to (0, 1.15), in gray, thick
+draw a segment from (-3.5, 1.15) to (3.5, 1.15), in gray, thick
+draw an arrow from (-3.5, 1.15) to (-3.5, 0.7), in orange, thick
+draw an arrow from (3.5, 1.15) to (3.5, 0.7), in green, thick
+draw a segment from (-3.5, -0.3) to (-3.5, -0.95), in gray, thick
+draw a segment from (-5.0, -0.95) to (-2.0, -0.95), in gray, thick
+draw an arrow from (-5.0, -0.95) to (-5.0, -1.6), in red, thick
+draw an arrow from (-2.0, -0.95) to (-2.0, -1.6), in teal, thick
+write "$\\text{Main (Root Environment)}$" at (0, 1.7) in teal, large
+write "$\\text{Module A}$" at (-3.5, -0.2) in orange, large
+write "$\\text{Module B}$" at (3.5, -0.2) in green, large
+write "$\\text{Sub } A_1$" at (-5.0, -2.5) in red
+write "$\\text{Sub } A_2$" at (-2.0, -2.5) in teal
+```
+
 ##### Absolute Resolution (No Leading Dots)
 When a `using` or `import` statement is executed without leading dots, Julia initiates an absolute top-level lookup:
 ```julia
@@ -353,8 +378,38 @@ Beginning in Julia 1.11, the runtime recognizes version-specific manifests (e.g.
 
 ### The Acyclic Dependency Principle
 Julia's compilation model mandates that module dependency topologies form a Directed Acyclic Graph (DAG). If `ModuleA` imports `ModuleB`, `ModuleB` cannot directly or transitively import `ModuleA`: 
-![[module_dependency graph.png]]
-(see [[Tikz Code - Directed Acyclic Graph Resolution of Module Dependencies]])
+
+```easy-tikz
+title $\text{Directed Acyclic Graph Resolution of Module Dependencies}$
+show x from -7.5 to 7.5 and y from -5.5 to 4.5
+axes on the edges
+set show_axis_label = false
+size 14 x 10
+R_modA_cyc: shade where x >= -5.4 and x <= -1.8 and y >= 2.0 and y <= 3.0, in orange, opacity 0.18, outlined
+R_modB_cyc: shade where x >= 1.8 and x <= 5.4 and y >= 2.0 and y <= 3.0, in green, opacity 0.18, outlined
+R_common: shade where x >= -2.8 and x <= 2.9 and y >= -1.6 and y <= -0.2 in teal, opacity 0.18, outlined
+R_modA_dag: shade where x >= -5.4 and x <= -1.8 and y >= -4.8 and y <= -3.6, in orange, opacity 0.18, outlined
+R_modB_dag: shade where x >= 1.8 and x <= 5.4 and y >= -4.8 and y <= -3.6, in green, opacity 0.18, outlined
+draw an arrow from (-1.8, 2.5) to (1.8, 2.5), in red, thick
+draw a segment from (3.6, 3.0) to (3.6, 3.5), in red, thick
+draw a segment from (3.6, 3.5) to (-3.6, 3.5), in red, thick
+draw an arrow from (-3.6, 3.5) to (-3.6, 3.0), in red, thick
+draw a segment from (-7.0, 1.2) to (7.0, 1.2), in gray, dashed
+draw a segment from (-3.6, -3.6) to (-3.6, -2.8), in gray, thick
+draw a segment from (3.6, -3.6) to (3.6, -2.8), in gray, thick
+draw a segment from (-3.6, -2.8) to (3.6, -2.8), in gray, thick
+draw an arrow from (0, -2.8) to (0, -1.6), in teal, very thick
+write "$\\text{CYCLIC DEPENDENCY (ILLEGAL)}$" at (-0.2, 3.6) in red
+write "$\\text{ModuleA}$" at (-3.55, 2.05) in orange, large
+write "$\\text{ModuleB}$" at (3.65, 2.05) in green, large
+write "$\\text{Circular Dependency Deadlock}$" at (0, 2.85) in red, small
+write "$\\text{ACYCLIC RESOLUTION VIA SHARED ABSTRACTION (COMPLIANT)}$" at (-0.05, 0.2) in green
+write "$\\text{Common Abstract Types}$" at (0, -1.05) in teal, large
+write "$\\text{(Shared Behavioral Contract)}$" at (0, -1.55), small
+write "$\\text{ModuleA}$" at (-3.6, -4.6) in orange, large
+write "$\\text{ModuleB}$" at (3.6, -4.7) in green, large
+write "$\\text{Both Depend on Shared Contract (No Cycles)}$" at (0.1, -5.4) in gray, small
+```
 
 Circular references prevent static compilation, invalidate method specialization trees, and induce precompilation deadlocks. When two modules require mutual awareness, the structural solution requires factoring the shared abstract types and protocol definitions into a lightweight third foundation module.
 
@@ -489,7 +544,35 @@ converted_shares = convert(Float64, integer_shares) # Direct conversion protocol
 ```
 
 Automatic conversion via `convert` is restricted to four specific language evaluation boundaries:
-![[conversion_function.png]]
+
+```easy-tikz
+title $\text{Implicit Conversion Boundaries in Type Enforcement}$
+show x from -7.6 to 7.6 and y from -5.0 to 3.0
+axes on the edges
+set show_axis_label = false
+size 14 x 9
+R_root: shade where x >= -2.6 and x <= 2.6 and y >= 1.4 and y <= 2.4, in teal, opacity 0.18, outlined
+R_array: shade where x >= -7.2 and x <= -2.8 and y >= -1.2 and y <= 0.4, in orange, opacity 0.18, outlined
+R_field: shade where x >= -2.2 and x <= 2.2 and y >= -1.2 and y <= 0.4, in green, opacity 0.18, outlined
+R_return: shade where x >= 2.8 and x <= 7.2 and y >= -1.2 and y <= 0.4, in red, opacity 0.18, outlined
+R_var: shade where x >= -2.6 and x <= 2.6 and y >= -4.2 and y <= -2.6, in purple, opacity 0.18, outlined
+draw a segment from (0, 1.4) to (0, 0.9), in gray, thick
+draw a segment from (-5.0, 0.9) to (5.0, 0.9), in gray, thick
+draw an arrow from (-5.0, 0.9) to (-5.0, 0.4), in orange, thick
+draw an arrow from (0, 0.9) to (0, 0.4), in green, thick
+draw an arrow from (5.0, 0.9) to (5.0, 0.4), in red, thick
+draw an arrow from (0, -1.2) to (0, -2.6), in purple, thick
+mark (0, 0.9), (-5.0, 0.9) and (5.0, 0.9), in black, small
+write "$\\text{Conversion Boundaries}$" at (0, 1.45) in teal, large
+write "$\\text{1. Array Element} \\\\ \\text{ Assignment}$" at (-5.0, -0.75) in orange
+write "$A[i] = v$" at (-4.95, -1.2), small
+write "$\\text{2. Struct Field} \\\\ \\text{ Assignment}$" at (0, -0.7) in green
+write "$\\text{obj.field} = v$" at (0, -1.15), small
+write "$\\text{3. Declared Return} \\\\ \\text{Boundary}$" at (5.0, -0.7) in red
+write "$f()::T = v$" at (5.1, -1.2), small
+write "$\\text{4. Typed Variable Assignment}$" at (0, -3.6) in purple
+write "$\\text{local } x::T = v$" at (0, -4.1), small
+```
 
 1.  **Array Assignment:** Assigning a value into a typed array:
 ```julia

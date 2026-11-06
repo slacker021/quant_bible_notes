@@ -194,7 +194,6 @@ The table below contrasts expression manipulation constructs:
 | `$(xs...)` | *Spliced sequence* | Immediate AST expansion | Constructing variadic multi-factor asset pricing calls. |
 
 ---
-
 # Developing Macros and Macro Architecture
 A **macro** defines an AST-to-AST transformation executed during the compilation phase, before the program is lowered to machine code. While a function takes runtime values as arguments and returns a runtime value, a macro takes **unevaluated expressions, symbols, or literals** as inputs and returns a transformed **expression**:
 $$\begin{gather}

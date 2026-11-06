@@ -301,9 +301,48 @@ slippage = cost_calibrated(0.1, 0.05, 50_000.0)
 
 ---
 # Understanding Multiple Dispatch and Ambiguities
-Multiple dispatch is Julia's fundamental execution mechanism. While single-dispatch languages determine method execution based solely on the runtime type of the object preceding the dot (`object.method()`), Julia inspects the types of **all positional arguments** simultaneously.
-![[multiple_dispatch_engine_instrument.png]]
-(see [[Tikz Code - Multiple Dispatch Across Engine Matrix and Instrument Taxonomy]])
+Multiple dispatch is Julia's fundamental execution mechanism. While single-dispatch languages determine method execution based solely on the runtime type of the object preceding the dot (`object.method()`), Julia inspects the types of **all positional arguments** simultaneously:
+
+```easy-tikz
+title $\text{Multiple Dispatch Across Engine Matrix and Instrument Taxonomy}$
+show x from -7.6 to 7.6 and y from -5.6 to 2.8
+axes on the edges
+set show_axis_label = false
+size 14 x 9.5
+R_call: shade where x >= -5.1 and x <= 5.3 and y >= 1.4 and y <= 2.4 in teal, opacity 0.18, outlined
+R_eng_hdr: shade where x >= -7.4 and x <= -1 and y >= -0.3 and y <= 0.7 in orange, opacity 0.18, outlined
+R_inst_hdr: shade where x >= 0.7 and x <= 7.6 and y >= -0.3 and y <= 0.7 in green, opacity 0.18, outlined
+R_eng1: shade where x >= -6.2 and x <= -2.2 and y >= -2.0 and y <= -1.0, in orange, opacity 0.15, outlined
+R_eng2: shade where x >= -6.2 and x <= -2.2 and y >= -3.5 and y <= -2.5, in orange, opacity 0.15, outlined
+R_inst1: shade where x >= 2.2 and x <= 6.2 and y >= -2.0 and y <= -1.0, in green, opacity 0.15, outlined
+R_inst2: shade where x >= 2.2 and x <= 6.2 and y >= -3.5 and y <= -2.5, in green, opacity 0.15, outlined
+R_inst3: shade where x >= 2.2 and x <= 6.2 and y >= -5.0 and y <= -4.0, in green, opacity 0.15, outlined
+draw a segment from (0, 1.4) to (0, 1.05), in gray, thick
+draw a segment from (-4.2, 1.05) to (4.2, 1.05), in gray, thick
+draw an arrow from (-4.2, 1.05) to (-4.2, 0.7), in orange, thick
+draw an arrow from (4.2, 1.05) to (4.2, 0.7), in green, thick
+mark (0, 1.05), (-4.2, 1.05) and (4.2, 1.05), in black, small
+draw a segment from (-4.2, -0.3) to (-4.2, -0.6), in orange, thick
+draw a segment from (-6.6, -0.6) to (-4.2, -0.6), in orange, thick
+draw a segment from (-6.6, -0.6) to (-6.6, -3.0), in orange, thick
+draw an arrow from (-6.6, -1.5) to (-6.2, -1.5), in orange, thick
+draw an arrow from (-6.6, -3.0) to (-6.2, -3.0), in orange, thick
+draw a segment from (4.2, -0.3) to (4.2, -0.6), in green, thick
+draw a segment from (1.8, -0.6) to (4.2, -0.6), in green, thick
+draw a segment from (1.8, -0.6) to (1.8, -4.5), in green, thick
+draw an arrow from (1.8, -1.5) to (2.2, -1.5), in green, thick
+draw an arrow from (1.8, -3.0) to (2.2, -3.0), in green, thick
+draw an arrow from (1.8, -4.5) to (2.2, -4.5), in green, thick
+write "$\\text{Function Call: } \\text{crossorders(engine, instrument)}$" at (0.1, 1.5) in teal, large
+write "$\\text{Engine Type Matrix (Arg 1)}$" at (-4.2, -0.2) in orange, large
+write "$\\text{Instrument Taxonomy (Arg 2)}$" at (4.15, -0.15) in green, large
+write "$\\text{LitBookExecution}$" at (-4.2, -1.8) in orange
+write "$\\text{DarkPoolExecution}$" at (-4.35, -3.4) in orange
+write "$\\text{SpotEquity}$" at (4.1, -1.9) in green
+write "$\\text{EuropeanOption}$" at (4.2, -3.25) in green
+write "$\\text{CreditDefaultSwap}$" at (4.2, -4.85) in green
+write "$\\text{Dispatch Table: Specialized Method Selected at Runtime via } (\\text{Arg } 1 \\times \\text{Arg } 2)$" at (0, -5.6) in gray, small
+```
 
 The compiler selects the method from the function's method table whose signature represents the most specific match within the type lattice:
 ```julia
@@ -438,7 +477,7 @@ using Test
 The table below contrasts modern interface methodologies within the Julia ecosystem:
 
 | Interface Methodology | Verification Mode | Structural Model | Syntactic Overhead | Production Considerations |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | **Holy Traits** | Compile-Time (Dispatch) | Compositional / Orthogonal | Low | Built directly into core Julia without external dependencies. |
 | **`RequiredInterfaces.jl`** | Test-Time (Static Analysis) | Abstract Type Bound | Minimal | Lightweight dependency; ideal for package testing suites. |
 | **Informal Documentation** | Runtime Failures | Duck Typing | Zero | Fragile; prone to `MethodError` exceptions during live trading. |

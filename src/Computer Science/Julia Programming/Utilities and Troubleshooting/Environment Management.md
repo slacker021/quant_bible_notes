@@ -2,7 +2,6 @@
 dg-publish: true
 ---
 # Environment Architecture and Project Isolation
-
 In quantitative finance and econometric research, computational reproducibility is a prerequisite for production deployment. Research pipelines that evaluate statistical arbitrage, portfolio optimization, or risk surfaces cannot rely on unmanaged, mutable dependency environments. A failure to enforce environment isolation leads to **configuration drift**—a pathology where code executes successfully on a research workstation but fails catastrophically on a live trade-execution server due to implicit dependency mismatches.
 
 Julia resolves dependency tracking through its native package manager, `Pkg`, using a declarative, isolated environment architecture: 
@@ -25,7 +24,6 @@ Package Registries        Central Artifact Store
 ---
 
 # Declarative Environments: `Project.toml` and `Manifest.toml`
-
 An isolated Julia project environment is defined by a filesystem directory containing two foundational configuration files:
 1. **`Project.toml`:** Declares high-level project metadata, direct dependencies explicitly imported by the codebase, and semantic version compatibility constraints (`[compat]`):
 ```toml
@@ -59,7 +57,6 @@ julia> ]
 The string preceding the prompt indicates the currently active environment. By default, Julia loads the global user environment (`@v1.11`).
 
 ### Activating Local Environments
-
 To isolate project dependencies, the environment must be pointed directly to the project's root directory:
 
 ##### Method 1: Interactive Pkg Mode
