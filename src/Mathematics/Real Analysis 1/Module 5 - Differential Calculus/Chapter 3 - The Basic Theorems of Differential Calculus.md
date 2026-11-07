@@ -36,7 +36,7 @@ f'(x_0) = 0.
 >If $f'(x_0) > 0$, the linear approximation $\Delta f \approx f'(x_0)h$ forces $f(x_0 + h) > f(x_0)$ for positive $h$ and $f(x_0 + h) < f(x_0)$ for negative $h$, precluding any maximum or minimum. An interior extremum requires that the linear drift vanishes entirely ($f'(x_0) = 0$), leaving higher-order curvature terms to determine the turning point.
 
 ### Taxonomy of Critical Points and the Closed Interval Protocol
-A point $c \in \text{int}(E)$ where $f'(c) = 0$ is termed a **stationary point**. 
+A point $c \in \text{int}(E)$ where $f'(c) = 0$ is termed a *stationary point*. 
 
 Fermat's condition is a necessary, but not sufficient, condition for an extremum:
 - The function $f(x) = x^3$ has $f'(0) = 0$, yet $x = 0$ is an inflection point, not a local extremum.
@@ -71,9 +71,9 @@ f'(\xi) = 0.
 (see [[Proof of Rolle's Theorem]])
 
 Every condition in Rolle's Theorem is mathematically essential:
-1. **Failure of Boundary Equality**: $f(x) = x$ on $[0, 1]$ has $f'(x) \equiv 1 \neq 0$.
-2. **Failure of Interior Differentiability**: $f(x) = 1 - |x|$ on $[-1, 1]$ satisfies $f(-1) = f(1) = 0$, but $f'(x) = \pm 1$ never vanishes because differentiability fails at $x = 0$.
-3. **Failure of Compact Boundary Continuity**: $f(x) = x$ for $x \in [0, 1)$ with $f(1) = 0$ satisfies $f(0) = f(1) = 0$, but lacks continuity at $x = 1$; its derivative $f'(x) \equiv 1$ never vanishes.
+1. **Failure of Boundary Equality:** $f(x) = x$ on $[0, 1]$ has $f'(x) \equiv 1 \neq 0$.
+2. **Failure of Interior Differentiability:** $f(x) = 1 - |x|$ on $[-1, 1]$ satisfies $f(-1) = f(1) = 0$, but $f'(x) = \pm 1$ never vanishes because differentiability fails at $x = 0$.
+3. **Failure of Compact Boundary Continuity:** $f(x) = x$ for $x \in [0, 1)$ with $f(1) = 0$ satisfies $f(0) = f(1) = 0$, but lacks continuity at $x = 1$; its derivative $f'(x) \equiv 1$ never vanishes.
 
 ### Algebraic Corollary: Interlacing of Polynomial Roots
 $$\begin{gather}
@@ -88,7 +88,7 @@ $$\begin{gather}
 # The Finite Increments Theorems: Lagrange and Cauchy
 
 ### Lagrange's Mean Value Theorem
-By applying an affine shear transformation to reduce a general secant chord to the horizontal baseline of Rolle's Theorem, one obtains the celebrated **Finite Increments Theorem** of Joseph-Louis Lagrange:
+By applying an affine shear transformation to reduce a general secant chord to the horizontal baseline of Rolle's Theorem, one obtains the celebrated *Finite Increments Theorem* of Joseph-Louis Lagrange:
 
 $$\begin{gather}
 \textbf{Theorem: Lagrange’s Mean Value Theorem} \\[5mm]
@@ -124,7 +124,7 @@ write "$\xi$" at (4.0, 0.0), in purple, below
 write "$b$" at (6.5, 0.0), in black, below
 ```
 
-Setting $b = x_0 + h$ and $a = x_0$, the intermediate point can be parameterized as $\xi = x_0 + \theta h$ with $\theta \in (0, 1)$, yielding the **finite increment formula**:
+Setting $b = x_0 + h$ and $a = x_0$, the intermediate point can be parameterized as $\xi = x_0 + \theta h$ with $\theta \in (0, 1)$, yielding the *finite increment formula*:
 $$\Delta f(x_0; h) = f'(x_0 + \theta h) h \tag{1}$$
 
 ### Fundamental Global Consequences
@@ -213,7 +213,7 @@ M_1 := \sup_{x \in \mathbb{R}} |f'(x)| \le \sqrt{2 M_0 M_2}.
 
 # Taylor's Formula and Higher-Order Local Approximations
 
-Just as the differential provides the unique affine function having contact of order 1 with a curve, **Taylor's formula** generalizes this local linear microscope to osculating polynomials of arbitrary degree $n \in \mathbb{N}$ having contact of order $n$.
+Just as the differential provides the unique affine function having contact of order 1 with a curve, *Taylor's formula* generalizes this local linear microscope to osculating polynomials of arbitrary degree $n \in \mathbb{N}$ having contact of order $n$.
 
 ### The Taylor Polynomial
 Let $f: U(x_0) \to \mathbb{R}$ be $n$ times differentiable at an interior point $x_0 \in \mathbb{R}$.
@@ -223,9 +223,9 @@ $$\begin{gather}
 \text{The Taylor polynomial of degree } n \text{ of } f \text{ at the expansion point } x_0 \text{ is the polynomial:} \\[3.5mm]
 P_n(x_0; x) := \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = f(x_0) + f'(x_0)(x - x_0) + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n.
 \end{gather}$$
-By direct differentiation, $P_n^{(k)}(x_0; x_0) = f^{(k)}(x_0)$ for all $k = 0, 1, \dots, n$. When $x_0 = 0$, $P_n(0; x)$ is termed the **Maclaurin polynomial**.
+By direct differentiation, $P_n^{(k)}(x_0; x_0) = f^{(k)}(x_0)$ for all $k = 0, 1, \dots, n$. When $x_0 = 0$, $P_n(0; x)$ is termed the *Maclaurin polynomial*.
 
-The difference between the function and its Taylor polynomial is the **remainder term**:
+The difference between the function and its Taylor polynomial is the *remainder term*:
 $$R_n(x_0; x) := f(x) - P_n(x_0; x) \tag{5}$$
 
 ### Taylor's Theorem with Remainder Forms

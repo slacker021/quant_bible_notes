@@ -185,7 +185,7 @@ $$\begin{gather}
 (see [[Proof of the General Leibniz Formula for Higher Derivatives]])
 
 ### Non-Invariance of Higher-Order Differentials
-While the first differential $df = f'(x)dx$ is invariant under arbitrary coordinate changes, higher-order differentials are **not** invariant. 
+While the first differential $df = f'(x)dx$ is invariant under arbitrary coordinate changes, higher-order differentials are *not* invariant. 
 
 Let $y = f(x)$. Differentiating $dy = f'(x)dx$ again under the assumption that $x$ is an independent variable (so that $dx$ is constant, $d^2 x = 0$) gives:
 $$d^2 y = d(f'(x)dx) = f''(x)(dx)^2 \tag{7}$$

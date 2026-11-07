@@ -5,7 +5,7 @@ dg-publish: true
 
 The real continuum $\mathbb{R}$, constructed through Dedekind cuts in Module 2, is topologically complete and linearly ordered. However, it is algebraically incomplete: negative numbers possess no real square roots, and simple polynomial equations such as $x^2 + 1 = 0$ admit no solutions in $\mathbb{R}$. 
 
-By embedding the real line into the two-dimensional field of **complex numbers** $\mathbb{C}$, analysis achieves algebraic closedness. This extension does not merely provide roots for algebraic equations; it fundamentally unifies the transcendental elementary functions—exponential, trigonometric, and hyperbolic—into manifestations of a single complex analytic function. 
+By embedding the real line into the two-dimensional field of *complex numbers* $\mathbb{C}$, analysis achieves algebraic closedness. This extension does not merely provide roots for algebraic equations; it fundamentally unifies the transcendental elementary functions—exponential, trigonometric, and hyperbolic—into manifestations of a single complex analytic function. 
 
 In this chapter, the theory of complex numbers is developed with strict adherence to single-variable analysis, preparing the ground for the natural science differential equations of Chapter 6 and the integration of rational functions in Chapter 7.
 
@@ -24,12 +24,12 @@ $$\begin{gather}
 
 Under these operations, $\mathbb{C}$ is a field with additive identity $0_{\mathbb{C}} = (0, 0)$ and multiplicative identity $1_{\mathbb{C}} = (1, 0)$. 
 
-The subset of elements of the form $(x, 0)$ forms a subfield isomorphic to the real line $\mathbb{R}$ via the identification $(x, 0) \equiv x$. The special element $i := (0, 1)$ is termed the **imaginary unit**. Computing its square from the complex multiplication rule:
+The subset of elements of the form $(x, 0)$ forms a subfield isomorphic to the real line $\mathbb{R}$ via the identification $(x, 0) \equiv x$. The special element $i := (0, 1)$ is termed the *imaginary unit*. Computing its square from the complex multiplication rule:
 $$i^2 = (0, 1) \cdot (0, 1) = (0 \cdot 0 - 1 \cdot 1, \ 0 \cdot 1 + 1 \cdot 0) = (-1, 0) \equiv -1 \tag{3}$$
 
 Every complex number $z = (x, y)$ can thus be represented uniquely in algebraic form as:
 $$z = x + iy \quad (x, y \in \mathbb{R}) \tag{4}$$
-The scalar $x = \operatorname{Re}(z)$ is the **real part**, and $y = \operatorname{Im}(z)$ is the **imaginary part**.
+The scalar $x = \operatorname{Re}(z)$ is the *real part*, and $y = \operatorname{Im}(z)$ is the *imaginary part*.
 
 ### Conjugation and Modulus
 $$\begin{gather}
@@ -45,7 +45,7 @@ The modulus satisfies all metric norm properties on $\mathbb{C}$:
 3. Triangle inequality: $|z_1 + z_2| \le |z_1| + |z_2|$ and $||z_1| - |z_2|| \le |z_1 - z_2|$.
 
 ### Polar Representation and de Moivre's Formula
-In the geometric plane $\mathbb{R}^2$, identifying $(x, y)$ with polar coordinates $(r, \varphi)$ via $x = r \cos\varphi$ and $y = r \sin\varphi$ yields the **trigonometric form**:
+In the geometric plane $\mathbb{R}^2$, identifying $(x, y)$ with polar coordinates $(r, \varphi)$ via $x = r \cos\varphi$ and $y = r \sin\varphi$ yields the *trigonometric form*:
 $$z = r(\cos\varphi + i\sin\varphi) \tag{5}$$
 where $r = |z|$ is the modulus, and $\varphi = \operatorname{Arg}(z) \in (-\pi, \pi]$ is the principal argument.
 

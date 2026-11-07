@@ -19,14 +19,14 @@ F(x) := f(x) - L(x) = f(x) - f(a) - \frac{f(b) - f(a)}{b - a}(x - a) \tag{2}
 $$
 
 ### Step 2: Verification of Rolle's Hypotheses
-1. **Continuity on $[a, b]$**: Because $f$ is continuous on $[a, b]$ and $L(x)$ is a polynomial (affine function), their difference $F$ is continuous on $[a, b]$.
-2. **Differentiability on $(a, b)$**: Because $f$ and $L$ are differentiable on $(a, b)$, by linearity $F$ is differentiable on $(a, b)$, with derivative:
+1. **Continuity on $[a, b]$:** Because $f$ is continuous on $[a, b]$ and $L(x)$ is a polynomial (affine function), their difference $F$ is continuous on $[a, b]$.
+2. **Differentiability on $(a, b)$:** Because $f$ and $L$ are differentiable on $(a, b)$, by linearity $F$ is differentiable on $(a, b)$, with derivative:
 $$
 \begin{gather}
 F'(x) = f'(x) - \frac{f(b) - f(a)}{b - a} \tag{3}
 \end{gather}
 $$
-3. **Boundary Value Equality**: Evaluating $F$ at the endpoints:
+3. **Boundary Value Equality:** Evaluating $F$ at the endpoints:
 $$
 \begin{gather}
 F(a) = f(a) - f(a) - \frac{f(b) - f(a)}{b - a}(0) = 0 \tag{4} \\

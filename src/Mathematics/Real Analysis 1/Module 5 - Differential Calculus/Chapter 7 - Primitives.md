@@ -5,7 +5,7 @@ dg-publish: true
 
 Having developed the operational algebra of differentiation, the inverse problem naturally arises: given a real-valued function $f: I \to \mathbb{R}$, does there exist a function $F: I \to \mathbb{R}$ whose derivative coincides with $f$? 
 
-In the differential calculus of a single variable, the search for an antiderivative or **primitive** is the algebraic counterpart to differentiation. While computing the derivative of an elementary function is a deterministic algebraic procedure that never leads beyond the class of elementary functions, finding a primitive in closed form is an inverse problem of profound depth, frequently generating transcendental non-elementary functions.
+In the differential calculus of a single variable, the search for an antiderivative or *primitive* is the algebraic counterpart to differentiation. While computing the derivative of an elementary function is a deterministic algebraic procedure that never leads beyond the class of elementary functions, finding a primitive in closed form is an inverse problem of profound depth, frequently generating transcendental non-elementary functions.
 
 This chapter systematically develops the theory of primitives, establishing the fundamental integration techniques (parts and substitution), the algorithmic integration of rational fractions via Ostrogradsky's method, Euler substitutions for algebraic irrationals, and Pafnuty Chebyshev's landmark theorem on differential binomials.
 
@@ -67,7 +67,7 @@ $$Q(x) = a_n (x - c_1)^{k_1}\dots(x - c_r)^{k_r} (x^2 + p_1 x + q_1)^{m_1}\dots(
 Every proper rational fraction decomposes uniquely into real partial fractions:
 $$\frac{P(x)}{Q(x)} = \sum_{i=1}^r \sum_{j=1}^{k_i} \frac{A_{ij}}{(x - c_i)^j} + \sum_{i=1}^s \sum_{j=1}^{m_i} \frac{M_{ij} x + N_{ij}}{(x^2 + p_i x + q_i)^j} \tag{2}$$
 
-Because each partial fraction integrates into rational functions, logarithms $\ln|x - c_i|$, and arctangents $\arctan\left(\frac{2x+p}{\sqrt{4q-p^2}}\right)$, **every rational function is integrable in elementary functions**.
+Because each partial fraction integrates into rational functions, logarithms $\ln|x - c_i|$, and arctangents $\arctan\left(\frac{2x+p}{\sqrt{4q-p^2}}\right)$, *every rational function is integrable in elementary functions*.
 
 ### Ostrogradsky’s Algebraic Reduction Method
 When $Q(x)$ has high-order multiple roots, computing partial fraction coefficients requires solving enormous linear systems. Mikhail Ostrogradsky discovered an algebraic method that separates the rational part of the integral *without* factoring $Q(x)$ into linear roots:

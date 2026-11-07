@@ -28,13 +28,13 @@ $$
 $$
 
 ### Step 3: Verification of Rolle's Hypotheses
-1. **Continuity and Differentiability**: Because $f$ and $g$ are continuous on $[a, b]$ and differentiable on $(a, b)$, $\Phi$ is continuous on $[a, b]$ and differentiable on $(a, b)$, with derivative:
+1. **Continuity and Differentiability:** Because $f$ and $g$ are continuous on $[a, b]$ and differentiable on $(a, b)$, $\Phi$ is continuous on $[a, b]$ and differentiable on $(a, b)$, with derivative:
 $$
 \begin{gather}
 \Phi'(x) = f'(x) - \frac{f(b) - f(a)}{g(b) - g(a)} g'(x) \tag{4}
 \end{gather}
 $$
-2. **Boundary Equality**: Evaluating $\Phi$ at the endpoints:
+2. **Boundary Equality:** Evaluating $\Phi$ at the endpoints:
 $$
 \begin{gather}
 \Phi(a) = f(a) - f(a) - \frac{f(b) - f(a)}{g(b) - g(a)}(g(a) - g(a)) = 0 \tag{5} \\

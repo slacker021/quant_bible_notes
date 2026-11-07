@@ -26,7 +26,7 @@ $$\begin{gather}
 f(x_0 + h) - f(x_0) = A \cdot h + \alpha(h) \cdot h \quad \forall h \in (-\delta_0, \delta_0).
 \end{gather}$$
 
-The linear function $h \mapsto A \cdot h$ is termed the **differential** of the function $f$ at the point $x_0$, denoted by $df(x_0)$ or $df(x_0; h)$. The scalar coefficient $A$ is termed the *derivative* of $f$ at $x_0$, denoted by $f'(x_0)$ or $\frac{df}{dx}(x_0)$.
+The linear function $h \mapsto A \cdot h$ is termed the *differential* of the function $f$ at the point $x_0$, denoted by $df(x_0)$ or $df(x_0; h)$. The scalar coefficient $A$ is termed the *derivative* of $f$ at $x_0$, denoted by $f'(x_0)$ or $\frac{df}{dx}(x_0)$.
 
 $$\begin{gather}
 \textbf{Theorem: Uniqueness of the Differential and Difference Quotient Criterion} \\[5mm]
@@ -60,9 +60,9 @@ $$\begin{gather}
 (see [[Proof of the Differentiability Implies Continuity Criterion]])
 
 The converse of the Differentiability Implies Pointwise Continuity Theorem is false. Pointwise continuity does not guarantee differentiability:
-1. **Corner Points**: The absolute value function $f(x) = |x|$ is uniformly continuous across all of $\mathbb{R}$, yet fails to be differentiable at $x_0 = 0$ because:
+1. **Corner Points:** The absolute value function $f(x) = |x|$ is uniformly continuous across all of $\mathbb{R}$, yet fails to be differentiable at $x_0 = 0$ because:
    $$\lim_{h \to 0^+} \frac{|h| - 0}{h} = 1 \neq -1 = \lim_{h \to 0^-} \frac{|h| - 0}{h} \tag{5}$$
-2. **Nowhere-Differentiable Continuous Functions**: There exist functions continuous everywhere on $\mathbb{R}$ that are differentiable at *no* point of $\mathbb{R}$. The canonical construction, due to Karl Weierstrass, is the Fourier series:
+2. **Nowhere-Differentiable Continuous Functions:** There exist functions continuous everywhere on $\mathbb{R}$ that are differentiable at *no* point of $\mathbb{R}$. The canonical construction, due to Karl Weierstrass, is the Fourier series:
    $$W(x) = \sum_{n=0}^\infty a^n \cos(b^n \pi x), \quad 0 < a < 1, \quad ab > 1 + \frac{3}{2}\pi \tag{6}$$
    which exhibits extreme fractal self-similarity, precluding the existence of a principal linear part at any scale.
 

@@ -5,7 +5,7 @@ dg-publish: true
 
 Differential calculus was forged in the seventeenth and eighteenth centuries primarily to decipher the dynamical laws of nature. In the physical sciences, fundamental balance principles—conservation of momentum, mass continuity, hydrostatic equilibrium, and energy conservation—are formulated not as algebraic equations connecting states, but as differential relations connecting instantaneous rates of change.
 
-Following Vladimir Zorich's pedagogical framework, this chapter presents **six canonical physical systems**, exploring each in extensive detail through a standardized analytical structure:
+Following Vladimir Zorich's pedagogical framework, this chapter presents *six canonical physical systems*, exploring each in extensive detail through a standardized analytical structure:
 1. Physical formulation and coordinate definition.
 2. Deductive derivation of the governing differential equation.
 3. Analytical solution using single-variable differential calculus.
@@ -55,7 +55,7 @@ $$\frac{dP}{dt} = m(t)\frac{dv}{dt} + u\frac{dm}{dt} \tag{4}$$
 
 In the presence of an external external force $F_{\text{ext}}$ (such as gravity $F_g = -m(t)g$):
 $$m(t)\frac{dv}{dt} + u\frac{dm}{dt} = F_{\text{ext}} \tag{5}$$
-The equation of step 5 is **Meshchersky's equation** for the dynamics of a point mass of variable mass.
+The equation of step 5 is *Meshchersky's equation* for the dynamics of a point mass of variable mass.
 
 $$\begin{gather}
 \textbf{Proposition: The Tsiolkovsky Rocket Equation} \\[5mm]
@@ -76,7 +76,7 @@ Consider a thin horizontal layer of gas of cross-sectional area $A$ bounded betw
 For the air column to be in static equilibrium, the sum of forces must vanish:
 $$p(h)A - p(h + \Delta h)A - \rho(h)g A \Delta h = 0 \tag{6}$$
 
-Dividing by $A \Delta h$ and taking the limit as $\Delta h \to 0$ yields the **fundamental hydrostatic differential equation**:
+Dividing by $A \Delta h$ and taking the limit as $\Delta h \to 0$ yields the *fundamental hydrostatic differential equation*:
 $$\frac{dp}{dh} = -\rho(h) g \tag{7}$$
 
 ### Equation of State
@@ -134,8 +134,8 @@ Consider a body of mass $m$ falling vertically downward through the atmosphere u
 $$m \frac{dv}{dt} = mg - F_{\text{drag}}(v) \tag{14}$$
 
 Depending on the Reynolds number, atmospheric resistance is governed by two physical regimes:
-1. **Linear Drag (Stokes regime)**: $F_{\text{drag}} = k_1 v$ (valid for small particles or high viscosity).
-2. **Quadratic Aerodynamic Drag (Newton regime)**: $F_{\text{drag}} = k_2 v^2$ (valid for macroscopic bodies and parachutists).
+1. **Linear Drag (Stokes regime):** $F_{\text{drag}} = k_1 v$ (valid for small particles or high viscosity).
+2. **Quadratic Aerodynamic Drag (Newton regime):** $F_{\text{drag}} = k_2 v^2$ (valid for macroscopic bodies and parachutists).
 
 $$\begin{gather}
 \textbf{Proposition: Trajectories Under Atmospheric Drag} \\[5mm]
@@ -146,7 +146,7 @@ $$\begin{gather}
 \end{gather}$$
 (see [[Derivation of the Trajectories of Falling Bodies Under Linear and Quadratic Drag]])
 
-In both regimes, as $t \to \infty$, the acceleration vanishes ($\dot{v} \to 0$), and the velocity converges monotonically to the asymptotic **terminal velocity** $v_\infty$.
+In both regimes, as $t \to \infty$, the acceleration vanishes ($\dot{v} \to 0$), and the velocity converges monotonically to the asymptotic *terminal velocity* $v_\infty$.
 
 ---
 

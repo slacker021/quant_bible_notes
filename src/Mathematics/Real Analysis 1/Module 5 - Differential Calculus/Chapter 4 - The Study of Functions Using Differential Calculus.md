@@ -47,7 +47,7 @@ f'(x_0) = f''(x_0) = \dots = f^{(n-1)}(x_0) = 0, \quad \text{and} \quad f^{(n)}(
 # Convexity and the Master Equivalence Architecture
 
 ### Rigorous Definition via Secant Chords
-In elementary treatments, convexity is often described visually as "bending upward" or "lying above tangent lines." In rigorous analysis, convexity is defined intrinsically without assuming differentiability, via the position of the curve relative to its **secant chords**:
+In elementary treatments, convexity is often described visually as "bending upward" or "lying above tangent lines." In rigorous analysis, convexity is defined intrinsically without assuming differentiability, via the position of the curve relative to its *secant chords*:
 
 $$\begin{gather}
 \textbf{Definition: Convex Functions} \\[5mm]
@@ -179,7 +179,7 @@ $$\begin{gather}
 \text{A straight line } y = kx + b \text{ is an oblique asymptote as } x \to \infty \text{ if and only if both limits exist in } \mathbb{R}\text{:} \\[3.5mm]
 k = \lim_{x \to \infty} \frac{f(x)}{x}, \quad b = \lim_{x \to \infty} \big( f(x) - kx \big).
 \end{gather}$$
-If $k = 0$, the line $y = b$ is termed a **horizontal asymptote**.
+If $k = 0$, the line $y = b$ is termed a *horizontal asymptote*.
 
 $$\begin{gather}
 \textbf{Definition: Points of Inflection} \\[5mm]

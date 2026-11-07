@@ -50,7 +50,7 @@ $$
 
 Because $0 \in \bar{B}_R(0)$, $|P(z_0)| \le |P(0)|$. By the condition of step 4, for any point outside the disk ($|z| > R$), $|P(z)| > |P(0)| \ge |P(z_0)|$. 
 
-Consequently, $z_0$ is a **global minimum** of $|P(z)|$ across the entire complex plane:
+Consequently, $z_0$ is a *global minimum* of $|P(z)|$ across the entire complex plane:
 $$
 \begin{gather}
 |P(z_0)| \le |P(z)| \quad \forall z \in \mathbb{C} \tag{6}
