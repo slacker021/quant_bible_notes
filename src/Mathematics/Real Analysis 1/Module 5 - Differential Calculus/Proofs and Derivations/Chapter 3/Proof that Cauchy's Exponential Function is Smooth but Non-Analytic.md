@@ -52,7 +52,7 @@ $$
 $$
 so $f$ is continuous at 0.
 
-Assume $f^{(k)}(0) = 0$ for some $k \ge 0$. By Definition 1.1:
+Assume $f^{(k)}(0) = 0$ for some $k \ge 0$. By the definition of differentiability at a point:
 $$
 \begin{gather}
 f^{(k+1)}(0) = \lim_{x \to 0} \frac{f^{(k)}(x) - f^{(k)}(0)}{x - 0} = \lim_{x \to 0} \frac{1}{x} P_{3k}\left(\frac{1}{x}\right) e^{-1/x^2} \tag{7}

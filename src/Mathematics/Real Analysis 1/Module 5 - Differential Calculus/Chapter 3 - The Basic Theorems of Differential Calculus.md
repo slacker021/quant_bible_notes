@@ -15,7 +15,7 @@ This chapter establishes the core foundational theorems of differential calculus
 Let $E \subseteq \mathbb{R}$ and let $f: E \to \mathbb{R}$.
 
 $$\begin{gather}
-\textbf{Definition 3.1: Local Extrema} \\[5mm]
+\textbf{Definition: Local Extrema} \\[5mm]
 \text{1. The function } f \text{ has a local maximum at } x_0 \in E \text{ if there exists a neighborhood } U(x_0) \text{ such that:} \\[2mm]
 f(x) \le f(x_0) \quad \forall x \in U(x_0) \cap E. \\[3mm]
 \text{2. The function } f \text{ has a local minimum at } x_0 \in E \text{ if there exists a neighborhood } U(x_0) \text{ such that:} \\[2mm]
@@ -25,7 +25,7 @@ If the strict inequalities $f(x) < f(x_0)$ (resp. $f(x) > f(x_0)$) hold for all 
 
 ### Fermat's Stationary Point Lemma
 $$\begin{gather}
-\textbf{Theorem 3.1: Fermat's Stationary Point Lemma} \\[5mm]
+\textbf{Theorem: Fermat's Stationary Point Lemma} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } x_0 \in \text{int}(E), \text{ and let } f: E \to \mathbb{R}. \\[2mm]
 \text{If } f \text{ has a local extremum at } x_0 \text{ and } f \text{ is differentiable at } x_0, \text{ then the derivative vanishes:} \\[3.5mm]
 f'(x_0) = 0.
@@ -43,15 +43,15 @@ Fermat's condition is a necessary, but not sufficient, condition for an extremum
 - The function $f(x) = |x|$ attains a strict global minimum at $x = 0$, but $f'(0)$ does not exist.
 
 $$\begin{gather}
-\textbf{Definition 3.2: Critical Numbers} \\[5mm]
+\textbf{Definition: Critical Numbers} \\[5mm]
 \text{Let } f: I \to \mathbb{R}. \text{ A point } c \in \text{int}(I) \text{ is a critical number of } f \text{ if either:} \\[2mm]
 f'(c) = 0 \quad (\text{stationary point}), \quad \text{or} \quad f'(c) \text{ does not exist} \quad (\text{singular point}).
 \end{gather}$$
 
-By combining Fermat's Lemma with the Weierstrass Extreme Value Theorem (Theorem 2.5 of Module 4), the search for global extrema on compact intervals is reduced to a finite algorithmic evaluation:
+By combining Fermat's Stationary Point Lemma with the Weierstrass Extreme Value Theorem (Module 4), the search for global extrema on compact intervals is reduced to a finite algorithmic evaluation:
 
 $$\begin{gather}
-\textbf{Theorem 3.2: The Closed Interval Method} \\[5mm]
+\textbf{Theorem: The Closed Interval Method} \\[5mm]
 \text{Let } f: [a, b] \to \mathbb{R} \text{ be continuous on the compact interval } [a, b], \text{ and differentiable on } (a, b) \setminus \Sigma, \\[2mm]
 \text{where } \Sigma \subset (a, b) \text{ is a finite set of singular points. Then } f \text{ attains its absolute maximum and minimum} \\[2mm]
 \text{on } [a, b], \text{ and these absolute extrema belong exclusively to the set:} \\[3.5mm]
@@ -63,7 +63,7 @@ S = \{a, b\} \cup \{c \in (a, b) : f'(c) = 0\} \cup \Sigma.
 # Rolle's Theorem
 
 $$\begin{gather}
-\textbf{Theorem 3.3: Rolle's Theorem} \\[5mm]
+\textbf{Theorem: Rolle's Theorem} \\[5mm]
 \text{Let } f: [a, b] \to \mathbb{R} \text{ be continuous on the closed interval } [a, b] \text{ and differentiable on the open interval } (a, b). \\[2mm]
 \text{If } f(a) = f(b), \text{ then there exists at least one intermediate point } \xi \in (a, b) \text{ such that:} \\[3.5mm]
 f'(\xi) = 0.
@@ -77,7 +77,7 @@ Every condition in Rolle's Theorem is mathematically essential:
 
 ### Algebraic Corollary: Interlacing of Polynomial Roots
 $$\begin{gather}
-\textbf{Corollary 3.1: Interlacing of Real Roots} \\[5mm]
+\textbf{Corollary: Interlacing of Real Roots} \\[5mm]
 \text{Let } P(x) \in \mathbb{R}[x] \text{ be a real polynomial. Between any two distinct real roots of } P(x), \\[2mm]
 \text{there lies at least one real root of its derivative } P'(x). \\[2mm]
 \text{Consequently, if } P(x) \text{ has } k \text{ distinct real roots, } P'(x) \text{ has at least } k - 1 \text{ real roots.}
@@ -91,7 +91,7 @@ $$\begin{gather}
 By applying an affine shear transformation to reduce a general secant chord to the horizontal baseline of Rolle's Theorem, one obtains the celebrated **Finite Increments Theorem** of Joseph-Louis Lagrange:
 
 $$\begin{gather}
-\textbf{Theorem 3.4: Lagrange’s Mean Value Theorem} \\[5mm]
+\textbf{Theorem: Lagrange’s Mean Value Theorem} \\[5mm]
 \text{Let } f: [a, b] \to \mathbb{R} \text{ be continuous on } [a, b] \text{ and differentiable on } (a, b). \\[2mm]
 \text{Then there exists at least one intermediate point } \xi \in (a, b) \text{ such that:} \\[3.5mm]
 f(b) - f(a) = f'(\xi)(b - a), \quad \text{or equivalently} \quad \frac{f(b) - f(a)}{b - a} = f'(\xi).
@@ -129,7 +129,7 @@ $$\Delta f(x_0; h) = f'(x_0 + \theta h) h \tag{1}$$
 
 ### Fundamental Global Consequences
 $$\begin{gather}
-\textbf{Theorem 3.5: The Constancy and Monotonicity Criteria} \\[5mm]
+\textbf{Theorem: The Constancy and Monotonicity Criteria} \\[5mm]
 \text{Let } f: I \to \mathbb{R} \text{ be continuous on an interval } I \subseteq \mathbb{R} \text{ and differentiable on } \text{int}(I). \\[3mm]
 \begin{align}
 \text{1. Constancy:} \quad &f'(x) = 0 \ \forall x \in \text{int}(I) \iff f(x) \equiv C \text{ on } I \text{ for some constant } C \in \mathbb{R}. \\[2mm]
@@ -141,7 +141,7 @@ $$\begin{gather}
 (see [[Proof of the Constancy and Monotonicity Criteria]])
 
 $$\begin{gather}
-\textbf{Corollary 3.2: Interval Uniqueness of Primitives} \\[5mm]
+\textbf{Corollary: Interval Uniqueness of Primitives} \\[5mm]
 \text{Let } F_1, F_2: I \to \mathbb{R} \text{ be differentiable functions on an interval } I. \\[2mm]
 \text{If } F_1'(x) = F_2'(x) \text{ for all } x \in I, \text{ then there exists a constant } C \in \mathbb{R} \text{ such that:} \\[3.5mm]
 F_1(x) = F_2(x) + C \quad \forall x \in I.
@@ -151,7 +151,7 @@ Notice that interval connectedness is mandatory: if the domain $E = (0, 1) \cup 
 
 ### Cauchy's Generalized Mean Value Theorem
 $$\begin{gather}
-\textbf{Theorem 3.6: Cauchy’s Generalized Mean Value Theorem} \\[5mm]
+\textbf{Theorem: Cauchy’s Generalized Mean Value Theorem} \\[5mm]
 \text{Let } f, g: [a, b] \to \mathbb{R} \text{ be continuous on } [a, b] \text{ and differentiable on } (a, b). \\[2mm]
 \text{If } g'(x) \neq 0 \text{ for all } x \in (a, b), \text{ then } g(b) \neq g(a), \text{ and there exists } \xi \in (a, b) \text{ such that:} \\[3.5mm]
 \frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(\xi)}{g'(\xi)}.
@@ -167,7 +167,7 @@ Lagrange's Theorem is the special case of Cauchy's Theorem corresponding to the 
 A continuous function satisfies the Intermediate Value Property (Bolzano-Cauchy Theorem, Module 4). Remarkably, Jean-Gaston Darboux discovered that *every derivative* satisfies the intermediate value property, even if the derivative function $f'$ is everywhere discontinuous:
 
 $$\begin{gather}
-\textbf{Theorem 3.7: Darboux’s Intermediate Value Theorem for Derivatives} \\[5mm]
+\textbf{Theorem: Darboux’s Intermediate Value Theorem for Derivatives} \\[5mm]
 \text{Let } f: [a, b] \to \mathbb{R} \text{ be differentiable on } [a, b]. \\[2mm]
 \text{If } \gamma \in \mathbb{R} \text{ lies strictly between } f'(a) \text{ and } f'(b) \text{ (i.e., } f'(a) < \gamma < f'(b) \text{ or } f'(b) < \gamma < f'(a)\text{)}, \\[2mm]
 \text{then there exists at least one intermediate point } c \in (a, b) \text{ such that:} \\[3.5mm]
@@ -177,7 +177,7 @@ f'(c) = \gamma. \\[3.5mm]
 (see [[Proof of Darboux's Intermediate Value Theorem for Derivatives]])
 
 $$\begin{gather}
-\textbf{Theorem 3.8: Classification of Discontinuities of Derivatives} \\[5mm]
+\textbf{Theorem: Classification of Discontinuities of Derivatives} \\[5mm]
 \text{Let } f: I \to \mathbb{R} \text{ be differentiable on an open interval } I. \\[2mm]
 \text{The derivative function } f': I \to \mathbb{R} \text{ cannot possess jump discontinuities (discontinuities of the first kind)} \\[2mm]
 \text{or removable discontinuities at any point of } I. \\[2mm]
@@ -190,7 +190,7 @@ $$\begin{gather}
 >$$f(x) = \begin{cases} x^2 \sin(1/x), & x \neq 0 \\ 0, & x = 0 \end{cases} \tag{2}$$
 >For $x \neq 0$, the standard product and chain rules yield:
 >$$f'(x) = 2x \sin(1/x) - \cos(1/x) \tag{3}$$
->At the origin $x = 0$, evaluating the difference quotient limit directly from Definition 1.1:
+>At the origin $x = 0$, evaluating the difference quotient limit directly from the definition of differentiability at a point:
 >$$f'(0) = \lim_{h \to 0} \frac{h^2 \sin(1/h) - 0}{h} = \lim_{h \to 0} h \sin(1/h) = 0 \tag{4}$$
 >Thus $f'(x)$ exists for all $x \in \mathbb{R}$. However, as $x \to 0$, $2x \sin(1/x) \to 0$ while $-\cos(1/x)$ oscillates densely across $[-1, 1]$. Consequently, $\lim_{x \to 0} f'(x)$ does not exist. The derivative $f'$ is discontinuous at $x = 0$, yet in every neighborhood $(-\delta, \delta)$, $f'((-\delta, \delta))$ maps onto $[-1, 1]$, perfectly satisfying Darboux's theorem.
 
@@ -201,7 +201,7 @@ $$\begin{gather}
 In approximation theory and functional analysis, bounding intermediate derivatives using lower- and higher-order derivatives is a fundamental technique:
 
 $$\begin{gather}
-\textbf{Theorem 3.9: The Landau-Kolmogorov Inequality on Finite Increments} \\[5mm]
+\textbf{Theorem: The Landau-Kolmogorov Inequality on Finite Increments} \\[5mm]
 \text{Let } f: \mathbb{R} \to \mathbb{R} \text{ be twice differentiable on } \mathbb{R}, \text{ and let:} \\[2mm]
 M_0 := \sup_{x \in \mathbb{R}} |f(x)| < \infty, \quad M_2 := \sup_{x \in \mathbb{R}} |f''(x)| < \infty. \\[2mm]
 \text{Then the first derivative is bounded on all of } \mathbb{R}, \text{ and satisfies the sharp bound:} \\[3.5mm]
@@ -219,7 +219,7 @@ Just as the differential provides the unique affine function having contact of o
 Let $f: U(x_0) \to \mathbb{R}$ be $n$ times differentiable at an interior point $x_0 \in \mathbb{R}$.
 
 $$\begin{gather}
-\textbf{Definition 3.3: The Taylor Polynomial} \\[5mm]
+\textbf{Definition: The Taylor Polynomial} \\[5mm]
 \text{The Taylor polynomial of degree } n \text{ of } f \text{ at the expansion point } x_0 \text{ is the polynomial:} \\[3.5mm]
 P_n(x_0; x) := \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = f(x_0) + f'(x_0)(x - x_0) + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n.
 \end{gather}$$
@@ -230,7 +230,7 @@ $$R_n(x_0; x) := f(x) - P_n(x_0; x) \tag{5}$$
 
 ### Taylor's Theorem with Remainder Forms
 $$\begin{gather}
-\textbf{Theorem 3.10: Taylor's Theorem and Its Remainder Forms} \\[5mm]
+\textbf{Theorem: Taylor's Theorem and Its Remainder Forms} \\[5mm]
 \text{Let } f: U(x_0) \to \mathbb{R} \text{ be defined on an open neighborhood of } x_0. \\[3mm]
 \begin{align}
 \text{1. Peano Remainder:} \quad &\text{If } f \text{ is } n \text{ times differentiable at } x_0, \text{ then as } x \to x_0\text{:} \\[2mm]
@@ -248,7 +248,7 @@ $$\begin{gather}
 ### Canonical Maclaurin Expansions
 Evaluating the derivatives of standard elementary functions at $x_0 = 0$ yields the canonical Maclaurin series with Peano remainder as $x \to 0$:
 $$\begin{gather}
-\textbf{Table 3.1: Fundamental Maclaurin Expansions} \\[2mm]
+\textbf{Table: Fundamental Maclaurin Expansions} \\[2mm]
 \begin{array}{|l|l|}
 \hline
 e^x & 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} + o(x^n) \\[1mm]
@@ -267,7 +267,7 @@ e^x & 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} + o(x^n) \\[1mm]
 A function $f$ is real-analytic ($C^\omega$) at $x_0$ if its Taylor series converges to $f(x)$ on a neighborhood of $x_0$. Augustin-Louis Cauchy discovered that smooth functions ($C^\infty$) are not necessarily analytic:
 
 $$\begin{gather}
-\textbf{Theorem 3.11: Cauchy’s Non-Analytic Smooth Function} \\[5mm]
+\textbf{Theorem: Cauchy’s Non-Analytic Smooth Function} \\[5mm]
 \text{Define the function } f: \mathbb{R} \to \mathbb{R} \text{ by:} \\[3.5mm]
 f(x) := \begin{cases} e^{-1/x^2}, & x \neq 0 \\ 0, & x = 0 \end{cases} \\[3.5mm]
 \text{1. } f \in C^\infty(\mathbb{R}), \text{ possessing derivatives of all orders on all of } \mathbb{R}. \\[2mm]
@@ -278,7 +278,7 @@ f(x) := \begin{cases} e^{-1/x^2}, & x \neq 0 \\ 0, & x = 0 \end{cases} \\[3.5mm]
 
 ### Bernstein's Sufficient Criterion for Analyticity
 $$\begin{gather}
-\textbf{Theorem 3.12: Bernstein’s Analyticity Criterion} \\[5mm]
+\textbf{Theorem: Bernstein’s Analyticity Criterion} \\[5mm]
 \text{Let } f \in C^\infty([-R, R]). \text{ If there exists a constant } C > 0 \text{ such that:} \\[3.5mm]
 \sup_{x \in [-R, R]} |f^{(n)}(x)| \le C^n n! \quad \forall n \in \mathbb{N},
 \end{gather}$$

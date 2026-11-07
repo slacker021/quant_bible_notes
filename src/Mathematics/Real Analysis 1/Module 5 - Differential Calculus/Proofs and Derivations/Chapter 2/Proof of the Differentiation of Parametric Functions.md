@@ -6,9 +6,9 @@ Let $I \subseteq \mathbb{R}$ be an open interval, and let $\varphi, \psi: I \to 
 Let $t_0 \in I$ such that $\varphi'(t_0) \neq 0$.
 
 ### Step 1: Local Inversion of the Coordinate Function
-Because $\varphi$ is differentiable at $t_0$, by Theorem 1.2 $\varphi$ is continuous on a neighborhood $U(t_0)$. Without loss of generality, assume $\varphi'(t_0) > 0$. By the sign preservation property of derivatives (or continuity of $\varphi'$ if continuous, or strict local monotonicity via Theorem 1.1 of Module 4), there exists an open interval $U(t_0) \subseteq I$ on which $\varphi$ is strictly increasing.
+Because $\varphi$ is differentiable at $t_0$, by the Differentiability Implies Pointwise Continuity Theorem $\varphi$ is continuous on a neighborhood $U(t_0)$. Without loss of generality, assume $\varphi'(t_0) > 0$. By the sign preservation property of derivatives (or continuity of $\varphi'$ if continuous, or strict local monotonicity via Module 4), there exists an open interval $U(t_0) \subseteq I$ on which $\varphi$ is strictly increasing.
 
-By Theorem 2.4 (Differentiation of the Inverse Function), the inverse function $t = \varphi^{-1}(x)$ exists on $V(x_0) = \varphi(U(t_0))$ where $x_0 = \varphi(t_0)$, and is differentiable at $x_0$ with derivative:
+By the Differentiation of the Inverse Function Theorem, the inverse function $t = \varphi^{-1}(x)$ exists on $V(x_0) = \varphi(U(t_0))$ where $x_0 = \varphi(t_0)$, and is differentiable at $x_0$ with derivative:
 $$
 \begin{gather}
 (\varphi^{-1})'(x_0) = \frac{1}{\varphi'(t_0)} \tag{1}
@@ -23,7 +23,7 @@ y(x) = (\psi \circ \varphi^{-1})(x) \tag{2}
 \end{gather}
 $$
 
-Because $\varphi^{-1}$ is differentiable at $x_0$ and $\psi$ is differentiable at $t_0 = \varphi^{-1}(x_0)$, by Theorem 2.3 (The Invariant Chain Rule), the composite function $y(x)$ is differentiable at $x_0$. 
+Because $\varphi^{-1}$ is differentiable at $x_0$ and $\psi$ is differentiable at $t_0 = \varphi^{-1}(x_0)$, by the Invariant Chain Rule, the composite function $y(x)$ is differentiable at $x_0$. 
 
 Computing the derivative:
 $$

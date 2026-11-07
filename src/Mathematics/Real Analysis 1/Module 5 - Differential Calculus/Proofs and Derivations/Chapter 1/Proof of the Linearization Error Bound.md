@@ -30,7 +30,7 @@ g(x) = f(x) - \big( f(x) + f'(x)(0) \big) - K(0)^2 = 0 \tag{4}
 \end{gather}
 $$
 
-Because $f \in C^2$, $g$ is continuous on $[x_0, x]$ and differentiable on $(x_0, x)$, with $g(x_0) = g(x) = 0$. By Rolle's Theorem (Theorem 3.2 of Chapter 3, proven from the Weierstrass Extreme Value Theorem), there exists an intermediate point $\xi \in (x_0, x)$ such that:
+Because $f \in C^2$, $g$ is continuous on $[x_0, x]$ and differentiable on $(x_0, x)$, with $g(x_0) = g(x) = 0$. By Rolle's Theorem (proven from the Weierstrass Extreme Value Theorem), there exists an intermediate point $\xi \in (x_0, x)$ such that:
 $$
 \begin{gather}
 g'(\xi) = 0 \tag{5}

@@ -6,7 +6,7 @@ Let $f: I \to \mathbb{R}$ be defined on an interval $I$, and let $x_0 \in \text{
 ### Part 1: The First Derivative Test
 Suppose there exists $\delta > 0$ such that $f'(x) \ge 0$ for all $x \in (x_0 - \delta, x_0)$ and $f'(x) \le 0$ for all $x \in (x_0, x_0 + \delta)$.
 
-Let $x \in (x_0 - \delta, x_0)$. By Theorem 3.4 (Lagrange's Mean Value Theorem) applied to $f$ on $[x, x_0]$, there exists $\xi \in (x, x_0)$ such that:
+Let $x \in (x_0 - \delta, x_0)$. By Lagrange's Mean Value Theorem applied to $f$ on $[x, x_0]$, there exists $\xi \in (x, x_0)$ such that:
 $$
 \begin{gather}
 f(x_0) - f(x) = f'(\xi)(x_0 - x) \tag{1}
@@ -39,7 +39,7 @@ Combining inequalities (2) and (4) proves that $f(x) \le f(x_0)$ for all $x \in 
 ### Part 2: The Higher-Order Derivative Test
 Suppose $f \in C^n(U(x_0))$ with $f'(x_0) = \dots = f^{(n-1)}(x_0) = 0$ and $f^{(n)}(x_0) \neq 0$.
 
-By Theorem 3.10 (Taylor's Theorem with the Peano Remainder), for $x \in U(x_0)$:
+By Taylor's Theorem with the Peano Remainder, for $x \in U(x_0)$:
 $$
 \begin{gather}
 f(x) - f(x_0) = \sum_{k=1}^{n-1} \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + o((x - x_0)^n) \tag{5}

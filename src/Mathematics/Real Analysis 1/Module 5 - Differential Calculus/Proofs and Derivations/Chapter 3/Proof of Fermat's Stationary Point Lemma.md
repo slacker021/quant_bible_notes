@@ -5,7 +5,7 @@ Let $E \subseteq \mathbb{R}$, let $x_0 \in \text{int}(E)$, and let $f: E \to \ma
 
 Suppose $f$ attains a local maximum at $x_0$. 
 
-By Definition 3.1, there exists a radius $\delta_0 > 0$ such that $(x_0 - \delta_0, x_0 + \delta_0) \subseteq E$ and:
+By the definition of local extrema, there exists a radius $\delta_0 > 0$ such that $(x_0 - \delta_0, x_0 + \delta_0) \subseteq E$ and:
 $$
 \begin{gather}
 f(x) \le f(x_0) \quad \forall x \in (x_0 - \delta_0, x_0 + \delta_0) \tag{1}
@@ -27,7 +27,7 @@ $$
 \end{gather}
 $$
 
-Because $f$ is differentiable at $x_0$, the two-sided limit exists and equals the right-hand limit. By the order preservation property of limits (Theorem 2.1 of Module 3):
+Because $f$ is differentiable at $x_0$, the two-sided limit exists and equals the right-hand limit. By the order preservation property of limits (Module 3):
 $$
 \begin{gather}
 f'(x_0) = \lim_{h \to 0^+} \frac{f(x_0 + h) - f(x_0)}{h} \le 0 \tag{4}

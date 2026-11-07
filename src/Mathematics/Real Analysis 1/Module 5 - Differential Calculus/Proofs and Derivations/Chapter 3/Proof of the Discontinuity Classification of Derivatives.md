@@ -6,7 +6,7 @@ Let $f: I \to \mathbb{R}$ be differentiable on an open interval $I$, and let $x_
 ### Part 1: Impossibility of Jump Discontinuities (First Kind)
 Suppose for contradiction that $f'$ possesses a jump discontinuity at $x_0$. 
 
-By definition of a jump discontinuity (Definition 1.3 of Module 4), both one-sided limits exist and are finite, but differ:
+By definition of a jump discontinuity (Module 4), both one-sided limits exist and are finite, but differ:
 $$
 \begin{gather}
 L^- := \lim_{x \to x_0^-} f'(x) \quad \text{and} \quad L^+ := \lim_{x \to x_0^+} f'(x) \quad \text{with } L^- \neq L^+ \tag{1}
@@ -26,7 +26,7 @@ By definition of one-sided limits:
 
 Now, consider any subinterval $[a, b] \subset (x_0 - \delta_1, x_0 + \delta_2)$ containing $x_0$ in its interior ($a < x_0 < b$). 
 
-By construction, $f'(a) < \gamma$ and $f'(b) > \gamma$. By Theorem 3.7 (Darboux's Theorem), there must exist some $c \in (a, b)$ such that $f'(c) = \gamma$.
+By construction, $f'(a) < \gamma$ and $f'(b) > \gamma$. By Darboux's Intermediate Value Theorem for Derivatives, there must exist some $c \in (a, b)$ such that $f'(c) = \gamma$.
 
 However, by the choice of $\delta_1$ and $\delta_2$, for every $x \in (x_0 - \delta_1, x_0)$ we have $f'(x) < \gamma$, and for every $x \in (x_0, x_0 + \delta_2)$ we have $f'(x) > \gamma$. The only remaining candidate point in $(a, b)$ is $x_0$ itself. 
 
@@ -35,7 +35,7 @@ Thus, we must have $f'(x_0) = \gamma$ for *every* choice of $\gamma \in (L^-, L^
 ### Part 2: Impossibility of Removable Discontinuities
 Suppose that $\lim_{x \to x_0} f'(x) = L \in \mathbb{R}$ exists. We must show that $f'(x_0) = L$.
 
-Let $h > 0$. By Theorem 3.4 (Lagrange's Mean Value Theorem) applied to $f$ on $[x_0, x_0 + h]$:
+Let $h > 0$. By Lagrange's Mean Value Theorem applied to $f$ on $[x_0, x_0 + h]$:
 $$
 \begin{gather}
 \frac{f(x_0 + h) - f(x_0)}{h} = f'(\xi_h) \tag{3}

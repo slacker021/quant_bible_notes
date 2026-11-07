@@ -11,7 +11,7 @@ x = \alpha_1 x_1 + \alpha_2 x_2, \quad \text{where } \alpha_1 = \frac{x_2 - x}{x
 \end{gather}
 $$
 
-By Definition 4.1, chord convexity holds if and only if:
+By the definition of convex functions, chord convexity holds if and only if:
 $$
 \begin{gather}
 f(x) \le \frac{x_2 - x}{x_2 - x_1} f(x_1) + \frac{x - x_1}{x_2 - x_1} f(x_2) \tag{2}
@@ -97,9 +97,9 @@ $$
 Because $f'$ is non-decreasing, $f'(x + h) \ge f'(x)$, so $f''(x) \ge 0$.
 
 ### (5) $\implies$ (1): Second Derivative Implies Chord Convexity
-Let $f''(x) \ge 0$. By Theorem 3.5 (Monotonicity Criterion), $f'$ is non-decreasing. 
+Let $f''(x) \ge 0$. By the Monotonicity Criterion, $f'$ is non-decreasing. 
 Let $x_1 < x_2$ and $x = \alpha_1 x_1 + \alpha_2 x_2 \in (x_1, x_2)$. 
-By Lagrange's Mean Value Theorem (Theorem 3.4):
+By Lagrange's Mean Value Theorem:
 $$
 \begin{gather}
 \frac{f(x) - f(x_1)}{x - x_1} = f'(\xi_1) \quad \text{for } \xi_1 \in (x_1, x) \tag{14} \\

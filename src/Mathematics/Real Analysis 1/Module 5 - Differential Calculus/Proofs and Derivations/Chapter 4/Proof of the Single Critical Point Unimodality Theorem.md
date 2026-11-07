@@ -32,7 +32,7 @@ $$
 
 Choose $\delta$ sufficiently small such that $c + \delta < x_1$. 
 
-If $f(c + \delta) = f(c)$, then by Rolle's Theorem (Theorem 3.3) applied to $f$ on $[c, c + \delta]$, there would exist $\xi \in (c, c + \delta)$ with $f'(\xi) = 0$, producing a second critical number $\xi \neq c$, which contradicts uniqueness. Therefore:
+If $f(c + \delta) = f(c)$, then by Rolle's Theorem applied to $f$ on $[c, c + \delta]$, there would exist $\xi \in (c, c + \delta)$ with $f'(\xi) = 0$, producing a second critical number $\xi \neq c$, which contradicts uniqueness. Therefore:
 $$
 \begin{gather}
 f(c) < f(c + \delta) \tag{4}
@@ -42,7 +42,7 @@ $$
 ### Step 3: Application of the Extreme Value Theorem
 Consider the compact subinterval $[c + \delta, x_1] \subset I$.
 
-Because $f$ is continuous on $[c + \delta, x_1]$, by the Weierstrass Extreme Value Theorem (Theorem 2.5 of Module 4), $f$ attains an absolute minimum on $[c + \delta, x_1]$ at some point $x^* \in [c + \delta, x_1]$:
+Because $f$ is continuous on $[c + \delta, x_1]$, by the Weierstrass Extreme Value Theorem (Module 4), $f$ attains an absolute minimum on $[c + \delta, x_1]$ at some point $x^* \in [c + \delta, x_1]$:
 $$
 \begin{gather}
 f(x^*) = \min_{x \in [c + \delta, x_1]} f(x) \tag{5}
@@ -66,7 +66,7 @@ $$
 ### Step 4: Existence of a Second Critical Point
 There are two possibilities for $x^*$:
 - **Subcase A ($x^* \in (c + \delta, x_1)$ is an interior point):**
-  Because $x^*$ is an interior minimum of $f$ on $[c + \delta, x_1]$, by Theorem 3.1 (Fermat's Lemma) $x^*$ is a critical number of $f$ ($f'(x^*) = 0$ or undefined). Because $x^* > c + \delta > c$, $x^*$ is distinct from $c$, directly contradicting the uniqueness of the critical number.
+  Because $x^*$ is an interior minimum of $f$ on $[c + \delta, x_1]$, by Fermat's Stationary Point Lemma $x^*$ is a critical number of $f$ ($f'(x^*) = 0$ or undefined). Because $x^* > c + \delta > c$, $x^*$ is distinct from $c$, directly contradicting the uniqueness of the critical number.
 - **Subcase B ($x^* = x_1$):**
   If $x_1$ is an interior point of $I$, then $f(x_1) \le f(c) < f(c + \delta)$. 
   Consider the interval $[c, x_1]$. By the Weierstrass Extreme Value Theorem on $[c, x_1]$, $f$ attains an absolute maximum on $[c, x_1]$ at some point $x_{\max}$.

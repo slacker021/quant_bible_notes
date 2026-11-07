@@ -11,7 +11,7 @@ g(x) := f(x) - \gamma x \tag{1}
 \end{gather}
 $$
 
-Because $f$ is differentiable on $[a, b]$, by Theorem 1.2 $f$ is continuous on $[a, b]$, which implies that $g$ is continuous on the compact interval $[a, b]$ and differentiable on $[a, b]$, with:
+Because $f$ is differentiable on $[a, b]$, by the Differentiability Implies Pointwise Continuity Theorem $f$ is continuous on $[a, b]$, which implies that $g$ is continuous on the compact interval $[a, b]$ and differentiable on $[a, b]$, with:
 $$
 \begin{gather}
 g'(x) = f'(x) - \gamma \tag{2}
@@ -28,7 +28,7 @@ g'(b) = f'(b) - \gamma > 0 \quad (\text{since } \gamma < f'(b)) \tag{4}
 $$
 
 ### Step 3: Location of the Absolute Minimum
-By the Weierstrass Extreme Value Theorem (Theorem 2.5 of Module 4), the continuous function $g$ attains an absolute minimum on $[a, b]$ at some point $c \in [a, b]$:
+By the Weierstrass Extreme Value Theorem (the Weierstrass Extreme Value Theorem (Module 4)), the continuous function $g$ attains an absolute minimum on $[a, b]$ at some point $c \in [a, b]$:
 $$
 \begin{gather}
 g(c) = \min_{x \in [a, b]} g(x) \tag{5}
@@ -54,7 +54,7 @@ Because $h < 0$, $g(b + h) - g(b) < 0 \implies g(b + h) < g(b)$. Therefore, $b$ 
 ### Step 4: Application of Fermat's Lemma
 Because $c \neq a$ and $c \neq b$, $c$ is an interior point: $c \in (a, b)$.
 
-Because $g$ attains an absolute (and hence local) minimum at the interior point $c$, by Theorem 3.1 (Fermat's Stationary Point Lemma):
+Because $g$ attains an absolute (and hence local) minimum at the interior point $c$, by Fermat's Stationary Point Lemma:
 $$
 \begin{gather}
 g'(c) = 0 \tag{8}

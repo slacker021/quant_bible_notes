@@ -6,7 +6,7 @@ Let $X, Y \subseteq \mathbb{R}$, let $x_0 \in \text{int}(X)$, let $f: X \to Y$, 
 Suppose $f$ is differentiable at $x_0$, and $g$ is differentiable at $y_0$.
 
 ### Step 1: Application of Carathéodory's Theorem
-By Theorem 2.2, differentiability of $f$ at $x_0$ guarantees the existence of a function $\psi_f: X \to \mathbb{R}$ continuous at $x_0$ such that:
+By Carathéodory’s Criterion for Differentiability, differentiability of $f$ at $x_0$ guarantees the existence of a function $\psi_f: X \to \mathbb{R}$ continuous at $x_0$ such that:
 $$
 \begin{gather}
 f(x) - f(x_0) = \psi_f(x)(x - x_0) \quad \forall x \in X, \quad \text{with } \psi_f(x_0) = f'(x_0) \tag{1}
@@ -50,8 +50,8 @@ $$
 $$
 
 ### Step 3: Continuity of the Composite Slope
-Because $f$ is differentiable at $x_0$, by Theorem 1.2 $f$ is continuous at $x_0$. 
-Because $\psi_g$ is continuous at $y_0 = f(x_0)$, by Theorem 2.1 of Module 4 (Continuity of Composite Mappings), the composition $x \mapsto \psi_g(f(x))$ is continuous at $x_0$.
+Because $f$ is differentiable at $x_0$, by the Differentiability Implies Pointwise Continuity Theorem $f$ is continuous at $x_0$. 
+Because $\psi_g$ is continuous at $y_0 = f(x_0)$, by the Continuity of Composite Mappings Theorem (Module 4), the composition $x \mapsto \psi_g(f(x))$ is continuous at $x_0$.
 
 Because $\psi_f$ is also continuous at $x_0$, the product $\Psi(x) = \psi_g(f(x)) \cdot \psi_f(x)$ is continuous at $x_0$ by the product theorem for continuous functions.
 
@@ -62,7 +62,7 @@ $$
 \end{gather}
 $$
 
-By Theorem 2.2 (Carathéodory's criterion), equation (6) and the continuity of $\Psi$ at $x_0$ rigorously prove that $(g \circ f)$ is differentiable at $x_0$, with derivative:
+By Carathéodory’s Criterion for Differentiability, equation (6) and the continuity of $\Psi$ at $x_0$ rigorously prove that $(g \circ f)$ is differentiable at $x_0$, with derivative:
 $$
 \begin{gather}
 (g \circ f)'(x_0) = \Psi(x_0) = g'(f(x_0)) \cdot f'(x_0) \tag{8}

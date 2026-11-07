@@ -20,7 +20,7 @@ $$
 
 As $t \to 0$, $\sum_{i=1}^n \alpha_i x_i^t \to \sum_{i=1}^n \alpha_i = 1$, so $\ln\left(\sum \alpha_i x_i^t\right) \to 0$. This represents an indeterminate form $\frac{0}{0}$.
 
-Applying L'Hôpital's Rule (Theorem 4.7) with respect to $t$:
+Applying L'Hôpital's Rule with respect to $t$:
 $$
 \begin{gather}
 \lim_{t \to 0} \ln M_t = \lim_{t \to 0} \frac{\frac{d}{dt}\ln\left( \sum_{i=1}^n \alpha_i x_i^t \right)}{\frac{d}{dt}(t)} = \lim_{t \to 0} \frac{\frac{\sum_{i=1}^n \alpha_i x_i^t \ln x_i}{\sum_{i=1}^n \alpha_i x_i^t}}{1} = \frac{\sum_{i=1}^n \alpha_i \ln x_i}{1} = \sum_{i=1}^n \alpha_i \ln x_i \tag{3}
@@ -39,7 +39,7 @@ proving that $t \mapsto M_t$ is continuous at $t = 0$.
 Let $0 < s < t$. Define $p := \frac{t}{s} > 1$.
 Consider the convex function $g(u) = u^p$ for $u \ge 0$. Because $p > 1$, $g''(u) = p(p-1)u^{p-2} > 0$ for $u > 0$, so $g$ is strictly convex.
 
-Set $u_i := x_i^s$. Applying Theorem 4.4 (Jensen's inequality) to $g$:
+Set $u_i := x_i^s$. Applying Jensen's Inequality to $g$:
 $$
 \begin{gather}
 g\left( \sum_{i=1}^n \alpha_i u_i \right) \le \sum_{i=1}^n \alpha_i g(u_i) \tag{5}

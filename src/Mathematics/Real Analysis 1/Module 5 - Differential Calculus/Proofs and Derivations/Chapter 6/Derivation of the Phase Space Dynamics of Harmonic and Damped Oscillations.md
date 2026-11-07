@@ -52,7 +52,7 @@ x_{\mathbb{C}}(t) = c_1 e^{(-\gamma + i\omega)t} + c_2 e^{(-\gamma - i\omega)t} 
 \end{gather}
 $$
 
-Applying Euler's formula (Theorem 5.3), $e^{\pm i\omega t} = \cos(\omega t) \pm i\sin(\omega t)$. Restricting to real-valued solutions yields the equivalent harmonic amplitude-phase representation:
+Applying Euler's formula, $e^{\pm i\omega t} = \cos(\omega t) \pm i\sin(\omega t)$. Restricting to real-valued solutions yields the equivalent harmonic amplitude-phase representation:
 $$
 \begin{gather}
 x(t) = A e^{-\gamma t} \cos(\omega t + \varphi_0) \tag{8}

@@ -4,7 +4,7 @@ dg-publish: true
 ### Part 1: Integration by Parts
 Let $u, v: I \to \mathbb{R}$ be continuously differentiable on an interval $I \subseteq \mathbb{R}$.
 
-By Theorem 2.1 (The Leibniz Product Rule), the product function $(u v)$ is differentiable on $I$, with:
+By the Leibniz product rule, the product function $(u v)$ is differentiable on $I$, with:
 $$
 \begin{gather}
 (u(x) v(x))' = u'(x) v(x) + u(x) v'(x) \tag{1}
@@ -49,7 +49,7 @@ $$
 \end{gather}
 $$
 
-By Theorem 2.3 (The Chain Rule), $\Phi$ is differentiable on $J$, with derivative:
+By the Invariant Chain Rule, $\Phi$ is differentiable on $J$, with derivative:
 $$
 \begin{gather}
 \Phi'(t) = F'(\varphi(t)) \cdot \varphi'(t) \tag{7}
@@ -63,7 +63,7 @@ $$
 \end{gather}
 $$
 
-By Definition 7.1, equation (8) proves that $\Phi(t) = F(\varphi(t))$ is a primitive of the function $t \mapsto f(\varphi(t)) \varphi'(t)$ on $J$. 
+By the definition of the primitive, equation (8) proves that $\Phi(t) = F(\varphi(t))$ is a primitive of the function $t \mapsto f(\varphi(t)) \varphi'(t)$ on $J$. 
 
 Therefore, taking the indefinite integral:
 $$

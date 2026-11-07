@@ -45,7 +45,7 @@ $$
 \end{gather}
 $$
 
-By Definition 1.1, $\tilde{y}$ is differentiable with respect to $\tilde{x}$ at $\tilde{x}_0$, with transformed derivative:
+By the definition of differentiability at a point, $\tilde{y}$ is differentiable with respect to $\tilde{x}$ at $\tilde{x}_0$, with transformed derivative:
 $$
 \begin{gather}
 \frac{d\tilde{y}}{d\tilde{x}}(\tilde{x}_0) = \frac{\alpha_2}{\alpha_1} f'(x_0) \tag{7}

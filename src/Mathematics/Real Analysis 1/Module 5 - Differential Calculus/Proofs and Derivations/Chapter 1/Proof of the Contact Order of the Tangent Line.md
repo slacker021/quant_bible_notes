@@ -4,7 +4,7 @@ dg-publish: true
 Let $f: U(x_0) \to \mathbb{R}$ be defined on a neighborhood $U(x_0)$ of $x_0$, and let $\varphi(x) = c_0 + c_1(x - x_0)$ be an arbitrary affine function.
 
 ### Part 1: Contact of Order 0
-By Definition 1.3, $\varphi$ has contact of order 0 with $f$ at $x_0$ if:
+By the definition of contact of order $n$, $\varphi$ has contact of order 0 with $f$ at $x_0$ if:
 $$
 \begin{gather}
 f(x) - \varphi(x) = o((x - x_0)^0) = o(1) \quad \text{as } x \to x_0 \tag{1}
@@ -28,7 +28,7 @@ $$
 Because $x_0 \in U(x_0)$, evaluating at $x = x_0$ requires $f(x_0) - c_0 = 0 \implies c_0 = f(x_0)$. Substituting $c_0 = f(x_0)$ into equation (3) yields $\lim_{x \to x_0} f(x) = f(x_0)$, which is the definition of continuity of $f$ at $x_0$.
 
 ### Part 2: Contact of Order 1
-By Definition 1.3, $\varphi(x)$ has contact of order 1 with $f$ at $x_0$ if:
+By the definition of contact of order $n$, $\varphi(x)$ has contact of order 1 with $f$ at $x_0$ if:
 $$
 \begin{gather}
 f(x) - \varphi(x) = o(x - x_0) \quad \text{as } x \to x_0 \tag{4}
@@ -49,7 +49,7 @@ f(x) - f(x_0) = c_1(x - x_0) + o(x - x_0) \quad \text{as } x \to x_0 \tag{6}
 \end{gather}
 $$
 
-Comparing equation (6) directly with Definition 1.1 of differentiability (with increment $h = x - x_0$), condition (6) holds if and only if $f$ is differentiable at $x_0$ and the coefficient $c_1$ equals the derivative:
+Comparing equation (6) directly with the definition of differentiability at a point (with increment $h = x - x_0$), condition (6) holds if and only if $f$ is differentiable at $x_0$ and the coefficient $c_1$ equals the derivative:
 $$
 \begin{gather}
 c_1 = f'(x_0) \tag{7}

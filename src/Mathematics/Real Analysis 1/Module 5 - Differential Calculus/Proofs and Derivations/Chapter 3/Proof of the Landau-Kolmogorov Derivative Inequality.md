@@ -11,7 +11,7 @@ $$
 Let $x \in \mathbb{R}$ be an arbitrary point, and let $h > 0$ be an arbitrary positive parameter.
 
 ### Step 1: Taylor Expansions Forward and Backward
-By Theorem 1.5 (or Lagrange's remainder for order 2), expanding $f(x + h)$ and $f(x - h)$ around $x$:
+By the Quantitative Linearization Error Bound Theorem (or Lagrange's remainder for order 2), expanding $f(x + h)$ and $f(x - h)$ around $x$:
 $$
 \begin{gather}
 f(x + h) = f(x) + f'(x)h + \frac{f''(\xi_1)}{2}h^2 \quad \text{for some } \xi_1 \in (x, x + h) \tag{2} \\

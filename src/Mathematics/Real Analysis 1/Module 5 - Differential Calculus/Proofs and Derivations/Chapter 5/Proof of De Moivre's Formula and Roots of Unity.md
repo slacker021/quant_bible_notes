@@ -21,7 +21,7 @@ z^{k+1} = \big[ r^k (\cos(k\varphi) + i\sin(k\varphi)) \big] \cdot \big[ r (\cos
 \end{gather}
 $$
 
-Using complex multiplication (Definition 5.1):
+Using complex multiplication:
 $$
 \begin{gather}
 z^{k+1} = r^{k+1} \Big( \big[ \cos(k\varphi)\cos\varphi - \sin(k\varphi)\sin\varphi \big] + i \big[ \sin(k\varphi)\cos\varphi + \cos(k\varphi)\sin\varphi \big] \Big) \tag{3}

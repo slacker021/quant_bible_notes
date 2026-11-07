@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 ---
-Let $\theta \in \mathbb{R}$. By Definition 5.4, the complex exponential $e^z$ is defined by the power series:
+Let $\theta \in \mathbb{R}$. By the definition of the complex exponential function, the complex exponential $e^z$ is defined by the power series:
 $$
 \begin{gather}
 e^z = \sum_{n=0}^\infty \frac{z^n}{n!} \tag{1}

@@ -13,7 +13,7 @@ Suppose $\lim_{x \to a^+} f(x) = 0$ and $\lim_{x \to a^+} g(x) = 0$.
 
 Extend $f$ and $g$ continuously to the left endpoint $a$ by defining $f(a) := 0$ and $g(a) := 0$. 
 
-For any $x \in (a, b)$, the extended functions are continuous on $[a, x]$ and differentiable on $(a, x)$. By Theorem 3.6 (Cauchy's Generalized Mean Value Theorem), there exists an intermediate point $\xi_x \in (a, x)$ such that:
+For any $x \in (a, b)$, the extended functions are continuous on $[a, x]$ and differentiable on $(a, x)$. By Cauchy's Generalized Mean Value Theorem, there exists an intermediate point $\xi_x \in (a, x)$ such that:
 $$
 \begin{gather}
 \frac{f(x)}{g(x)} = \frac{f(x) - f(a)}{g(x) - g(a)} = \frac{f'(\xi_x)}{g'(\xi_x)} \tag{2}

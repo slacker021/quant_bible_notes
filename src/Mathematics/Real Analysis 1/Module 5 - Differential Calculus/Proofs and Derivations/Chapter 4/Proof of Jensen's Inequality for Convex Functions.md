@@ -6,7 +6,7 @@ Let $f: I \to \mathbb{R}$ be a convex function on an interval $I \subseteq \math
 The proof proceeds by mathematical induction on $n \in \mathbb{N}$, where $n \ge 2$.
 
 ### Base Case: $n = 2$
-For $n = 2$, let $x_1, x_2 \in I$ and let $\alpha_1, \alpha_2 \ge 0$ with $\alpha_1 + \alpha_2 = 1$. By Definition 4.1:
+For $n = 2$, let $x_1, x_2 \in I$ and let $\alpha_1, \alpha_2 \ge 0$ with $\alpha_1 + \alpha_2 = 1$. By the definition of convex functions:
 $$
 \begin{gather}
 f(\alpha_1 x_1 + \alpha_2 x_2) \le \alpha_1 f(x_1) + \alpha_2 f(x_2) \tag{1}

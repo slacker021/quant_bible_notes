@@ -10,7 +10,7 @@ $$
 
 Let $x_0 = 0$, and let $x \in [-R, R]$ with $|x| < \frac{1}{C}$.
 
-By Theorem 3.10 (Taylor's Theorem with the Lagrange Remainder), for each $n \in \mathbb{N}$, there exists an intermediate point $\xi_n$ strictly between 0 and $x$ such that:
+By Taylor's Theorem with the Lagrange Remainder, for each $n \in \mathbb{N}$, there exists an intermediate point $\xi_n$ strictly between 0 and $x$ such that:
 $$
 \begin{gather}
 f(x) - P_n(0; x) = R_n(0; x) = \frac{f^{(n+1)}(\xi_n)}{(n+1)!} x^{n+1} \tag{2}

@@ -6,7 +6,7 @@ Let $u, v: I \to \mathbb{R}$ be $n$ times differentiable functions on an open in
 The proof proceeds by mathematical induction on $n \in \mathbb{N}$.
 
 ### Base Case: $n = 1$
-For $n = 1$, the product rule (Theorem 2.1) yields:
+For $n = 1$, the product rule yields:
 $$
 \begin{gather}
 (u v)' = u' v + u v' \tag{1}

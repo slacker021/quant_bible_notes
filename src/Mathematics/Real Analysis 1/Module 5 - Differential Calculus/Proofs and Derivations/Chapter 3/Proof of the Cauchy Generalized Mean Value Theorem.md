@@ -6,7 +6,7 @@ Let $f, g: [a, b] \to \mathbb{R}$ be continuous on $[a, b]$ and differentiable o
 ### Step 1: Non-Vanishing of the Denominator Increment
 Suppose for contradiction that $g(b) = g(a)$. 
 
-Because $g$ is continuous on $[a, b]$ and differentiable on $(a, b)$, by Theorem 3.3 (Rolle's Theorem) there would exist a point $\xi_0 \in (a, b)$ such that:
+Because $g$ is continuous on $[a, b]$ and differentiable on $(a, b)$, by Rolle's Theorem there would exist a point $\xi_0 \in (a, b)$ such that:
 $$
 \begin{gather}
 g'(\xi_0) = 0 \tag{1}
@@ -44,7 +44,7 @@ $$
 Thus $\Phi(a) = \Phi(b) = 0$.
 
 ### Step 4: Application of Rolle's Theorem
-By Theorem 3.3 (Rolle's Theorem), there exists an intermediate point $\xi \in (a, b)$ such that:
+By Rolle's Theorem, there exists an intermediate point $\xi \in (a, b)$ such that:
 $$
 \begin{gather}
 \Phi'(\xi) = 0 \tag{7}

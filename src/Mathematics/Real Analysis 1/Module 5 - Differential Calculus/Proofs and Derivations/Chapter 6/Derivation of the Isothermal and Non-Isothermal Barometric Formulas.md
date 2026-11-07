@@ -73,7 +73,7 @@ $$
 \end{gather}
 $$
 
-By Theorem 3.5 (The Constancy Criterion):
+By the Constancy Criterion:
 $$
 \begin{gather}
 \ln p(h) - \frac{\mu g}{R\gamma} \ln(T_0 - \gamma h) = C \tag{11}

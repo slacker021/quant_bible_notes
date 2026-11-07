@@ -49,7 +49,7 @@ $$
 ### Step 2: Application of Cauchy's Generalized Mean Value Theorem
 Let $\Phi: [x_0, x] \to \mathbb{R}$ be a continuous function on $[x_0, x]$, differentiable with non-vanishing derivative on $(x_0, x)$.
 
-Applying Theorem 3.6 (Cauchy's Mean Value Theorem) to $F(t)$ and $\Phi(t)$ on $[x_0, x]$:
+Applying Cauchy's Generalized Mean Value Theorem to $F(t)$ and $\Phi(t)$ on $[x_0, x]$:
 $$
 \begin{gather}
 \frac{F(x) - F(x_0)}{\Phi(x) - \Phi(x_0)} = \frac{F'(\xi)}{\Phi'(\xi)} \tag{7}

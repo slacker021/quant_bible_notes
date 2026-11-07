@@ -36,7 +36,7 @@ $$
 Thus, $F(a) = F(b) = 0$.
 
 ### Step 3: Application of Rolle's Theorem
-The auxiliary function $F$ satisfies all hypotheses of Theorem 3.3 (Rolle's Theorem). Consequently, there exists an intermediate point $\xi \in (a, b)$ such that:
+The auxiliary function $F$ satisfies all hypotheses of Rolle's Theorem. Consequently, there exists an intermediate point $\xi \in (a, b)$ such that:
 $$
 \begin{gather}
 F'(\xi) = 0 \tag{6}

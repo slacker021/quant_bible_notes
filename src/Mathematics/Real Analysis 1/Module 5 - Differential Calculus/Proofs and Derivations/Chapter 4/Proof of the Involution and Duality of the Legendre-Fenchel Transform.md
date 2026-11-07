@@ -22,7 +22,7 @@ $$
 
 Stationary points satisfy $\varphi_p'(x) = 0 \iff f'(x) = p$.
 
-Because $f$ is strictly convex, by Theorem 4.3 its derivative $f'$ is strictly increasing on $I$. Therefore, the equation $f'(x) = p$ has at most one solution:
+Because $f$ is strictly convex, by the Master Equivalence Architecture of Convexity its derivative $f\'$ is strictly increasing on $I$. Therefore, the equation $f'(x) = p$ has at most one solution:
 $$
 \begin{gather}
 x(p) = (f')^{-1}(p) \tag{3}

@@ -32,7 +32,7 @@ $$
 \end{gather}
 $$
 
-By Theorem 3.5 (The Constancy Criterion, proven from Lagrange's Mean Value Theorem), a function whose derivative vanishes identically on a time interval is constant:
+By the Constancy Criterion (proven from Lagrange's Mean Value Theorem), a function whose derivative vanishes identically on a time interval is constant:
 $$
 \begin{gather}
 v(t) + u \ln m(t) = C \tag{5}

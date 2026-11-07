@@ -58,7 +58,7 @@ $$m(t)\frac{dv}{dt} + u\frac{dm}{dt} = F_{\text{ext}} \tag{5}$$
 Equation (5) is **Meshchersky's equation** for the dynamics of a point mass of variable mass.
 
 $$\begin{gather}
-\textbf{Proposition 6.1: The Tsiolkovsky Rocket Equation} \\[5mm]
+\textbf{Proposition: The Tsiolkovsky Rocket Equation} \\[5mm]
 \text{In field-free space } (F_{\text{ext}} = 0), \text{ the velocity of a rocket with initial mass } m_0 \text{ and burnout mass } m(t) \text{ satisfies:} \\[3.5mm]
 v(t) = v_0 + u \ln\left( \frac{m_0}{m(t)} \right).
 \end{gather}$$
@@ -88,7 +88,7 @@ Substituting equation (8) into equation (7) produces the separable differential 
 $$\frac{dp}{dh} = -\frac{\mu g}{R T(h)} p(h) \tag{9}$$
 
 $$\begin{gather}
-\textbf{Proposition 6.2: Isothermal and Polytropic Barometric Formulas} \\[5mm]
+\textbf{Proposition: Isothermal and Polytropic Barometric Formulas} \\[5mm]
 \begin{align}
 \text{1. Isothermal Atmosphere } (T(h) \equiv T_0)\text{:} \quad &p(h) = p_0 \exp\left( -\frac{\mu g}{R T_0} h \right). \\[3mm]
 \text{2. Non-Isothermal Atmosphere } (T(h) = T_0 - \gamma h)\text{:} \quad &p(h) = p_0 \left( 1 - \frac{\gamma}{T_0} h \right)^{\frac{\mu g}{R\gamma}}.
@@ -116,7 +116,7 @@ In a nuclear fission chain reaction, let $n(t)$ denote the neutron density insid
 $$\frac{dn}{dt} = (\alpha - \beta - \gamma) n(t) = k_{\text{eff}} n(t) \tag{13}$$
 
 $$\begin{gather}
-\textbf{Proposition 6.3: The Criticality Condition of a Nuclear Reactor} \\[5mm]
+\textbf{Proposition: The Criticality Condition of a Nuclear Reactor} \\[5mm]
 \begin{align}
 k_{\text{eff}} < 0 \implies &n(t) = n_0 e^{-|k_{\text{eff}}|t} \to 0 \quad (\text{Subcritical: reaction terminates}), \\[2mm]
 k_{\text{eff}} = 0 \implies &n(t) \equiv n_0 \quad (\text{Critical: stationary sustained power generation}), \\[2mm]
@@ -138,7 +138,7 @@ Depending on the Reynolds number, atmospheric resistance is governed by two phys
 2. **Quadratic Aerodynamic Drag (Newton regime)**: $F_{\text{drag}} = k_2 v^2$ (valid for macroscopic bodies and parachutists).
 
 $$\begin{gather}
-\textbf{Proposition 6.4: Trajectories Under Atmospheric Drag} \\[5mm]
+\textbf{Proposition: Trajectories Under Atmospheric Drag} \\[5mm]
 \begin{align}
 \text{1. Linear Drag } \left(m \dot{v} = mg - k_1 v\right)\text{:} \quad &v(t) = v_\infty \left( 1 - e^{-\frac{k_1}{m} t} \right), \quad \text{where } v_\infty = \frac{mg}{k_1}. \\[3mm]
 \text{2. Quadratic Drag } \left(m \dot{v} = mg - k_2 v^2\right)\text{:} \quad &v(t) = v_\infty \tanh\left( \frac{gt}{v_\infty} \right), \quad \text{where } v_\infty = \sqrt{\frac{mg}{k_2}}.
@@ -157,7 +157,7 @@ In Module 2, the number $e$ was defined as the limit of the sequence $\left(1 + 
 $$y'(x) = \alpha y(x), \quad y(0) = y_0 \tag{15}$$
 
 $$\begin{gather}
-\textbf{Theorem 6.1: Uniqueness of the Exponential Growth Operator} \\[5mm]
+\textbf{Theorem: Uniqueness of the Exponential Growth Operator} \\[5mm]
 \text{Let } \alpha \in \mathbb{R} \text{ and } y_0 \in \mathbb{R}. \text{ The only differentiable function } f: \mathbb{R} \to \mathbb{R} \text{ satisfying:} \\[3.5mm]
 f'(x) = \alpha f(x) \quad \forall x \in \mathbb{R}, \quad \text{with } f(0) = y_0, \\[3.5mm]
 \text{is the function } f(x) = y_0 e^{\alpha x}.
@@ -193,7 +193,7 @@ Seeking solutions of the form $x(t) = e^{\lambda t}$, the characteristic algebra
 $$\lambda^2 + 2\gamma \lambda + \omega_0^2 = 0 \implies \lambda_{1, 2} = -\gamma \pm \sqrt{\gamma^2 - \omega_0^2} \tag{22}$$
 
 $$\begin{gather}
-\textbf{Proposition 6.5: Classification of Damped Oscillatory Regimes} \\[5mm]
+\textbf{Proposition: Classification of Damped Oscillatory Regimes} \\[5mm]
 \begin{align}
 \text{1. Underdamped } (\gamma < \omega_0)\text{:} \quad &x(t) = A e^{-\gamma t} \cos(\omega t + \varphi_0), \quad \omega = \sqrt{\omega_0^2 - \gamma^2} \\[2mm]
 &\text{(Damped quasi-periodic oscillation converging to 0).} \\[3mm]

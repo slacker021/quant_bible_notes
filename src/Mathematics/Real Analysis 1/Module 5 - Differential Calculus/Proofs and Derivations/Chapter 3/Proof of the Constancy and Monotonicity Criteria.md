@@ -8,7 +8,7 @@ Let $f: I \to \mathbb{R}$ be continuous on an interval $I \subseteq \mathbb{R}$ 
 Suppose $f'(x) = 0$ for all $x \in \text{int}(I)$. Fix an arbitrary reference point $x_0 \in I$. 
 For any other point $x \in I$ with $x \neq x_0$, the closed interval with endpoints $x_0$ and $x$ is contained in $I$ because $I$ is an interval. 
 
-Applying Theorem 3.4 (Lagrange's Mean Value Theorem) on this interval, there exists an intermediate point $\xi$ strictly between $x_0$ and $x$ such that:
+Applying Lagrange's Mean Value Theorem on this interval, there exists an intermediate point $\xi$ strictly between $x_0$ and $x$ such that:
 $$
 \begin{gather}
 f(x) - f(x_0) = f'(\xi)(x - x_0) \tag{1}

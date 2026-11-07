@@ -20,7 +20,7 @@ $$\Delta f(x_0; h) := f(x_0 + h) - f(x_0) \tag{1}$$
 The central problem of differential calculus consists of isolating from the increment $\Delta f(x_0; h)$ a component that depends linearly on $h$ and serves as the principal part of the increment as $h \to 0$:
 
 $$\begin{gather}
-\textbf{Definition 1.1: Differentiability at a Point} \\[5mm]
+\textbf{Definition: Differentiability at a Point} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } x_0 \in \text{int}(E), \text{ and let } f: E \to \mathbb{R}. \\[2mm]
 \text{The function } f \text{ is differentiable at the point } x_0 \text{ if there exists a real constant } A \in \mathbb{R} \\[2mm]
 \text{such that the increment admits the asymptotic expansion:} \\[3.5mm]
@@ -32,7 +32,7 @@ f(x_0 + h) - f(x_0) = A \cdot h + \alpha(h) \cdot h \quad \forall h \in (-\delta
 The linear function $h \mapsto A \cdot h$ is termed the **differential** of the function $f$ at the point $x_0$, denoted by $df(x_0)$ or $df(x_0; h)$. The scalar coefficient $A$ is termed the **derivative** of $f$ at $x_0$, denoted by $f'(x_0)$ or $\frac{df}{dx}(x_0)$.
 
 $$\begin{gather}
-\textbf{Theorem 1.1: Uniqueness of the Differential and Difference Quotient Criterion} \\[5mm]
+\textbf{Theorem: Uniqueness of the Differential and Difference Quotient Criterion} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } x_0 \in \text{int}(E), \text{ and let } f: E \to \mathbb{R}. \\[2mm]
 \text{1. If } f \text{ is differentiable at } x_0, \text{ the linear mapping } h \mapsto A \cdot h \text{ is uniquely determined.} \\[2mm]
 \text{2. The function } f \text{ is differentiable at } x_0 \text{ if and only if the limit of the difference quotient exists in } \mathbb{R}\text{:} \\[3.5mm]
@@ -46,7 +46,7 @@ f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{x \to x_0} \frac{
 ### The Canonical Differential of the Identity Map
 Consider the identity mapping on the real continuum:
 $$I: \mathbb{R} \to \mathbb{R}, \quad I(x) = x \tag{2}$$
-For any point $x \in \mathbb{R}$ and increment $h$, the increment of the identity map is $\Delta I(x; h) = (x + h) - x = 1 \cdot h + 0$. Comparing this identity with Definition 1.1 establishes that $I$ is differentiable everywhere with $I'(x) \equiv 1$. 
+For any point $x \in \mathbb{R}$ and increment $h$, the increment of the identity map is $\Delta I(x; h) = (x + h) - x = 1 \cdot h + 0$. Comparing this identity with the definition of differentiability at a point establishes that $I$ is differentiable everywhere with $I'(x) \equiv 1$. 
 
 The differential of the identity coordinate function $x$ is denoted simply by $dx$:
 $$dx(h) := 1 \cdot h = h \tag{3}$$
@@ -56,13 +56,13 @@ Formula (4) demonstrates that Leibniz's classical notation $\frac{df}{dx}(x_0)$ 
 
 ### Relationship to Continuity
 $$\begin{gather}
-\textbf{Theorem 1.2: Differentiability Implies Pointwise Continuity} \\[5mm]
+\textbf{Theorem: Differentiability Implies Pointwise Continuity} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } x_0 \in \text{int}(E), \text{ and let } f: E \to \mathbb{R}. \\[2mm]
 \text{If } f \text{ is differentiable at } x_0, \text{ then } f \text{ is continuous at } x_0.
 \end{gather}$$
 (see [[Proof of the Differentiability Implies Continuity Criterion]])
 
-The converse of Theorem 1.2 is false. Pointwise continuity does not guarantee differentiability:
+The converse of the Differentiability Implies Pointwise Continuity Theorem is false. Pointwise continuity does not guarantee differentiability:
 1. **Corner Points**: The absolute value function $f(x) = |x|$ is uniformly continuous across all of $\mathbb{R}$, yet fails to be differentiable at $x_0 = 0$ because:
    $$\lim_{h \to 0^+} \frac{|h| - 0}{h} = 1 \neq -1 = \lim_{h \to 0^-} \frac{|h| - 0}{h} \tag{5}$$
 2. **Nowhere-Differentiable Continuous Functions**: There exist functions continuous everywhere on $\mathbb{R}$ that are differentiable at *no* point of $\mathbb{R}$. The canonical construction, due to Karl Weierstrass, is the Fourier series:
@@ -107,7 +107,7 @@ write "$x_0 + h_2$" at (5.0, 0.0), in blue, below
 ```
 
 $$\begin{gather}
-\textbf{Definition 1.2: The Tangent Line} \\[5mm]
+\textbf{Definition: The Tangent Line} \\[5mm]
 \text{Let } f: E \to \mathbb{R} \text{ be differentiable at } x_0 \in \text{int}(E). \\[2mm]
 \text{The tangent line to the graph of } f \text{ at the point } (x_0, f(x_0)) \text{ is the straight line defined by the affine equation:} \\[3.5mm]
 y = T(x) := f(x_0) + f'(x_0)(x - x_0)
@@ -117,13 +117,13 @@ y = T(x) := f(x_0) + f'(x_0)(x - x_0)
 The tangent line is distinguished from all other straight lines intersecting the graph at $(x_0, f(x_0))$ by its order of geometric contact:
 
 $$\begin{gather}
-\textbf{Definition 1.3: Contact of Order } n \\[5mm]
+\textbf{Definition: Contact of Order } n \\[5mm]
 \text{Two functions } f, \varphi: U(x_0) \to \mathbb{R} \text{ have contact of order } n \in \mathbb{N} \text{ at the point } x_0 \text{ if:} \\[3.5mm]
 f(x) - \varphi(x) = o((x - x_0)^n) \quad \text{as } x \to x_0.
 \end{gather}$$
 
 $$\begin{gather}
-\textbf{Theorem 1.3: Geometric Characterization of the Tangent Line} \\[5mm]
+\textbf{Theorem: Geometric Characterization of the Tangent Line} \\[5mm]
 \text{Let } f: U(x_0) \to \mathbb{R} \text{ be defined in a neighborhood of } x_0. \\[2mm]
 \text{1. The graph of an affine function } \varphi(x) = c_0 + c_1(x - x_0) \text{ has contact of order } 0 \text{ with } f \text{ at } x_0 \\[2mm]
 \text{if and only if } c_0 = f(x_0) \text{ and } f \text{ is continuous at } x_0. \\[2mm]
@@ -132,7 +132,7 @@ $$\begin{gather}
 \end{gather}$$
 (see [[Proof of the Contact Order of the Tangent Line]])
 
-Theorem 1.3 proves that the tangent line is the *unique* straight line that approximates the curve with residual error decaying strictly faster than the first power of distance:
+The Geometric Characterization of the Tangent Line Theorem proves that the tangent line is the *unique* straight line that approximates the curve with residual error decaying strictly faster than the first power of distance:
 $$f(x) - T(x) = o(x - x_0) \tag{8}$$
 
 ---
@@ -147,7 +147,7 @@ $$d\tilde{x} = \alpha_1 \, dx, \quad d\tilde{y} = \alpha_2 \, dy \tag{10}$$
 The function $y = f(x)$ becomes $\tilde{y} = \tilde{f}(\tilde{x}) = \alpha_2 f\left(\frac{\tilde{x} - \beta_1}{\alpha_1}\right) + \beta_2$.
 
 $$\begin{gather}
-\textbf{Theorem 1.4: Invariance of the First Differential} \\[5mm]
+\textbf{Theorem: Invariance of the First Differential} \\[5mm]
 \text{The differential } df(x_0) \text{ is a geometric invariant of the tangent space } T_{x_0}\mathbb{R}. \\[2mm]
 \text{Its representation as an operator on displacements satisfies:} \\[3.5mm]
 d\tilde{y}(\tilde{x}_0; d\tilde{x}) = \alpha_2 \, dy(x_0; dx).
@@ -163,7 +163,7 @@ The first differential represents the intrinsic linear map between tangent space
 The differential provides the theoretical foundation for linear approximation algorithms in applied mathematics and numerical analysis.
 
 $$\begin{gather}
-\textbf{Definition 1.4: Linearization} \\[5mm]
+\textbf{Definition: Linearization} \\[5mm]
 \text{Let } f: E \to \mathbb{R} \text{ be differentiable at } x_0 \in \text{int}(E). \\[2mm]
 \text{The linear approximation (or linearization) of } f \text{ at } x_0 \text{ is the function:} \\[3.5mm]
 L(x) := f(x_0) + f'(x_0)(x - x_0).
@@ -172,7 +172,7 @@ L(x) := f(x_0) + f'(x_0)(x - x_0).
 In empirical applications, one writes $\Delta f \approx df(x_0; \Delta x)$. To transform this heuristic statement into an analytical theorem, the remainder error must be bounded:
 
 $$\begin{gather}
-\textbf{Theorem 1.5: Quantitative Linearization Error Bound} \\[5mm]
+\textbf{Theorem: Quantitative Linearization Error Bound} \\[5mm]
 \text{Let } f \in C^2([x_0 - \delta, x_0 + \delta]) \text{ and let } M_2 = \sup_{t \in [x_0 - \delta, x_0 + \delta]} |f''(t)|. \\[2mm]
 \text{Then for every } x \in [x_0 - \delta, x_0 + \delta], \text{ the approximation error satisfies:} \\[3.5mm]
 |f(x) - L(x)| \le \frac{M_2}{2} (x - x_0)^2.
@@ -234,7 +234,7 @@ write "$\text{Tangent Line}$" at (5.0, 3.2), in red, right
 
 The inclination tangent of the surface curve $y = f(x)$ must satisfy the slope ratio:
 $$\begin{gather}
-\textbf{Proposition 1.1: Differential Equation of the Rotating Fluid Surface} \\[5mm]
+\textbf{Proposition: Differential Equation of the Rotating Fluid Surface} \\[5mm]
 f'(x) = \frac{F_c}{F_g} = \frac{m\omega^2 x}{mg} = \frac{\omega^2}{g}x.
 \end{gather}$$
 Deducing that a function whose derivative is proportional to $x$ must be quadratic (as proven formally in Chapter 3), the free surface forms a paraboloid of revolution:
@@ -244,7 +244,7 @@ $$f(x) = f(0) + \frac{\omega^2}{2g}x^2 \tag{17}$$
 Consider the parabola $y = \frac{x^2}{2p}$ with focus located at $F = (0, p/2)$ and directrix $y = -p/2$. Fermat’s principle of least action implies that rays emanating parallel to the symmetry axis must reflect into the focus.
 
 $$\begin{gather}
-\textbf{Theorem 1.6: The Parabolic Reflection Property} \\[5mm]
+\textbf{Theorem: The Parabolic Reflection Property} \\[5mm]
 \text{Let } P_0 = (x_0, y_0) \text{ be a point on the parabola } y = \frac{x^2}{2p}. \\[2mm]
 \text{The tangent line } T \text{ to the parabola at } P_0 \text{ has slope } f'(x_0) = \frac{x_0}{p}. \\[2mm]
 \text{The angle between } T \text{ and the vertical line } x = x_0 \text{ equals the angle between } T \text{ and the focal segment } FP_0.

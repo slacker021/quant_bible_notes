@@ -41,7 +41,7 @@ Consider the closed disk $\bar{B}_R(0) = \{z \in \mathbb{C} : |z| \le R\}$.
 
 Because $\bar{B}_R(0) \subset \mathbb{R}^2$ is closed and bounded, by the Heine-Borel Theorem (Module 2) it is compact. Because $P(z)$ is a polynomial, the real-valued function $z \mapsto |P(z)|$ is continuous on $\bar{B}_R(0)$.
 
-By the Weierstrass Extreme Value Theorem (Theorem 2.5 of Module 4), the continuous function $|P(z)|$ attains an absolute minimum on the compact disk $\bar{B}_R(0)$ at some point $z_0 \in \bar{B}_R(0)$:
+By the Weierstrass Extreme Value Theorem (the Weierstrass Extreme Value Theorem (Module 4)), the continuous function $|P(z)|$ attains an absolute minimum on the compact disk $\bar{B}_R(0)$ at some point $z_0 \in \bar{B}_R(0)$:
 $$
 \begin{gather}
 |P(z_0)| = \min_{z \in \bar{B}_R(0)} |P(z)| \tag{5}

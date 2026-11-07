@@ -36,7 +36,7 @@ g(x) := f(x) e^{-\alpha x} \tag{4}
 \end{gather}
 $$
 
-Because both $f(x)$ and $e^{-\alpha x}$ are differentiable across all of $\mathbb{R}$, by Theorem 2.1 (The Leibniz Product Rule) and Theorem 2.3 (The Chain Rule), $g$ is differentiable on $\mathbb{R}$.
+Because both $f(x)$ and $e^{-\alpha x}$ are differentiable across all of $\mathbb{R}$, by the Leibniz Product Rule and the Invariant Chain Rule, $g$ is differentiable on $\mathbb{R}$.
 
 Computing the derivative $g'(x)$:
 $$
@@ -59,7 +59,7 @@ g'(x) = 0 \cdot e^{-\alpha x} \equiv 0 \quad \forall x \in \mathbb{R} \tag{7}
 \end{gather}
 $$
 
-By Theorem 3.5 (The Constancy Criterion, proven from Lagrange's Mean Value Theorem), a function whose derivative vanishes identically on the connected interval $\mathbb{R}$ is constant:
+By the Constancy Criterion (proven from Lagrange's Mean Value Theorem), a function whose derivative vanishes identically on the connected interval $\mathbb{R}$ is constant:
 $$
 \begin{gather}
 g(x) \equiv C \quad \forall x \in \mathbb{R} \tag{8}

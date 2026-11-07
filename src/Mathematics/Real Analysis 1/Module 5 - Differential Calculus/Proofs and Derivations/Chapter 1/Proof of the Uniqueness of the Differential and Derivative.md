@@ -36,7 +36,7 @@ $$
 Equation (5) establishes that $A_1 = A_2$. Consequently, the linear mapping $h \mapsto A h$ is uniquely determined.
 
 ### Part 2: Equivalence with the Difference Quotient Limit
-Suppose first that $f$ is differentiable at $x_0$. By Definition 1.1:
+Suppose first that $f$ is differentiable at $x_0$. By the definition of differentiability at a point:
 $$
 \begin{gather}
 f(x_0 + h) - f(x_0) = A h + \alpha(h) h, \quad \text{where } \lim_{h \to 0} \alpha(h) = 0 \tag{6}

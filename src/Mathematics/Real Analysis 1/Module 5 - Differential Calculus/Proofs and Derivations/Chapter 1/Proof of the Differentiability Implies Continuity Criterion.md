@@ -3,7 +3,7 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$, let $x_0 \in \text{int}(E)$, and let $f: E \to \mathbb{R}$ be differentiable at $x_0$.
 
-By Definition 1.1, the increment of the function admits the representation:
+By the definition of differentiability at a point, the increment of the function admits the representation:
 $$
 \begin{gather}
 f(x_0 + h) - f(x_0) = f'(x_0) h + \alpha(h) h \tag{1}
@@ -40,7 +40,7 @@ $$
 \end{gather}
 $$
 
-By Theorem 1.1 of Module 4 (Characterization of Continuity at Accumulation Points), condition (6) is the precise definition of pointwise continuity at $x_0$. Consequently, $f$ is continuous at $x_0$.
+By the Characterization of Continuity at Accumulation Points Theorem (Module 4), condition (6) is the precise definition of pointwise continuity at $x_0$. Consequently, $f$ is continuous at $x_0$.
 $$
 \begin{gather}
 \textbf{Q.E.D.}

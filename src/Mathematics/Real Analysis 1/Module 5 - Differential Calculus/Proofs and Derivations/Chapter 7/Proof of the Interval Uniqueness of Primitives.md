@@ -3,7 +3,7 @@ dg-publish: true
 ---
 Let $I \subseteq \mathbb{R}$ be an interval, and let $F_1, F_2: I \to \mathbb{R}$ be two primitives of the same function $f: I \to \mathbb{R}$.
 
-By Definition 7.1, for all $x \in I$:
+By the definition of the primitive, for all $x \in I$:
 $$
 \begin{gather}
 F_1'(x) = f(x) \quad \text{and} \quad F_2'(x) = f(x) \tag{1}
@@ -17,7 +17,7 @@ $$
 \end{gather}
 $$
 
-Because $F_1$ and $F_2$ are differentiable on $I$, by Theorem 2.1 (Linearity of Derivatives) $\Phi$ is differentiable on $I$, with:
+Because $F_1$ and $F_2$ are differentiable on $I$, by linearity of derivatives $\Phi$ is differentiable on $I$, with:
 $$
 \begin{gather}
 \Phi'(x) = F_1'(x) - F_2'(x) = f(x) - f(x) = 0 \quad \forall x \in I \tag{3}
@@ -28,7 +28,7 @@ Fix an arbitrary reference point $x_0 \in I$.
 
 For any other point $x \in I$ with $x \neq x_0$, the closed interval with endpoints $x_0$ and $x$ is contained in $I$ because $I$ is an interval. 
 
-By Theorem 3.4 (Lagrange's Mean Value Theorem) applied to $\Phi$ on this interval, there exists an intermediate point $\xi$ strictly between $x_0$ and $x$ such that:
+By Lagrange's Mean Value Theorem applied to $\Phi$ on this interval, there exists an intermediate point $\xi$ strictly between $x_0$ and $x$ such that:
 $$
 \begin{gather}
 \Phi(x) - \Phi(x_0) = \Phi'(\xi)(x - x_0) \tag{4}

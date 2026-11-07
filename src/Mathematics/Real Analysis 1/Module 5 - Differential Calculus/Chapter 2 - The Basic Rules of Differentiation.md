@@ -12,7 +12,7 @@ Throughout this chapter, all functions are real-valued mappings of a single real
 # Differentiation and the Arithmetic Operations
 
 $$\begin{gather}
-\textbf{Theorem 2.1: The Arithmetic Algebra of Derivatives and Differentials} \\[5mm]
+\textbf{Theorem: The Arithmetic Algebra of Derivatives and Differentials} \\[5mm]
 \text{Let } f, g: E \to \mathbb{R} \text{ be functions defined on a neighborhood of } x_0 \in \mathbb{R}, \text{ and suppose both } f \text{ and } g \\
 \text{are differentiable at } x_0. \text{ Then:} \\[3mm]
 \begin{align}
@@ -47,7 +47,7 @@ This naive argument possesses an insurmountable analytical flaw: the intermediat
 To bypass this pitfall with complete analytical rigor, differentiability is reformulated via continuous slope extensions:
 
 $$\begin{gather}
-\textbf{Theorem 2.2: Carathéodory’s Criterion for Differentiability} \\[5mm]
+\textbf{Theorem: Carathéodory’s Criterion for Differentiability} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } x_0 \in \text{int}(E), \text{ and let } f: E \to \mathbb{R}. \\[2mm]
 \text{The function } f \text{ is differentiable at } x_0 \text{ if and only if there exists a function } \psi: E \to \mathbb{R} \\[2mm]
 \text{such that } \psi \text{ is continuous at } x_0 \text{ and satisfies:} \\[3.5mm]
@@ -60,7 +60,7 @@ f(x) - f(x_0) = \psi(x)(x - x_0) \quad \forall x \in E. \\[3.5mm]
 Using Carathéodory’s continuous slope function, the Chain Rule emerges simply as the preservation of continuity under composition:
 
 $$\begin{gather}
-\textbf{Theorem 2.3: The Invariant Chain Rule} \\[5mm]
+\textbf{Theorem: The Invariant Chain Rule} \\[5mm]
 \text{Let } X, Y \subseteq \mathbb{R}, \text{ let } x_0 \in \text{int}(X), \text{ let } f: X \to Y, \text{ and let } g: Y \to \mathbb{R}. \\[2mm]
 \text{Suppose } f \text{ is differentiable at } x_0, \text{ and } g \text{ is differentiable at } y_0 = f(x_0) \in \text{int}(Y). \\[2mm]
 \text{Then the composite function } (g \circ f): X \to \mathbb{R} \text{ is differentiable at } x_0. \\[2mm]
@@ -80,7 +80,7 @@ proving that the differential form $df = f' dx$ remains formally invariant wheth
 # Differentiation of the Inverse Function
 
 $$\begin{gather}
-\textbf{Theorem 2.4: Differentiation of the Inverse Function} \\[5mm]
+\textbf{Theorem: Differentiation of the Inverse Function} \\[5mm]
 \text{Let } f: I \to \mathbb{R} \text{ be a continuous, strictly monotonic function defined on an interval } I \subseteq \mathbb{R}, \\[2mm]
 \text{and let } J = f(I) \text{ denote its image interval. Let } x_0 \in \text{int}(I) \text{ and } y_0 = f(x_0) \in \text{int}(J). \\[2mm]
 \text{If } f \text{ is differentiable at } x_0 \text{ and } f'(x_0) \neq 0, \text{ then the inverse function } f^{-1}: J \to I \\[2mm]
@@ -101,7 +101,7 @@ In classical applied analysis, functional relations are frequently defined not b
 To maintain deductive purity in single-variable real analysis, parametric differentiation is grounded strictly upon the 1D Inverse Function Theorem and the 1D Chain Rule, completely avoiding unproven multivariable partial derivatives:
 
 $$\begin{gather}
-\textbf{Theorem 2.5: Differentiation of Parametric Curves} \\[5mm]
+\textbf{Theorem: Differentiation of Parametric Curves} \\[5mm]
 \text{Let } I \subseteq \mathbb{R} \text{ be an open interval, and let } \varphi, \psi: I \to \mathbb{R} \text{ be differentiable functions describing} \\[2mm]
 \text{a planar curve } t \mapsto (x(t), y(t)) = (\varphi(t), \psi(t)). \\[2mm]
 \text{Let } t_0 \in I \text{ be a parameter value such that } \varphi'(t_0) \neq 0. \\[2mm]
@@ -118,7 +118,7 @@ $$\frac{d^2 y}{dx^2}(x_0) = \frac{d}{dt}\left(\frac{\dot{y}}{\dot{x}}\right) \cd
 >[!example]- Physical Application: Relativistic Velocity Addition Under Lorentz Boosts
 >In special relativity, let the trajectory of a particle observed in an inertial frame $K$ be parameterized by its coordinate $x = x(t)$. Under a Lorentz boost with relative velocity $v$, the coordinates $(\tilde{x}, \tilde{t})$ in frame $\tilde{K}$ are given by the linear parameterization:
 >$$\tilde{x}(t) = \gamma(x(t) - vt), \quad \tilde{t}(t) = \gamma\left(t - \frac{v}{c^2}x(t)\right), \quad \text{where } \gamma = \frac{1}{\sqrt{1 - v^2/c^2}} \tag{5}$$
->Viewing $(\tilde{x}, \tilde{t})$ as a parametric curve driven by parameter $t$, Theorem 2.5 establishes that the velocity observed in $\tilde{K}$ is:
+>Viewing $(\tilde{x}, \tilde{t})$ as a parametric curve driven by parameter $t$, the Differentiation of Parametric Curves Theorem establishes that the velocity observed in $\tilde{K}$ is:
 >$$\tilde{u} = \frac{d\tilde{x}}{d\tilde{t}} = \frac{\dot{\tilde{x}}(t)}{\dot{\tilde{t}}(t)} = \frac{\gamma(\dot{x}(t) - v)}{\gamma\left(1 - \frac{v}{c^2}\dot{x}(t)\right)} = \frac{u - v}{1 - \frac{uv}{c^2}} \tag{6}$$
 >where $u = \dot{x}(t)$ is the particle velocity in $K$. Equation (6) is Einstein's velocity addition law, derived purely as the derivative of a parametric single-variable curve.
 
@@ -126,10 +126,10 @@ $$\frac{d^2 y}{dx^2}(x_0) = \frac{d}{dt}\left(\frac{\dot{y}}{\dot{x}}\right) \cd
 
 # Table of Derivatives of Elementary Functions
 
-Applying the definition of the derivative alongside Theorems 2.1 through 2.4 yields the canonical derivatives of the elementary functions across their natural domains:
+Applying the definition of the derivative alongside the arithmetic rules of differentiation, Carathéodory’s criterion, the chain rule, and the inverse function differentiation theorem yields the canonical derivatives of the elementary functions across their natural domains:
 
 $$\begin{gather}
-\textbf{Table 2.1: Master Derivatives of the Elementary Functions} \\[2mm]
+\textbf{Table: Master Derivatives of the Elementary Functions} \\[2mm]
 \begin{array}{|l|l|l|}
 \hline
 \textbf{Function } f(x) & \textbf{Derivative } f'(x) & \textbf{Natural Domain / Restrictions} \\
@@ -167,7 +167,7 @@ e^x & e^x & x \in \mathbb{R} \\
 Let $f: E \to \mathbb{R}$ be differentiable on an open interval $I \subseteq E$. The derivative $f'$ is itself a real-valued function $f': I \to \mathbb{R}$.
 
 $$\begin{gather}
-\textbf{Definition 2.1: Higher-Order Derivatives} \\[5mm]
+\textbf{Definition: Higher-Order Derivatives} \\[5mm]
 \text{The second derivative of } f \text{ at } x_0 \in I, \text{ denoted } f''(x_0) \text{ or } f^{(2)}(x_0), \text{ is defined as:} \\[3.5mm]
 f''(x_0) := (f')'(x_0) = \lim_{h \to 0} \frac{f'(x_0 + h) - f'(x_0)}{h}. \\[3.5mm]
 \text{Inductively, for any integer } n \ge 2, \text{ the } n\text{-th derivative of } f \text{ at } x_0 \text{ is defined as:} \\[3.5mm]
@@ -176,7 +176,7 @@ f^{(n)}(x_0) := \big( f^{(n-1)} \big)'(x_0).
 A function possessing continuous derivatives up to order $n$ on an open set $U$ is said to be of class $C^n(U)$. If derivatives of all orders exist, $f \in C^\infty(U)$ (smooth function).
 
 $$\begin{gather}
-\textbf{Theorem 2.6: The General Leibniz Rule for Products} \\[5mm]
+\textbf{Theorem: The General Leibniz Rule for Products} \\[5mm]
 \text{Let } u, v: I \to \mathbb{R} \text{ be } n \text{ times differentiable functions on an open interval } I. \\[2mm]
 \text{Then the product function } (u \cdot v) \text{ is } n \text{ times differentiable on } I, \text{ and satisfies:} \\[3.5mm]
 (u \cdot v)^{(n)}(x) = \sum_{k=0}^n \binom{n}{k} u^{(n-k)}(x) v^{(k)}(x), \\[3.5mm]

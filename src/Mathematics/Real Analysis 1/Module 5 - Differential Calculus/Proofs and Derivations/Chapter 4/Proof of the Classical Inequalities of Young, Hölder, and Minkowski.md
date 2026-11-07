@@ -6,7 +6,7 @@ Let $p, q > 1$ such that $\frac{1}{p} + \frac{1}{q} = 1$. Let $a, b > 0$ (if $a 
 
 Consider the exponential function $f(x) = e^x$. Because $f''(x) = e^x > 0$ on $\mathbb{R}$, $f$ is strictly convex on $\mathbb{R}$.
 
-Set the weights $\alpha_1 = \frac{1}{p}$ and $\alpha_2 = \frac{1}{q}$. Because $\frac{1}{p} + \frac{1}{q} = 1$ and $\alpha_1, \alpha_2 > 0$, applying Definition 4.1 to $x_1 = \ln(a^p)$ and $x_2 = \ln(b^q)$:
+Set the weights $\alpha_1 = \frac{1}{p}$ and $\alpha_2 = \frac{1}{q}$. Because $\frac{1}{p} + \frac{1}{q} = 1$ and $\alpha_1, \alpha_2 > 0$, applying the definition of convex functions to $x_1 = \ln(a^p)$ and $x_2 = \ln(b^q)$:
 $$
 \begin{gather}
 \exp\left( \frac{1}{p} \ln(a^p) + \frac{1}{q} \ln(b^q) \right) \le \frac{1}{p} \exp(\ln(a^p)) + \frac{1}{q} \exp(\ln(b^q)) \tag{1}

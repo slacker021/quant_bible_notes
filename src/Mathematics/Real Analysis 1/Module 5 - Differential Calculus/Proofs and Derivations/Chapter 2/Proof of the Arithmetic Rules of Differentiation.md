@@ -3,7 +3,7 @@ dg-publish: true
 ---
 Let $f, g: E \to \mathbb{R}$ be defined on a neighborhood of $x_0 \in \text{int}(E)$, and suppose both $f$ and $g$ are differentiable at $x_0$. 
 
-By Definition 1.1, the functional increments satisfy:
+By the definition of differentiability at a point, the functional increments satisfy:
 $$
 \begin{gather}
 f(x_0 + h) - f(x_0) = f'(x_0) h + \alpha(h) h \tag{1} \\
@@ -34,7 +34,7 @@ $$
 \end{gather}
 $$
 
-By limit algebra, $\lim_{h \to 0} (c_1 \alpha(h) + c_2 \beta(h)) = c_1 \cdot 0 + c_2 \cdot 0 = 0$. By Definition 1.1, $\Phi$ is differentiable at $x_0$, and:
+By limit algebra, $\lim_{h \to 0} (c_1 \alpha(h) + c_2 \beta(h)) = c_1 \cdot 0 + c_2 \cdot 0 = 0$. By the definition of differentiability at a point, $\Phi$ is differentiable at $x_0$, and:
 $$
 \begin{gather}
 \Phi'(x_0) = c_1 f'(x_0) + c_2 g'(x_0) \tag{6}
@@ -63,7 +63,7 @@ $$
 \end{gather}
 $$
 
-Because $g$ is differentiable at $x_0$, by Theorem 1.2 $g$ is continuous at $x_0$, which guarantees that $\lim_{h \to 0} g(x_0 + h) = g(x_0)$. 
+Because $g$ is differentiable at $x_0$, by the Differentiability Implies Pointwise Continuity Theorem $g$ is continuous at $x_0$, which guarantees that $\lim_{h \to 0} g(x_0 + h) = g(x_0)$. 
 
 Taking the limit as $h \to 0$ in equation (9):
 $$

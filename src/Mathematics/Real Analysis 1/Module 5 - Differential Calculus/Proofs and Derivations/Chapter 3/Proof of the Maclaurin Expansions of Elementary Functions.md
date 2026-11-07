@@ -5,7 +5,7 @@ Evaluating the successive derivatives of the basic elementary functions at $x_0 
 
 ### 1. The Exponential Function $f(x) = e^x$
 For all $k \in \mathbb{N}$, $f^{(k)}(x) = e^x$, so $f^{(k)}(0) = 1$.
-By Taylor's Theorem with the Peano remainder (Theorem 3.10):
+By Taylor's Theorem with the Peano remainder:
 $$
 \begin{gather}
 e^x = \sum_{k=0}^n \frac{f^{(k)}(0)}{k!}x^k + o(x^n) = 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} + o(x^n) \quad \text{as } x \to 0 \tag{1}

@@ -4,7 +4,7 @@ dg-publish: true
 Let $E \subseteq \mathbb{R}$, let $x_0 \in \text{int}(E)$, and let $f: E \to \mathbb{R}$.
 
 ### Direct Implication
-Suppose $f$ is differentiable at $x_0$. By Theorem 1.1, the derivative $f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$ exists in $\mathbb{R}$.
+Suppose $f$ is differentiable at $x_0$. By the Uniqueness of the Differential and Derivative Theorem, the derivative $f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$ exists in $\mathbb{R}$.
 
 Define the auxiliary function $\psi: E \to \mathbb{R}$ by:
 $$
@@ -53,7 +53,7 @@ $$
 \end{gather}
 $$
 
-Because the limit exists and equals the finite real number $\psi(x_0)$, by Theorem 1.1 the function $f$ is differentiable at $x_0$, with derivative $f'(x_0) = \psi(x_0)$.
+Because the limit exists and equals the finite real number $\psi(x_0)$, by the Uniqueness of the Differential and Derivative Theorem the function $f$ is differentiable at $x_0$, with derivative $f'(x_0) = \psi(x_0)$.
 $$
 \begin{gather}
 \textbf{Q.E.D.}

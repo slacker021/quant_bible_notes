@@ -17,7 +17,7 @@ e^{\lambda t}\frac{dN}{dt} + \lambda e^{\lambda t} N(t) = 0 \implies \frac{d}{dt
 \end{gather}
 $$
 
-By Theorem 3.5 (The Constancy Criterion):
+By the Constancy Criterion:
 $$
 \begin{gather}
 N(t) e^{\lambda t} = C \tag{3}

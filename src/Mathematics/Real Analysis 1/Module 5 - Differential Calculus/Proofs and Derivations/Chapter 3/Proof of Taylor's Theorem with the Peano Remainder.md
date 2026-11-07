@@ -18,7 +18,7 @@ $$
 $$
 
 ### Step 1: Base Case ($n = 1$)
-For $n = 1$, by Definition 1.1 of differentiability:
+For $n = 1$, by the definition of differentiability at a point:
 $$
 \begin{gather}
 R_1(x) = f(x) - f(x_0) - f'(x_0)(x - x_0) = o(x - x_0) \tag{3}
@@ -43,7 +43,7 @@ g^{(k)}(x_0) = 0 \quad \forall k = 0, 1, \dots, n-1, \quad \text{and} \quad g^{(
 \end{gather}
 $$
 
-Applying Cauchy's Generalized Mean Value Theorem (Theorem 3.6) repeatedly $n - 1$ times on the interval between $x_0$ and $x$:
+Applying Cauchy's Generalized Mean Value Theorem repeatedly $n - 1$ times on the interval between $x_0$ and $x$:
 $$
 \begin{gather}
 \frac{R_n(x)}{(x - x_0)^n} = \frac{R_n'(x_1)}{n(x_1 - x_0)^{n-1}} = \frac{R_n''(x_2)}{n(n-1)(x_2 - x_0)^{n-2}} = \dots = \frac{R_n^{(n-1)}(x_{n-1})}{n!(x_{n-1} - x_0)} \tag{6}
