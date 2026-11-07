@@ -24,10 +24,10 @@ $$
 \varphi(0) = y_0 e^0 = y_0 \tag{3}
 \end{gather}
 $$
-Thus, $\varphi(x) = y_0 e^{\alpha x}$ is an analytical solution to problem (1).
+Thus, $\varphi(x) = y_0 e^{\alpha x}$ is an analytical solution to the problem of step 1.
 
 ### Part 2: Uniqueness
-Let $f: \mathbb{R} \to \mathbb{R}$ be an arbitrary differentiable function satisfying problem (1).
+Let $f: \mathbb{R} \to \mathbb{R}$ be an arbitrary differentiable function satisfying the problem of step 1.
 
 Consider the auxiliary function $g: \mathbb{R} \to \mathbb{R}$ defined by:
 $$
@@ -52,7 +52,7 @@ g'(x) = \big( f'(x) - \alpha f(x) \big) e^{-\alpha x} \tag{6}
 \end{gather}
 $$
 
-By hypothesis (1), $f'(x) - \alpha f(x) \equiv 0$ for all $x \in \mathbb{R}$. Therefore:
+By the hypothesis of step 1, $f'(x) - \alpha f(x) \equiv 0$ for all $x \in \mathbb{R}$. Therefore:
 $$
 \begin{gather}
 g'(x) = 0 \cdot e^{-\alpha x} \equiv 0 \quad \forall x \in \mathbb{R} \tag{7}
@@ -73,14 +73,14 @@ C = g(0) = f(0) e^0 = y_0 \cdot 1 = y_0 \tag{9}
 \end{gather}
 $$
 
-Substituting $C = y_0$ into equation (8):
+Substituting $C = y_0$ into the equation of step 8:
 $$
 \begin{gather}
 f(x) e^{-\alpha x} = y_0 \implies f(x) = y_0 e^{\alpha x} \tag{10}
 \end{gather}
 $$
 
-Equation (10) proves that $f(x)$ is identically equal to $y_0 e^{\alpha x}$, establishing uniqueness.
+The equation of step 10 proves that $f(x)$ is identically equal to $y_0 e^{\alpha x}$, establishing uniqueness.
 $$
 \begin{gather}
 \textbf{Q.E.D.}

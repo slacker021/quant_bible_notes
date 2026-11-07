@@ -35,14 +35,14 @@ $$
 \end{gather}
 $$
 
-By equation (3), $\Phi'(\xi) = 0$. Therefore:
+By the equation of step 3, $\Phi'(\xi) = 0$. Therefore:
 $$
 \begin{gather}
 \Phi(x) - \Phi(x_0) = 0 \cdot (x - x_0) = 0 \implies \Phi(x) = \Phi(x_0) \tag{5}
 \end{gather}
 $$
 
-Setting $C := \Phi(x_0) = F_1(x_0) - F_2(x_0) \in \mathbb{R}$, equation (5) proves that:
+Setting $C := \Phi(x_0) = F_1(x_0) - F_2(x_0) \in \mathbb{R}$, the equation of step 5 proves that:
 $$
 \begin{gather}
 F_1(x) - F_2(x) \equiv C \quad \forall x \in I \tag{6}

@@ -19,7 +19,7 @@ f(x - h) = f(x) - f'(x)h + \frac{f''(\xi_2)}{2}h^2 \quad \text{for some } \xi_2 
 \end{gather}
 $$
 
-Subtracting equation (3) from equation (2):
+Subtracting the equation of step 3 from the equation of step 2:
 $$
 \begin{gather}
 f(x + h) - f(x - h) = 2 f'(x) h + \frac{f''(\xi_1) - f''(\xi_2)}{2}h^2 \tag{4}
@@ -27,7 +27,7 @@ f(x + h) - f(x - h) = 2 f'(x) h + \frac{f''(\xi_1) - f''(\xi_2)}{2}h^2 \tag{4}
 $$
 
 ### Step 2: Isolating the First Derivative
-Rearranging equation (4) to solve for $f'(x)$:
+Rearranging the equation of step 4 to solve for $f'(x)$:
 $$
 \begin{gather}
 f'(x) = \frac{f(x + h) - f(x - h)}{2h} - \frac{f''(\xi_1) - f''(\xi_2)}{4}h \tag{5}
@@ -48,14 +48,14 @@ $$
 \end{gather}
 $$
 
-Substituting these bounds into inequality (6):
+Substituting these bounds into the inequality of step 6:
 $$
 \begin{gather}
 |f'(x)| \le \frac{2 M_0}{2h} + \frac{2 M_2}{4}h = \frac{M_0}{h} + \frac{M_2}{2}h \tag{8}
 \end{gather}
 $$
 
-Because inequality (8) holds for every $x \in \mathbb{R}$, taking the supremum over $x \in \mathbb{R}$:
+Because the inequality of step 8 holds for every $x \in \mathbb{R}$, taking the supremum over $x \in \mathbb{R}$:
 $$
 \begin{gather}
 M_1 = \sup_{x \in \mathbb{R}} |f'(x)| \le \frac{M_0}{h} + \frac{M_2}{2}h \quad \forall h > 0 \tag{9}
@@ -63,7 +63,7 @@ M_1 = \sup_{x \in \mathbb{R}} |f'(x)| \le \frac{M_0}{h} + \frac{M_2}{2}h \quad \
 $$
 
 ### Step 3: Minimization Over the Parameter $h$
-Inequality (9) holds for *every* choice of $h > 0$. We choose $h$ to minimize the upper bound function:
+The inequality of step 9 holds for *every* choice of $h > 0$. We choose $h$ to minimize the upper bound function:
 $$
 \begin{gather}
 \varphi(h) = \frac{M_0}{h} + \frac{M_2}{2}h \tag{10}
@@ -86,7 +86,7 @@ $$
 \end{gather}
 $$
 
-Substituting the minimum value into inequality (9):
+Substituting the minimum value into the inequality of step 9:
 $$
 \begin{gather}
 M_1 \le \sqrt{2 M_0 M_2} \tag{13}

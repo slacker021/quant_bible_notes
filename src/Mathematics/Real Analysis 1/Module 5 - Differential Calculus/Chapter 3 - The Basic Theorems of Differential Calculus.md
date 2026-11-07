@@ -238,7 +238,7 @@ $$\begin{gather}
 \text{2. Lagrange Remainder:} \quad &\text{If } f \in C^n([a, b]) \text{ and is } (n+1) \text{ times differentiable on } (a, b), \text{ then } \forall x \in [a, b], \\[2mm]
 &\exists \xi \in (x_0, x) \text{ such that:} \\[2mm]
 &R_n(x_0; x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - x_0)^{n+1}. \\[3mm]
-\text{3. Cauchy Remainder:} \quad &\text{Under the same hypotheses as (2), there exists } \theta \in (0, 1) \text{ such that:} \\[2mm]
+\text{3. Cauchy Remainder:} \quad &\text{Under the same hypotheses as the Lagrange remainder, there exists } \theta \in (0, 1) \text{ such that:} \\[2mm]
 &R_n(x_0; x) = \frac{f^{(n+1)}(x_0 + \theta(x - x_0))}{n!} (1 - \theta)^n (x - x_0)^{n+1}.
 \end{align}
 \end{gather}$$

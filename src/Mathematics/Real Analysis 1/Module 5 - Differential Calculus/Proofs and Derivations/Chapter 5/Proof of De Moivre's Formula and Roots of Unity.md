@@ -13,7 +13,7 @@ $$
 
 For $n = 1$, $z^1 = r^1(\cos(1\varphi) + i\sin(1\varphi))$, which holds identically.
 
-Assume equation (1) holds for $n = k$: $z^k = r^k(\cos(k\varphi) + i\sin(k\varphi))$. 
+Assume the equation of step 1 holds for $n = k$: $z^k = r^k(\cos(k\varphi) + i\sin(k\varphi))$. 
 Computing $z^{k+1} = z^k \cdot z$:
 $$
 \begin{gather}
@@ -36,7 +36,7 @@ $$
 \end{gather}
 $$
 
-Substituting equations (4) and (5) into equation (3):
+Substituting the equations of step 4 and step 5 into the equation of step 3:
 $$
 \begin{gather}
 z^{k+1} = r^{k+1} \big( \cos((k+1)\varphi) + i\sin((k+1)\varphi) \big) \tag{6}

@@ -52,21 +52,21 @@ f\left( \sum_{k=1}^{m+1} \alpha_k x_k \right) = f(\gamma \bar{x} + \alpha_{m+1} 
 \end{gather}
 $$
 
-Now, applying the inductive hypothesis (2) to $\bar{x} = \sum_{k=1}^m \left(\frac{\alpha_k}{\gamma}\right) x_k$:
+Now, applying the inductive the hypothesis of step 2 to $\bar{x} = \sum_{k=1}^m \left(\frac{\alpha_k}{\gamma}\right) x_k$:
 $$
 \begin{gather}
 f(\bar{x}) \le \sum_{k=1}^m \frac{\alpha_k}{\gamma} f(x_k) \tag{6}
 \end{gather}
 $$
 
-Multiplying inequality (6) by $\gamma > 0$:
+Multiplying the inequality of step 6 by $\gamma > 0$:
 $$
 \begin{gather}
 \gamma f(\bar{x}) \le \sum_{k=1}^m \alpha_k f(x_k) \tag{7}
 \end{gather}
 $$
 
-Substituting inequality (7) into inequality (5):
+Substituting the inequality of step 7 into the inequality of step 5:
 $$
 \begin{gather}
 f\left( \sum_{k=1}^{m+1} \alpha_k x_k \right) \le \sum_{k=1}^m \alpha_k f(x_k) + \alpha_{m+1} f(x_{m+1}) = \sum_{k=1}^{m+1} \alpha_k f(x_k) \tag{8}

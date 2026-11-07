@@ -13,14 +13,14 @@ $$
 \end{gather}
 $$
 
-For every $x \in E \setminus \{x_0\}$, multiplying equation (1) by $(x - x_0)$ yields:
+For every $x \in E \setminus \{x_0\}$, multiplying the equation of step 1 by $(x - x_0)$ yields:
 $$
 \begin{gather}
 f(x) - f(x_0) = \psi(x)(x - x_0) \tag{2}
 \end{gather}
 $$
 
-For $x = x_0$, equation (2) reduces to $0 = \psi(x_0) \cdot 0 = 0$, which holds identically. 
+For $x = x_0$, the equation of step 2 reduces to $0 = \psi(x_0) \cdot 0 = 0$, which holds identically. 
 
 Furthermore, evaluating the limit of $\psi(x)$ as $x \to x_0$:
 $$
@@ -29,7 +29,7 @@ $$
 \end{gather}
 $$
 
-Equation (3) proves that $\psi$ is continuous at the point $x_0$.
+The equation of step 3 proves that $\psi$ is continuous at the point $x_0$.
 
 ### Converse Implication
 Suppose there exists a function $\psi: E \to \mathbb{R}$ that is continuous at $x_0$ and satisfies:
@@ -39,14 +39,14 @@ f(x) - f(x_0) = \psi(x)(x - x_0) \quad \forall x \in E \tag{4}
 \end{gather}
 $$
 
-For any $x \in E \setminus \{x_0\}$, dividing equation (4) by $(x - x_0)$ yields:
+For any $x \in E \setminus \{x_0\}$, dividing the equation of step 4 by $(x - x_0)$ yields:
 $$
 \begin{gather}
 \frac{f(x) - f(x_0)}{x - x_0} = \psi(x) \tag{5}
 \end{gather}
 $$
 
-Because $\psi$ is continuous at $x_0$, taking the limit as $x \to x_0$ on both sides of equation (5) yields:
+Because $\psi$ is continuous at $x_0$, taking the limit as $x \to x_0$ on both sides of the equation of step 5 yields:
 $$
 \begin{gather}
 \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = \lim_{x \to x_0} \psi(x) = \psi(x_0) \tag{6}

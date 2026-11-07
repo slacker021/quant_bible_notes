@@ -34,7 +34,7 @@ f(x) - f(x_0) \le 0 \implies f(x) \le f(x_0) \tag{4}
 \end{gather}
 $$
 
-Combining inequalities (2) and (4) proves that $f(x) \le f(x_0)$ for all $x \in (x_0 - \delta, x_0 + \delta)$, establishing that $x_0$ is a local maximum. (The proof for local minimum with signs reversed is identical).
+Combining the inequalities of step 2 and step 4 proves that $f(x) \le f(x_0)$ for all $x \in (x_0 - \delta, x_0 + \delta)$, establishing that $x_0$ is a local maximum. (The proof for local minimum with signs reversed is identical).
 
 ### Part 2: The Higher-Order Derivative Test
 Suppose $f \in C^n(U(x_0))$ with $f'(x_0) = \dots = f^{(n-1)}(x_0) = 0$ and $f^{(n)}(x_0) \neq 0$.

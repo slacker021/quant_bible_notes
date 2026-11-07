@@ -11,7 +11,7 @@ f(x_0 + h) - f(x_0) = f'(x_0) h + \alpha(h) h \tag{1}
 $$
 where $\lim_{h \to 0} \alpha(h) = 0$.
 
-Taking the functional limit as $h \to 0$ on both sides of equation (1):
+Taking the functional limit as $h \to 0$ on both sides of the equation of step 1:
 $$
 \begin{gather}
 \lim_{h \to 0} \big( f(x_0 + h) - f(x_0) \big) = \lim_{h \to 0} \big( f'(x_0) h + \alpha(h) h \big) \tag{2}
@@ -26,7 +26,7 @@ $$
 \end{gather}
 $$
 
-Substituting equations (3) and (4) into equation (2) gives:
+Substituting the equations of step 3 and step 4 into the equation of step 2 gives:
 $$
 \begin{gather}
 \lim_{h \to 0} \big( f(x_0 + h) - f(x_0) \big) = 0 \implies \lim_{h \to 0} f(x_0 + h) = f(x_0) \tag{5}
@@ -40,7 +40,7 @@ $$
 \end{gather}
 $$
 
-By the Characterization of Continuity at Accumulation Points Theorem (Module 4), condition (6) is the precise definition of pointwise continuity at $x_0$. Consequently, $f$ is continuous at $x_0$.
+By the Characterization of Continuity at Accumulation Points Theorem (Module 4), the condition of step 6 is the precise definition of pointwise continuity at $x_0$. Consequently, $f$ is continuous at $x_0$.
 $$
 \begin{gather}
 \textbf{Q.E.D.}

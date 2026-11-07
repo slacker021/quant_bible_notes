@@ -56,14 +56,14 @@ $$
 \end{gather}
 $$
 
-Because $F'(x) = f(x)$, substituting $x = \varphi(t)$ into equation (7) gives:
+Because $F'(x) = f(x)$, substituting $x = \varphi(t)$ into the equation of step 7 gives:
 $$
 \begin{gather}
 \Phi'(t) = f(\varphi(t)) \cdot \varphi'(t) \tag{8}
 \end{gather}
 $$
 
-By the definition of the primitive, equation (8) proves that $\Phi(t) = F(\varphi(t))$ is a primitive of the function $t \mapsto f(\varphi(t)) \varphi'(t)$ on $J$. 
+By the definition of the primitive, the equation of step 8 proves that $\Phi(t) = F(\varphi(t))$ is a primitive of the function $t \mapsto f(\varphi(t)) \varphi'(t)$ on $J$. 
 
 Therefore, taking the indefinite integral:
 $$

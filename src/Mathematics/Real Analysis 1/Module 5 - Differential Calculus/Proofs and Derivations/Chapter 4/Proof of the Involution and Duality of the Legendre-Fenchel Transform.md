@@ -63,14 +63,14 @@ Equality holds if and only if $x = (f')^{-1}(p) \iff p = f'(x)$.
 ### Step 3: Involution $(f^*)^* = f$
 Define the second conjugate $(f^*)^*(x) := \sup_{p \in \text{dom}(f^*)} (xp - f^*(p))$.
 
-From the Young-Fenchel inequality (7), $xp - f^*(p) \le f(x)$ for all $p$. Taking the supremum over $p$:
+From the Young-Fenchel the inequality of step 7, $xp - f^*(p) \le f(x)$ for all $p$. Taking the supremum over $p$:
 $$
 \begin{gather}
 (f^*)^*(x) = \sup_p \big( xp - f^*(p) \big) \le f(x) \tag{8}
 \end{gather}
 $$
 
-Now choose the specific slope $p_0 := f'(x)$. By Step 1, equality holds in equation (7) at $p_0$:
+Now choose the specific slope $p_0 := f'(x)$. By Step 1, equality holds in the equation of step 7 at $p_0$:
 $$
 \begin{gather}
 x p_0 - f^*(p_0) = f(x) \tag{9}
@@ -84,7 +84,7 @@ $$
 \end{gather}
 $$
 
-Combining inequalities (8) and (10):
+Combining the inequalities of step 8 and step 10:
 $$
 \begin{gather}
 (f^*)^*(x) = f(x) \quad \forall x \in I \tag{11}

@@ -28,7 +28,7 @@ $$
 \end{gather}
 $$
 
-Substituting equations (3) and (4) into inequality (1):
+Substituting the equations of step 3 and step 4 into the inequality of step 1:
 $$
 \begin{gather}
 ab \le \frac{a^p}{p} + \frac{b^q}{q} \tag{5}
@@ -48,14 +48,14 @@ u_k := \frac{|a_k|}{A}, \quad v_k := \frac{|b_k|}{B} \tag{6}
 \end{gather}
 $$
 
-Applying Young's inequality (5) to $u_k$ and $v_k$:
+Applying Young's the inequality of step 5 to $u_k$ and $v_k$:
 $$
 \begin{gather}
 u_k v_k \le \frac{u_k^p}{p} + \frac{v_k^q}{q} \implies \frac{|a_k b_k|}{AB} \le \frac{|a_k|^p}{p A^p} + \frac{|b_k|^q}{q B^q} \tag{7}
 \end{gather}
 $$
 
-Summing inequality (7) over $k = 1, \dots, n$:
+Summing the inequality of step 7 over $k = 1, \dots, n$:
 $$
 \begin{gather}
 \frac{1}{AB} \sum_{k=1}^n |a_k b_k| \le \frac{1}{p A^p} \sum_{k=1}^n |a_k|^p + \frac{1}{q B^q} \sum_{k=1}^n |b_k|^q \tag{8}
@@ -69,7 +69,7 @@ $$
 \end{gather}
 $$
 
-Multiplying inequality (9) by $AB$:
+Multiplying the inequality of step 9 by $AB$:
 $$
 \begin{gather}
 \sum_{k=1}^n |a_k b_k| \le A B = \left( \sum_{k=1}^n |a_k|^p \right)^{1/p} \left( \sum_{k=1}^n |b_k|^q \right)^{1/q} \tag{10}
@@ -101,7 +101,7 @@ $$
 \end{gather}
 $$
 
-Applying Hölder's inequality (10) to each sum on the right-hand side:
+Applying Hölder's the inequality of step 10 to each sum on the right-hand side:
 $$
 \begin{gather}
 \sum_{k=1}^n |a_k||a_k + b_k|^{p-1} \le \left( \sum_{k=1}^n |a_k|^p \right)^{1/p} \left( \sum_{k=1}^n |a_k + b_k|^{(p-1)q} \right)^{1/q} = \left( \sum_{k=1}^n |a_k|^p \right)^{1/p} \left( \sum_{k=1}^n |a_k + b_k|^p \right)^{1/q} \tag{14}
@@ -115,14 +115,14 @@ $$
 \end{gather}
 $$
 
-Substituting bounds (14) and (15) into inequality (13):
+Substituting the bounds of step 14 and step 15 into the inequality of step 13:
 $$
 \begin{gather}
 \sum_{k=1}^n |a_k + b_k|^p \le \left[ \left( \sum_{k=1}^n |a_k|^p \right)^{1/p} + \left( \sum_{k=1}^n |b_k|^p \right)^{1/p} \right] \left( \sum_{k=1}^n |a_k + b_k|^p \right)^{1/q} \tag{16}
 \end{gather}
 $$
 
-If $\sum_{k=1}^n |a_k + b_k|^p = 0$, the inequality holds trivially. If not, dividing inequality (16) by $\left( \sum_{k=1}^n |a_k + b_k|^p \right)^{1/q}$, and noting that $1 - \frac{1}{q} = \frac{1}{p}$:
+If $\sum_{k=1}^n |a_k + b_k|^p = 0$, the inequality holds trivially. If not, dividing the inequality of step 16 by $\left( \sum_{k=1}^n |a_k + b_k|^p \right)^{1/q}$, and noting that $1 - \frac{1}{q} = \frac{1}{p}$:
 $$
 \begin{gather}
 \left( \sum_{k=1}^n |a_k + b_k|^p \right)^{1/p} \le \left( \sum_{k=1}^n |a_k|^p \right)^{1/p} + \left( \sum_{k=1}^n |b_k|^p \right)^{1/p} \tag{17}

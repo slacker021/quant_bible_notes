@@ -20,7 +20,7 @@ y - y_0 = \frac{x_0}{p}(x - x_0) \tag{2}
 \end{gather}
 $$
 
-Setting $x = 0$ in equation (2), the $y$-intercept of the tangent line $T$ at the point $Q = (0, y_Q)$ is:
+Setting $x = 0$ in the equation of step 2, the $y$-intercept of the tangent line $T$ at the point $Q = (0, y_Q)$ is:
 $$
 \begin{gather}
 y_Q = y_0 - \frac{x_0^2}{p} = \frac{x_0^2}{2p} - \frac{x_0^2}{p} = -\frac{x_0^2}{2p} = -y_0 \tag{3}
@@ -42,14 +42,14 @@ $$
 \end{gather}
 $$
 
-Because $P_0$ lies on the parabola, $x_0^2 = 2p y_0$. Substituting this identity into equation (5):
+Because $P_0$ lies on the parabola, $x_0^2 = 2p y_0$. Substituting this identity into the equation of step 5:
 $$
 \begin{gather}
 |FP_0| = \sqrt{2p y_0 + y_0^2 - p y_0 + \frac{p^2}{4}} = \sqrt{y_0^2 + p y_0 + \frac{p^2}{4}} = \sqrt{\left(y_0 + \frac{p}{2}\right)^2} = y_0 + \frac{p}{2} \tag{6}
 \end{gather}
 $$
 
-Comparing equations (4) and (6) establishes that:
+Comparing the equations of step 4 and step 6 establishes that:
 $$
 \begin{gather}
 |FQ| = |FP_0| \tag{7}
@@ -57,7 +57,7 @@ $$
 $$
 
 ### Step 3: Equality of Reflection Angles
-Equation (7) proves that the triangle $\triangle F Q P_0$ is isosceles with base $Q P_0$. Consequently, the base angles are equal:
+The equation of step 7 proves that the triangle $\triangle F Q P_0$ is isosceles with base $Q P_0$. Consequently, the base angles are equal:
 $$
 \begin{gather}
 \angle F Q P_0 = \angle F P_0 Q \tag{8}
@@ -74,14 +74,14 @@ $$
 $$
 where $\angle V P_0 T_{\text{ext}}$ denotes the angle made by the incoming vertical ray with the tangent line.
 
-Combining equations (8) and (9):
+Combining the equations of step 8 and step 9:
 $$
 \begin{gather}
 \angle V P_0 T_{\text{ext}} = \angle F P_0 Q \tag{10}
 \end{gather}
 $$
 
-Equation (10) establishes that the angle of incidence between the incoming vertical ray and the tangent line equals the angle of reflection between the tangent line and the reflected focal ray $P_0 F$.
+The equation of step 10 establishes that the angle of incidence between the incoming vertical ray and the tangent line equals the angle of reflection between the tangent line and the reflected focal ray $P_0 F$.
 $$
 \begin{gather}
 \textbf{Q.E.D.}

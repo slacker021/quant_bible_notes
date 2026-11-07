@@ -59,7 +59,7 @@ f'(x_0) = \lim_{h \to 0^+} \frac{f(x_0 + h) - f(x_0)}{h} \ge 0 \tag{6}
 $$
 
 ### Part 3: Strict Monotonicity
-Suppose $f'(x) > 0$ for all $x \in \text{int}(I)$. For any $x_1 < x_2$ in $I$, by equation (3):
+Suppose $f'(x) > 0$ for all $x \in \text{int}(I)$. For any $x_1 < x_2$ in $I$, by the equation of step 3:
 $$
 \begin{gather}
 f(x_2) - f(x_1) = f'(\xi)(x_2 - x_1) \tag{7}

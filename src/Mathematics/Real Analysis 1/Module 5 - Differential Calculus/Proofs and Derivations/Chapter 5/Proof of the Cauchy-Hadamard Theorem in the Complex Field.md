@@ -29,14 +29,14 @@ $$
 \end{gather}
 $$
 
-Multiplying inequality (3) by $|z - z_0|^n$:
+Multiplying the inequality of step 3 by $|z - z_0|^n$:
 $$
 \begin{gather}
 |c_n (z - z_0)^n| = |c_n| |z - z_0|^n < \left( \frac{|z - z_0|}{r} \right)^n \quad \forall n \ge N \tag{4}
 \end{gather}
 $$
 
-Set $q := \frac{|z - z_0|}{r}$. By inequality (1), $0 \le q < 1$. 
+Set $q := \frac{|z - z_0|}{r}$. By the inequality of step 1, $0 \le q < 1$. 
 
 The series $\sum_{n=N}^\infty q^n$ is a convergent geometric series of real numbers. By the Direct Comparison Test for real series (Module 3), the series:
 $$

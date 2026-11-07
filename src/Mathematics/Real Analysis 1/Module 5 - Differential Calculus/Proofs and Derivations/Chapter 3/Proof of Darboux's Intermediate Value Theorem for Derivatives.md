@@ -61,7 +61,7 @@ g'(c) = 0 \tag{8}
 \end{gather}
 $$
 
-Substituting equation (2) into equation (8):
+Substituting the equation of step 2 into the equation of step 8:
 $$
 \begin{gather}
 f'(c) - \gamma = 0 \implies f'(c) = \gamma \tag{9}

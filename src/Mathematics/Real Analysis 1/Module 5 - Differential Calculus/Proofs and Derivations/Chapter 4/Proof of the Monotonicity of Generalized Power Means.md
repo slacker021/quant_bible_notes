@@ -27,7 +27,7 @@ $$
 \end{gather}
 $$
 
-Exponentiating equation (3):
+Exponentiating the equation of step 3:
 $$
 \begin{gather}
 \lim_{t \to 0} M_t = \exp\left( \sum_{i=1}^n \alpha_i \ln x_i \right) = \prod_{i=1}^n x_i^{\alpha_i} = M_0 \tag{4}

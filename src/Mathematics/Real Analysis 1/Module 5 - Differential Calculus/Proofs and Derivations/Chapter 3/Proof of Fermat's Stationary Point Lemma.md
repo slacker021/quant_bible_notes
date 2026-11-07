@@ -12,7 +12,7 @@ f(x) \le f(x_0) \quad \forall x \in (x_0 - \delta_0, x_0 + \delta_0) \tag{1}
 \end{gather}
 $$
 
-For any increment $h$ satisfying $0 < |h| < \delta_0$, condition (1) implies that:
+For any increment $h$ satisfying $0 < |h| < \delta_0$, the condition of step 1 implies that:
 $$
 \begin{gather}
 \Delta f(x_0; h) = f(x_0 + h) - f(x_0) \le 0 \tag{2}
@@ -20,7 +20,7 @@ $$
 $$
 
 ### Case 1: Right-Hand Limit ($h > 0$)
-For $0 < h < \delta_0$, dividing the non-positive numerator (2) by the positive denominator $h > 0$ gives:
+For $0 < h < \delta_0$, dividing the non-positive numerator of step 2 by the positive denominator $h > 0$ gives:
 $$
 \begin{gather}
 \frac{f(x_0 + h) - f(x_0)}{h} \le 0 \tag{3}
@@ -35,7 +35,7 @@ f'(x_0) = \lim_{h \to 0^+} \frac{f(x_0 + h) - f(x_0)}{h} \le 0 \tag{4}
 $$
 
 ### Case 2: Left-Hand Limit ($h < 0$)
-For $-\delta_0 < h < 0$, dividing the non-positive numerator (2) by the negative denominator $h < 0$ reverses the inequality:
+For $-\delta_0 < h < 0$, dividing the non-positive numerator of step 2 by the negative denominator $h < 0$ reverses the inequality:
 $$
 \begin{gather}
 \frac{f(x_0 + h) - f(x_0)}{h} \ge 0 \tag{5}
@@ -50,7 +50,7 @@ f'(x_0) = \lim_{h \to 0^-} \frac{f(x_0 + h) - f(x_0)}{h} \ge 0 \tag{6}
 $$
 
 ### Conclusion
-Combining inequalities (4) and (6):
+Combining the inequalities of step 4 and step 6:
 $$
 \begin{gather}
 f'(x_0) \le 0 \quad \text{and} \quad f'(x_0) \ge 0 \implies f'(x_0) = 0 \tag{7}

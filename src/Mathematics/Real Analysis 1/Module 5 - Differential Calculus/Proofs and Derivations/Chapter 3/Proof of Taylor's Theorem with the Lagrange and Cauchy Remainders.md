@@ -57,7 +57,7 @@ $$
 $$
 for some $\xi$ strictly between $x_0$ and $x$.
 
-Substituting $F(x) = 0$, $F(x_0) = R_n(x_0; x)$, and equation (6) into equation (7):
+Substituting $F(x) = 0$, $F(x_0) = R_n(x_0; x)$, and the equation of step 6 into the equation of step 7:
 $$
 \begin{gather}
 \frac{-R_n(x_0; x)}{\Phi(x) - \Phi(x_0)} = \frac{-\frac{f^{(n+1)}(\xi)}{n!}(x - \xi)^n}{\Phi'(\xi)} \tag{8}
@@ -74,7 +74,7 @@ $$
 ### Step 3: Derivation of the Lagrange Remainder Form
 Choose $\Phi(t) := (x - t)^{n+1}$.
 Then $\Phi'(t) = -(n+1)(x - t)^n$, $\Phi(x) = 0$, and $\Phi(x_0) = (x - x_0)^{n+1}$.
-Substituting these expressions into equation (9):
+Substituting these expressions into the equation of step 9:
 $$
 \begin{gather}
 R_n(x_0; x) = \frac{0 - (x - x_0)^{n+1}}{-(n+1)(x - \xi)^n} \frac{f^{(n+1)}(\xi)}{n!}(x - \xi)^n = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - x_0)^{n+1} \tag{10}
@@ -85,14 +85,14 @@ which is the Lagrange form of the remainder.
 ### Step 4: Derivation of the Cauchy Remainder Form
 Choose $\Phi(t) := x - t$.
 Then $\Phi'(t) = -1$, $\Phi(x) = 0$, and $\Phi(x_0) = x - x_0$.
-Substituting into equation (9):
+Substituting into the equation of step 9:
 $$
 \begin{gather}
 R_n(x_0; x) = \frac{0 - (x - x_0)}{-1} \frac{f^{(n+1)}(\xi)}{n!}(x - \xi)^n = \frac{f^{(n+1)}(\xi)}{n!}(x - \xi)^n (x - x_0) \tag{11}
 \end{gather}
 $$
 
-Writing $\xi = x_0 + \theta(x - x_0)$ with $\theta \in (0, 1)$, we have $x - \xi = (1 - \theta)(x - x_0)$. Substituting into equation (11) gives:
+Writing $\xi = x_0 + \theta(x - x_0)$ with $\theta \in (0, 1)$, we have $x - \xi = (1 - \theta)(x - x_0)$. Substituting into the equation of step 11 gives:
 $$
 \begin{gather}
 R_n(x_0; x) = \frac{f^{(n+1)}(x_0 + \theta(x - x_0))}{n!} (1 - \theta)^n (x - x_0)^{n+1} \tag{12}

@@ -21,14 +21,14 @@ g(y) - g(y_0) = \psi_g(y)(y - y_0) \quad \forall y \in Y, \quad \text{with } \ps
 $$
 
 ### Step 2: Evaluation on the Composite Mapping
-For any $x \in X$, let $y = f(x)$ and $y_0 = f(x_0)$. Substituting $y$ and $y_0$ into equation (2):
+For any $x \in X$, let $y = f(x)$ and $y_0 = f(x_0)$. Substituting $y$ and $y_0$ into the equation of step 2:
 $$
 \begin{gather}
 (g \circ f)(x) - (g \circ f)(x_0) = g(f(x)) - g(f(x_0)) = \psi_g(f(x)) \big( f(x) - f(x_0) \big) \tag{3}
 \end{gather}
 $$
 
-Substituting equation (1) into equation (3):
+Substituting the equation of step 1 into the equation of step 3:
 $$
 \begin{gather}
 (g \circ f)(x) - (g \circ f)(x_0) = \psi_g(f(x)) \cdot \psi_f(x)(x - x_0) \tag{4}
@@ -42,7 +42,7 @@ $$
 \end{gather}
 $$
 
-Equation (4) becomes:
+The equation of step 4 becomes:
 $$
 \begin{gather}
 (g \circ f)(x) - (g \circ f)(x_0) = \Psi(x)(x - x_0) \quad \forall x \in X \tag{6}
@@ -62,7 +62,7 @@ $$
 \end{gather}
 $$
 
-By Carathéodory’s Criterion for Differentiability, equation (6) and the continuity of $\Psi$ at $x_0$ rigorously prove that $(g \circ f)$ is differentiable at $x_0$, with derivative:
+By Carathéodory’s Criterion for Differentiability, the equation of step 6 and the continuity of $\Psi$ at $x_0$ rigorously prove that $(g \circ f)$ is differentiable at $x_0$, with derivative:
 $$
 \begin{gather}
 (g \circ f)'(x_0) = \Psi(x_0) = g'(f(x_0)) \cdot f'(x_0) \tag{8}
@@ -77,7 +77,7 @@ d(g \circ f)(x_0)(h) = \big( g'(f(x_0)) \cdot f'(x_0) \big) h = g'(f(x_0)) \cdot
 \end{gather}
 $$
 
-Because $df(x_0)(h) = f'(x_0) h$ and $dg(y_0)(k) = g'(y_0) k$, equation (9) is precisely the composition of linear maps:
+Because $df(x_0)(h) = f'(x_0) h$ and $dg(y_0)(k) = g'(y_0) k$, the equation of step 9 is precisely the composition of linear maps:
 $$
 \begin{gather}
 d(g \circ f)(x_0) = dg(y_0) \circ df(x_0) \tag{10}

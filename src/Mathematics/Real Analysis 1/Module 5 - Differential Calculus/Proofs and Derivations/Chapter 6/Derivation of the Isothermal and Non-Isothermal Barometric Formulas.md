@@ -23,7 +23,7 @@ $$
 $$
 
 ### Part 1: Isothermal Atmosphere ($T(h) \equiv T_0$)
-If temperature is constant across all altitudes, equation (3) becomes:
+If temperature is constant across all altitudes, the equation of step 3 becomes:
 $$
 \begin{gather}
 \frac{d}{dh}\big(\ln p(h)\big) = -\frac{\mu g}{R T_0} \tag{4}
@@ -52,7 +52,7 @@ T(h) = T_0 - \gamma h \quad (\gamma > 0) \tag{7}
 \end{gather}
 $$
 
-Substituting equation (7) into equation (3):
+Substituting the equation of step 7 into the equation of step 3:
 $$
 \begin{gather}
 \frac{d}{dh}\big(\ln p(h)\big) = -\frac{\mu g}{R(T_0 - \gamma h)} \tag{8}
@@ -82,14 +82,14 @@ $$
 
 At $h = 0$, $C = \ln p_0 - \frac{\mu g}{R\gamma} \ln T_0$. 
 
-Substituting $C$ back into equation (11):
+Substituting $C$ back into the equation of step 11:
 $$
 \begin{gather}
 \ln\left(\frac{p(h)}{p_0}\right) = \frac{\mu g}{R\gamma} \big( \ln(T_0 - \gamma h) - \ln T_0 \big) = \frac{\mu g}{R\gamma} \ln\left( 1 - \frac{\gamma}{T_0} h \right) \tag{12}
 \end{gather}
 $$
 
-Exponentiating equation (12):
+Exponentiating the equation of step 12:
 $$
 \begin{gather}
 p(h) = p_0 \left( 1 - \frac{\gamma}{T_0} h \right)^{\frac{\mu g}{R\gamma}} \tag{13}

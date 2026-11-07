@@ -20,7 +20,7 @@ $$
 \end{gather}
 $$
 
-Substituting equations (1) and (2) into equation (3):
+Substituting the equations of step 1 and step 2 into the equation of step 3:
 $$
 \begin{gather}
 \Phi(x_0 + h) - \Phi(x_0) = c_1 \big( f'(x_0) h + \alpha(h) h \big) + c_2 \big( g'(x_0) h + \beta(h) h \big) \tag{4}
@@ -56,7 +56,7 @@ $$
 \end{gather}
 $$
 
-Dividing equation (8) by $h \neq 0$:
+Dividing the equation of step 8 by $h \neq 0$:
 $$
 \begin{gather}
 \frac{\Pi(x_0 + h) - \Pi(x_0)}{h} = \left( \frac{f(x_0 + h) - f(x_0)}{h} \right) g(x_0 + h) + f(x_0) \left( \frac{g(x_0 + h) - g(x_0)}{h} \right) \tag{9}
@@ -65,7 +65,7 @@ $$
 
 Because $g$ is differentiable at $x_0$, by the Differentiability Implies Pointwise Continuity Theorem $g$ is continuous at $x_0$, which guarantees that $\lim_{h \to 0} g(x_0 + h) = g(x_0)$. 
 
-Taking the limit as $h \to 0$ in equation (9):
+Taking the limit as $h \to 0$ in the equation of step 9:
 $$
 \begin{gather}
 \lim_{h \to 0} \frac{\Pi(x_0 + h) - \Pi(x_0)}{h} = f'(x_0) g(x_0) + f(x_0) g'(x_0) \tag{10}
@@ -81,7 +81,7 @@ R(x_0 + h) - R(x_0) = \frac{1}{g(x_0 + h)} - \frac{1}{g(x_0)} = -\frac{g(x_0 + h
 \end{gather}
 $$
 
-Dividing equation (11) by $h \neq 0$:
+Dividing the equation of step 11 by $h \neq 0$:
 $$
 \begin{gather}
 \frac{R(x_0 + h) - R(x_0)}{h} = -\frac{1}{g(x_0 + h) g(x_0)} \cdot \frac{g(x_0 + h) - g(x_0)}{h} \tag{12}

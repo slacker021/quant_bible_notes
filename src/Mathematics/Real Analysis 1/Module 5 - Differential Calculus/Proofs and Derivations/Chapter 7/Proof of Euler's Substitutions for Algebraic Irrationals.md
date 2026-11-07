@@ -13,7 +13,7 @@ $$
 \end{gather}
 $$
 
-Squaring both sides of equation (1):
+Squaring both sides of the equation of step 1:
 $$
 \begin{gather}
 a x^2 + b x + c = (\sqrt{a} x + t)^2 = a x^2 + 2\sqrt{a} x t + t^2 \tag{2}
@@ -50,7 +50,7 @@ $$
 \end{gather}
 $$
 
-Squaring both sides of equation (6):
+Squaring both sides of the equation of step 6:
 $$
 \begin{gather}
 a x^2 + b x + c = x^2 t^2 + 2\sqrt{c} x t + c \tag{7}

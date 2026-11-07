@@ -3,7 +3,7 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$, let $x_0 \in \text{int}(E)$, and let $f: E \to \mathbb{R}$.
 
-### Part 1: Uniqueness of the Differential and Derivative
+# Part 1: Uniqueness of the Differential and Derivative
 Suppose there exist two linear mappings $L_1(h) = A_1 h$ and $L_2(h) = A_2 h$ with $A_1, A_2 \in \mathbb{R}$ such that:
 $$
 \begin{gather}
@@ -12,30 +12,30 @@ $$
 \end{gather}
 $$
 
-Subtracting equation (2) from equation (1) yields:
+Subtracting the equation of step 2 from the equation of step 1 yields:
 $$
 \begin{gather}
 0 = (A_1 - A_2)h + o(h) - o(h) = (A_1 - A_2)h + o(h) \quad \text{as } h \to 0 \tag{3}
 \end{gather}
 $$
 
-For any $h \neq 0$, dividing equation (3) by $h$ produces:
+For any $h \neq 0$, dividing the equation of step 3 by $h$ produces:
 $$
 \begin{gather}
 0 = (A_1 - A_2) + \frac{o(h)}{h} \tag{4}
 \end{gather}
 $$
 
-Taking the limit as $h \to 0$ in equation (4), by definition of the Landau little-$o$ notation $\lim_{h \to 0} \frac{o(h)}{h} = 0$:
+Taking the limit as $h \to 0$ in the equation of step 4, by definition of the Landau little-$o$ notation $\lim_{h \to 0} \frac{o(h)}{h} = 0$:
 $$
 \begin{gather}
 0 = \lim_{h \to 0} \left( (A_1 - A_2) + \frac{o(h)}{h} \right) = A_1 - A_2 \tag{5}
 \end{gather}
 $$
 
-Equation (5) establishes that $A_1 = A_2$. Consequently, the linear mapping $h \mapsto A h$ is uniquely determined.
+The equation of step 5 establishes that $A_1 = A_2$. Consequently, the linear mapping $h \mapsto A h$ is uniquely determined.
 
-### Part 2: Equivalence with the Difference Quotient Limit
+# Part 2: Equivalence with the Difference Quotient Limit
 Suppose first that $f$ is differentiable at $x_0$. By the definition of differentiability at a point:
 $$
 \begin{gather}
@@ -43,14 +43,14 @@ f(x_0 + h) - f(x_0) = A h + \alpha(h) h, \quad \text{where } \lim_{h \to 0} \alp
 \end{gather}
 $$
 
-For $h \neq 0$, dividing equation (6) by $h$ gives:
+For $h \neq 0$, dividing the equation of step 6 by $h$ gives:
 $$
 \begin{gather}
 \frac{f(x_0 + h) - f(x_0)}{h} = A + \alpha(h) \tag{7}
 \end{gather}
 $$
 
-Taking the limit as $h \to 0$ in equation (7):
+Taking the limit as $h \to 0$ in the equation of step 7:
 $$
 \begin{gather}
 \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{h \to 0} (A + \alpha(h)) = A + 0 = A \tag{8}
@@ -71,14 +71,14 @@ $$
 \end{gather}
 $$
 
-By hypothesis (9), $\lim_{h \to 0} \alpha(h) = A - A = 0$. Multiplying equation (10) by $h$ yields:
+By the hypothesis of step 9, $\lim_{h \to 0} \alpha(h) = A - A = 0$. Multiplying the equation of step 10 by $h$ yields:
 $$
 \begin{gather}
 f(x_0 + h) - f(x_0) = A h + \alpha(h) h = A h + o(h) \quad \text{as } h \to 0 \tag{11}
 \end{gather}
 $$
 
-Substituting $x = x_0 + h$, so that $h = x - x_0$, transforms equation (9) into the equivalent coordinate formulation:
+Substituting $x = x_0 + h$, so that $h = x - x_0$, transforms the equation of step 9 into the equivalent coordinate formulation:
 $$
 \begin{gather}
 f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} \tag{12}

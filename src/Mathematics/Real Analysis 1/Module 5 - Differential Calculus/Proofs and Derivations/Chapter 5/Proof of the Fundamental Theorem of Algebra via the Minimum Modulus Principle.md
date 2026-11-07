@@ -27,7 +27,7 @@ $$
 \end{gather}
 $$
 
-Equation (3) proves that $\lim_{|z| \to \infty} |P(z)| = \infty$.
+The equation of step 3 proves that $\lim_{|z| \to \infty} |P(z)| = \infty$.
 
 ### Step 2: Attainment of the Minimum Modulus
 Because $\lim_{|z| \to \infty} |P(z)| = \infty$, there exists a large radius $R \ge R_1$ such that:
@@ -48,7 +48,7 @@ $$
 \end{gather}
 $$
 
-Because $0 \in \bar{B}_R(0)$, $|P(z_0)| \le |P(0)|$. By condition (4), for any point outside the disk ($|z| > R$), $|P(z)| > |P(0)| \ge |P(z_0)|$. 
+Because $0 \in \bar{B}_R(0)$, $|P(z_0)| \le |P(0)|$. By the condition of step 4, for any point outside the disk ($|z| > R$), $|P(z)| > |P(0)| \ge |P(z_0)|$. 
 
 Consequently, $z_0$ is a **global minimum** of $|P(z)|$ across the entire complex plane:
 $$
@@ -99,7 +99,7 @@ $$
 \end{gather}
 $$
 
-Substituting equation (11) into equation (8):
+Substituting the equation of step 11 into the equation of step 8:
 $$
 \begin{gather}
 P(z) = c_0 \left( 1 - \frac{\rho^k}{r_0} + \rho^{k+1} e^{i(k+1)\alpha/k} Q(z) \right) \tag{12}
@@ -129,7 +129,7 @@ $$
 \end{gather}
 $$
 
-Inequality (15) directly contradicts the fact (equation 6) that $|P(z_0)|$ is the global minimum of $|P(z)|$ on $\mathbb{C}$. 
+The inequality of step 15 directly contradicts the fact (equation 6) that $|P(z_0)|$ is the global minimum of $|P(z)|$ on $\mathbb{C}$. 
 
 This contradiction forces $|P(z_0)| = 0 \implies P(z_0) = 0$.
 $$

@@ -25,7 +25,7 @@ f'(x) = e^{-1/x^2} \frac{d}{dx}\left(-\frac{1}{x^2}\right) = \frac{2}{x^3} e^{-1
 $$
 Here $P_3(t) = 2t^3$, which is a polynomial of degree 3, establishing the base case.
 
-Assume equation (2) holds for $n = k$: $f^{(k)}(x) = P_{3k}\left(\frac{1}{x}\right) e^{-1/x^2}$. Differentiating with respect to $x$:
+Assume the equation of step 2 holds for $n = k$: $f^{(k)}(x) = P_{3k}\left(\frac{1}{x}\right) e^{-1/x^2}$. Differentiating with respect to $x$:
 $$
 \begin{gather}
 f^{(k+1)}(x) = P'_{3k}\left(\frac{1}{x}\right)\left(-\frac{1}{x^2}\right) e^{-1/x^2} + P_{3k}\left(\frac{1}{x}\right) \left(\frac{2}{x^3}\right) e^{-1/x^2} \tag{4}

@@ -49,7 +49,7 @@ f(x^*) = \min_{x \in [c + \delta, x_1]} f(x) \tag{5}
 \end{gather}
 $$
 
-By assumption (2), $f(x_1) \le f(c)$. By inequality (4), $f(c) < f(c + \delta)$. Therefore:
+By the assumption that $f(x_1) \le f(c)$, $f(x_1) \le f(c)$. By the inequality of step 4, $f(c) < f(c + \delta)$. Therefore:
 $$
 \begin{gather}
 f(x_1) < f(c + \delta) \tag{6}

@@ -21,7 +21,7 @@ $$
 \end{gather}
 $$
 
-Because $f$ is differentiable at $x_0$, as $x \to x_0$ the denominator in equation (1) satisfies:
+Because $f$ is differentiable at $x_0$, as $x \to x_0$ the denominator in the equation of step 1 satisfies:
 $$
 \begin{gather}
 \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = f'(x_0) \tag{3}
@@ -35,7 +35,7 @@ $$
 \end{gather}
 $$
 
-Because the limit in equation (4) exists in $\mathbb{R}$, $f^{-1}$ is differentiable at $y_0$, with derivative:
+Because the limit in the equation of step 4 exists in $\mathbb{R}$, $f^{-1}$ is differentiable at $y_0$, with derivative:
 $$
 \begin{gather}
 (f^{-1})'(y_0) = \frac{1}{f'(x_0)} = \frac{1}{f'(f^{-1}(y_0))} \tag{5}

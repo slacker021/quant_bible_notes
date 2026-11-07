@@ -41,7 +41,7 @@ In elementary calculus, the rule for differentiating a composite function $z = g
 $$\frac{\Delta z}{\Delta x} = \frac{\Delta z}{\Delta y} \cdot \frac{\Delta y}{\Delta x} \tag{2}$$
 where $y = f(x)$ and $\Delta y = f(x + h) - f(x)$. 
 
-This naive argument possesses an insurmountable analytical flaw: the intermediate increment $\Delta y$ may vanish at points arbitrarily close to $x_0$ (for instance, if $f(x) = x^2 \sin(1/x)$ or if $f$ is constant), producing a division by zero that renders equation (2) meaningless.
+This naive argument possesses an insurmountable analytical flaw: the intermediate increment $\Delta y$ may vanish at points arbitrarily close to $x_0$ (for instance, if $f(x) = x^2 \sin(1/x)$ or if $f$ is constant), producing a division by zero that renders the equation of step 2 meaningless.
 
 ### Carathéodory’s Equivalence Criterion
 To bypass this pitfall with complete analytical rigor, differentiability is reformulated via continuous slope extensions:
@@ -120,7 +120,7 @@ $$\frac{d^2 y}{dx^2}(x_0) = \frac{d}{dt}\left(\frac{\dot{y}}{\dot{x}}\right) \cd
 >$$\tilde{x}(t) = \gamma(x(t) - vt), \quad \tilde{t}(t) = \gamma\left(t - \frac{v}{c^2}x(t)\right), \quad \text{where } \gamma = \frac{1}{\sqrt{1 - v^2/c^2}} \tag{5}$$
 >Viewing $(\tilde{x}, \tilde{t})$ as a parametric curve driven by parameter $t$, the Differentiation of Parametric Curves Theorem establishes that the velocity observed in $\tilde{K}$ is:
 >$$\tilde{u} = \frac{d\tilde{x}}{d\tilde{t}} = \frac{\dot{\tilde{x}}(t)}{\dot{\tilde{t}}(t)} = \frac{\gamma(\dot{x}(t) - v)}{\gamma\left(1 - \frac{v}{c^2}\dot{x}(t)\right)} = \frac{u - v}{1 - \frac{uv}{c^2}} \tag{6}$$
->where $u = \dot{x}(t)$ is the particle velocity in $K$. Equation (6) is Einstein's velocity addition law, derived purely as the derivative of a parametric single-variable curve.
+>where $u = \dot{x}(t)$ is the particle velocity in $K$. The equation of step 6 is Einstein's velocity addition law, derived purely as the derivative of a parametric single-variable curve.
 
 ---
 

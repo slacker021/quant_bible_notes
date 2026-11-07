@@ -12,7 +12,7 @@ $$
 g'(\xi_0) = 0 \tag{1}
 \end{gather}
 $$
-Equation (1) directly contradicts the hypothesis that $g'(x) \neq 0$ for all $x \in (a, b)$. Therefore:
+The equation of step 1 directly contradicts the hypothesis that $g'(x) \neq 0$ for all $x \in (a, b)$. Therefore:
 $$
 \begin{gather}
 g(b) \neq g(a) \implies g(b) - g(a) \neq 0 \tag{2}
@@ -51,14 +51,14 @@ $$
 \end{gather}
 $$
 
-Substituting equation (4) into equation (7):
+Substituting the equation of step 4 into the equation of step 7:
 $$
 \begin{gather}
 f'(\xi) - \frac{f(b) - f(a)}{g(b) - g(a)} g'(\xi) = 0 \tag{8}
 \end{gather}
 $$
 
-Because $g'(\xi) \neq 0$, dividing equation (8) by $g'(\xi)$ yields:
+Because $g'(\xi) \neq 0$, dividing the equation of step 8 by $g'(\xi)$ yields:
 $$
 \begin{gather}
 \frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(\xi)}{g'(\xi)} \tag{9}

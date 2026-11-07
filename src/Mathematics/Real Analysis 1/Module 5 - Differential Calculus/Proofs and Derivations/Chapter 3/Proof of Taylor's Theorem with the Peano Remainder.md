@@ -59,7 +59,7 @@ R_n^{(n-1)}(t) = f^{(n-1)}(t) - f^{(n-1)}(x_0) - f^{(n)}(x_0)(t - x_0) \tag{7}
 \end{gather}
 $$
 
-Substituting equation (7) at $t = x_{n-1}$ into equation (6):
+Substituting the equation of step 7 at $t = x_{n-1}$ into the equation of step 6:
 $$
 \begin{gather}
 \frac{R_n(x)}{(x - x_0)^n} = \frac{1}{n!} \left( \frac{f^{(n-1)}(x_{n-1}) - f^{(n-1)}(x_0)}{x_{n-1} - x_0} - f^{(n)}(x_0) \right) \tag{8}
@@ -73,7 +73,7 @@ $$
 \end{gather}
 $$
 
-Taking the limit as $x \to x_0$ in equation (8):
+Taking the limit as $x \to x_0$ in the equation of step 8:
 $$
 \begin{gather}
 \lim_{x \to x_0} \frac{R_n(x)}{(x - x_0)^n} = \frac{1}{n!} \big( f^{(n)}(x_0) - f^{(n)}(x_0) \big) = 0 \tag{10}

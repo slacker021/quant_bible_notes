@@ -10,7 +10,7 @@ $$
 m \frac{dv}{dt} = mg - k_1 v \implies \frac{dv}{dt} = g - \frac{k_1}{m}v \tag{1}
 \end{gather}
 $$
-Define the terminal velocity $v_\infty := \frac{mg}{k_1}$. Equation (1) becomes:
+Define the terminal velocity $v_\infty := \frac{mg}{k_1}$. The equation of step 1 becomes:
 $$
 \begin{gather}
 \frac{dv}{dt} = -\frac{k_1}{m}(v - v_\infty) \tag{2}

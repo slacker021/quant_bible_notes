@@ -39,14 +39,14 @@ $$
 $$
 
 ### Step 2: Differentiating the Integral Identity
-Differentiating both sides of equation (4) with respect to $x$:
+Differentiating both sides of the equation of step 4 with respect to $x$:
 $$
 \begin{gather}
 \frac{P(x)}{Q(x)} = \frac{d}{dx}\left( \frac{P_1(x)}{Q_1(x)} \right) + \frac{P_2(x)}{Q_2(x)} = \frac{P_1'(x) Q_1(x) - P_1(x) Q_1'(x)}{(Q_1(x))^2} + \frac{P_2(x)}{Q_2(x)} \tag{6}
 \end{gather}
 $$
 
-Because $Q(x) = Q_1(x) Q_2(x)$, multiply both sides of equation (6) by $Q(x) = Q_1(x) Q_2(x)$:
+Because $Q(x) = Q_1(x) Q_2(x)$, multiply both sides of the equation of step 6 by $Q(x) = Q_1(x) Q_2(x)$:
 $$
 \begin{gather}
 P(x) = \frac{P_1'(x) Q_1(x) - P_1(x) Q_1'(x)}{Q_1(x)} Q_2(x) + P_2(x) Q_1(x) \tag{7}
@@ -70,7 +70,7 @@ T(x) := \frac{Q_1'(x) Q_2(x)}{Q_1(x)} \tag{9}
 \end{gather}
 $$
 
-Substituting $T(x)$ into equation (7) produces the fundamental polynomial identity:
+Substituting $T(x)$ into the equation of step 7 produces the fundamental polynomial identity:
 $$
 \begin{gather}
 P(x) = P_1'(x) Q_2(x) - P_1(x) T(x) + P_2(x) Q_1(x) \tag{10}
@@ -83,7 +83,7 @@ Let $\deg Q_1 = n_1$ and $\deg Q_2 = n_2$, so that $\deg Q = n_1 + n_2$.
 The polynomials $P_1(x)$ and $P_2(x)$ have degree at most $n_1 - 1$ and $n_2 - 1$, respectively. 
 Representing $P_1(x)$ and $P_2(x)$ by their undetermined coefficients gives $n_1 + n_2 = \deg Q$ unknown real variables.
 
-Equating coefficients of like powers of $x$ on both sides of equation (10) produces a system of $\deg Q$ linear algebraic equations in $\deg Q$ unknowns. 
+Equating coefficients of like powers of $x$ on both sides of the equation of step 10 produces a system of $\deg Q$ linear algebraic equations in $\deg Q$ unknowns. 
 
 By the uniqueness of partial fraction expansions, the homogeneous system ($P(x) \equiv 0$) forces $P_1(x) \equiv 0$ and $P_2(x) \equiv 0$. By linear algebra, a square linear system with a trivial kernel has a non-vanishing determinant, guaranteeing a unique solution for the coefficient polynomials $P_1(x)$ and $P_2(x)$.
 $$

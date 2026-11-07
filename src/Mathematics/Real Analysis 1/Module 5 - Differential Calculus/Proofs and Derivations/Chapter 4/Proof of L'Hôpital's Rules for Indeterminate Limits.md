@@ -22,7 +22,7 @@ $$
 
 As $x \to a^+$, the squeeze theorem forces $\xi_x \to a^+$. 
 
-By hypothesis (1):
+By the hypothesis of step 1:
 $$
 \begin{gather}
 \lim_{x \to a^+} \frac{f(x)}{g(x)} = \lim_{x \to a^+} \frac{f'(\xi_x)}{g'(\xi_x)} = \lim_{\xi \to a^+} \frac{f'(\xi)}{g'(\xi)} = L \tag{3}
@@ -32,7 +32,7 @@ $$
 ### Part 2: The Indeterminate Form $\infty/\infty$
 Suppose $\lim_{x \to a^+} |g(x)| = \infty$.
 
-Assume first that $L \in \mathbb{R}$ is finite. Let $\varepsilon > 0$. By hypothesis (1), there exists $c \in (a, b)$ such that for all $t \in (a, c)$:
+Assume first that $L \in \mathbb{R}$ is finite. Let $\varepsilon > 0$. By the hypothesis of step 1, there exists $c \in (a, b)$ such that for all $t \in (a, c)$:
 $$
 \begin{gather}
 L - \frac{\varepsilon}{2} < \frac{f'(t)}{g'(t)} < L + \frac{\varepsilon}{2} \tag{4}
@@ -46,7 +46,7 @@ $$
 \end{gather}
 $$
 
-By inequality (4):
+By the inequality of step 4:
 $$
 \begin{gather}
 L - \frac{\varepsilon}{2} < \frac{f(x) - f(y)}{g(x) - g(y)} < L + \frac{\varepsilon}{2} \tag{6}
@@ -67,7 +67,7 @@ $$
 \end{gather}
 $$
 
-Combining equations (6), (7), and (8), for sufficiently small $x - a$:
+Combining the equations of step 6, step 7, and step 8, for sufficiently small $x - a$:
 $$
 \begin{gather}
 L - \varepsilon < \frac{f(x)}{g(x)} < L + \varepsilon \tag{9}

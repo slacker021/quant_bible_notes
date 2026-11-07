@@ -50,7 +50,7 @@ $$
 \end{gather}
 $$
 
-Combining equations (3) and (4) with the definition of the derivative:
+Combining the equations of step 3 and step 4 with the definition of the derivative:
 $$
 \begin{gather}
 f'(x_0) = \lim_{h \to 0^+} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{h \to 0^+} f'(\xi_h) = L \tag{5}

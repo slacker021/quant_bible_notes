@@ -17,21 +17,21 @@ f(x) - P_n(0; x) = R_n(0; x) = \frac{f^{(n+1)}(\xi_n)}{(n+1)!} x^{n+1} \tag{2}
 \end{gather}
 $$
 
-Taking the absolute value on both sides of equation (2):
+Taking the absolute value on both sides of the equation of step 2:
 $$
 \begin{gather}
 |R_n(0; x)| = \frac{|f^{(n+1)}(\xi_n)|}{(n+1)!} |x|^{n+1} \tag{3}
 \end{gather}
 $$
 
-Because $\xi_n \in (-|x|, |x|) \subset [-R, R]$, applying hypothesis (1) to order $n+1$:
+Because $\xi_n \in (-|x|, |x|) \subset [-R, R]$, applying the hypothesis of step 1 to order $n+1$:
 $$
 \begin{gather}
 |f^{(n+1)}(\xi_n)| \le C^{n+1} (n+1)! \tag{4}
 \end{gather}
 $$
 
-Substituting bound (4) into equation (3):
+Substituting the bound of step 4 into the equation of step 3:
 $$
 \begin{gather}
 |R_n(0; x)| \le \frac{C^{n+1}(n+1)!}{(n+1)!} |x|^{n+1} = (C |x|)^{n+1} \tag{5}

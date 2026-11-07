@@ -19,7 +19,7 @@ $$
 \sum_{k=0}^1 \binom{1}{k} u^{(1-k)} v^{(k)} = \binom{1}{0} u^{(1)} v^{(0)} + \binom{1}{1} u^{(0)} v^{(1)} = 1 \cdot u' v + 1 \cdot u v' = u' v + u v' \tag{2}
 \end{gather}
 $$
-Equation (2) matches equation (1), establishing the base case.
+The equation of step 2 matches the equation of step 1, establishing the base case.
 
 ### Inductive Hypothesis
 Assume that for some integer $m \ge 1$, if $u$ and $v$ are $m$ times differentiable, then:
@@ -30,7 +30,7 @@ $$
 $$
 
 ### Inductive Step: $n = m + 1$
-Suppose $u$ and $v$ are $m + 1$ times differentiable. Differentiating equation (3) with respect to $x$:
+Suppose $u$ and $v$ are $m + 1$ times differentiable. Differentiating the equation of step 3 with respect to $x$:
 $$
 \begin{gather}
 (u v)^{(m+1)} = \frac{d}{dx} \left[ \sum_{k=0}^m \binom{m}{k} u^{(m-k)} v^{(k)} \right] = \sum_{k=0}^m \binom{m}{k} \frac{d}{dx} \big( u^{(m-k)} v^{(k)} \big) \tag{4}
@@ -44,7 +44,7 @@ $$
 \end{gather}
 $$
 
-Substituting equation (5) into equation (4) and splitting the sum:
+Substituting the equation of step 5 into the equation of step 4 and splitting the sum:
 $$
 \begin{gather}
 (u v)^{(m+1)} = \sum_{k=0}^m \binom{m}{k} u^{(m+1-k)} v^{(k)} + \sum_{k=0}^m \binom{m}{k} u^{(m-k)} v^{(k+1)} \tag{6}
@@ -72,7 +72,7 @@ $$
 \end{gather}
 $$
 
-Furthermore, $\binom{m}{0} = 1 = \binom{m+1}{0}$ and $\binom{m}{m} = 1 = \binom{m+1}{m+1}$. Substituting these identities into equation (8):
+Furthermore, $\binom{m}{0} = 1 = \binom{m+1}{0}$ and $\binom{m}{m} = 1 = \binom{m+1}{m+1}$. Substituting these identities into the equation of step 8:
 $$
 \begin{gather}
 (u v)^{(m+1)} = \binom{m+1}{0} u^{(m+1)} v^{(0)} + \sum_{k=1}^m \binom{m+1}{k} u^{(m+1-k)} v^{(k)} + \binom{m+1}{m+1} u^{(0)} v^{(m+1)} \tag{10}

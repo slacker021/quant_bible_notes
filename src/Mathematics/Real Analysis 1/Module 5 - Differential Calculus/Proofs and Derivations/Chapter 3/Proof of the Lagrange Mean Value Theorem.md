@@ -43,7 +43,7 @@ F'(\xi) = 0 \tag{6}
 \end{gather}
 $$
 
-Substituting equation (3) into equation (6):
+Substituting the equation of step 3 into the equation of step 6:
 $$
 \begin{gather}
 f'(\xi) - \frac{f(b) - f(a)}{b - a} = 0 \implies f(b) - f(a) = f'(\xi)(b - a) \tag{7}

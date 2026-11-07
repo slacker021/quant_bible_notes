@@ -16,7 +16,7 @@ $$
 \end{gather}
 $$
 
-Substituting into equation (1):
+Substituting into the equation of step 1:
 $$
 \begin{gather}
 (\lambda^2 + 2\gamma \lambda + \omega_0^2) e^{\lambda t} = 0 \tag{3}
@@ -63,7 +63,7 @@ where $A \ge 0$ and $\varphi_0 \in (-\pi, \pi]$ are determined by initial condit
 ### Step 3: Critically Damped Dynamics ($\gamma = \omega_0$)
 When $\gamma = \omega_0$, the discriminant vanishes, yielding a repeated real root $\lambda = -\gamma$. 
 
-One solution is $x_1(t) = e^{-\gamma t}$. Using the reduction of order method, set $x_2(t) = v(t) e^{-\gamma t}$. Substituting into equation (1) yields $\ddot{v}(t) = 0 \implies v(t) = t$. Thus:
+One solution is $x_1(t) = e^{-\gamma t}$. Using the reduction of order method, set $x_2(t) = v(t) e^{-\gamma t}$. Substituting into the equation of step 1 yields $\ddot{v}(t) = 0 \implies v(t) = t$. Thus:
 $$
 \begin{gather}
 x(t) = (C_1 + C_2 t) e^{-\gamma t} \tag{9}

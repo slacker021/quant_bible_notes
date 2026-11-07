@@ -10,7 +10,7 @@ $$
 where $m(t) > 0$ is the rocket mass, $v(t)$ is its forward velocity, and $u > 0$ is the constant relative speed of the exhaust gases directed backwards.
 
 ### Step 1: Separation of Variables
-Rearranging equation (1):
+Rearranging the equation of step 1:
 $$
 \begin{gather}
 m(t)\frac{dv}{dt} = -u \frac{dm}{dt} \tag{2}
@@ -41,14 +41,14 @@ $$
 
 ### Step 3: Imposition of Initial Conditions
 At the initial launch time $t = 0$, $v(0) = v_0$ and $m(0) = m_0$. 
-Evaluating equation (5) at $t = 0$:
+Evaluating the equation of step 5 at $t = 0$:
 $$
 \begin{gather}
 C = v_0 + u \ln m_0 \tag{6}
 \end{gather}
 $$
 
-Substituting $C$ back into equation (5):
+Substituting $C$ back into the equation of step 5:
 $$
 \begin{gather}
 v(t) + u \ln m(t) = v_0 + u \ln m_0 \tag{7}

@@ -44,7 +44,7 @@ g'(t) = -\left( f'(t) + f''(t)(x - t) - f'(t) \right) + 2K(x - t) = -f''(t)(x - 
 \end{gather}
 $$
 
-Evaluating equation (6) at $t = \xi$:
+Evaluating the equation of step 6 at $t = \xi$:
 $$
 \begin{gather}
 g'(\xi) = (x - \xi) \big( 2K - f''(\xi) \big) = 0 \tag{7}
@@ -58,14 +58,14 @@ $$
 \end{gather}
 $$
 
-Substituting equation (8) into equation (3):
+Substituting the equation of step 8 into the equation of step 3:
 $$
 \begin{gather}
 E(x) = \frac{f''(\xi)}{2} (x - x_0)^2 \tag{9}
 \end{gather}
 $$
 
-Taking absolute values on both sides of equation (9):
+Taking absolute values on both sides of the equation of step 9:
 $$
 \begin{gather}
 |f(x) - L(x)| = |E(x)| = \frac{|f''(\xi)|}{2} (x - x_0)^2 \le \frac{M_2}{2} (x - x_0)^2 \tag{10}

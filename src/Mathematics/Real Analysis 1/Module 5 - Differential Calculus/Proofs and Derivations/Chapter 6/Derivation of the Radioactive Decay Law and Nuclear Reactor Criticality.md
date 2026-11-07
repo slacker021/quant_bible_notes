@@ -10,7 +10,7 @@ $$
 $$
 where $\lambda > 0$ is the decay constant.
 
-Multiplying equation (1) by the integrating factor $e^{\lambda t}$:
+Multiplying the equation of step 1 by the integrating factor $e^{\lambda t}$:
 $$
 \begin{gather}
 e^{\lambda t}\frac{dN}{dt} + \lambda e^{\lambda t} N(t) = 0 \implies \frac{d}{dt}\big( N(t) e^{\lambda t} \big) = 0 \tag{2}
@@ -47,7 +47,7 @@ $$
 \end{gather}
 $$
 
-Define the effective multiplication excess parameter $k_{\text{eff}} := \alpha - \beta - \gamma \in \mathbb{R}$. Equation (6) becomes:
+Define the effective multiplication excess parameter $k_{\text{eff}} := \alpha - \beta - \gamma \in \mathbb{R}$. The equation of step 6 becomes:
 $$
 \begin{gather}
 \frac{dn}{dt} = k_{\text{eff}} n(t), \quad n(0) = n_0 \tag{7}

@@ -47,7 +47,7 @@ Consider the change in total linear momentum of the closed physical system (rock
 $$P(t) = m(t)v(t) \tag{1}$$
 $$P(t + \Delta t) = (m + \Delta m)(v + \Delta v) + (-\Delta m)(v - u) \tag{2}$$
 
-Expanding equation (2) and computing the increment $\Delta P$:
+Expanding the equation of step 2 and computing the increment $\Delta P$:
 $$\Delta P = m \Delta v + v \Delta m + \Delta m \Delta v - v \Delta m + u \Delta m = m \Delta v + u \Delta m + \mathcal{O}((\Delta t)^2) \tag{3}$$
 
 Dividing by $\Delta t$ and taking the limit as $\Delta t \to 0$:
@@ -55,7 +55,7 @@ $$\frac{dP}{dt} = m(t)\frac{dv}{dt} + u\frac{dm}{dt} \tag{4}$$
 
 In the presence of an external external force $F_{\text{ext}}$ (such as gravity $F_g = -m(t)g$):
 $$m(t)\frac{dv}{dt} + u\frac{dm}{dt} = F_{\text{ext}} \tag{5}$$
-Equation (5) is **Meshchersky's equation** for the dynamics of a point mass of variable mass.
+The equation of step 5 is **Meshchersky's equation** for the dynamics of a point mass of variable mass.
 
 $$\begin{gather}
 \textbf{Proposition: The Tsiolkovsky Rocket Equation} \\[5mm]
@@ -84,7 +84,7 @@ By the ideal gas law, pressure, density, and temperature $T$ satisfy:
 $$p = \frac{\rho}{\mu} R T \implies \rho = \frac{\mu p}{R T} \tag{8}$$
 where $\mu$ is the molar mass of air and $R$ is the universal gas constant. 
 
-Substituting equation (8) into equation (7) produces the separable differential equation:
+Substituting the equation of step 8 into the equation of step 7 produces the separable differential equation:
 $$\frac{dp}{dh} = -\frac{\mu g}{R T(h)} p(h) \tag{9}$$
 
 $$\begin{gather}
@@ -106,7 +106,7 @@ Let $N(t)$ denote the number of radioactive nuclei present in an ore sample at t
 Over the increment $\Delta t$, the expected change in nuclei is $\Delta N = -\lambda N(t) \Delta t + o(\Delta t)$. In the limit $\Delta t \to 0$:
 $$\frac{dN}{dt} = -\lambda N(t) \tag{10}$$
 
-Integrating equation (10) establishes the exponential decay law:
+Integrating the equation of step 10 establishes the exponential decay law:
 $$N(t) = N_0 e^{-\lambda t} \tag{11}$$
 The half-life $T_{1/2}$ is the time required for half the sample to disintegrate:
 $$N(T_{1/2}) = \frac{N_0}{2} \implies T_{1/2} = \frac{\ln 2}{\lambda} \tag{12}$$
@@ -165,7 +165,7 @@ f'(x) = \alpha f(x) \quad \forall x \in \mathbb{R}, \quad \text{with } f(0) = y_
 (see [[Proof of the Uniqueness and Existence of the Exponential Differential Equation Solution]])
 
 ### The Euler Polygonal Approximations
-Discretize the interval $[0, x]$ into $n$ uniform steps of size $h = \frac{x}{n}$. Replacing the derivative in equation (15) with the forward finite difference:
+Discretize the interval $[0, x]$ into $n$ uniform steps of size $h = \frac{x}{n}$. Replacing the derivative in the equation of step 15 with the forward finite difference:
 $$\frac{y_{k+1} - y_k}{h} = \alpha y_k \implies y_{k+1} = (1 + \alpha h) y_k = \left( 1 + \frac{\alpha x}{n} \right) y_k \tag{16}$$
 Iterating $n$ steps from $y_0$:
 $$y_n = y_0 \left( 1 + \frac{\alpha x}{n} \right)^n \tag{17}$$
@@ -181,7 +181,7 @@ recovering the fundamental exponential limit from Module 2 as the continuum limi
 Consider a particle of mass $m$ attached to a linear spring with spring constant $k > 0$. By Hooke's law, the restoring force is $F = -kx$. Newton's second law yields:
 $$m \ddot{x} + kx = 0 \implies \ddot{x} + \omega_0^2 x = 0, \quad \text{where } \omega_0 = \sqrt{\frac{k}{m}} \tag{19}$$
 
-Multiplying equation (19) by $\dot{x}$ reveals the exact derivative of total mechanical energy:
+Multiplying the equation of step 19 by $\dot{x}$ reveals the exact derivative of total mechanical energy:
 $$\dot{x} \ddot{x} + \omega_0^2 x \dot{x} = 0 \implies \frac{d}{dt}\left[ \frac{1}{2}m\dot{x}^2 + \frac{1}{2}k x^2 \right] = 0 \tag{20}$$
 proving that the total mechanical energy $E = \frac{1}{2}m v^2 + \frac{1}{2}k x^2$ is an invariant of motion.
 
