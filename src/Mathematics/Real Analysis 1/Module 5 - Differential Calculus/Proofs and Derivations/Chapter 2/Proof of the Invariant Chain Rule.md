@@ -5,7 +5,7 @@ Let $X, Y \subseteq \mathbb{R}$, let $x_0 \in \text{int}(X)$, let $f: X \to Y$, 
 
 Suppose $f$ is differentiable at $x_0$, and $g$ is differentiable at $y_0$.
 
-### Step 1: Application of Carathéodory's Theorem
+# Step 1: Application of Carathéodory's Theorem
 By Carathéodory’s Criterion for Differentiability, differentiability of $f$ at $x_0$ guarantees the existence of a function $\psi_f: X \to \mathbb{R}$ continuous at $x_0$ such that:
 $$
 \begin{gather}
@@ -20,7 +20,7 @@ g(y) - g(y_0) = \psi_g(y)(y - y_0) \quad \forall y \in Y, \quad \text{with } \ps
 \end{gather}
 $$
 
-### Step 2: Evaluation on the Composite Mapping
+# Step 2: Evaluation on the Composite Mapping
 For any $x \in X$, let $y = f(x)$ and $y_0 = f(x_0)$. Substituting $y$ and $y_0$ into the equation of step 2:
 $$
 \begin{gather}
@@ -49,7 +49,7 @@ $$
 \end{gather}
 $$
 
-### Step 3: Continuity of the Composite Slope
+# Step 3: Continuity of the Composite Slope
 Because $f$ is differentiable at $x_0$, by the Differentiability Implies Pointwise Continuity Theorem $f$ is continuous at $x_0$. 
 Because $\psi_g$ is continuous at $y_0 = f(x_0)$, by the Continuity of Composite Mappings Theorem (Module 4), the composition $x \mapsto \psi_g(f(x))$ is continuous at $x_0$.
 
@@ -69,7 +69,7 @@ $$
 \end{gather}
 $$
 
-### Step 4: Invariance of Differential Operator Composition
+# Step 4: Invariance of Differential Operator Composition
 The differential of the composition acts on displacement $h$ as:
 $$
 \begin{gather}

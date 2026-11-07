@@ -2,15 +2,12 @@
 dg-publish: true
 ---
 # The Basic Rules of Differentiation
-
 Having established the foundational concept of the differential as the principal linear part of a local increment, the task now turns to developing the structural algebra of differentiation. Rather than recalculating limits of difference quotients from first principles for every combination of functions, differential calculus provides a closed operational algebra: given differentiable constituent functions, their linear combinations, products, quotients, compositions, and inverses can be differentiated systematically.
 
 Throughout this chapter, all functions are real-valued mappings of a single real variable, $f: E \to \mathbb{R}$ with $E \subseteq \mathbb{R}$, and all points $x_0$ are interior points of the respective domains.
 
 ---
-
 # Differentiation and the Arithmetic Operations
-
 $$\begin{gather}
 \textbf{Theorem: The Arithmetic Algebra of Derivatives and Differentials} \\[5mm]
 \text{Let } f, g: E \to \mathbb{R} \text{ be functions defined on a neighborhood of } x_0 \in \mathbb{R}, \text{ and suppose both } f \text{ and } g \\
@@ -33,19 +30,17 @@ $$\begin{gather}
 >Because both $u$ and $v$ are differentiable, $\Delta u = u' h + o(h)$ and $\Delta v = v' h + o(h)$. The corner rectangle $\Delta u \Delta v = \mathcal{O}(h^2)$ decays faster than $h$, leaving the two linear rectangular strips $v \, du + u \, dv$ as the exact differential.
 
 ---
-
 # The Chain Rule and Carathéodory's Formulation
 
-### The Classical Singularity Pitfall
-In elementary calculus, the rule for differentiating a composite function $z = g(f(x))$ is frequently justified by writing the ratio of difference quotients:
-$$\frac{\Delta z}{\Delta x} = \frac{\Delta z}{\Delta y} \cdot \frac{\Delta y}{\Delta x} \tag{2}$$
-where $y = f(x)$ and $\Delta y = f(x + h) - f(x)$. 
-
-This naive argument possesses an insurmountable analytical flaw: the intermediate increment $\Delta y$ may vanish at points arbitrarily close to $x_0$ (for instance, if $f(x) = x^2 \sin(1/x)$ or if $f$ is constant), producing a division by zero that renders the equation of step 2 meaningless.
+>[!warning]+ Warning: The Classical Singularity Pitfall
+>In elementary calculus, the rule for differentiating a composite function $z = g(f(x))$ is frequently justified by writing the ratio of difference quotients:
+>$$\frac{\Delta z}{\Delta x} = \frac{\Delta z}{\Delta y} \cdot \frac{\Delta y}{\Delta x} \tag{2}$$
+>where $y = f(x)$ and $\Delta y = f(x + h) - f(x)$. 
+>
+>This naive argument possesses an insurmountable analytical flaw: the intermediate increment $\Delta y$ may vanish at points arbitrarily close to $x_0$ (for instance, if $f(x) = x^2 \sin(1/x)$ or if $f$ is constant), producing a division by zero that renders the equation of step 2 meaningless.
 
 ### Carathéodory’s Equivalence Criterion
 To bypass this pitfall with complete analytical rigor, differentiability is reformulated via continuous slope extensions:
-
 $$\begin{gather}
 \textbf{Theorem: Carathéodory’s Criterion for Differentiability} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } x_0 \in \text{int}(E), \text{ and let } f: E \to \mathbb{R}. \\[2mm]
@@ -57,8 +52,7 @@ f(x) - f(x_0) = \psi(x)(x - x_0) \quad \forall x \in E. \\[3.5mm]
 (see [[Proof of Carathéodory's Differentiability Criterion]])
 
 ### The Invariant Chain Rule
-Using Carathéodory’s continuous slope function, the Chain Rule emerges simply as the preservation of continuity under composition:
-
+Using Carathéodory’s continuous slope function, the *Chain Rule* emerges simply as the preservation of continuity under composition:
 $$\begin{gather}
 \textbf{Theorem: The Invariant Chain Rule} \\[5mm]
 \text{Let } X, Y \subseteq \mathbb{R}, \text{ let } x_0 \in \text{int}(X), \text{ let } f: X \to Y, \text{ and let } g: Y \to \mathbb{R}. \\[2mm]
@@ -76,7 +70,6 @@ $$d(g \circ f)(x_0)(dx) = dg(y_0)(df(x_0)(dx)) = g'(y_0) \cdot \big( f'(x_0) dx 
 proving that the differential form $df = f' dx$ remains formally invariant whether $x$ is an independent variable or a dependent intermediate function.
 
 ---
-
 # Differentiation of the Inverse Function
 
 $$\begin{gather}
@@ -90,16 +83,15 @@ $$\begin{gather}
 (see [[Proof of the Differentiation of Inverse Functions]])
 
 >[!danger]+ Intuition: Geometric Reflection Across the Diagonal
->The graph of $y = f(x)$ and the graph of $x = f^{-1}(y)$ are identical geometric subsets of $\mathbb{R}^2$. Under the reflection mapping $(x, y) \mapsto (y, x)$ across the line $y = x$, a straight line with non-zero slope $m = f'(x_0)$ reflects into a straight line with reciprocal slope $\tilde{m} = \frac{1}{m}$. The analytical non-vanishing condition $f'(x_0) \neq 0$ is the exact geometric requirement that prevents the reflected tangent line from becoming vertical.
+>The graph of $y = f(x)$ and the graph of $x = f^{-1}(y)$ are identical geometric subsets of $\mathbb{R}^2$. Under the reflection mapping $(x, y) \mapsto (y, x)$ across the line $y = x$, a straight line with non-zero slope $m = f'(x_0)$ reflects into a straight line with reciprocal slope $\tilde{m} = \frac{1}{m}$. The analytical non-vanishing condition $f'(x_0) \neq 0$ is the exact geometric requirement that prevents the reflected tangent line from becoming vertical. 
+>
+>Simply put, the both graphs of $y$ and $x$ look like reflections of one another, with an invisible line equidistant to both plots acting as a sort of mirror. 
 
 ---
-
 # Parametric Curves and Single-Variable Implicit Calculus
+In classical applied real analysis, functional relations are frequently defined not by an explicit formula $y = f(x)$, but through a parametric representation or an implicit equation. 
 
-In classical applied analysis, functional relations are frequently defined not by an explicit formula $y = f(x)$, but through a parametric representation or an implicit equation. 
-
-To maintain deductive purity in single-variable real analysis, parametric differentiation is grounded strictly upon the 1D Inverse Function Theorem and the 1D Chain Rule, completely avoiding unproven multivariable partial derivatives:
-
+To maintain deductive purity in single-variable real analysis, parametric differentiation is grounded strictly upon the one-dimensional *Inverse Function Theorem* and the one-dimensional Chain Rule, completely avoiding unproven multivariable partial derivatives:
 $$\begin{gather}
 \textbf{Theorem: Differentiation of Parametric Curves} \\[5mm]
 \text{Let } I \subseteq \mathbb{R} \text{ be an open interval, and let } \varphi, \psi: I \to \mathbb{R} \text{ be differentiable functions describing} \\[2mm]
@@ -123,49 +115,8 @@ $$\frac{d^2 y}{dx^2}(x_0) = \frac{d}{dt}\left(\frac{\dot{y}}{\dot{x}}\right) \cd
 >where $u = \dot{x}(t)$ is the particle velocity in $K$. The equation of step 6 is Einstein's velocity addition law, derived purely as the derivative of a parametric single-variable curve.
 
 ---
-
-# Table of Derivatives of Elementary Functions
-
-Applying the definition of the derivative alongside the arithmetic rules of differentiation, Carathéodory’s criterion, the chain rule, and the inverse function differentiation theorem yields the canonical derivatives of the elementary functions across their natural domains:
-
-$$\begin{gather}
-\textbf{Table: Master Derivatives of the Elementary Functions} \\[2mm]
-\begin{array}{|l|l|l|}
-\hline
-\textbf{Function } f(x) & \textbf{Derivative } f'(x) & \textbf{Natural Domain / Restrictions} \\
-\hline
-C \ (\text{constant}) & 0 & x \in \mathbb{R} \\
-x^\alpha \ (\alpha \in \mathbb{R}) & \alpha x^{\alpha - 1} & x > 0 \ (\forall x \text{ if } \alpha \in \mathbb{N}) \\
-a^x \ (a > 0, a \neq 1) & a^x \ln a & x \in \mathbb{R} \\
-e^x & e^x & x \in \mathbb{R} \\
-\log_a |x| \ (a > 0, a \neq 1) & \frac{1}{x \ln a} & x \in \mathbb{R} \setminus \{0\} \\
-\ln |x| & \frac{1}{x} & x \in \mathbb{R} \setminus \{0\} \\
-\sin x & \cos x & x \in \mathbb{R} \\
-\cos x & -\sin x & x \in \mathbb{R} \\
-\tan x & \frac{1}{\cos^2 x} = 1 + \tan^2 x & x \neq \frac{\pi}{2} + \pi k, \ k \in \mathbb{Z} \\
-\cot x & -\frac{1}{\sin^2 x} = -(1 + \cot^2 x) & x \neq \pi k, \ k \in \mathbb{Z} \\
-\arcsin x & \frac{1}{\sqrt{1 - x^2}} & x \in (-1, 1) \\
-\arccos x & -\frac{1}{\sqrt{1 - x^2}} & x \in (-1, 1) \\
-\arctan x & \frac{1}{1 + x^2} & x \in \mathbb{R} \\
-\text{arccot } x & -\frac{1}{1 + x^2} & x \in \mathbb{R} \\
-\sinh x & \cosh x & x \in \mathbb{R} \\
-\cosh x & \sinh x & x \in \mathbb{R} \\
-\tanh x & \frac{1}{\cosh^2 x} = 1 - \tanh^2 x & x \in \mathbb{R} \\
-\coth x & -\frac{1}{\sinh^2 x} = 1 - \coth^2 x & x \neq 0 \\
-\text{arsinh } x & \frac{1}{\sqrt{1 + x^2}} & x \in \mathbb{R} \\
-\text{arcosh } x & \frac{1}{\sqrt{x^2 - 1}} & x > 1 \\
-\text{artanh } x & \frac{1}{1 - x^2} & |x| < 1 \\
-\text{arcoth } x & \frac{1}{1 - x^2} & |x| > 1 \\
-\hline
-\end{array}
-\end{gather}$$
-
----
-
 # Higher-Order Derivatives and the General Leibniz Rule
-
-Let $f: E \to \mathbb{R}$ be differentiable on an open interval $I \subseteq E$. The derivative $f'$ is itself a real-valued function $f': I \to \mathbb{R}$.
-
+Let $f: E \to \mathbb{R}$ be differentiable on an open interval $I \subseteq E$. The derivative $f'$ is itself a real-valued function $f': I \to \mathbb{R}$: 
 $$\begin{gather}
 \textbf{Definition: Higher-Order Derivatives} \\[5mm]
 \text{The second derivative of } f \text{ at } x_0 \in I, \text{ denoted } f''(x_0) \text{ or } f^{(2)}(x_0), \text{ is defined as:} \\[3.5mm]

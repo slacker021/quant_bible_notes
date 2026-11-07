@@ -12,7 +12,8 @@ g(x_0 + h) - g(x_0) = g'(x_0) h + \beta(h) h \tag{2}
 $$
 where $\lim_{h \to 0} \alpha(h) = 0$ and $\lim_{h \to 0} \beta(h) = 0$.
 
-### Part 1: Linearity
+---
+# Theorem 1
 Let $c_1, c_2 \in \mathbb{R}$, and consider the linear combination $\Phi(x) := c_1 f(x) + c_2 g(x)$. The increment is:
 $$
 \begin{gather}
@@ -41,7 +42,8 @@ $$
 \end{gather}
 $$
 
-### Part 2: Leibniz Product Rule
+---
+# Theorem 2
 Consider the product function $\Pi(x) := f(x) g(x)$. The increment is:
 $$
 \begin{gather}
@@ -73,7 +75,8 @@ $$
 $$
 which proves the product rule.
 
-### Part 3: Quotient Rule
+---
+# Theorem 3
 Suppose $g(x_0) \neq 0$. By continuity of $g$ at $x_0$, there exists a neighborhood $U(x_0)$ on which $g(x) \neq 0$. Consider the reciprocal function $R(x) := \frac{1}{g(x)}$. Its increment is:
 $$
 \begin{gather}

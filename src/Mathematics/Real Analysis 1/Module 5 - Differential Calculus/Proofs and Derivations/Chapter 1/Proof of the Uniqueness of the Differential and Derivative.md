@@ -3,7 +3,7 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$, let $x_0 \in \text{int}(E)$, and let $f: E \to \mathbb{R}$.
 
-# Part 1: Uniqueness of the Differential and Derivative
+# Theorem 1
 Suppose there exist two linear mappings $L_1(h) = A_1 h$ and $L_2(h) = A_2 h$ with $A_1, A_2 \in \mathbb{R}$ such that:
 $$
 \begin{gather}
@@ -35,7 +35,8 @@ $$
 
 The equation of step 5 establishes that $A_1 = A_2$. Consequently, the linear mapping $h \mapsto A h$ is uniquely determined.
 
-# Part 2: Equivalence with the Difference Quotient Limit
+---
+# Theorem 2
 Suppose first that $f$ is differentiable at $x_0$. By the definition of differentiability at a point:
 $$
 \begin{gather}

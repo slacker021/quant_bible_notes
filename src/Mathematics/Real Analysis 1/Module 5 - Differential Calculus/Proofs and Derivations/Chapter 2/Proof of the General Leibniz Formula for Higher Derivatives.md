@@ -3,9 +3,10 @@ dg-publish: true
 ---
 Let $u, v: I \to \mathbb{R}$ be $n$ times differentiable functions on an open interval $I \subseteq \mathbb{R}$.
 
-The proof proceeds by mathematical induction on $n \in \mathbb{N}$.
+The proof proceeds by the [[Proof that Induction Works|principle of induction]] on $n \in \mathbb{N}$.
 
-### Base Case: $n = 1$
+---
+# Base Case: $n = 1$
 For $n = 1$, the product rule yields:
 $$
 \begin{gather}
@@ -21,7 +22,8 @@ $$
 $$
 The equation of step 2 matches the equation of step 1, establishing the base case.
 
-### Inductive Hypothesis
+---
+# Inductive Hypothesis
 Assume that for some integer $m \ge 1$, if $u$ and $v$ are $m$ times differentiable, then:
 $$
 \begin{gather}

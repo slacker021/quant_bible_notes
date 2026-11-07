@@ -5,7 +5,7 @@ Let the parabola be defined in Cartesian coordinates by the equation $y = f(x) =
 
 Let $P_0 = (x_0, y_0) = \left(x_0, \frac{x_0^2}{2p}\right)$ with $x_0 \neq 0$ be an arbitrary point on the parabola. 
 
-# Step 1: The Tangent Line Equation
+# Step 1
 Differentiating $f(x)$ at $x_0$:
 $$
 \begin{gather}
@@ -27,7 +27,7 @@ y_Q = y_0 - \frac{x_0^2}{p} = \frac{x_0^2}{2p} - \frac{x_0^2}{p} = -\frac{x_0^2}
 \end{gather}
 $$
 
-# Step 2: Distance Geometry and Rhombus Formation
+# Step 2
 Calculate the distance from the focus $F = \left(0, \frac{p}{2}\right)$ to the $y$-intercept $Q = (0, -y_0)$:
 $$
 \begin{gather}
@@ -56,7 +56,7 @@ $$
 \end{gather}
 $$
 
-# Step 3: Equality of Reflection Angles
+# Step 3
 The equation of step 7 proves that the triangle $\triangle F Q P_0$ is isosceles with base $Q P_0$. Consequently, the base angles are equal:
 $$
 \begin{gather}

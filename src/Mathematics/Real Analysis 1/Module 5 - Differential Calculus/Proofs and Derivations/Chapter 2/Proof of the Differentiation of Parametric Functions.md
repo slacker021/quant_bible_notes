@@ -5,7 +5,7 @@ Let $I \subseteq \mathbb{R}$ be an open interval, and let $\varphi, \psi: I \to 
 
 Let $t_0 \in I$ such that $\varphi'(t_0) \neq 0$.
 
-### Step 1: Local Inversion of the Coordinate Function
+# Step 1: Local Inversion of the Coordinate Function
 Because $\varphi$ is differentiable at $t_0$, by the Differentiability Implies Pointwise Continuity Theorem $\varphi$ is continuous on a neighborhood $U(t_0)$. Without loss of generality, assume $\varphi'(t_0) > 0$. By the sign preservation property of derivatives (or continuity of $\varphi'$ if continuous, or strict local monotonicity via Module 4), there exists an open interval $U(t_0) \subseteq I$ on which $\varphi$ is strictly increasing.
 
 By the Differentiation of the Inverse Function Theorem, the inverse function $t = \varphi^{-1}(x)$ exists on $V(x_0) = \varphi(U(t_0))$ where $x_0 = \varphi(t_0)$, and is differentiable at $x_0$ with derivative:
@@ -15,7 +15,7 @@ $$
 \end{gather}
 $$
 
-### Step 2: Differentiating the Composite Function
+# Step 2: Differentiating the Composite Function
 The ordinate $y$ is expressed as a single-variable function of $x$ by:
 $$
 \begin{gather}

@@ -3,7 +3,7 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$, let $x_0 \in \text{int}(E)$, and let $f: E \to \mathbb{R}$.
 
-### Direct Implication
+# Direct Implication
 Suppose $f$ is differentiable at $x_0$. By the Uniqueness of the Differential and Derivative Theorem, the derivative $f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$ exists in $\mathbb{R}$.
 
 Define the auxiliary function $\psi: E \to \mathbb{R}$ by:
@@ -31,7 +31,7 @@ $$
 
 The equation of step 3 proves that $\psi$ is continuous at the point $x_0$.
 
-### Converse Implication
+# Converse Implication
 Suppose there exists a function $\psi: E \to \mathbb{R}$ that is continuous at $x_0$ and satisfies:
 $$
 \begin{gather}
