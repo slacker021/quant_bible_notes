@@ -2,7 +2,7 @@
 dg-publish: true
 ---
 # The Differential and the Derivative
-The core analytical mechanism of differential calculus is the local approximation of nonlinear functional behavior by linear mappings. When a complex system—whether an orbital trajectory in celestial mechanics, the state variable of a thermodynamic reservoir, or the pricing manifold of a financial contingent claim—is perturbed within a sufficiently small neighborhood of a reference state, its response is governed predominantly by its first-order linear component. 
+With the [[Chapter 2 - Limits of Functions|limits]] and [[Chapter 2 - Properties of Continuous Functions|continuity]] of [[Chapter 4 - Functions and Cardinality|functions]] having been established, the domain of inquiry shifts to the first of two core analytical mechanisms of differential calculus: the *Derivative of a Function*—which could be thought of as the local approximation of nonlinear functional behavior by linear mappings. When a complex system—whether an orbital trajectory in celestial mechanics, the state variable of a thermodynamic reservoir, or the pricing manifold of a financial contingent claim—is perturbed within a sufficiently small neighborhood of a reference state, its response is governed predominantly by its first-order linear component. 
 
 In classical real analysis, differentiation is not an ad-hoc algebraic recipe for calculating slope quotients; it is the rigorous study of the *tangent mapping* or *differential*. In this chapter, the theory of differentiation for real-valued functions of a single real variable is deductively constructed from the topological and limit foundations established in the preceding modules.
 
@@ -26,8 +26,7 @@ $$\begin{gather}
 f(x_0 + h) - f(x_0) = A \cdot h + \alpha(h) \cdot h \quad \forall h \in (-\delta_0, \delta_0).
 \end{gather}$$
 
-The linear function $h \mapsto A \cdot h$ is termed the *differential* of the function $f$ at the point $x_0$, denoted by $df(x_0)$ or $df(x_0; h)$. The scalar coefficient $A$ is termed the *derivative* of $f$ at $x_0$, denoted by $f'(x_0)$ or $\frac{df}{dx}(x_0)$.
-
+The linear function $h \mapsto A \cdot h$ is termed the *differential* of the function $f$ at the point $x_0$, denoted by $df(x_0)$ or $df(x_0; h)$. The scalar coefficient $A$ is termed the *derivative* of $f$ at $x_0$, denoted by $f'(x_0)$ or $\frac{df}{dx}(x_0)$. The emergence of the differential of the function $f$ at the point $x_{0}$ is also unique, assuming it exists:
 $$\begin{gather}
 \textbf{Theorem: Uniqueness of the Differential and Difference Quotient Criterion} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } x_0 \in \text{int}(E), \text{ and let } f: E \to \mathbb{R}. \\[2mm]
@@ -41,7 +40,7 @@ f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{x \to x_0} \frac{
 >Consider observing the graph of a curved function through an optical microscope focused at the point $(x_0, f(x_0))$. As the magnification increases indefinitely (corresponding to $h \to 0$), the nonlinear curvature of the graph recedes into higher-order insignificance ($o(h)$). The curve increasingly resembles a straight line. Differentiability is the analytical guarantee that this local straight line exists and exhibits a finite, unambiguous inclination.
 
 ### The Canonical Differential of the Identity Map
-Consider the identity mapping on the real continuum:
+Consider the identity mapping on the [[Chapter 4 - The Cardinality of the Continuum|real continuum]]:
 $$I: \mathbb{R} \to \mathbb{R}, \quad I(x) = x \tag{2}$$
 For any point $x \in \mathbb{R}$ and increment $h$, the increment of the identity map is $\Delta I(x; h) = (x + h) - x = 1 \cdot h + 0$. Comparing this identity with the definition of differentiability at a point establishes that $I$ is differentiable everywhere with $I'(x) \equiv 1$. 
 
@@ -59,10 +58,10 @@ $$\begin{gather}
 \end{gather}$$
 (see [[Proof of the Differentiability Implies Continuity Criterion]])
 
-The converse of the Differentiability Implies Pointwise Continuity Theorem is false. Pointwise continuity does not guarantee differentiability:
-1. **Corner Points:** The absolute value function $f(x) = |x|$ is uniformly continuous across all of $\mathbb{R}$, yet fails to be differentiable at $x_0 = 0$ because:
+The converse of the aforementioned theorem is false, as pointwise continuity does not automatically guarantee differentiability:
+1. **Corner Points**: The absolute value function $f(x) = |x|$ is uniformly continuous across all of $\mathbb{R}$, yet fails to be differentiable at $x_0 = 0$ because:
    $$\lim_{h \to 0^+} \frac{|h| - 0}{h} = 1 \neq -1 = \lim_{h \to 0^-} \frac{|h| - 0}{h} \tag{5}$$
-2. **Nowhere-Differentiable Continuous Functions:** There exist functions continuous everywhere on $\mathbb{R}$ that are differentiable at *no* point of $\mathbb{R}$. The canonical construction, due to Karl Weierstrass, is the Fourier series:
+2. **Nowhere-Differentiable Continuous Functions**: There exist functions continuous everywhere on $\mathbb{R}$ that are differentiable at *no* point of $\mathbb{R}$. The canonical construction, due to Karl Weierstrass, is the *Fourier series*:
    $$W(x) = \sum_{n=0}^\infty a^n \cos(b^n \pi x), \quad 0 < a < 1, \quad ab > 1 + \frac{3}{2}\pi \tag{6}$$
    which exhibits extreme fractal self-similarity, precluding the existence of a principal linear part at any scale.
 
@@ -71,7 +70,7 @@ The converse of the Differentiability Implies Pointwise Continuity Theorem is fa
 # Geometry of the Differential: Tangency and Contact
 
 ### Tangent Lines as Limits of Secants
-Let $f: E \to \mathbb{R}$ be defined on a neighborhood of $x_0$. Consider the secant line passing through the fixed point $P_0 = (x_0, f(x_0))$ and a neighboring variable point $P = (x_0 + h, f(x_0 + h))$. The slope of this secant chord is:
+Let $f: E \to \mathbb{R}$ be defined on a neighborhood of $x_0$. Consider the *secant line* passing through the fixed point $P_0 = (x_0, f(x_0))$ and a neighboring variable point $P = (x_0 + h, f(x_0 + h))$. The slope of this secant chord is:
 $$k(h) = \frac{f(x_0 + h) - f(x_0)}{h} \tag{7}$$
 
 If $f$ is differentiable at $x_0$, as $h \to 0$ the point $P$ traverses the curve toward $P_0$, and the secant slope $k(h)$ converges to the finite value $f'(x_0)$. 
@@ -80,28 +79,29 @@ If $f$ is differentiable at $x_0$, as $h \to 0$ the point $P$ traverses the curv
 title $\text{Secant Chords Converging to the Tangent Line}$
 xlabel $x$
 ylabel $y$
-show x from 0 to 8 and y from 0 to 6
+show x from 0.281 to 8.281 and y from 0.835 to 6.835
 axes on the edges
 size 12 x 8
-plot f(x) = 1.0 + 0.4*x + 0.08*x^2, from x = 0.5 to 7.0, in teal, very thick
-draw a line from (0.5, 1.48) to (7.5, 5.96), in red, thick
-draw a segment from (1.0, 1.48) to (6.5, 6.98), in blue, dashed
-draw a segment from (1.0, 1.48) to (5.5, 4.60), in purple, dashed
-draw a segment from (2.0, 0.2) to (2.0, 2.12), in gray, dotted
-draw a segment from (5.0, 0.2) to (5.0, 5.0), in gray, dotted
-draw a segment from (3.5, 0.2) to (3.5, 3.38), in gray, dotted
-mark (2.0, 2.12), in black, large
-mark (5.0, 5.0), in blue, medium
-mark (3.5, 3.38), in purple, medium
+plot f(x) = 0.25 * (x - 1)^2 + 2 in teal, very thick
+plot L(x) = 0.5(x - 2) + 2.25 in red, very thick, tangentPoint="4.281"
+draw a segment from (1.0, 1.0) to (5.5, 6.625), in blue, dashed
+draw a segment from (1.0, 1.35) to (6.5, 6.3), in purple, dashed
+draw a segment from (2.0, 0.85) to (2.0, 2.25), in gray, dotted
+draw a segment from (3.6, 0.85) to (3.6, 3.69), in gray, dotted
+draw a segment from (5.0, 0.85) to (5.0, 6.0), in gray, dotted
+mark (2.0, 2.25) in black, large
+mark (3.6, 3.69) in purple, medium
+mark (5.0, 6.0) in blue, medium
 write "$P_0(x_0, f(x_0))$" at (2.0, 2.45), in black, above left
-write "$P_2(x_0 + h_2, f(x_0 + h_2))$" at (5.05, 5.15), in blue, right
-write "$P_1(x_0 + h_1, f(x_0 + h_1))$" at (3.55, 3.65), in purple, right
-write "$\text{Tangent Line } y = L(x)$" at (6.8, 5.4), in red, right
-write "$y = f(x)$" at (6.8, 4.2), in teal, right
-write "$x_0$" at (2.0, 0.0), in black, below
-write "$x_0 + h_1$" at (3.5, 0.0), in purple, below
-write "$x_0 + h_2$" at (5.0, 0.0), in blue, below
+write "$P_1(x_0 + h_1, f(x_0 + h_1))$" at (3.15, 3.75) in purple, left
+write "$P_2(x_0 + h_2, f(x_0 + h_2))$" at (5.48, 6.85) in blue, right
+write "$\\text{Tangent Line } y = L(x)$" at (5.5, 3.65) in red, right
+write "$y = f(x)$" at (4.08, 6.55) in teal, right
+write "$x_0$" at (1.95, 1.55), below
+write "$x_0 + h_1$" at (0.2, 1) in purple, below
+write "$x_0 + h_2$" at (5.35, 1.4) in blue, below
 ```
+
 
 $$\begin{gather}
 \textbf{Definition: The Tangent Line} \\[5mm]
@@ -133,7 +133,6 @@ The Geometric Characterization of the Tangent Line Theorem proves that the tange
 $$f(x) - T(x) = o(x - x_0) \tag{8}$$
 
 ---
-
 # The Role of Coordinates and Affine Invariance
 
 Let $x$ denote the coordinate on the domain line and $y$ the coordinate on the codomain line. Consider performing an affine coordinate change:
@@ -210,17 +209,14 @@ show x from 0 to 6 and y from 0 to 5
 axes on the edges
 size 10 x 7
 plot f(x) = 1.0 + 0.1*x^2, from x = 0 to 5.5, in teal, very thick
-draw a segment from (3.0, 1.9) to (5.0, 3.1), in red, thick
-draw a segment from (3.0, 1.9) to (3.0, 0.4), in blue, thick, with an arrow at (3.0, 0.4)
-draw a segment from (3.0, 1.9) to (4.8, 1.9), in purple, thick, with an arrow at (4.8, 1.9)
-draw a segment from (3.0, 1.9) to (4.8, 0.4), in black, thick, with an arrow at (4.8, 0.4)
-mark (3.0, 1.9), in black, large
-write "$P(x, y)$" at (2.7, 2.15), in black, above
+plot f1(x) = 0.4(x - 2) + 1.4 in red, very thick
+mark (2,1.4) in black
+write "$P(x, y)$" at (1.4, 1.45)
 write "$\mathbf{F}_g = -mg\mathbf{e}_y$" at (3.05, 0.5), in blue, left
 write "$\mathbf{F}_c = m\omega^2 x\mathbf{e}_x$" at (4.85, 2.15), in purple, above
 write "$\mathbf{F}_{\text{net}}$" at (4.9, 0.35), in black, right
-write "$\text{Surface } y = f(x)$" at (4.8, 3.8), in teal, right
-write "$\text{Tangent Line}$" at (5.0, 3.2), in red, right
+write "$\\text{Surface } y = f(x)$" at (3.33, 3.95) in teal, right
+write "$\\text{Tangent Line } f'(x)$" at (4.5, 1.7) in red, center
 ```
 
 The inclination tangent of the surface curve $y = f(x)$ must satisfy the slope ratio:

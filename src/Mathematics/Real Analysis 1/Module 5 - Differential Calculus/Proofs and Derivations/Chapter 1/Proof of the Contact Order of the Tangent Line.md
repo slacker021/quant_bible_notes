@@ -3,7 +3,7 @@ dg-publish: true
 ---
 Let $f: U(x_0) \to \mathbb{R}$ be defined on a neighborhood $U(x_0)$ of $x_0$, and let $\varphi(x) = c_0 + c_1(x - x_0)$ be an arbitrary affine function.
 
-### Part 1: Contact of Order 0
+# Part 1: Contact of Order 0
 By the definition of contact of order $n$, $\varphi$ has contact of order 0 with $f$ at $x_0$ if:
 $$
 \begin{gather}
@@ -27,7 +27,7 @@ $$
 
 Because $x_0 \in U(x_0)$, evaluating at $x = x_0$ requires $f(x_0) - c_0 = 0 \implies c_0 = f(x_0)$. Substituting $c_0 = f(x_0)$ into the equation of step 3 yields $\lim_{x \to x_0} f(x) = f(x_0)$, which is the definition of continuity of $f$ at $x_0$.
 
-### Part 2: Contact of Order 1
+# Part 2: Contact of Order 1
 By the definition of contact of order $n$, $\varphi(x)$ has contact of order 1 with $f$ at $x_0$ if:
 $$
 \begin{gather}
