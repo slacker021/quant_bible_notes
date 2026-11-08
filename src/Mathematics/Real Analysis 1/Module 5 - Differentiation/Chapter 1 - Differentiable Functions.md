@@ -5,7 +5,7 @@ dg-publish: true
 The foundational concepts of real analysis established in preceding modules govern how mathematical mappings behave under spatial transformations. In [[Chapter 1 - Basic Definition of Continuity|Module 4]], continuity emerged as the mathematical formulation of proximity preservation: a mapping is continuous if it maps sufficiently close points in a domain to arbitrarily close points in a codomain. Yet, while continuity guarantees stability, it remains qualitatively blind to direction, rate, and dynamical momentum. A continuous curve may turn violently, fracture into infinite directional oscillations, or present vertical precipices that defy physical realization.
 
 ### Rates of Change
-To model rates of change—velocity vectors, elastic deformations, marginal pricing dynamics, and other phenomena across the quantitative sciences—real analysis requires a structure that is strictly more refined than topological proximity: The principle of *local linear approximation*. 
+To model rates of change—velocity *vectors*, elastic deformations, marginal pricing dynamics, and other phenomena across the quantitative sciences—real analysis requires a structure that is strictly more refined than topological proximity: The principle of *local linear approximation*. 
 
 The differential calculus of a single real variable addresses a fundamental question: Given a non-linear mapping $f: E \to \mathbb{R}$, under what circumstances can its behavior in an immediate neighborhood of an anchor point $x_0$ be replaced by a simple affine function $x \mapsto c_0 + c_1(x - x_0)$ such that the resulting error vanishes faster than the displacement $x - x_0$? The investigation of this question yields the twin concepts of the *derivative* and the *differential*. 
 
@@ -458,7 +458,7 @@ It is with the three reciprocal trigonometric identities that the derivatives of
 $$
 \begin{gather}
 \textbf{Theorem: Master Catalog of Elementary Derivatives (Part 1)} \\[5mm]
-\text{The fundamental elementary functions admit the following derivative formulas on their domains:} \\[3.5mm]
+\text{The fundamental elementary functions admit the following} \\[2mm]\text{derivative formulas on their domains:} \\[3.5mm]
 \begin{align}
 \text{1. Monomials: } & \frac{d}{dx}\big(x^n\big) = n x^{n-1} \quad (n \in \mathbb{N}, \ x \in \mathbb{R}). \\[2mm]
 \text{2. General Power: } & \frac{d}{dx}\big(x^\alpha\big) = \alpha x^{\alpha-1} \quad (\alpha \in \mathbb{R}, \ x > 0). \\[2mm]
@@ -467,7 +467,7 @@ $$
 \text{5. Trigonometric Cosine: } & \frac{d}{dx}\big(\cos x\big) = -\sin x \quad (x \in \mathbb{R}). \\[2mm]
 \text{6. Trigonometric Tangent: } & \frac{d}{dx} \big(\tan x \big) = \sec^2(x) \quad \left( x \in \mathbb{R} \setminus \left(  \frac{\pi}{2} + n\pi \right), \text{ where n } \in \mathbb{Z} \right) \\[2mm]
 \text{7. Trigonometric Cosecant: } & \frac{d}{dx} \big(\csc x \big) = - \csc(x)\cot(x) \quad (x \in \mathbb{R} \setminus   \pi n, \text{ where } n \in \mathbb{Z}) \\[2mm]
-\text{8. Trigonometric Secant: } & \frac{d}{dx} \big(\sec(x) \big) = \sec(x)\tan(x) \quad \left( x \in \mathbb{R} \setminus \left(  \frac{\pi}{2} + n\pi \right), \text{ where n } \in \mathbb{Z} \right)  \\
+\text{8. Trigonometric Secant: } & \frac{d}{dx} \big(\sec(x) \big) = \sec(x)\tan(x) \quad \left( x \in \mathbb{R} \setminus \left(  \frac{\pi}{2} + n\pi \right), \\[2mm] \text{ where } n \in \mathbb{Z} \right)  \\
 \text{9. Trigonometric Contangent: } & \frac{d}{dx} \big(\cot(x)\big) = -\csc^2(x) \quad (x \in \mathbb{R} \setminus   \pi n, \text{ where } n \in \mathbb{Z})
 \end{align}
 \end{gather}
@@ -560,104 +560,29 @@ $$
 $$
 where $D^* := \frac{D_{\text{Mac}}}{1 + y}$ is the *Modified Duration*. The equation of step 33 is the differential approximation of bond pricing: the percentage change in bond price is strictly linear in the yield shift $dy$, up to an infinitesimal error of order $o(dy)$.
 
-### Classical Mechanics: Curvilinear Motion and Centripetal Acceleration
-Consider a point mass executing uniform circular motion of radius $R$ at constant angular frequency $\omega$ in a Cartesian plane:
-$$
-\begin{gather}
-\vec{r}(t) = \big(R \cos(\omega t), R \sin(\omega t)\big) \tag{34}
-\end{gather}
-$$
-Applying the differentiation rules for trigonometric functions establishes the instantaneous velocity vector:
-$$
-\begin{gather}
-\vec{v}(t) = \frac{d\vec{r}}{dt} = \big(-R\omega \sin(\omega t), R\omega \cos(\omega t)\big) \tag{35}
-\end{gather}
-$$
-Taking the Euclidean inner product of $\vec{r}(t)$ and $\vec{v}(t)$ yields:
-$$
-\begin{gather}
-\vec{r}(t) \cdot \vec{v}(t) = R(-R\omega \cos(\omega t)\sin(\omega t)) + R(R\omega \sin(\omega t)\cos(\omega t)) = 0 \tag{36}
-\end{gather}
-$$
-Step 36 demonstrates that the velocity vector is strictly orthogonal to the position vector, confirming that the tangent line to a circle is perpendicular to its radius. 
-
-Differentiating a second time yields the acceleration vector:
-$$
-\begin{gather}
-\vec{a}(t) = \frac{d\vec{v}}{dt} = \big(-R\omega^2 \cos(\omega t), -R\omega^2 \sin(\omega t)\big) = -\omega^2 \vec{r}(t) \tag{37}
-\end{gather}
-$$
-The acceleration vector points directly opposite to the radius vector—toward the center of the orbit. Its magnitude is the classical centripetal acceleration:
-$$
-\begin{gather}
-\|\vec{a}(t)\| = \omega^2 R = \frac{\|\vec{v}\|^2}{R} \tag{38}
-\end{gather}
-$$
-
-### Geometrical Optics: The Reflective Geometry of Parabolic Mirrors
-Consider a reflective mirror whose cross-section forms a parabola in the Cartesian plane:
-$$
-\begin{gather}
-y^2 = 2px \implies x(y) = \frac{y^2}{2p} \quad (p > 0) \tag{39}
-\end{gather}
-$$
-The geometric focal point of this parabola is positioned on the symmetry axis at $F := (p/2, 0)$. 
-
-Suppose an incident light ray travels parallel to the horizontal axis along the straight line $y = y_0$, striking the mirror at the point $M := (x_0, y_0) = (y_0^2/(2p), y_0)$. To determine the path of the reflected ray, one computes the tangent line to the mirror at $M$. Differentiating $x$ with respect to $y$ yields:
-$$
-\begin{gather}
-\frac{dx}{dy} = \frac{y_0}{p} \implies \frac{dy}{dx} = \frac{p}{y_0} \tag{40}
-\end{gather}
-$$
-The tangent vector to the parabola at $M$ is $\vec{T} = (1, p/y_0) \sim (y_0, p)$. The vector from the impact point $M$ to the focus $F$ is:
-$$
-\begin{gather}
-\vec{MF} = F - M = \left(\frac{p}{2} - \frac{y_0^2}{2p}, -y_0\right) = \left(\frac{p^2 - y_0^2}{2p}, -y_0\right) \tag{41}
-\end{gather}
-$$
-Evaluating the Euclidean norm of $\vec{MF}$ yields:
-$$
-\begin{gather}
-\|\vec{MF}\| = \sqrt{\left(\frac{p^2 - y_0^2}{2p}\right)^2 + y_0^2} = \sqrt{\frac{p^4 - 2p^2 y_0^2 + y_0^4 + 4p^2 y_0^2}{4p^2}} = \frac{p^2 + y_0^2}{2p} \tag{42}
-\end{gather}
-$$
-Let $\vec{u} := (1, 0)$ represent the unit direction vector of the incoming horizontal ray. By virtue of the law of reflection, the angle of incidence equals the angle of reflection if and only if the tangent vector forms equal angles with the incoming ray direction $-\vec{u} = (-1, 0)$ and the focal direction $\vec{MF} / \|\vec{MF}\|$. Taking inner products with the unnormalized tangent vector $\vec{T} = (y_0, p)$ confirms:
-$$
-\begin{gather}
-\cos \theta_1 = \frac{\vec{T} \cdot (1, 0)}{\|\vec{T}\|} = \frac{y_0}{\sqrt{y_0^2 + p^2}} \tag{43}
-\end{gather}
-$$
-and
-$$
-\begin{gather}
-\cos \theta_2 = \frac{\vec{T} \cdot \vec{MF}}{\|\vec{T}\| \|\vec{MF}\|} = \frac{y_0 \left(\frac{p^2 - y_0^2}{2p}\right) - p y_0}{\sqrt{y_0^2 + p^2} \left(\frac{p^2 + y_0^2}{2p}\right)} = \frac{y_0 (p^2 - y_0^2 - 2p^2)}{\sqrt{y_0^2 + p^2} (p^2 + y_0^2)} = \frac{-y_0(p^2 + y_0^2)}{\sqrt{y_0^2 + p^2}(p^2 + y_0^2)} = \frac{-y_0}{\sqrt{y_0^2 + p^2}} \tag{44}
-\end{gather}
-$$
-Accounting for vector orientation, the angles of incidence and reflection are identical. Thus, *every incoming parallel light ray reflects off the parabolic tangent and passes strictly through the focus $F$*. This optical property underpins astronomical telescopes, satellite dishes, and radar collectors.
-
 ### Chemical Kinetics: Instantaneous Rates of Reaction
 In a homogeneous chemical reactor, consider an irreversible second-order reaction of the form $2A \to B$. Let $[A](t)$ denote the molar concentration of reactant $A$ at time $t$. Over a macroscopic duration $\Delta t$, the average rate of consumption is $-\frac{\Delta [A]}{\Delta t}$. 
 $$
 \begin{gather}
-r(t) := -\frac{d[A]}{dt} \tag{45}
+r(t) := -\frac{d[A]}{dt} \tag{34}
 \end{gather}
 $$
 According to the empirical law of mass action, the instantaneous rate is proportional to the square of the instantaneous concentration:
 $$
 \begin{gather}
--\frac{d[A]}{dt} = k [A]^2 \tag{46}
+-\frac{d[A]}{dt} = k [A]^2 \tag{35}
 \end{gather}
 $$
 where $k > 0$ is the kinetic rate constant. Applying the chain rule to the reciprocal function $y(t) := \frac{1}{[A](t)}$ yields:
 $$
 \begin{gather}
-\frac{d}{dt}\left(\frac{1}{[A]}\right) = -\frac{1}{[A]^2} \frac{d[A]}{dt} = -\frac{1}{[A]^2} \big(-k [A]^2\big) = k \tag{47}
+\frac{d}{dt}\left(\frac{1}{[A]}\right) = -\frac{1}{[A]^2} \frac{d[A]}{dt} = -\frac{1}{[A]^2} \big(-k [A]^2\big) = k \tag{36}
 \end{gather}
 $$
 Because the derivative of the reciprocal concentration is constant ($k$), it follows that $\frac{1}{[A](t)}$ is an affine linear function of time:
 $$
 \begin{gather}
-\frac{1}{[A](t)} = \frac{1}{[A]_0} + k t \implies [A](t) = \frac{[A]_0}{1 + k [A]_0 t} \tag{48}
+\frac{1}{[A](t)} = \frac{1}{[A]_0} + k t \implies [A](t) = \frac{[A]_0}{1 + k [A]_0 t} \tag{37}
 \end{gather}
 $$
 The derivative isolates the instantaneous molecular turnover, transforming the non-linear kinetic rate into a solvable differential relationship.
@@ -666,7 +591,7 @@ The derivative isolates the instantaneous molecular turnover, transforming the n
 In semiconductor electronics, the current-voltage characteristic of an ideal $p$-$n$ junction diode is governed by the Shockley equation:
 $$
 \begin{gather}
-I_D(V_D) = I_S \left(e^{\frac{V_D}{\eta V_T}} - 1\right) \tag{49}
+I_D(V_D) = I_S \left(e^{\frac{V_D}{\eta V_T}} - 1\right) \tag{38}
 \end{gather}
 $$
 where $I_S$ is the reverse saturation current, $V_T := \frac{k_B T}{q}$ is the thermal voltage, and $\eta \ge 1$ is the ideality factor. The relationship between diode voltage $V_D$ and diode current $I_D$ is non-linear.
@@ -676,19 +601,19 @@ In signal processing, the diode is biased at a constant direct-current operating
 Expanding the current via its differential at $V_{DQ}$ yields:
 $$
 \begin{gather}
-I_D(V_{DQ} + v_d) = I_{DQ} + dI_D(V_{DQ})(v_d) + o(v_d) \tag{50}
+I_D(V_{DQ} + v_d) = I_{DQ} + dI_D(V_{DQ})(v_d) + o(v_d) \tag{39}
 \end{gather}
 $$
 Computing the derivative from the exponential derivative formula of the Master Catalog of Elementary Derivatives yields:
 $$
 \begin{gather}
-g_d := \left.\frac{dI_D}{dV_D}\right|_{V_{DQ}} = \frac{I_S}{\eta V_T} e^{\frac{V_{DQ}}{\eta V_T}} = \frac{I_{DQ} + I_S}{\eta V_T} \approx \frac{I_{DQ}}{\eta V_T} \tag{51}
+g_d := \left.\frac{dI_D}{dV_D}\right|_{V_{DQ}} = \frac{I_S}{\eta V_T} e^{\frac{V_{DQ}}{\eta V_T}} = \frac{I_{DQ} + I_S}{\eta V_T} \approx \frac{I_{DQ}}{\eta V_T} \tag{40}
 \end{gather}
 $$
 The linear coefficient $g_d$ is the *small-signal dynamic conductance* (and its reciprocal $r_d := 1/g_d$ is the dynamic resistance). For small signal amplitudes, the non-linear diode behaves as a linear ohmic resistor:
 $$
 \begin{gather}
-i_d(t) \approx g_d \cdot v_d(t) \tag{52}
+i_d(t) \approx g_d \cdot v_d(t) \tag{41}
 \end{gather}
 $$
 This linear approximation enables electronic engineers to design amplifiers, active filters, and operational transconductance circuits using standard linear circuit theory.

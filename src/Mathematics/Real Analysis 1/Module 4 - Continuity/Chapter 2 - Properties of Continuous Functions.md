@@ -263,18 +263,6 @@ $$
 $$
 (see [[Proof of the Weierstrass Global Boundedness Theorem]])
 
-The mechanism of this proof leverages the Bolzano–Weierstrass Theorem. 
-
-If $f$ were unbounded on $K$, there would exist a sequence of witness arguments $\{x_n\} \subseteq K$ such that $|f(x_n)| > n$. 
-
-Because $K$ is bounded, $\{x_n\}$ admits a convergent subsequence $\{x_{n_k}\} \to x_0$. 
-
-Because $K$ is closed, $x_0 \in K$. 
-
-By continuity, $f(x_{n_k}) \to f(x_0) \in \mathbb{R}$, which forces the convergent sequence to remain bounded, contradicting the condition $|f(x_{n_k})| > n_k \ge k$. 
-
-Compactness prevents functional escape by forcing sequences to accumulate within the domain.
-
 ### The Second Weierstrass Theorem: Attainment of Extrema
 Boundedness guarantees that the supremum and infimum of the functional image are finite real numbers. 
 
@@ -442,9 +430,7 @@ $$
 $$
 (see [[Proof of Cantor's Uniform Continuity Theorem]])
 
-Cantor's theorem establishes that on closed bounded intervals $[a, b]$, delta collapse is impossible. 
-
-The universal control distance $\delta(\varepsilon)$ is guaranteed to exist.
+Cantor's theorem establishes that on closed bounded intervals $[a, b]$, delta collapse is impossible, with the universal control distance $\delta(\varepsilon)$ being guaranteed to exist.
 
 A profound consequence of uniform continuity is the preservation of Cauchy sequences: 
 $$
@@ -519,14 +505,8 @@ $$
 \end{gather}
 $$
 (see [[Proof of Strictly Monotonic Continuous Bijections]])
-
-For a general function, an interval image does not imply continuity (as shown by Darboux counterexamples). 
-
-However, for a *strictly monotonic* function, any discontinuity must be a jump discontinuity of the first kind. 
-
-A jump discontinuity would excise an open gap from the codomain, preventing the image from forming an interval. 
-
-Consequently, for strictly monotonic mappings on intervals, connectedness of the image is equivalent to continuity.
+For a general function, an interval image does not imply continuity (as shown by Darboux counterexamples). However, for a *strictly monotonic* function, any discontinuity must be a jump discontinuity of the first kind. 
+A jump discontinuity would excise an open gap from the codomain, preventing the image from forming an interval. Consequently, for strictly monotonic mappings on intervals, connectedness of the image is equivalent to continuity.
 
 ### Continuity of the Inverse Mapping
 A continuous injective mapping from an interval onto an interval possesses an inverse that is automatically continuous: 
@@ -566,16 +546,11 @@ write "$I = [a, b]$" at (2.5, 0.9) in blue
 write "$J = f(I) = [c, d]$" at (-0.65, 2.65) in red, right
 ```
 
-Because $f$ is strictly monotonic on an interval $I$, its inverse $f^{-1}$ is strictly monotonic on the interval $J$. 
-
-Evaluating the image of $J$ under $f^{-1}$ yields:
+Because $f$ is strictly monotonic on an interval $I$, its inverse $f^{-1}$ is strictly monotonic on the interval $J$. Evaluating the image of $J$ under $f^{-1}$ yields:
 $$
 f^{-1}(J) = f^{-1}(f(I)) = I \tag{17}
 $$
-
-Because $I$ is an interval by hypothesis, the strictly monotonic mapping $f^{-1}$ maps the interval $J$ onto the interval $I$. 
-
-By the preceding theorem, $f^{-1}$ is continuous on $J$.
+Because $I$ is an interval by hypothesis, the strictly monotonic mapping $f^{-1}$ maps the interval $J$ onto the interval $I$. By the preceding theorem, $f^{-1}$ is continuous on $J$.
 
 >[!example]- Example: Discontinuous Inverses of Continuous Bijections on Disconnected Domains
 >The requirement that the domain $I$ be an interval is indispensable. If the domain is disconnected, a continuous bijection can possess a violently discontinuous inverse.
