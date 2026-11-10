@@ -135,7 +135,6 @@ $$
 (see [[Proof of Parity Alternation Under Differentiation]])
 
 ---
-
 # Composition, Inversion, and Structural Transformations
 While arithmetic operations account for linear and rational interactions, the vast majority of physical and financial models involve the nested nesting of dependencies: a quantity $z$ depends on an intermediate state $y$, which itself is driven by an underlying coordinate $x$.
 
@@ -155,7 +154,6 @@ $$
 
 ##### Higher-Order Jet Regularity of the Carathéodory Auxiliary Function
 The utility of Carathéodory's formulation extends directly to higher-order differential structures:
-
 $$
 \begin{gather}
 \textbf{Proposition: Higher-Order Smoothness of the Carathéodory Factor} \\[5mm]
@@ -169,8 +167,7 @@ $$
 (see [[Proof of Higher-Order Smoothness of the Carathéodory Factor]])
 
 ### The Chain Rule for Composite Mappings
-With Carathéodory's criterion established, the differentiation of composite functions reduces to an elementary product of continuous factors.
-
+With Carathéodory's criterion established, the differentiation of composite functions reduces to an elementary product of continuous factors: 
 $$
 \begin{gather}
 \textbf{Theorem: The Chain Rule} \\[5mm]
@@ -199,8 +196,7 @@ $$
 The formal expression of the first differential $df = f'(x) \, dx$ retains its structure regardless of whether $x$ is an independent coordinate or an intermediate function of a deeper parameter $t$. This universal property is termed the *first-order differential invariance*.
 
 ### The Inverse Function Theorem for Single-Variable Mappings
-If a continuous mapping $f: X \to Y$ is strictly monotonic on an interval $X \subset \mathbb{R}$, it defines a bijection onto its image $Y := f(X)$, guaranteeing the existence of a continuous inverse mapping $f^{-1}: Y \to X$. The differentiation of this inverse corresponds geometrically to interchanging the roles of the abscissa and ordinate axes, reflecting the tangent line across the main diagonal $y = x$.
-
+If a continuous mapping $f: X \to Y$ is strictly monotonic on an interval $X \subset \mathbb{R}$, it defines a bijection onto its image $Y := f(X)$, guaranteeing the existence of a continuous inverse mapping $f^{-1}: Y \to X$. The differentiation of this inverse corresponds geometrically to interchanging the roles of the abscissa and ordinate axes, reflecting the tangent line across the main diagonal $y = x$: 
 $$
 \begin{gather}
 \textbf{Theorem: The Derivative of an Inverse Function} \\[5mm]
@@ -249,7 +245,6 @@ $$
 Thus, the power rule $\frac{d}{dx} x^r = r x^{r-1}$ is valid for all rational exponents $r \in \mathbb{Q}$ on $(0, \infty)$.
 
 ---
-
 # The Twelve Transcendental Systems
 In quantitative analysis, functional modeling relies heavily on circular and hyperbolic geometries. To ensure complete clarity, the six fundamental hyperbolic functions, the six inverse circular functions, and the six inverse hyperbolic functions are systematically defined, accompanied by their governing algebraic identities and derivative formulas.
 
@@ -284,7 +279,6 @@ $$
 
 ##### Derivatives of the Hyperbolic Functions
 Differentiating the defining linear combinations of $e^x$ and $e^{-x}$ via the chain and quotient rules yields:
-
 $$
 \begin{gather}
 \textbf{Proposition: Derivatives of the Six Hyperbolic Functions} \\[5mm]
@@ -386,32 +380,37 @@ $$
 $$
 (see [[Proof of Derivatives of the Inverse Hyperbolic Functions]])
 
----
-
-### Master Catalog of Elementary Derivatives (Rational & Transcendental)
-The operational rules derived in this chapter establish the differentiation catalog for basic elementary functions:
-
-| Function $f(x)$            | Domain of $f$                | Derivative $f'(x)$                           | Domain of $f'$               | Differential $df(x)$                 |     |     |      |                                   |
-| :------------------------- | :--------------------------- | :------------------------------------------- | :--------------------------- | :----------------------------------- | --- | --- | ---- | --------------------------------- |
-| $c$ (constant)             | $\mathbb{R}$                 | $0$                                          | $\mathbb{R}$                 | $0$                                  |     |     |      |                                   |
-| $\arcsin(x)$               | $[-1, 1]$                    | $\frac{1}{\sqrt{1 - x^2}}$                   | $(-1, 1)$                    | $\frac{1}{\sqrt{1-x^2}} dx$          |     |     |      |                                   |
-| $\arccos(x)$               | $[-1, 1]$                    | $-\frac{1}{\sqrt{1 - x^2}}$                  | $(-1, 1)$                    | $-\frac{1}{\sqrt{1-x^2}} dx$         |     |     |      |                                   |
-| $\arctan(x)$               | $\mathbb{R}$                 | $\frac{1}{1 + x^2}$                          | $\mathbb{R}$                 | $\frac{1}{1+x^2} dx$                 |     |     |      |                                   |
-| $\operatorname{arccot}(x)$ | $\mathbb{R}$                 | $-\frac{1}{1 + x^2}$                         | $\mathbb{R}$                 | $-\frac{1}{1+x^2} dx$                |     |     |      |                                   |
-| $\operatorname{arcsec}(x)$ | $\mathbb{R}$                 | x                                            | \ge 1$                       | $\frac{1}{\|x\|\sqrt{x^2 - 1}}$      | $   | x   | > 1$ | $\frac{1}{\|x\|\sqrt{x^2-1}} dx$  |
-| $\operatorname{arccsc}(x)$ | $\mathbb{R}$                 | x                                            | \ge 1$                       | $-\frac{1}{\|x\|\sqrt{x^2 - 1}}$     | $   | x   | > 1$ | $-\frac{1}{\|x\|\sqrt{x^2-1}} dx$ |
-| $\sinh(x)$                 | $\mathbb{R}$                 | $\cosh(x)$                                   | $\mathbb{R}$                 | $\cosh(x) dx$                        |     |     |      |                                   |
-| $\cosh(x)$                 | $\mathbb{R}$                 | $\sinh(x)$                                   | $\mathbb{R}$                 | $\sinh(x) dx$                        |     |     |      |                                   |
-| $\tanh(x)$                 | $\mathbb{R}$                 | $\operatorname{sech}^2(x) = 1 - \tanh^2(x)$  | $\mathbb{R}$                 | $\operatorname{sech}^2(x) dx$        |     |     |      |                                   |
-| $\coth(x)$                 | $\mathbb{R} \setminus \{0\}$ | $-\operatorname{csch}^2(x) = 1 - \coth^2(x)$ | $\mathbb{R} \setminus \{0\}$ | $-\operatorname{csch}^2(x) dx$       |     |     |      |                                   |
-| $\operatorname{sech}(x)$   | $\mathbb{R}$                 | $-\operatorname{sech}(x)\tanh(x)$            | $\mathbb{R}$                 | $-\operatorname{sech}(x)\tanh(x) dx$ |     |     |      |                                   |
-| $\operatorname{csch}(x)$   | $\mathbb{R} \setminus \{0\}$ | $-\operatorname{csch}(x)\coth(x)$            | $\mathbb{R} \setminus \{0\}$ | $-\operatorname{csch}(x)\coth(x) dx$ |     |     |      |                                   |
-| $\operatorname{arsinh}(x)$ | $\mathbb{R}$                 | $\frac{1}{\sqrt{x^2 + 1}}$                   | $\mathbb{R}$                 | $\frac{1}{\sqrt{x^2+1}} dx$          |     |     |      |                                   |
-| $\operatorname{arcosh}(x)$ | $[1, \infty)$                | $\frac{1}{\sqrt{x^2 - 1}}$                   | $(1, \infty)$                | $\frac{1}{\sqrt{x^2-1}} dx$          |     |     |      |                                   |
-| $\operatorname{artanh}(x)$ | $(-1, 1)$                    | $\frac{1}{1 - x^2}$                          | $(-1, 1)$                    | $\frac{1}{1-x^2} dx$                 |     |     |      |                                   |
-| $\operatorname{arcoth}(x)$ | $\|x\| > 1$                  | $\frac{1}{1 - x^2}$                          | $\|x\| > 1$                  | $\frac{1}{1-x^2} dx$                 |     |     |      |                                   |
-| $\operatorname{arsech}(x)$ | $(0, 1]$                     | $-\frac{1}{x\sqrt{1 - x^2}}$                 | $(0, 1)$                     | $-\frac{1}{x\sqrt{1-x^2}} dx$        |     |     |      |                                   |
-| $\operatorname{arcsch}(x)$ | $\mathbb{R} \setminus \{0\}$ | $-\frac{1}{\|x\|\sqrt{1 + x^2}}$             | $\mathbb{R} \setminus \{0\}$ | $-\frac{1}{\|x\|\sqrt{1+x^2}} dx$    |     |     |      |                                   |
+### Master Catalog of Elementary Derivatives (Part 2)
+Continuing from the first part of the catalog established in [[Chapter 1 - Differentiable Functions|Chapter 1]], the operational rules and structural theorems established throughout this chapter yield the derivative formulas for the remaining fundamental elementary, hyperbolic, and inverse transcendental functions on their respective domains:
+$$
+\begin{gather}
+\textbf{Theorem: Master Catalog of Elementary Derivatives (Part 2)} \\[5mm]
+\text{The fundamental elementary, hyperbolic, and inverse transcendental functions admit} \\[2mm]
+\text{the following derivative formulas on their domains:} \\[3.5mm]
+\begin{align}
+\text{10. Constant Function: } & \frac{d}{dx}(c) = 0 \quad (c \in \mathbb{R}, \ x \in \mathbb{R}). \\[2mm]
+\text{11. Inverse Trigonometric Sine: } & \frac{d}{dx}\big(\arcsin(x)\big) = \frac{1}{\sqrt{1 - x^2}} \quad (x \in (-1, 1)). \\[2mm]
+\text{12. Inverse Trigonometric Cosine: } & \frac{d}{dx}\big(\arccos(x)\big) = -\frac{1}{\sqrt{1 - x^2}} \quad (x \in (-1, 1)). \\[2mm]
+\text{13. Inverse Trigonometric Tangent: } & \frac{d}{dx}\big(\arctan(x)\big) = \frac{1}{1 + x^2} \quad (x \in \mathbb{R}). \\[2mm]
+\text{14. Inverse Trigonometric Cotangent: } & \frac{d}{dx}\big(\operatorname{arccot}(x)\big) = -\frac{1}{1 + x^2} \quad (x \in \mathbb{R}). \\[2mm]
+\text{15. Inverse Trigonometric Secant: } & \frac{d}{dx}\big(\operatorname{arcsec}(x)\big) = \frac{1}{|x|\sqrt{x^2 - 1}} \quad (|x| > 1). \\[2mm]
+\text{16. Inverse Trigonometric Cosecant: } & \frac{d}{dx}\big(\operatorname{arccsc}(x)\big) = -\frac{1}{|x|\sqrt{x^2 - 1}} \quad (|x| > 1). \\[2mm]
+\text{17. Hyperbolic Sine: } & \frac{d}{dx}\big(\sinh(x)\big) = \cosh(x) \quad (x \in \mathbb{R}). \\[2mm]
+\text{18. Hyperbolic Cosine: } & \frac{d}{dx}\big(\cosh(x)\big) = \sinh(x) \quad (x \in \mathbb{R}). \\[2mm]
+\text{19. Hyperbolic Tangent: } & \frac{d}{dx}\big(\tanh(x)\big) = \operatorname{sech}^2(x) \quad (x \in \mathbb{R}). \\[2mm]
+\text{20. Hyperbolic Cotangent: } & \frac{d}{dx}\big(\coth(x)\big) = -\operatorname{csch}^2(x) \quad (x \in \mathbb{R} \setminus \{0\}). \\[2mm]
+\text{21. Hyperbolic Secant: } & \frac{d}{dx}\big(\operatorname{sech}(x)\big) = -\operatorname{sech}(x)\tanh(x) \quad (x \in \mathbb{R}). \\[2mm]
+\text{22. Hyperbolic Cosecant: } & \frac{d}{dx}\big(\operatorname{csch}(x)\big) = -\operatorname{csch}(x)\coth(x) \quad (x \in \mathbb{R} \setminus \{0\}). \\[2mm]
+\text{23. Area Hyperbolic Sine: } & \frac{d}{dx}\big(\operatorname{arsinh}(x)\big) = \frac{1}{\sqrt{x^2 + 1}} \quad (x \in \mathbb{R}). \\[2mm]
+\text{24. Area Hyperbolic Cosine: } & \frac{d}{dx}\big(\operatorname{arcosh}(x)\big) = \frac{1}{\sqrt{x^2 - 1}} \quad (x \in (1, \infty)). \\[2mm]
+\text{25. Area Hyperbolic Tangent: } & \frac{d}{dx}\big(\operatorname{artanh}(x)\big) = \frac{1}{1 - x^2} \quad (x \in (-1, 1)). \\[2mm]
+\text{26. Area Hyperbolic Cotangent: } & \frac{d}{dx}\big(\operatorname{arcoth}(x)\big) = \frac{1}{1 - x^2} \quad (|x| > 1). \\[2mm]
+\text{27. Area Hyperbolic Secant: } & \frac{d}{dx}\big(\operatorname{arsech}(x)\big) = -\frac{1}{x\sqrt{1 - x^2}} \quad (x \in (0, 1)). \\[2mm]
+\text{28. Area Hyperbolic Cosecant: } & \frac{d}{dx}\big(\operatorname{arcsch}(x)\big) = -\frac{1}{|x|\sqrt{1 + x^2}} \quad (x \in \mathbb{R} \setminus \{0\}).
+\end{align}
+\end{gather}
+$$
+(see [[Proof of Derivatives of the Six Hyperbolic Functions]], [[Proof of Derivatives of the Inverse Circular Functions]], and [[Proof of Derivatives of the Inverse Hyperbolic Functions]])
 
 ---
 # Implicit Differentiation, Parametric Curves, and Mechanical Invariants
@@ -522,7 +521,6 @@ $$
 
 ### Jet Reconstruction and Taylor-Hermite Polynomial Interpolation
 A fundamental question in polynomial approximation is whether a set of derivative specifications at an anchor point uniquely characterizes a polynomial:
-
 $$
 \begin{gather}
 \textbf{Proposition: Polynomial Reconstruction from Jet Coordinates} \\[5mm]
@@ -548,7 +546,6 @@ Every inclusion in the sequence of step 57 is strict.
 
 ##### Pathological Class $D^1 \setminus C^1$: Differentiability Without Derivative Continuity
 In elementary analysis, it is frequently presumed that if a function possesses a derivative everywhere, that derivative must be continuous. This intuition is false:
-
 $$
 \begin{gather}
 \textbf{Proposition: Differentiability Without Derivative Continuity} \\[5mm]
@@ -565,7 +562,6 @@ As $x \to 0$, the factor $2x \sin(1/x)$ vanishes, but the term $\cos(1/x)$ oscil
 
 ##### The Cauchy Flatness Phenomenon and Non-Analytic Smooth Functions
 Even more striking is the divide between infinitely differentiable functions ($C^\infty$) and real-analytic functions ($C^\omega$). Augustin-Louis Cauchy discovered that a smooth function can be completely flat at an anchor point without being zero elsewhere:
-
 $$
 \begin{gather}
 \textbf{Theorem: The Cauchy Flatness Theorem} \\[5mm]
@@ -581,7 +577,6 @@ Because every derivative vanishes at the origin, the Taylor series of $f$ center
 
 ##### Partition-of-Unity Bump Functions
 Translating and composing Cauchy's flat function yields smooth bump functions with compact support:
-
 $$
 \begin{gather}
 \textbf{Corollary: Existence of Compactly Supported Smooth Bump Functions} \\[5mm]
@@ -595,14 +590,10 @@ $$
 Such functions serve as the foundational building blocks for smooth partitions of unity, cutoff operators, and mollifiers in distribution theory and differential topology.
 
 ---
-
 # Visualizations of Transcendental Geometries
 
-The following visual models, constructed via the *Easy-Tikz* engine, illustrate the geometric and pathological phenomena established in this chapter.
-
 ### Tangent Line Reflection Across the Diagonal $y = x$
-The Inverse Function Theorem states that the graph of an inverse function $f^{-1}$ is obtained by reflecting the graph of $f$ across the identity line $y = x$. At corresponding points $(x_0, y_0)$ and $(y_0, x_0)$, the tangent slopes are reciprocal: $\tan(\beta) = \frac{1}{\tan(\alpha)}$.
-
+The Inverse Function Theorem states that the graph of an inverse function $f^{-1}$ is obtained by reflecting the graph of $f$ across the identity line $y = x$. At corresponding points $(x_0, y_0)$ and $(y_0, x_0)$, the tangent slopes are reciprocal: $\tan(\beta) = \frac{1}{\tan(\alpha)}$: 
 ```easy-tikz
 title $\text{Geometric Reciprocity of Inverse Function Tangents}$
 xlabel $x$
@@ -630,8 +621,7 @@ write "$\\text{Slope: } \f\\frac{1}{m}$" at (3.2, 1.0) in green, right
 ```
 
 ### The Geometry of the Hyperbolic Sine and Cosine
-The hyperbolic sine and cosine govern coordinates on equilateral hyperbolas $x^2 - y^2 = 1$ in identical fashion to circular coordinates on the unit circle $x^2 + y^2 = 1$. The hyperbolic cosine exhibits even symmetry, while the hyperbolic sine exhibits odd symmetry.
-
+The hyperbolic sine and cosine govern coordinates on equilateral hyperbolas $x^2 - y^2 = 1$ in identical fashion to circular coordinates on the unit circle $x^2 + y^2 = 1$. The hyperbolic cosine exhibits even symmetry, while the hyperbolic sine exhibits odd symmetry: 
 ```easy-tikz
 title $\text{Profiles of the Hyperbolic Functions } \sinh(x) \text{ and } \cosh(x)$
 xlabel $x$
@@ -654,8 +644,7 @@ write "$\cosh^2(x) - \sinh^2(x) = 1$" at (0.0, -3.2) in green, center
 ```
 
 ### The Cauchy Flatness Curve
-Cauchy's function $f(x) = \exp(-1/x^2)$ provides visual proof of infinite tangency: as the curve approaches the origin, its decay is faster than every power monomial $x^n$, forcing all successive derivatives to zero and welding the curve seamlessly to the horizontal axis.
-
+Cauchy's function $f(x) = \exp(-1/x^2)$ provides visual proof of infinite tangency: as the curve approaches the origin, its decay is faster than every power monomial $x^n$, forcing all successive derivatives to zero and welding the curve seamlessly to the horizontal axis: 
 ```easy-tikz
 title $\text{The Cauchy Flat Function } f(x) = \exp(-1/x^2)$
 xlabel $x$
@@ -674,7 +663,7 @@ write "$(0,0)$" at (0.0, 0.15) in white, center
 ```
 
 ---
-# Applications Across the Quantitative and Applied Sciences
+# Applications of the Basic Rules of Differentiation
 
 ### Quantitative Finance: Bond Convexity and Second-Order Price Sensitivities
 In fixed-income portfolio management, the price sensitivity of a bond to shifts in interest rate yield $y$ is described locally by its Taylor polynomial. Let $P(y) = \sum_{k=1}^m C_k (1 + y)^{-t_k}$ denote the price of a bond paying cash flows $C_k$ at future maturity dates $t_k$.

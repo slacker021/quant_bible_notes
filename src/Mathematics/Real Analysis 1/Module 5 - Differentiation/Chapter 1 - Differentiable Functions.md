@@ -531,7 +531,7 @@ write "$(0,0)$" at (0, -0.5) in red, center
 The neon red marker highlights the singular apex where the left-hand and right-hand tangents disagree, precluding the existence of a single linear approximation.
 
 ---
-# Applications of the Derivative
+# Applications of General Differentiation
 
 ### Quantitative Finance: Modified Duration as a Logarithmic Derivative
 Let $P(y)$ denote the market price of a fixed-income bond as a function of its yield-to-maturity $y$:
