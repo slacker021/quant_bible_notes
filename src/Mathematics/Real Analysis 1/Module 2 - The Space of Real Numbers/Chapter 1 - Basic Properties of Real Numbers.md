@@ -25,8 +25,7 @@ In the realm of real numbers, *addition* and *multiplication* form the two funda
 >The axiomatic definition reverses this dependency: rather than defining real numbers by what they look like, real analysis characterizes them strictly by how they behave under operational transformations. A system is the real continuum if and only if it functions as a complete ordered field. If an algorithmic simulation or physical measurement space satisfies these axioms, every analytical theorem deduced from them holds with absolute mathematical certainty.
 
 ### The Field Axioms
-The field axioms establish the algebraic mechanics of addition and multiplication upon $\mathbb{R}$, ensuring that elementary arithmetic operations can be inverted and combined consistently.
-
+The field axioms establish the algebraic mechanics of addition and multiplication upon $\mathbb{R}$, ensuring that elementary arithmetic operations can be inverted and combined consistently:
 ##### Axioms of Addition
 $$
 \begin{gather}
@@ -387,8 +386,7 @@ $$
 
 ---
 # The Axiom of Completeness (Continuity)
-The rational numbers $\mathbb{Q}$ satisfy all field and order axioms, forming an ordered field. However, $\mathbb{Q}$ is inadequate for analysis because it contains "holes" or "gaps" (for example, there is no rational number $q \in \mathbb{Q}$ such that $q^2 = 2$). The final axiom of the real numbers guarantees continuity and the absence of gaps.
-
+The rational numbers $\mathbb{Q}$ satisfy all field and order axioms, forming an ordered field. However, $\mathbb{Q}$ is inadequate for analysis because it contains "holes" or "gaps" (for example, there is no rational number $q \in \mathbb{Q}$ such that $q^2 = 2$). The final axiom of the real numbers guarantees continuity and the absence of gaps: 
 $$
 \begin{gather}
 \textbf{Axiom of Completeness (Dedekind Continuity)} \\[5mm]
