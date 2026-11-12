@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 ---
-# The Algebraic Infrastructure of Differentiation
+# Algebraic Infrastructure of Differentiation
 In [[Chapter 1 - Differentiable Functions|Chapter 1]], differentiability was formulated through the lens of local linear approximation: a real-valued mapping is differentiable at an anchor point if its local increment decomposes into a continuous linear transformation and a remainder term that decays strictly faster than the perturbation of the argument. While the difference quotient provides the formal definition of this property, evaluating limits of incremental ratios for every composite, rational, or transcendental mapping encountered in the quantitative sciences is computationally prohibitive and structurally inefficient.
 
 The calculus of differentiation overcomes this limitation by recognizing that the differential operator respects the algebraic structures of the underlying function spaces. When endowed with pointwise addition and multiplication, the collection of differentiable functions constitutes an associative and commutative algebra over the real field $\mathbb{R}$. This chapter establishes the operational machinery that permits the derivative of an arbitrarily complex mapping to be determined systematically from its constituent elementary components.
@@ -89,7 +89,6 @@ $$
 \end{gather}
 $$
 Taking the limit of the quotient as $h \to 0$ and combining the result with the Leibniz product rule for $f(x) \cdot \frac{1}{g(x)}$ generates the general quotient rule:
-
 $$
 \begin{gather}
 \textbf{Theorem: The Quotient Rule of Differentiation} \\[5mm]
@@ -120,8 +119,7 @@ $$
 >$$
 
 ### Symmetry Inversion Under Differentiation
-An essential structural property of the differential operator is its transmission of geometric symmetry. When a function exhibits even or odd parity across the origin, differentiation alters that parity systematically.
-
+An essential structural property of the differential operator is its transmission of geometric symmetry. When a function exhibits even or odd parity across the origin, differentiation alters that parity systematically: 
 $$
 \begin{gather}
 \textbf{Corollary: Parity Alternation Under Differentiation} \\[5mm]
@@ -608,16 +606,13 @@ plot tan1(x) = 1.0 + 1.0*(x - 1.0), from x = 0.0 to 3.5, in green, thick
 plot tan2(x) = 1.0 + 1.0*(x - 1.0), from x = 0.0 to 3.5, in green, thick
 draw a line from (1.0, 0) to (1.0, 1.0) in gray, dashed
 draw a line from (0, 1.0) to (1.0, 1.0) in gray, dashed
-raw tool {"type":"points","name":"P1","points":"(1.0, 1.0);","size":"large"}
-raw tool {"type":"points","name":"P2","points":"(2.0, 2.5);","size":"large"}
-raw tool {"type":"points","name":"P3","points":"(2.5, 2.0);","size":"large"}
+raw tool {"type":"points","name":"P1","color":"green","points":"(1.0, 1.0);","size":"large"}
 write "$y = x$" at (5.5, 5.8) in orchid, right
-write "$y = f(x)$" at (2.4, 4.5) in cyan, left
+write "$y= f(x)$" at (2.4, 4.5) in teal, left
 write "$y = f^{-1}(x)$" at (5.3, 2.65) in orange, below
 write "$(x_0, y_0)$" at (1.8, 2.8) in white, left
 write "$(y_0, x_0)$" at (2.8, 1.7) in white, right
 write "$\\text{Slope: } m$" at (0.8, 1.6) in green, left
-write "$\\text{Slope: } \f\\frac{1}{m}$" at (3.2, 1.0) in green, right
 ```
 
 ### The Geometry of the Hyperbolic Sine and Cosine

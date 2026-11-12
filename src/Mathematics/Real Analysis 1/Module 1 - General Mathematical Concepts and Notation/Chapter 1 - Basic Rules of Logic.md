@@ -34,7 +34,7 @@ $$
 A *definition* assigns a precise and unambiguous meaning to a term, symbol, or object. Definitions are linguistic conventions that establish shared clarity rather than mathematical assertions possessing empirical truth values. When convenient, introducing the definition of a mathematical entity can be executed using $:=$, which denotes "equality by definition." If $A$ is a new piece of notation with an unassigned meaning while $B$ is an established expression with a known meaning, $A := B$ denotes that $A$ is defined by $B$. Similarly, abbreviations for expressions already defined can be established using $=:$. If $A$ is an extended expression and $B$ is an abbreviation for that expression, then $A =: B$ denotes that $B$ serves as shorthand for $A$:
 $$
 \begin{gather}
-\textbf{Definition: Equality by Definition} \\[5mm]
+\textbf{Equality by Definition: } \\[5mm]
 \text{Let } B \text{ be an established mathematical entity or expression.} \\[2mm]
 \text{The assignment } A := B \text{ establishes that the new symbol } A \text{ is defined by } B. \\[2mm]
 \text{Conversely, } A =: B \text{ assigns the concise shorthand symbol } B \text{ to represent } A.

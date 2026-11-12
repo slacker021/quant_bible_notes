@@ -1,10 +1,10 @@
 ---
 dg-publish: true
 ---
-# The Architecture of Local Linear Approximation
+# Local Linear Approximation
 The foundational concepts of real analysis established in preceding modules govern how mathematical mappings behave under spatial transformations. In [[Chapter 1 - Basic Definition of Continuity|Module 4]], continuity emerged as the mathematical formulation of proximity preservation: a mapping is continuous if it maps sufficiently close points in a domain to arbitrarily close points in a codomain. Yet, while continuity guarantees stability, it remains qualitatively blind to direction, rate, and dynamical momentum. A continuous curve may turn violently, fracture into infinite directional oscillations, or present vertical precipices that defy physical realization.
 
-### Rates of Change
+### Fundamental Application: Rates of Change
 To model rates of change—velocity *vectors*, elastic deformations, marginal pricing dynamics, and other phenomena across the quantitative sciences—real analysis requires a structure that is strictly more refined than topological proximity: The principle of *local linear approximation*. 
 
 The differential calculus of a single real variable addresses a fundamental question: Given a non-linear mapping $f: E \to \mathbb{R}$, under what circumstances can its behavior in an immediate neighborhood of an anchor point $x_0$ be replaced by a simple affine function $x \mapsto c_0 + c_1(x - x_0)$ such that the resulting error vanishes faster than the displacement $x - x_0$? The investigation of this question yields the twin concepts of the *derivative* and the *differential*. 
@@ -531,7 +531,7 @@ write "$(0,0)$" at (0, -0.5) in red, center
 The neon red marker highlights the singular apex where the left-hand and right-hand tangents disagree, precluding the existence of a single linear approximation.
 
 ---
-# Applications of General Differentiation
+# Applications of Differentiable Functions
 
 ### Quantitative Finance: Modified Duration as a Logarithmic Derivative
 Let $P(y)$ denote the market price of a fixed-income bond as a function of its yield-to-maturity $y$:

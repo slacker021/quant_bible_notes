@@ -525,13 +525,14 @@ The topological symmetry of the inverse mapping is visualized below:
 title $\text{Symmetry of Strictly Increasing Bijection \& Its Inverse}$
 xlabel $x$
 ylabel $y$
-show x from -0.816 to 6.184 and y from 0 to 6
+show x from -0.887 to 6.113 and y from -0.03 to 5.97
 axes on the edges
 equal scale
 size 10 x 10
-plot id(x) = x, from x = 0.2 to 5.5, in gray, dashed, with the legend "$\\text{Symmetry Axis } y = x$"
-plot f(x) = 0.8 + 0.16 * x^2.1 from x = 0 to 5 in blue, very thick, with the legend "$\\text{Forward Bijection } y = f(x)$"
-plot finv(x) = ((x - 0.8) / 0.16)^(1 / 2.1) from x = 0 to 6 in red, very thick, with the legend "$\\text{Continuous Inverse } y = f^{-1}(x)$"
+set displayWidth = 700
+plot id(x) = x from x = 0.2 to 5.5 in gray, dashed, legendLabel="$\\text{Symmetry Axis } y = x$"
+plot f(x) = 0.8 + 0.16 * x^2.1 in blue, very thick, legendLabel="$\\text{Forward Bijection } y = f(x)$"
+plot finv(x) = ((x - 0.8) / 0.16)^(1 / 2.1) in red, very thick, legendLabel="$\\text{Continuous Inverse } y = f^{-1}(x)$"
 draw a segment from (2.8, 2.19) to (2.19, 2.8), in purple, dashed, thick
 draw a segment from (1.0, 0) to (1.0, 0.96), in blue, dashed
 draw a line from (4.41077, 0) to (4.41077, 4.41077) in blue, dashed
