@@ -16,11 +16,11 @@ $$
 >[!info]+ Remark: Starting Somewhere
 >The reader may wonder as to the level of rigor and ambiguity present in the naive definition of a set, which is valid because an overly naive and intuitive definition may leave logical gaps that lead to the reader misinterpreting its definition and subsequence properties. A more rigorous and less ambiguous definition can be constructed but doing so is far beyond the scope of this repository's treatment of real analysis. Nevertheless, more properties of sets may be explored by the reader in other aspects of the mathematical sciences—both in and outside of this repository of knowledge.
 >
->An example of a definition that may be open to interpretation is what constitutes a soup. Everyone has an idea of what a soup is, and is usually fairly banal. However, some may raise questions on what fits the definition of soup:
+>An example of a definition that may be open to interpretation is what constitutes a soup. Everyone has an idea of what a soup is, and is considered fairly banal by many. However, some may raise questions on what fits the definition of soup:
 >- *Borscht* is a famous European dish that is made from beets. Unlike other soups, however, it is traditionally served cold. Those who believe that soups are served hot may not consider this to be a soup. 
->- Is cereal a soup? If the definition of a soup is that it must be cold, then cereal may fit that definition. However, many consider it a snack or dessert item, not a soup.
+>- Is cereal a soup? If the definition of a soup is that it may be cold, then cereal may fit that definition. However, many consider it a snack or dessert item, but not a soup.
 >
->With these questions in mind, what is a soup? Are there exceptions that should be considered soups? Perhaps the definition of a soup should be more precise and unambiguous so as to reduce the chances of an edge case occurring that makes it difficult to determine whether something qualifies for a soup.
+>With these questions in mind, what is a soup? Are there exceptions that should be considered soups? Perhaps the definition of a soup should be more precise and unambiguous so as to reduce the chances of an edge case occurring that makes it difficult to determine whether or not something qualifies for a soup.
 
 If $x$ is an object and $P$ is a *unary predicate*—a property or condition—the expression $P(x)$ asserts that $x$ satisfies property $P$. In naive set theory, the collection of all objects satisfying property $P$ is denoted by:
 $$

@@ -12,7 +12,7 @@ In classical analysis, continuity is not an innate property of physical space, n
 ### The Problem of Local Preservation
 Let $E \subseteq \mathbb{R}$ represent an arbitrary non-empty subset of the real numbers, and let the mapping $f: E \to \mathbb{R}$ denote a real-valued function defined on $E$. Additionally, consider a fixed point $a \in E$. The central problem of local continuity consists of determining whether the functional values $f(x)$ can be kept arbitrarily close to $f(a)$ solely by constraining the argument $x \in E$ to a sufficiently tight neighborhood centered at $a$: 
 $$\begin{gather}
-\textbf{Definition: Pointwise Continuity (Metric } \varepsilon\text{--}\delta \textbf{ Formulation)} \\[5mm]
+\textbf{Definition: Pointwise Continuity (Metric } \varepsilon\text{-}\delta \textbf{ Formulation)} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } f: E \to \mathbb{R}, \text{ and let } a \in E. \\[2mm]
 \text{The function } f \text{ is continuous at the point } a \text{ if for every positive tolerance } \varepsilon > 0, \\[2mm]
 \text{there exists a corresponding distance } \delta > 0 \text{ such that for all } x \in E, \\[2mm]
@@ -51,7 +51,7 @@ write "$f(a) + \\varepsilon$" at (0.85, 3.75), in red, above
 write "$f(a)$" at (0.65, 2.75), in black, above
 write "$f(a) - \\varepsilon$" at (0.85, 1.65), in red, below
 write "$(a, f(a))$" at (3.55, 2.50), in black, right
-write "$y = f(x)$" at (5.9, 4.6), in teal, right
+write "$y= f(x)$" at (5.9, 4.6) in teal, right
 ```
 
 
@@ -247,7 +247,7 @@ write "$f(a^+)$" at (0.35, 3.95) in red
 write "$\\text{Left-hand limit } (a, f(a^-))$" at (3.45, 2.3) in blue, left
 write "$\\text{Isolated value } (a, f(a))$" at (3.25, 3.18) in purple, left
 write "$\\text{Right-hand limit } (a, f(a^+))$" at (3.45, 4.25) in red, left
-write "$\\Delta f(a) = f(a^+) - f(a^-)$" at (4.35, 2.85), in teal, right
+write "$\\Delta f(a) = f(a^+)- f(a^-)$" at (4.35, 2.85) in teal, right
 ```
 
 >[!question]+ Application: Càdlàg Price Trajectories and Order-Book Dislocations
@@ -269,7 +269,7 @@ show x from -6.189 to 6.211 and y from -4.482 to 4.518
 axes on the edges
 set show_axis_label = false
 size 14 x 9
-R_root: shade where x >= -2.6 and x <= 2.6 and y >= 2.8 and y <= 4.1, in black, opacity 0.12, outlined
+R_root: shade where x >= -2.6 and x <= 2.6 and y >= 2.8 and y <= 4.4 in black, opacity 0.12, outlined
 R_k1: shade where x >= -5.6 and x <= -0.8 and y >= 0.3 and y <= 1.7, in blue, opacity 0.15, outlined
 R_k2: shade where x >= 0.8 and x <= 5.6 and y >= 0.3 and y <= 1.7, in red, opacity 0.15, outlined
 R_rem: shade where x >= -5.9 and x <= -3.3 and y >= -3.8 and y <= -1.4, in teal, opacity 0.15, outlined
@@ -282,8 +282,8 @@ draw an arrow from (-3.8, 0.3) to (-4.6, -1.35), in teal, thick
 draw an arrow from (-2.6, 0.3) to (-1.7, -1.35), in purple, thick
 draw an arrow from (2.6, 0.3) to (1.7, -1.35), in orange, thick
 draw an arrow from (3.8, 0.3) to (4.6, -1.35), in magenta, thick
-write "$\\text{Point of Discontinuity } (x = a)$" at (0, 3.45)
-write "$\\lim_{x \\to a} f(x) \\neq f(a) \\text{ or limit DNE}$" at (0, 2.8), small
+write "$\\text{Point of Discontinuity } (x = a)$" at (-0.4, 3.6)
+write "$\\lim_{x \\to a} f(x) \\neq f(a) \\text{ or limit DNE}$" at (0.4, 3.2), small
 write "$\\text{Discontinuity of the First Kind}$" at (-3.2, 0.85) in blue
 write "$f(a^-), f(a^+) \\in \\mathbb{R} \\text{ both exist \\& finite}$" at (-3.2, 0.3), small
 write "$\\text{Discontinuity of the Second Kind}$" at (3.2, 1) in red
@@ -311,7 +311,6 @@ $$\tilde{f}(x) := \begin{cases} f(x), & x \in E \setminus \{a\} \\ L, & x = a \e
 ### 2. Discontinuity of the First Kind (Jump Discontinuity)
 A point $a \in E'$ is a discontinuity of the first kind (or simple jump) if the one-sided limits $f(a^-)$ and $f(a^+)$ both exist as finite real numbers, but fail to coincide:
 $$f(a^-) \in \mathbb{R}, \quad f(a^+) \in \mathbb{R}, \quad \text{and} \quad f(a^-) \ne f(a^+) \tag{8}$$
-
 Here, the jump dislocation magnitude is non-zero: $|\Delta f(a)| = |f(a^+) - f(a^-)| > 0$. No isolated redefinition of $f(a)$ can restore continuity.
 
 ### 3. Discontinuity of the Second Kind
@@ -412,7 +411,7 @@ $$f(y_n) = \sin(\pi n) = 0 \implies \lim_{n \to \infty} f(y_n) = 0 \tag{15}$$
 Because distinct sequences converging to the same input point yield image sequences converging to disparate values ($1 \ne 0$), the two-sided limit does not exist, creating an essential discontinuity of the second kind.
 
 ---
-# Applications of Continuity
+# Applications of Continuity at Point
 
 ### Quantitative Finance: Asset Continuum vs. Order Book Microstructure and Binary Payoffs
 In continuous-time financial models, asset valuations $S$ are idealized as spanning the positive continuum $\mathbb{R}_{>0}$. However, exchange matching engines operate on a discrete tick grid $E = \tau \mathbb{Z} = \{0, \tau, 2\tau, \dots\}$, where $\tau > 0$ is the minimum tick size (e.g., $\tau = \$0.01$). 
