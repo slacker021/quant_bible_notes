@@ -27,7 +27,7 @@ P(x) := u(x) v(x), \quad \forall x \in I \tag{3}
 \end{gather}
 $$
 
-Because $u$ and $v$ are differentiable on $I$, the [[Proof of The Product Rule of Differentiation|Product Rule of Differential Calculus]] implies that $P$ is differentiable at every point $x \in I$, with derivative:
+Because $u$ and $v$ are differentiable on $I$, the [[Proof of The Leibniz Product Rule|Product Rule of Differential Calculus]] implies that $P$ is differentiable at every point $x \in I$, with derivative:
 $$
 \begin{gather}
 P'(x) = \frac{d}{dx} \big( u(x) v(x) \big) = u'(x) v(x) + u(x) v'(x) \quad \forall x \in I \tag{4}

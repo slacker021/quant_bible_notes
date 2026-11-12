@@ -16,7 +16,7 @@ $$
 \end{gather}
 $$
 
-Because $\varphi$ is differentiable on $J$ with values in $I$, and $F$ is differentiable on $I$, the [[Proof of the Chain Rule for Differentiable Functions|Chain Rule of Differential Calculus]] implies that $\Phi$ is differentiable at every point $t \in J$.
+Because $\varphi$ is differentiable on $J$ with values in $I$, and $F$ is differentiable on $I$, the [[Proof of The Chain Rule|Chain Rule of Differential Calculus]] implies that $\Phi$ is differentiable at every point $t \in J$.
 
 Computing the derivative of $\Phi$ with respect to $t$ gives:
 $$

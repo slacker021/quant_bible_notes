@@ -35,7 +35,7 @@ $$
 \end{gather}
 $$
 
-The restriction of $H$ to $[x_0, x]$ satisfies the hypotheses of [[Proof of Lagrange's Mean-Value Theorem|Lagrange's Mean-Value Theorem]]:
+The restriction of $H$ to $[x_0, x]$ satisfies the hypotheses of [[Proof of Lagrange's Finite-Increment Theorem|Lagrange's Mean-Value Theorem]]:
 1. $H$ is continuous on $[x_0, x]$ because differentiability on $I$ implies continuity on $I$.
 2. $H$ is differentiable on the open interval $(x_0, x)$ because $(x_0, x) \subset I$.
 

@@ -74,7 +74,7 @@ $$
 ### The Darboux Continuity Constraint for Primitives
 A fundamental question arises: Does every real mapping $f: I \to \mathbb{R}$ admit a primitive? The answer is negative. The existence of an antiderivative imposes rigid structural constraints upon the local and global geometry of $f$.
 
-By [[Chapter 3 - The Basic Theorems of Differential Calculus#Darboux's Intermediate Value Theorem for Derivatives|Darboux's Theorem on Derivatives]], the derivative of any everywhere differentiable function on an interval possesses the *intermediate value property* (the Darboux property). Specifically, if $f = F'$, then for any two points $a, b \in I$ with $a < b$, the image $f([a, b])$ contains the entire closed interval bounded by $f(a)$ and $f(b)$.
+By [[Chapter 3 - The Basic Theorems of Differential Calculus#The Darboux Intermediate-Value Property of Derivatives|Darboux's Theorem on Derivatives]], the derivative of any everywhere differentiable function on an interval possesses the *intermediate value property* (the Darboux property). Specifically, if $f = F'$, then for any two points $a, b \in I$ with $a < b$, the image $f([a, b])$ contains the entire closed interval bounded by $f(a)$ and $f(b)$.
 
 $$
 \begin{gather}
@@ -352,103 +352,3 @@ $$
 $$
 (see [[Proof of Chebyshev's Differential Binomial Theorem]])
 
----
-# Applications of Antidifferentiation
-
-### Classical Mechanics: Escape Velocity and Potential Wells
-In classical gravitation and celestial mechanics, the motion of a test body of mass $m$ traversing a radially symmetric gravitational field governed by Newton's law of universal gravitation is dictated by the nonlinear differential equation:
-$$
-\begin{gather}
-m \frac{d^2 r}{dt^2} = -\frac{G M m}{r^2}.
-\end{gather}
-$$
-Multiplying both sides by the velocity $\frac{dr}{dt}$ transforms the second-order dynamical equation into an exact primitive problem:
-$$
-\begin{gather}
-\frac{d}{dt}\left( \frac{1}{2} m \left(\frac{dr}{dt}\right)^2 \right) = \frac{d}{dt}\left( \frac{G M m}{r} \right).
-\end{gather}
-$$
-Integrating across the temporal domain yields the conservation of total mechanical energy:
-$$
-\begin{gather}
-E = \frac{1}{2} m v(r)^2 - \frac{G M m}{r} = \text{constant}.
-\end{gather}
-$$
-To determine the escape velocity from the surface of a celestial body of radius $R_0$, the total energy must satisfy $E \ge 0$. Setting $E = 0$ yields the velocity field:
-$$
-\begin{gather}
-v(r) = \frac{dr}{dt} = \sqrt{\frac{2 G M}{r}}.
-\end{gather}
-$$
-Separating variables produces the temporal duration primitive:
-$$
-\begin{gather}
-t(r) = \int \sqrt{\frac{r}{2GM}} \, dr = \frac{1}{\sqrt{2GM}} \int r^{1/2} \, dr = \frac{2}{3\sqrt{2GM}} r^{3/2} + C.
-\end{gather}
-$$
-This exact algebraic primitive provides the temporal trajectory $t(r)$ for radial parabolic ejection without resorting to numerical approximation.
-
-### Thermodynamics: Clausius-Clapeyron Phase Equilibrium
-The differential thermodynamic equilibrium between two coexisting phases of a pure substance is governed by the Clausius-Clapeyron equation:
-$$
-\begin{gather}
-\frac{dP}{dT} = \frac{\Delta H_{\text{vap}}}{T \Delta V}.
-\end{gather}
-$$
-Under the ideal gas assumption for the vapor phase ($V_{\text{gas}} \gg V_{\text{liquid}}$ with $V_{\text{gas}} = \frac{R T}{P}$) and assuming a temperature-dependent vaporization enthalpy modeled by Kirchhoff's thermochemical law $\Delta H_{\text{vap}}(T) = \Delta H_0 + \Delta C_p (T - T_0)$, the differential equation assumes the separable form:
-$$
-\begin{gather}
-\frac{dP}{P} = \frac{\Delta H_0 - \Delta C_p T_0 + \Delta C_p T}{R T^2} \, dT.
-\end{gather}
-$$
-Decomposing into partial fractions over the temperature domain produces:
-$$
-\begin{gather}
-\int \frac{dP}{P} = \frac{\Delta H_0 - \Delta C_p T_0}{R} \int \frac{dT}{T^2} + \frac{\Delta C_p}{R} \int \frac{dT}{T}.
-\end{gather}
-$$
-Evaluating the elementary primitives yields the saturation vapor pressure function:
-$$
-\begin{gather}
-\ln P(T) = -\frac{\Delta H_0 - \Delta C_p T_0}{R T} + \frac{\Delta C_p}{R} \ln T + C_0.
-\end{gather}
-$$
-
-### Relativistic Mechanics: Perihelion Orbital Precession
-In general relativity and post-Newtonian orbital mechanics, the trajectory of a test particle orbiting a central mass $M$ in the equatorial plane is described using the inverse radial coordinate $u(\phi) = \frac{1}{r(\phi)}$. The Binet orbital equation incorporating the Schwarzschild general relativistic correction is:
-$$
-\begin{gather}
-\frac{d^2 u}{d\phi^2} + u = \frac{G M}{h^2} + 3 \frac{G M}{c^2} u^2.
-\end{gather}
-$$
-Multiplying by the derivative factor $\frac{du}{d\phi}$ produces an exact primitive:
-$$
-\begin{gather}
-\frac{d}{d\phi}\left( \frac{1}{2} \left(\frac{du}{d\phi}\right)^2 + \frac{1}{2} u^2 - \frac{G M}{h^2} u - \frac{G M}{c^2} u^3 \right) = 0.
-\end{gather}
-$$
-Setting the integration constant to an effective orbital energy parameter $\mathcal{E}$ yields the first-order differential equation:
-$$
-\begin{gather}
-\left(\frac{du}{d\phi}\right)^2 = 2 \frac{G M}{c^2} u^3 - u^2 + \frac{2GM}{h^2} u + 2\mathcal{E} =: P_3(u).
-\end{gather}
-$$
-The orbital angular displacement $\phi(u)$ is expressed by the primitive of the reciprocal quadratic-cubic irrational:
-$$
-\begin{gather}
-\phi(u) = \int \frac{du}{\sqrt{P_3(u)}}.
-\end{gather}
-$$
-Because $P_3(u)$ is a cubic polynomial with three distinct real roots $u_1 < u_2 \le u \le u_3$, this integral cannot be evaluated in terms of elementary circular functions (which would yield closed Keplerian ellipses). By Chebyshev's theorem, the primitive constitutes an *elliptic integral of the first kind*. Under the transformation:
-$$
-\begin{gather}
-u = u_2 + (u_3 - u_2) \sin^2 \theta,
-\end{gather}
-$$
-the differential irrational form reduces to Legendre's canonical elliptic integral:
-$$
-\begin{gather}
-\phi = \frac{2}{\sqrt{u_3 - u_1}} \int \frac{d\theta}{\sqrt{1 - k^2 \sin^2 \theta}}, \quad \text{with } k^2 = \frac{u_3 - u_2}{u_3 - u_1},
-\end{gather}
-$$
-whose period over $\theta \in [0, \pi]$ generates the perihelion advance $\Delta \phi = 2\pi + \frac{6\pi G M}{c^2 a (1 - e^2)}$ per orbit.

@@ -33,7 +33,7 @@ $$
 \end{gather}
 $$
 
-Because $\varphi$ is differentiable at each $t \in J$ with image $\varphi(t) \in I$, and $F$ is differentiable at each point of $I$, the composite function $\Phi$ is differentiable at every $t \in J$ by the [[Proof of the Chain Rule for Differentiable Functions|Chain Rule of Differential Calculus]]. 
+Because $\varphi$ is differentiable at each $t \in J$ with image $\varphi(t) \in I$, and $F$ is differentiable at each point of $I$, the composite function $\Phi$ is differentiable at every $t \in J$ by the [[Proof of The Chain Rule|Chain Rule of Differential Calculus]]. 
 
 Evaluating the derivative of $\Phi$ with respect to $t$ yields:
 $$
