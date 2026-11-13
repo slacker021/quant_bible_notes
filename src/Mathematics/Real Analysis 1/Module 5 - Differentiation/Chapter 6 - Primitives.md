@@ -57,6 +57,7 @@ write "$F(x) - C_1$" at (2.05, -1.3) in teal, right
 write "$F(x)$" at (2.55, 3.65) in orange, right
 write "$F(x) + C_2$" at (1.55, 4.7) in green, right
 write "$\\text{Identical Slopes: } F'(x_0) = f(x_0)$" at (-2.38, -2.1) in gray, right
+
 ```
 
 The transformation of primitives under smooth coordinate changes provides an essential invariance property:
@@ -125,9 +126,10 @@ plot f(x) = x^2 * sin(1.0 / (abs(x) + 0.04)), from x = -1.2 to 1.2, in cyan, thi
 plot envelope_pos(x) = x^2, from x = -1.2 to 1.2, in orange, dashed
 plot envelope_neg(x) = -x^2, from x = -1.2 to 1.2, in orange, dashed
 mark (0.0, 0.0), in green, large
-write "$F(x) = x^2 \sin(1/x)$" at (0.45, 0.95), in cyan, right
-write "$y = \pm x^2$" at (0.85, 0.65), in orange, right
+write "$F(x) = x^2 \\sin(1/x)$" at (0.45, 0.95) in cyan, right
+write "$y = \\pm x^2$" at (0.85, 0.65) in orange, right
 write "$F'(0) = 0 \\text{ exists everywhere}$" at (-0.66, 0.68) in green, right
+
 ```
 
 ---
@@ -303,9 +305,10 @@ mark (-1.0, 0.0), in green, large
 mark (0.0, 1.2), in orange, large
 mark (0.47, 0.88), in cyan, large
 write "$(-1, 0)$" at (-1.1, -0.05) in green, left
-write "$(0, t)$" at (0.1, 1.35), in orange, right
-write "$(\cos x, \sin x)$" at (0.6, 1.05), in cyan, right
+write "$(0, t)$" at (0.1, 1.35) in orange, right
+write "$(\\cos x, \\sin x)$" at (0.6, 1.05) in cyan, right
 write "$\\text{Projection Ray: } v = t(u + 1)$" at (-2.18, 1.35) in orange, right
+
 ```
 
 Although the substitution $t = \tan(x/2)$ is algebraically universal, it can inflate polynomial degrees. When integrands possess parity symmetries, specialized alternative transformations reduce computational overhead:

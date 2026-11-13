@@ -281,12 +281,12 @@ $$
 \begin{gather}
 \textbf{Proposition: Derivatives of the Six Hyperbolic Functions} \\[5mm]
 \text{The derivatives of the six fundamental hyperbolic functions are given by:} \\[3.5mm]
-\frac{d}{dx} \sinh(x) = \cosh(x) \tag{26} \\[2mm]
-\frac{d}{dx} \cosh(x) = \sinh(x) \tag{27} \\[2mm]
-\frac{d}{dx} \tanh(x) = \frac{1}{\cosh^2(x)} = \operatorname{sech}^2(x) = 1 - \tanh^2(x) \tag{28} \\[2mm]
-\frac{d}{dx} \coth(x) = -\frac{1}{\sinh^2(x)} = -\operatorname{csch}^2(x) = 1 - \coth^2(x), \quad x \neq 0 \tag{29} \\[2mm]
-\frac{d}{dx} \operatorname{sech}(x) = -\operatorname{sech}(x)\tanh(x) \tag{30} \\[2mm]
-\frac{d}{dx} \operatorname{csch}(x) = -\operatorname{csch}(x)\coth(x), \quad x \neq 0 \tag{31}
+\frac{d}{dx} \sinh(x) = \cosh(x) \\[2mm]
+\frac{d}{dx} \cosh(x) = \sinh(x) \\[2mm]
+\frac{d}{dx} \tanh(x) = \frac{1}{\cosh^2(x)} = \operatorname{sech}^2(x) = 1 - \tanh^2(x) \\[2mm]
+\frac{d}{dx} \coth(x) = -\frac{1}{\sinh^2(x)} = -\operatorname{csch}^2(x) = 1 - \coth^2(x), \quad x \neq 0 \\[2mm]
+\frac{d}{dx} \operatorname{sech}(x) = -\operatorname{sech}(x)\tanh(x) \\[2mm]
+\frac{d}{dx} \operatorname{csch}(x) = -\operatorname{csch}(x)\coth(x), \quad x \neq 0
 \end{gather}
 $$
 (see [[Proof of Derivatives of the Six Hyperbolic Functions]])
@@ -310,10 +310,10 @@ $$
 These principal inverses satisfy the standard complementarity and reciprocal relations:
 $$
 \begin{gather}
-\arcsin(x) + \arccos(x) = \frac{\pi}{2}, \quad \forall x \in [-1, 1] \tag{32} \\[2mm]
-\arctan(x) + \operatorname{arccot}(x) = \frac{\pi}{2}, \quad \forall x \in \mathbb{R} \tag{33} \\[2mm]
-\operatorname{arcsec}(x) + \operatorname{arccsc}(x) = \frac{\pi}{2}, \quad \forall |x| \ge 1 \tag{34} \\[2mm]
-\operatorname{arcsec}(x) = \arccos\left(\frac{1}{x}\right), \quad \operatorname{arccsc}(x) = \arcsin\left(\frac{1}{x}\right), \quad \forall |x| \ge 1 \tag{35}
+\arcsin(x) + \arccos(x) = \frac{\pi}{2}, \quad \forall x \in [-1, 1] \tag{26} \\[2mm]
+\arctan(x) + \operatorname{arccot}(x) = \frac{\pi}{2}, \quad \forall x \in \mathbb{R} \tag{27} \\[2mm]
+\operatorname{arcsec}(x) + \operatorname{arccsc}(x) = \frac{\pi}{2}, \quad \forall |x| \ge 1 \tag{28} \\[2mm]
+\operatorname{arcsec}(x) = \arccos\left(\frac{1}{x}\right), \quad \operatorname{arccsc}(x) = \arcsin\left(\frac{1}{x}\right), \quad \forall |x| \ge 1 \tag{29}
 \end{gather}
 $$
 
@@ -323,12 +323,12 @@ $$
 \begin{gather}
 \textbf{Proposition: Derivatives of the Inverse Circular Functions} \\[5mm]
 \text{The derivatives of the six inverse circular functions on their interior domains are:} \\[3.5mm]
-\frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}}, \quad x \in (-1, 1) \tag{36} \\[2mm]
-\frac{d}{dx} \arccos(x) = -\frac{1}{\sqrt{1 - x^2}}, \quad x \in (-1, 1) \tag{37} \\[2mm]
-\frac{d}{dx} \arctan(x) = \frac{1}{1 + x^2}, \quad x \in \mathbb{R} \tag{38} \\[2mm]
-\frac{d}{dx} \operatorname{arccot}(x) = -\frac{1}{1 + x^2}, \quad x \in \mathbb{R} \tag{39} \\[2mm]
-\frac{d}{dx} \operatorname{arcsec}(x) = \frac{1}{|x|\sqrt{x^2 - 1}}, \quad |x| > 1 \tag{40} \\[2mm]
-\frac{d}{dx} \operatorname{arccsc}(x) = -\frac{1}{|x|\sqrt{x^2 - 1}}, \quad |x| > 1 \tag{41}
+\frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}}, \quad x \in (-1, 1) \\[2mm]
+\frac{d}{dx} \arccos(x) = -\frac{1}{\sqrt{1 - x^2}}, \quad x \in (-1, 1) \\[2mm]
+\frac{d}{dx} \arctan(x) = \frac{1}{1 + x^2}, \quad x \in \mathbb{R} \\[2mm]
+\frac{d}{dx} \operatorname{arccot}(x) = -\frac{1}{1 + x^2}, \quad x \in \mathbb{R} \\[2mm]
+\frac{d}{dx} \operatorname{arcsec}(x) = \frac{1}{|x|\sqrt{x^2 - 1}}, \quad |x| > 1 \\[2mm]
+\frac{d}{dx} \operatorname{arccsc}(x) = -\frac{1}{|x|\sqrt{x^2 - 1}}, \quad |x| > 1
 \end{gather}
 $$
 (see [[Proof of Derivatives of the Inverse Circular Functions]])
@@ -355,10 +355,10 @@ $$
 Through purely algebraic and functional manipulations, the inverse hyperbolic functions satisfy structural reciprocal relations analogous to their circular counterparts:
 $$
 \begin{gather}
-\operatorname{arsech}(x) = \operatorname{arcosh}\left(\frac{1}{x}\right), \quad \forall x \in (0, 1] \tag{42} \\[2mm]
-\operatorname{arcsch}(x) = \operatorname{arsinh}\left(\frac{1}{x}\right), \quad \forall x \in \mathbb{R} \setminus \{0\} \tag{43} \\[2mm]
-\operatorname{arcoth}(x) = \operatorname{artanh}\left(\frac{1}{x}\right), \quad \forall |x| > 1 \tag{44} \\[2mm]
-\operatorname{artanh}(x) \pm \operatorname{artanh}(y) = \operatorname{artanh}\left(\frac{x \pm y}{1 \pm xy}\right), \quad \forall x, y \in (-1, 1) \tag{45}
+\operatorname{arsech}(x) = \operatorname{arcosh}\left(\frac{1}{x}\right), \quad \forall x \in (0, 1] \tag{30} \\[2mm]
+\operatorname{arcsch}(x) = \operatorname{arsinh}\left(\frac{1}{x}\right), \quad \forall x \in \mathbb{R} \setminus \{0\} \tag{31} \\[2mm]
+\operatorname{arcoth}(x) = \operatorname{artanh}\left(\frac{1}{x}\right), \quad \forall |x| > 1 \tag{32} \\[2mm]
+\operatorname{artanh}(x) \pm \operatorname{artanh}(y) = \operatorname{artanh}\left(\frac{x \pm y}{1 \pm xy}\right), \quad \forall x, y \in (-1, 1) \tag{33}
 \end{gather}
 $$
 
@@ -368,12 +368,12 @@ $$
 \begin{gather}
 \textbf{Proposition: Derivatives of the Inverse Hyperbolic Functions} \\[5mm]
 \text{The derivatives of the six inverse hyperbolic functions on their interior domains are:} \\[3.5mm]
-\frac{d}{dx} \operatorname{arsinh}(x) = \frac{1}{\sqrt{x^2 + 1}}, \quad x \in \mathbb{R} \tag{46} \\[2mm]
-\frac{d}{dx} \operatorname{arcosh}(x) = \frac{1}{\sqrt{x^2 - 1}}, \quad x \in (1, \infty) \tag{47} \\[2mm]
-\frac{d}{dx} \operatorname{artanh}(x) = \frac{1}{1 - x^2}, \quad x \in (-1, 1) \tag{48} \\[2mm]
-\frac{d}{dx} \operatorname{arcoth}(x) = \frac{1}{1 - x^2} = -\frac{1}{x^2 - 1}, \quad |x| > 1 \tag{49} \\[2mm]
-\frac{d}{dx} \operatorname{arsech}(x) = -\frac{1}{x\sqrt{1 - x^2}}, \quad x \in (0, 1) \tag{50} \\[2mm]
-\frac{d}{dx} \operatorname{arcsch}(x) = -\frac{1}{|x|\sqrt{1 + x^2}}, \quad x \neq 0 \tag{51}
+\frac{d}{dx} \operatorname{arsinh}(x) = \frac{1}{\sqrt{x^2 + 1}}, \quad x \in \mathbb{R} \\[2mm]
+\frac{d}{dx} \operatorname{arcosh}(x) = \frac{1}{\sqrt{x^2 - 1}}, \quad x \in (1, \infty) \\[2mm]
+\frac{d}{dx} \operatorname{artanh}(x) = \frac{1}{1 - x^2}, \quad x \in (-1, 1) \\[2mm]
+\frac{d}{dx} \operatorname{arcoth}(x) = \frac{1}{1 - x^2} = -\frac{1}{x^2 - 1}, \quad |x| > 1 \\[2mm]
+\frac{d}{dx} \operatorname{arsech}(x) = -\frac{1}{x\sqrt{1 - x^2}}, \quad x \in (0, 1) \\[2mm]
+\frac{d}{dx} \operatorname{arcsch}(x) = -\frac{1}{|x|\sqrt{1 + x^2}}, \quad x \neq 0
 \end{gather}
 $$
 (see [[Proof of Derivatives of the Inverse Hyperbolic Functions]])
@@ -432,7 +432,7 @@ $$
 When a physical trajectory is represented parametrically as $\vec{r}(t) = (x(t), y(t))$, the spatial tangent slope of the orbit in Cartesian coordinates is given by the ratio of component velocities:
 $$
 \begin{gather}
-\frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{\dot{y}(t)}{\dot{x}(t)} \tag{52}
+\frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{\dot{y}(t)}{\dot{x}(t)} \tag{34}
 \end{gather}
 $$
 provided that the horizontal velocity $\dot{x}(t)$ is non-zero. The parameter $t$ acts as a gauge, and the invariance of the first differential guarantees that the spatial slope is independent of the speed at which the curve is traversed.
@@ -461,13 +461,13 @@ A single derivative provides the best linear approximation to a mapping near an 
 Let $f: E \to \mathbb{R}$ be differentiable on an open interval $E \subseteq \mathbb{R}$. The derivative $f': E \to \mathbb{R}$ is itself a real-valued mapping. If $f'$ is differentiable at an anchor point $x_0 \in E$, its derivative is termed the *second derivative* of $f$ at $x_0$:
 $$
 \begin{gather}
-f''(x_0) := \frac{d^2 f}{dx^2}(x_0) := (f')'(x_0) \tag{53}
+f''(x_0) := \frac{d^2 f}{dx^2}(x_0) := (f')'(x_0) \tag{35}
 \end{gather}
 $$
 Recursively, for any integer $n \in \mathbb{N}$, the $n$-th derivative $f^{(n)}(x_0)$ is defined by:
 $$
 \begin{gather}
-f^{(n)}(x_0) := \big(f^{(n-1)}\big)'(x_0) \tag{54}
+f^{(n)}(x_0) := \big(f^{(n-1)}\big)'(x_0) \tag{36}
 \end{gather}
 $$
 with the convention that $f^{(0)} := f$.
@@ -476,7 +476,7 @@ with the convention that $f^{(0)} := f$.
 For an independent coordinate $x$, the increment $dx = h$ is a constant scalar that does not vary with $x$. Under this condition, the higher differentials are defined recursively by $d^n f(x) := d(d^{n-1} f(x))$, producing:
 $$
 \begin{gather}
-d^n f(x) = f^{(n)}(x) \, (dx)^n \tag{55}
+d^n f(x) = f^{(n)}(x) \, (dx)^n \tag{37}
 \end{gather}
 $$
 
@@ -486,7 +486,7 @@ $$
 >Suppose $z = f(y)$ and $y = g(x)$. Differentiating $dz = f'(y) \, dy$ via the product rule yields:
 >$$
 >\begin{gather}
->d^2 z = d\big(f'(y) \, dy\big) = f''(y) \, (dy)^2 + f'(y) \, d^2 y \tag{56}
+>d^2 z = d\big(f'(y) \, dy\big) = f''(y) \, (dy)^2 + f'(y) \, d^2 y \tag{38}
 >\end{gather}
 >$$
 >The second differential $d^2 z$ matches the classical form $f''(y) (dy)^2$ if and only if $d^2 y \equiv 0$, which occurs precisely when $y = g(x)$ is an affine linear function ($g''(x) = 0$). For non-linear transformations, the second-order term $f'(y) \, d^2 y$ introduces an inertial acceleration component that distorts the pure differential form.
@@ -535,12 +535,12 @@ $$
 The collection of real-valued functions defined on an interval $I$ forms a hierarchy of nested function spaces:
 $$
 \begin{gather}
-C^0(I) \supset D^1(I) \supset C^1(I) \supset \cdots \supset C^k(I) \supset \cdots \supset C^\infty(I) \supset C^\omega(I) \tag{57}
+C^0(I) \supset D^1(I) \supset C^1(I) \supset \cdots \supset C^k(I) \supset \cdots \supset C^\infty(I) \supset C^\omega(I) \tag{39}
 \end{gather}
 $$
 where $C^0$ denotes continuous functions, $D^1$ denotes differentiable functions, $C^k$ denotes functions whose $k$-th derivative is continuous, $C^\infty$ denotes smooth functions possessing derivatives of all orders, and $C^\omega$ denotes real-analytic functions that coincide locally with their Taylor power series.
 
-Every inclusion in the sequence of step 57 is strict.
+Every inclusion in the sequence of step 39 is strict.
 
 ##### Pathological Class $D^1 \setminus C^1$: Differentiability Without Derivative Continuity
 In elementary analysis, it is frequently presumed that if a function possesses a derivative everywhere, that derivative must be continuous. This intuition is false:
@@ -601,18 +601,19 @@ axes on the edges
 size 12 x 8
 plot f(x) = 0.5*x^2 + 0.5, from x = 0.2 to 3.2, in cyan, very thick
 plot finv(x) = sqrt(max(0, 2*(x - 0.5))), from x = 0.51 to 5.8, in orange, very thick
-plot diag(x) = x, from x = 0 to 6.0, in orchid, dashed
+plot diag(x) = x, from x = 0 to 6.0, in purple, dashed
 plot tan1(x) = 1.0 + 1.0*(x - 1.0), from x = 0.0 to 3.5, in green, thick
 plot tan2(x) = 1.0 + 1.0*(x - 1.0), from x = 0.0 to 3.5, in green, thick
 draw a line from (1.0, 0) to (1.0, 1.0) in gray, dashed
 draw a line from (0, 1.0) to (1.0, 1.0) in gray, dashed
 raw tool {"type":"points","name":"P1","color":"green","points":"(1.0, 1.0);","size":"large"}
-write "$y = x$" at (5.5, 5.8) in orchid, right
+write "$y = x$" at (5.5, 5.8) in purple, right
 write "$y= f(x)$" at (2.4, 4.5) in teal, left
 write "$y = f^{-1}(x)$" at (5.3, 2.65) in orange, below
-write "$(x_0, y_0)$" at (1.8, 2.8) in white, left
-write "$(y_0, x_0)$" at (2.8, 1.7) in white, right
+write "$(x_0, y_0)$" at (1.8, 2.8) in gray, left
+write "$(y_0, x_0)$" at (2.8, 1.7) in gray, right
 write "$\\text{Slope: } m$" at (0.8, 1.6) in green, left
+
 ```
 
 ### The Geometry of the Hyperbolic Sine and Cosine
@@ -626,16 +627,17 @@ axes on the edges
 size 12 x 8
 plot ch(x) = 0.5*(exp(x) + exp(-x)), from x = -2.3 to 2.3, in cyan, very thick
 plot sh(x) = 0.5*(exp(x) - exp(-x)), from x = -2.3 to 2.3, in orange, very thick
-plot asymp1(x) = 0.5*exp(x), from x = -1.0 to 2.4, in orchid, dashed
-plot asymp2(x) = 0.5*exp(-x), from x = -2.4 to 1.0, in orchid, dashed
+plot asymp1(x) = 0.5*exp(x), from x = -1.0 to 2.4, in purple, dashed
+plot asymp2(x) = 0.5*exp(-x), from x = -2.4 to 1.0, in purple, dashed
 draw a line from (-3.0, 1.0) to (3.0, 1.0) in gray, dashed
 raw tool {"type":"points","name":"Apex","points":"(0.0, 1.0);","size":"large"}
-write "$y = \cosh(x)$" at (1.7, 3.8) in cyan, left
-write "$y = \sinh(x)$" at (1.8, 2.2) in orange, right
-write "$y = \frac{1}{2}e^x$" at (2.3, 4.8) in orchid, right
-write "$y = \frac{1}{2}e^{-x}$" at (-2.3, 4.8) in orchid, left
-write "$(0, 1)$" at (0.0, 0.6) in white, center
-write "$\cosh^2(x) - \sinh^2(x) = 1$" at (0.0, -3.2) in green, center
+write "$y = \\cosh(x)$" at (1.7, 3.8) in cyan, left
+write "$y = \\sinh(x)$" at (1.8, 2.2) in orange, right
+write "$y = \\frac{1}{2}e^x$" at (2.3, 4.8) in purple, right
+write "$y = \\frac{1}{2}e^{-x}$" at (-2.3, 4.8) in purple, left
+write "$(0, 1)$" at (0.0, 0.6) in gray, center
+write "$\\cosh^2(x) - \\sinh^2(x) = 1$" at (0.0, -3.2) in green, center
+
 ```
 
 ### The Cauchy Flatness Curve
@@ -651,10 +653,11 @@ plot c(x) = (abs(x) < 0.05 ? 0.0 : exp(-1.0/(x^2))), from x = -3.2 to 3.2, in cy
 plot flat(x) = 0.0, from x = -1.2 to 1.2, in green, thick
 draw a line from (-3.0, 1.0) to (3.0, 1.0) in gray, dashed
 raw tool {"type":"points","name":"Origin","points":"(0.0, 0.0);","size":"large"}
-write "$y = \exp\left(-\frac{1}{x^2}\right)$" at (2.0, 1.15) in cyan, right
+write "$y = \\exp\\left(-\\frac{1}{x^2}\\right)$" at (2.0, 1.15) in cyan, right
 write "$\\text{Asymptote } y = 1$" at (-1, 1.13) in gray, left
-write "$\text{Infinitely Flat Apex: } f^{(n)}(0) = 0, \; \forall n \in \mathbb{N}$" at (0.0, -0.3) in green, center
-write "$(0,0)$" at (0.0, 0.15) in white, center
+write "$\\text{Infinitely Flat Apex: } f^{(n)}(0) = 0, \\; \\forall n \\in \\mathbb{N}$" at (0.0, -0.3) in green, center
+write "$(0,0)$" at (0.0, 0.15) in gray, center
+
 ```
 
 ---
@@ -666,7 +669,7 @@ In fixed-income portfolio management, the price sensitivity of a bond to shifts 
 Applying the rational power rule and linearity established in this chapter, the first derivative of the price with respect to yield is:
 $$
 \begin{gather}
-\frac{dP}{dy} = -\sum_{k=1}^m t_k C_k (1 + y)^{-(t_k + 1)} = -\frac{1}{1 + y} \sum_{k=1}^m t_k C_k (1 + y)^{-t_k} \tag{58}
+\frac{dP}{dy} = -\sum_{k=1}^m t_k C_k (1 + y)^{-(t_k + 1)} = -\frac{1}{1 + y} \sum_{k=1}^m t_k C_k (1 + y)^{-t_k} \tag{40}
 \end{gather}
 $$
 The *Modified Duration* $D^* := -\frac{1}{P}\frac{dP}{dy}$ captures the first-order linear approximation of the price swing. However, for non-infinitesimal interest rate shocks, the linear approximation introduces systematic pricing error due to the non-linear curvature of the discounting function.
@@ -674,19 +677,19 @@ The *Modified Duration* $D^* := -\frac{1}{P}\frac{dP}{dy}$ captures the first-or
 Applying the differentiation operator a second time via the power rule produces the second-order derivative:
 $$
 \begin{gather}
-\frac{d^2 P}{dy^2} = \sum_{k=1}^m t_k (t_k + 1) C_k (1 + y)^{-(t_k + 2)} > 0 \tag{59}
+\frac{d^2 P}{dy^2} = \sum_{k=1}^m t_k (t_k + 1) C_k (1 + y)^{-(t_k + 2)} > 0 \tag{41}
 \end{gather}
 $$
 The financial metric governing this curvature is the *Dollar Convexity*, normalized per dollar of investment as:
 $$
 \begin{gather}
-C := \frac{1}{P} \frac{d^2 P}{dy^2} = \frac{1}{P (1 + y)^2} \sum_{k=1}^m t_k (t_k + 1) \frac{C_k}{(1 + y)^{t_k}} \tag{60}
+C := \frac{1}{P} \frac{d^2 P}{dy^2} = \frac{1}{P (1 + y)^2} \sum_{k=1}^m t_k (t_k + 1) \frac{C_k}{(1 + y)^{t_k}} \tag{42}
 \end{gather}
 $$
 By virtue of the second-order differential expansion $dP = \frac{dP}{dy} \Delta y + \frac{1}{2} \frac{d^2 P}{dy^2} (\Delta y)^2 + o\big((\Delta y)^2\big)$, the percentage return on the bond under a yield perturbation $\Delta y$ satisfies:
 $$
 \begin{gather}
-\frac{\Delta P}{P} \approx -D^* \, \Delta y + \frac{1}{2} C \, (\Delta y)^2 \tag{61}
+\frac{\Delta P}{P} \approx -D^* \, \Delta y + \frac{1}{2} C \, (\Delta y)^2 \tag{43}
 \end{gather}
 $$
 Because the second derivative is strictly positive ($C > 0$), bond prices are strictly convex functions of yield. The second-order term $\frac{1}{2} C (\Delta y)^2$ is always positive, demonstrating that a bond's price rises more when yields fall than it declines when yields rise by an identical magnitude. Quantitative risk desks utilize this second differential to construct gamma-neutral and convexity-hedged asset allocations.
@@ -695,31 +698,31 @@ Because the second derivative is strictly positive ($C > 0$), bond prices are st
 In special relativity, the velocity $u$ of a particle moving along a spatial axis cannot exceed the speed of light $c$. When composing velocities between inertial reference frames moving at relative speed $v$, Newtonian Galilean addition $u' = u + v$ fails. Instead, velocities combine according to the Einstein addition formula:
 $$
 \begin{gather}
-u' = \frac{u + v}{1 + \frac{uv}{c^2}} \tag{62}
+u' = \frac{u + v}{1 + \frac{uv}{c^2}} \tag{44}
 \end{gather}
 $$
-The non-linear structure of step 62 is identical to the addition identity for the hyperbolic tangent established in step 24:
+The non-linear structure of step 44 is identical to the addition identity for the hyperbolic tangent established in step 24:
 $$
 \begin{gather}
-\tanh(\theta_1 + \theta_2) = \frac{\tanh(\theta_1) + \tanh(\theta_2)}{1 + \tanh(\theta_1)\tanh(\theta_2)} \tag{63}
+\tanh(\theta_1 + \theta_2) = \frac{\tanh(\theta_1) + \tanh(\theta_2)}{1 + \tanh(\theta_1)\tanh(\theta_2)} \tag{45}
 \end{gather}
 $$
 By defining the dimensionless velocity $\beta := \frac{u}{c} \in (-1, 1)$, one introduces the *relativistic rapidity* $\theta$ via the inverse hyperbolic tangent mapping:
 $$
 \begin{gather}
-\theta := \operatorname{artanh}(\beta) = \operatorname{artanh}\left(\frac{u}{c}\right) \tag{64}
+\theta := \operatorname{artanh}(\beta) = \operatorname{artanh}\left(\frac{u}{c}\right) \tag{46}
 \end{gather}
 $$
-Under this functional transformation, the non-linear velocity composition law of step 62 linearizes completely:
+Under this functional transformation, the non-linear velocity composition law of step 44 linearizes completely:
 $$
 \begin{gather}
-\theta' = \theta_u + \theta_v \tag{65}
+\theta' = \theta_u + \theta_v \tag{47}
 \end{gather}
 $$
-Differentiating rapidity with respect to velocity using the derivative of the inverse hyperbolic tangent (step 48) and the Chain Rule yields:
+Differentiating rapidity with respect to velocity using the derivative of the inverse hyperbolic tangent from the Proposition on the Derivatives of the Inverse Hyperbolic Functions and the Chain Rule yields:
 $$
 \begin{gather}
-\frac{d\theta}{du} = \frac{d}{du}\operatorname{artanh}\left(\frac{u}{c}\right) = \frac{1}{1 - \left(\frac{u}{c}\right)^2} \cdot \frac{1}{c} = \frac{c}{c^2 - u^2} \tag{66}
+\frac{d\theta}{du} = \frac{d}{du}\operatorname{artanh}\left(\frac{u}{c}\right) = \frac{1}{1 - \left(\frac{u}{c}\right)^2} \cdot \frac{1}{c} = \frac{c}{c^2 - u^2} \tag{48}
 \end{gather}
 $$
 Evaluating the acceleration in rapidity coordinates reveals that while spatial acceleration $a = \frac{du}{dt}$ must decay to zero as $u \to c$ under a constant applied force, the rate of change of rapidity $\frac{d\theta}{d\tau}$ with respect to proper time $\tau$ remains invariant, reflecting constant proper force.
@@ -730,27 +733,27 @@ Consider the steady laminar flow of an incompressible viscous Newtonian fluid be
 The velocity field satisfies the second-order Navier-Stokes differential equation:
 $$
 \begin{gather}
-\mu \frac{d^2 u}{dy^2} = -G \tag{67}
+\mu \frac{d^2 u}{dy^2} = -G \tag{49}
 \end{gather}
 $$
 subject to the no-slip boundary conditions $u(-h) = u(h) = 0$, where $\mu > 0$ represents the dynamic shear viscosity. 
 
-Integrating step 67 produces the parabolic plane Poiseuille profile:
+Integrating step 49 produces the parabolic plane Poiseuille profile:
 $$
 \begin{gather}
-u(y) = \frac{G}{2\mu} \big(h^2 - y^2\big) \tag{68}
+u(y) = \frac{G}{2\mu} \big(h^2 - y^2\big) \tag{50}
 \end{gather}
 $$
-Applying the monomial differentiation rule to step 68 yields the transverse velocity gradient:
+Applying the monomial differentiation rule to step 50 yields the transverse velocity gradient:
 $$
 \begin{gather}
-\frac{du}{dy} = -\frac{G}{\mu} y \tag{69}
+\frac{du}{dy} = -\frac{G}{\mu} y \tag{51}
 \end{gather}
 $$
 According to Newton's law of viscosity, the local shear stress $\tau(y)$ exerted between adjacent fluid layers is proportional to the first derivative of velocity:
 $$
 \begin{gather}
-\tau(y) = \mu \frac{du}{dy} = -G y \tag{70}
+\tau(y) = \mu \frac{du}{dy} = -G y \tag{52}
 \end{gather}
 $$
 The shear stress varies linearly across the channel, vanishing at the central streamline $y = 0$ and attaining maximum shear magnitude $|\tau| = Gh$ at the solid boundaries. 
@@ -758,13 +761,13 @@ The shear stress varies linearly across the channel, vanishing at the central st
 The fluid *vorticity* $\vec{\omega} := \nabla \times \vec{v}$ measures the local rate of angular rotation of fluid elements. For plane flow, the vorticity vector is oriented along the binormal axis $z$, with magnitude:
 $$
 \begin{gather}
-\omega_z(y) = -\frac{du}{dy} = \frac{G}{\mu} y \tag{71}
+\omega_z(y) = -\frac{du}{dy} = \frac{G}{\mu} y \tag{53}
 \end{gather}
 $$
 Differentiating the vorticity once more yields the fluid rate-of-strain curvature:
 $$
 \begin{gather}
-\frac{d\omega_z}{dy} = -\frac{d^2 u}{dy^2} = \frac{G}{\mu} = \text{constant} \tag{72}
+\frac{d\omega_z}{dy} = -\frac{d^2 u}{dy^2} = \frac{G}{\mu} = \text{constant} \tag{54}
 \end{gather}
 $$
-The constancy of the second derivative of the velocity field in step 72 signifies that the shear deformation rate across adjacent lamina is uniform throughout the channel, a foundational principle in hydrodynamic lubrication and pipeline transport design.
+The constancy of the second derivative of the velocity field in step 54 signifies that the shear deformation rate across adjacent lamina is uniform throughout the channel, a foundational principle in hydrodynamic lubrication and pipeline transport design.

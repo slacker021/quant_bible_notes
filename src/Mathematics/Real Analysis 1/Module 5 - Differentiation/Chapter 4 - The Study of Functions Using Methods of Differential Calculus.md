@@ -194,8 +194,9 @@ write "$\\text{Interface } y = 0$" at (3.8, 0.4) in gray, right
 write "$\\text{Medium 1 } (c_1)$" at (1.4, 0.85) in teal, center
 write "$\\text{Medium 2 } (c_2)$" at (5.05, -0.95) in orange, center
 write "$(x, 0)$" at (3.35, 0.45) in green, center
-write "$\alpha_1$" at (2.5, 1.2) in cyan, center
-write "$\alpha_2$" at (3.5, -1.2) in orange, center
+write "$\\alpha_1$" at (2.5, 1.2) in cyan, center
+write "$\\alpha_2$" at (3.5, -1.2) in orange, center
+
 ```
 
 ### Classical Algebraic Inequalities via Differential Optimization
@@ -307,7 +308,7 @@ size 12 x 8
 plot f(x) = 0.15*x*x - 0.2*x + 1.2, from x = 0.8 to 6.8, in cyan, very thick
 draw a line from (1.5, 1.2375) to (6.2, 5.726), in orange, thick
 draw a line from (1.5, 1.2375) to (3.8, 2.606), in green, dashed
-draw a line from (3.8, 2.606) to (6.2, 5.726), in orchid, dashed
+draw a line from (3.8, 2.606) to (6.2, 5.726), in purple, dashed
 draw a line from (1.5, 0.0) to (1.5, 1.2375), in gray, dashed
 draw a line from (3.8, 0.0) to (3.8, 2.606), in gray, dashed
 draw a line from (6.2, 0.0) to (6.2, 5.726), in gray, dashed
@@ -320,7 +321,8 @@ write "$x_2$" at (6.2, 0.4) in gray, center
 write "$\\text{Secant Chord}$" at (3.5, 4.3) in orange, center
 write "$f(x)$" at (6.25, 6.55) in teal, center
 write "$\\text{Slope } k_1$" at (2.9, 1.3) in green, center
-write "$\text{Slope } k_2$" at (5.3, 3.8) in orchid, center
+write "$\\text{Slope } k_2$" at (5.3, 3.8) in purple, center
+
 ```
 
 ### Differential Criteria for Convexity
@@ -412,6 +414,7 @@ write "$\\text{Concave: } f''(x) < 0$" at (2.45, 1.35) in teal, center
 write "$\\text{Convex: } f''(x) > 0$" at (-2.4, -1.2) in teal, center
 write "$\\text{Inflection Point } (0, 0)$" at (-0.05, 0.05) in green, left
 write "$\\text{Inflexional Tangent } y = x$" at (0.1, -0.13) in orange, right
+
 ```
 
 ### Jensen's Generalized Convex Inequality
@@ -630,6 +633,7 @@ write "$\\text{Oblique Asymptote } y = x$" at (4.7, 5.2) in orange, left
 write "$x = -1$" at (-2.3, -2.7) in gray, right
 write "$x = 1$" at (1.1, 2.6) in gray, right
 write "$\\text{Inflection } (0, 0)$" at (-3.7, 4.8) in green, right
+
 ```
 
 ---
