@@ -685,11 +685,12 @@ mark (0.0, 0.0), in green, large
 mark (2.0, 4.0), in orange, large
 draw an arrow from (-0.28, 1.35) to (-0.05, 0.25) in green
 draw an arrow from (3, 3) to (2.07, 3.9) in orange
-write "$\text{Boundary Maximum } (-1, 1)$" at (-1.0, 1.5) in orchid, center
+write "$\\text{Boundary Maximum } (-1, 1)$" at (-1.0, 1.5) in purple, center
 write "$\\text{Interior Minimum: } f'(0) = 0$" at (-0.45, 1.55) in green, center
 write "$\\text{Corner Maximum } (2, 4)$" at (3.13, 2.7) in orange, center
 write "$\\text{Plateau of Non-Strict Extrema } y = 4$" at (2.1, 5.15) in orange, below
 write "$f(x) = x^2$" at (0.72, 3.05) in teal, right
+
 ```
 
 ### Rolle's Horizontal Tangency on Compact Intervals
@@ -711,9 +712,10 @@ mark (6.0, 2.0), in orange, large
 mark (3.5, 4.19), in green, large
 write "$a$" at (1.0, 0.4) in gray, center
 write "$b$" at (6.0, 0.4) in gray, center
-write "$\xi$" at (3.5, 0.4) in gray, center
+write "$\\xi$" at (3.5, 0.4) in gray, center
 write "$f(a) = f(b)$" at (3.5, 1.7) in orange, center
-write "$\text{Horizontal Tangent: } f'(\xi) = 0$" at (3.5, 4.6) in green, center
+write "$\\text{Horizontal Tangent: } f'(\\xi) = 0$" at (3.5, 4.6) in green, center
+
 ```
 
 ### The Secant-Tangent Parallelism of Lagrange's Theorem
@@ -735,9 +737,10 @@ mark (6.5, 5.31), in orange, large
 mark (3.1, 3.65), in green, large
 write "$a$" at (0.8, 0.4) in gray, center
 write "$b$" at (6.5, 0.4) in gray, center
-write "$\xi$" at (3.1, 0.4) in gray, center
+write "$\\xi$" at (3.1, 0.4) in gray, center
 write "$\\text{Secant Slope: } \\frac{f(b) - f(a)}{b - a}$" at (4.05, 3.6) in orange, right
-write "$\text{Parallel Tangent: } f'(\xi)$" at (2.2, 4.0) in green, left
+write "$\\text{Parallel Tangent: } f'(\\xi)$" at (2.2, 4.0) in green, left
+
 ```
 
 ### Cauchy's Parametric Plane Curve Tangency
@@ -756,8 +759,9 @@ mark (6.0, 4.4), in orange, large
 mark (3.2, 3.8), in green, large
 write "$A(x(a), y(a))$" at (1.0, 1.6) in orange, center
 write "$B(x(b), y(b))$" at (6.0, 4.9) in orange, center
-write "$\text{Secant Vector } \Delta \vec{r}$" at (3.5, 2.8) in orange, center
-write "$\text{Tangent Velocity Vector } \vec{r}'(\xi)$" at (3.2, 4.4) in green, center
+write "$\\text{Secant Vector } \\Delta \\vec{r}$" at (3.5, 2.8) in orange, center
+write "$\\text{Tangent Velocity Vector } \\vec{r}'(\\xi)$" at (3.2, 4.4) in green, center
+
 ```
 
 ### Taylor Polynomial Envelopes for Circular Functions
@@ -771,13 +775,14 @@ size 12 x 8
 plot f(x) = sin(x), from x = -3.8 to 3.8, in cyan, very thick
 plot p1(x) = x, from x = -2.0 to 2.0, in orange, thick
 plot p3(x) = x - (x^3)/6.0, from x = -2.8 to 2.8, in green, thick
-plot p5(x) = x - (x^3)/6.0 + (x^5)/120.0, from x = -3.5 to 3.5, in orchid, thick
+plot p5(x) = x - (x^3)/6.0 + (x^5)/120.0, from x = -3.5 to 3.5, in purple, thick
 raw tool {"type":"points","name":"P1","color":"black","points":"(0.0, 0.0); ","size":"large"}
-write "$f(x) = \sin(x)$" at (3.2, 0.3) in cyan, right
+write "$f(x) = \\sin(x)$" at (3.2, 0.3) in cyan, right
 write "$P_1(x) = x$" at (1.85, 2.3) in orange, right
 write "$P_3(x) = x - \\frac{x^3}{6}$" at (0.3, -0.3) in green, right
 write "$\\sin(x)$" at (-3.6, 0.9) in teal, center
-write "$P_5(x) = x - \frac{x^3}{6} + \frac{x^5}{120}$" at (3.2, 1.8) in orchid, right
+write "$P_5(x) = x - \\frac{x^3}{6} + \\frac{x^5}{120}$" at (3.2, 1.8) in purple, right
+
 ```
 
 ---

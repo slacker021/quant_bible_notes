@@ -499,13 +499,14 @@ mark (6.5, 5.49), in orange, large
 mark (6.5, 4.75), in green, large
 write "$x_0$" at (2.7, 0.65) in gray, below
 write "$x_0 + h$" at (7, 0.6) in gray, below
-write "$P(x_0, f(x_0))$" at (2.8, 2.7), in cyan, left
+write "$P(x_0, f(x_0))$" at (2.8, 2.7) in cyan, left
 write "$Q(x_0+h, f(x_0+h))$" at (6.05, 5.8) in orange, left
 write "$\\text{Secant } S_h$" at (4.2, 3.85) in orange
 write "$\\text{Tangent } T$" at (7.63, 5.1) in green, below
-write "$dx = h$" at (4.75, 2.15), in gray, below
+write "$dx = h$" at (4.75, 2.15) in gray, below
 write "$df = f'(x_0)h$" at (4.78, 2.85) in green, right
 write "$o(h)$" at (6.85, 5.7) in red, right
+
 ```
 
 ### The Pathology Gallery (Corners, Cusps, and Vertical Tangents)
@@ -521,11 +522,12 @@ plot f(x) = abs(x), from x = -3.0 to 3.0, in cyan, thick
 draw a line from (0.0, 0.0) to (2.5, 2.5) in orange, very thick, dashed
 draw a line from (0.0, 0.0) to (-2.5, 2.5) in orange, very thick, dashed
 raw tool {"type":"points","name":"P1","points":"(0.0, 0.0);","size":"large"}
-write "$\text{Corner Point: } f'_-(0) = -1 \neq f'_+(0) = +1$" at (0.0, -1.0), in white, below
+write "$\\text{Corner Point: } f'_-(0) = -1 \\neq f'_+(0) = +1$" at (0.0, -1.0) in gray, below
 write "$y = |x|$" at (2.35, 3.35) in teal, right
 write "$f'_+(0) = +1$" at (3.4, 2.3) in orange, below
 write "$f'_-(0) = -1$" at (-3.15, 2.3) in orange, below
 write "$(0,0)$" at (0, -0.5) in red, center
+
 ```
 
 The neon red marker highlights the singular apex where the left-hand and right-hand tangents disagree, precluding the existence of a single linear approximation.
