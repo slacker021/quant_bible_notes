@@ -1,6 +1,31 @@
 ---
 dg-publish: true
 ---
+```easy-tikz
+title $\text{Convexity: Secant Chord Domination and Slope Ordering}$
+xlabel $x$
+ylabel $y$
+show x from 0.0 to 7.5 and y from 0.0 to 6.5
+axes on the edges
+size 12 x 8
+plot f(x) = 0.15*x*x - 0.2*x + 1.2, from x = 0.8 to 6.8, in cyan, very thick
+draw a line from (1.5, 1.2375) to (6.2, 5.726), in orange, thick
+draw a line from (1.5, 1.2375) to (3.8, 2.606), in green, dashed
+draw a line from (3.8, 2.606) to (6.2, 5.726), in purple, dashed
+draw a line from (1.5, 0.0) to (1.5, 1.2375), in gray, dashed
+draw a line from (3.8, 0.0) to (3.8, 2.606), in gray, dashed
+draw a line from (6.2, 0.0) to (6.2, 5.726), in gray, dashed
+mark (1.5, 1.2375), in orange, large
+mark (3.8, 2.606), in green, large
+mark (6.2, 5.726), in orange, large
+write "$x_1$" at (1.7, 0.45) in gray, center
+write "$x$" at (4, 0.4) in gray, center
+write "$x_2$" at (6.4, 0.4) in gray, center
+write "$\\text{Secant Chord}$" at (3.5, 4.3) in orange, center
+write "$f(x)$" at (6.25, 6.55) in teal, center
+write "$\\text{Slope } k_1$" at (2.9, 1.3) in green, center
+write "$\\text{Slope } k_2$" at (5.3, 3.8) in purple, center
+```
 # Differential Topology of the Continuum and Monotonic Deformation
 Possessing the ability to compute a derivative at an isolated point does not immediately yield a complete geometric portrait of a function. A strictly positive derivative $f'(x_0) > 0$ guarantees only that $f$ increases locally across an immediate neighborhood of $x_0$; it does not, by itself, preclude the graph from oscillating erratically, plunging steeply elsewhere, or forming pathological singularities. To reconstruct the global architecture of a curve—its intervals of monotonicity, its extremal peaks and valleys, its regions of upward or downward convexity, its asymptotes, and its singular branching behaviors—analysis must synthesize local derivatives into an overarching investigative apparatus. 
 
@@ -315,14 +340,13 @@ draw a line from (6.2, 0.0) to (6.2, 5.726), in gray, dashed
 mark (1.5, 1.2375), in orange, large
 mark (3.8, 2.606), in green, large
 mark (6.2, 5.726), in orange, large
-write "$x_1$" at (1.5, 0.4) in gray, center
-write "$x$" at (3.8, 0.4) in gray, center
-write "$x_2$" at (6.2, 0.4) in gray, center
+write "$x_1$" at (1.75, 0.4) in gray, center
+write "$x$" at (4.05, 0.4) in gray, center
+write "$x_2$" at (6.45, 0.4) in gray, center
 write "$\\text{Secant Chord}$" at (3.5, 4.3) in orange, center
 write "$f(x)$" at (6.25, 6.55) in teal, center
 write "$\\text{Slope } k_1$" at (2.9, 1.3) in green, center
 write "$\\text{Slope } k_2$" at (5.3, 3.8) in purple, center
-
 ```
 
 ### Differential Criteria for Convexity

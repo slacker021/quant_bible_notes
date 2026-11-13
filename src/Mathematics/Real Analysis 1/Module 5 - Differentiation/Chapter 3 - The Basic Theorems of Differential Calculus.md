@@ -1,6 +1,72 @@
 ---
 dg-publish: true
 ---
+```easy-tikz
+title $\text{Topological Classification of Extrema: Boundary vs. Interior}$
+xlabel $x$
+ylabel $y$
+show x from -1.929 to 4.571 and y from -0.54 to 5.46
+axes on the edges
+size 12 x 8
+plot f(x) = x^2, from x = -1.0 to 1.99, in cyan, very thick
+plot g(x) = 4.0 from x = 2.0 to 4.0 in brown, very thick
+draw a line from (-1.0, 0) to (-1.0, 1.0), in gray, dashed
+draw a line from (2.0, 0) to (2.0, 4.0), in gray, dashed
+raw tool {"type":"points","name":"P1","points":"(-1.0, 1.0);","size":"large"}
+mark (0.0, 0.0), in green, large
+mark (2.0, 4.0), in orange, large
+draw an arrow from (-0.28, 1.35) to (-0.05, 0.25) in green
+draw an arrow from (3, 3) to (2.07, 3.9) in orange
+write "$\\text{Boundary Maximum } (-1, 1)$" at (-0.5, 2.3) in red, center
+write "$\\text{Interior Minimum: } f'(0) = 0$" at (-0.45, 1.55) in green, center
+write "$\\text{Corner Maximum } (2, 4)$" at (3.13, 2.7) in orange, center
+write "$\\text{Plateau of Non-Strict Extrema } y = 4$" at (2.1, 5.15) in brown, below
+write "$f(x) = x^2$" at (0.72, 3.05) in teal, right
+```
+```easy-tikz
+title $\text{Topological Classification of Extrema: Boundary vs. Interior}$
+xlabel $x$
+ylabel $y$
+show x from -1.929 to 4.571 and y from -0.54 to 5.46
+axes on the edges
+size 12 x 8
+plot f(x) = x^2, from x = -1.0 to 1.99, in cyan, very thick
+plot g(x) = 4.0 from x = 2.0 to 4.0 in brown, very thick
+draw a line from (-1.0, 0) to (-1.0, 1.0), in gray, dashed
+draw a line from (2.0, 0) to (2.0, 4.0), in gray, dashed
+raw tool {"type":"points","name":"P1","points":"(-1.0, 1.0);","size":"large"}
+mark (0.0, 0.0), in green, large
+mark (2.0, 4.0), in orange, large
+draw an arrow from (-0.28, 1.35) to (-0.05, 0.25) in green
+draw an arrow from (3, 3) to (2.07, 3.9) in orange
+write "$\\text{Boundary Maximum } (-1, 1)$" at (-0.53, 2.15) in red, center
+write "$\\text{Interior Minimum: } f'(0) = 0$" at (-0.45, 1.55) in green, center
+write "$\\text{Corner Maximum } (2, 4)$" at (3.13, 2.7) in orange, center
+write "$\\text{Plateau of Non-Strict Extrema } y = 4$" at (2.1, 5.15) in brown, below
+write "$f(x) = x^2$" at (0.72, 3.05) in teal, right
+```
+```easy-tikz
+title $\text{Topological Classification of Extrema: Boundary vs. Interior}$
+xlabel $x$
+ylabel $y$
+show x from -1.929 to 4.571 and y from -0.54 to 5.46
+axes on the edges
+size 12 x 8
+plot f(x) = x^2, from x = -1.0 to 1.99, in cyan, very thick
+plot g(x) = 4.0, from x = 2.0 to 4.0, in orange, very thick
+draw a line from (-1.0, 0) to (-1.0, 1.0), in gray, dashed
+draw a line from (2.0, 0) to (2.0, 4.0), in gray, dashed
+raw tool {"type":"points","name":"P1","points":"(-1.0, 1.0);","size":"large"}
+mark (0.0, 0.0), in green, large
+mark (2.0, 4.0), in orange, large
+draw an arrow from (-0.28, 1.35) to (-0.05, 0.25) in green
+draw an arrow from (3, 3) to (2.07, 3.9) in orange
+write "$\\text{Boundary Maximum } (-1, 1)$" at (-0.42, 2.25) in purple, center
+write "$\\text{Interior Minimum: } f'(0) = 0$" at (-0.45, 1.55) in green, center
+write "$\\text{Corner Maximum } (2, 4)$" at (3.13, 2.7) in orange, center
+write "$\\text{Plateau of Non-Strict Extrema } y = 4$" at (2.1, 5.15) in orange, below
+write "$f(x) = x^2$" at (0.72, 3.05) in teal, right
+```
 # Finite Increments and Local Polynomial Approximations
 In [[Chapter 1 - Differentiable Functions|Chapter 1]], differentiability was formulated through the geometry of local linear approximation: a mapping is differentiable at an anchor point if its functional variation decomposes into a continuous linear transformation and a residual that vanishes strictly faster than the perturbation of the argument. In [[Chapter 2 - The Basic Rules of Differentiation|Chapter 2]], the algebraic infrastructure of differentiation was developed, establishing operational formulas for combinations, products, compositions, inverses, and higher-order jets. Yet, despite their computational utility, those results remain strictly pointwise and local. A difference quotient evaluated at an isolated point $x_0$ yields information only within an arbitrarily small neighborhood of that point. Pointwise derivatives alone cannot determine whether a function increases globally across an interval, whether it assumes an extremal value, or how closely a higher-order polynomial tracks the global trajectory of the curve.
 
@@ -669,28 +735,87 @@ The local Taylor formula provides the most powerful tool in differential calculu
 # Visual Models of Fundamental Differential Theorems
 
 ###  Classification of Local Extrema and Domain Topology
+
 ```easy-tikz
-title $\text{Topological Classification of Extrema: Boundary vs. Interior}$
+show x from -1.929 to 4.5721 and y from -0.54 to 5.46
 xlabel $x$
 ylabel $y$
-show x from -1.929 to 4.571 and y from -0.54 to 5.46
+title $\text{Topological Classification of Extrema: Boundary vs. Interior }$
+size 12 x 8
+plot f(x) = x^2 from x = -1 to 1.99 in teal, very thick
+plot line(x) = 4.0 from x = 2.0 to 4.0 in brown, very thick
+draw a line from (-1.0, 0) to (-1.0, 1.0) in gray, dashed
+raw tool {"type":"points","name":"P1","points":"(-1.0, 1.0);"}
+raw tool {"type":"points","name":"P2","color":"green","points":"(0.0, 0.0); "}
+raw tool {"type":"points","name":"P3","color":"orange","points":"(2,4); "}
+draw a line from (2.0, 0) to (2.0, 4.0) in gray, dashed
+write "$\\text{Boundary Maximum } (-1, 1)$" at (-0.65, 1.3) in red, center
+write "$\\text{Interior Minimum: } f'(0) = 0$" at (0.25, -0.25) in green, center
+write "$f(x) = x^2$" at (1.17, 3) in teal, center
+write "$\\text{Corner Maximum } (2, 4)$" at (3.18, 3.7) in orange, center
+write "$\\text{Plateau of Non-Strict Extrema } y = 4$" at (2.45, 4.25) in brown, center
+```
+```easy-tikz
+title $\text{Rolle's Theorem: Existence of Interior Stationary Point}$
+xlabel $x$
+ylabel $y$
+show x from 0.0 to 7.0 and y from 0.0 to 5.5
 axes on the edges
 size 12 x 8
-plot f(x) = x^2, from x = -1.0 to 1.99, in cyan, very thick
-plot g(x) = 4.0, from x = 2.0 to 4.0, in orange, very thick
-draw a line from (-1.0, 0) to (-1.0, 1.0), in gray, dashed
-draw a line from (2.0, 0) to (2.0, 4.0), in gray, dashed
-raw tool {"type":"points","name":"P1","points":"(-1.0, 1.0);","size":"large"}
-mark (0.0, 0.0), in green, large
-mark (2.0, 4.0), in orange, large
-draw an arrow from (-0.28, 1.35) to (-0.05, 0.25) in green
-draw an arrow from (3, 3) to (2.07, 3.9) in orange
-write "$\\text{Boundary Maximum } (-1, 1)$" at (-1.0, 1.5) in purple, center
-write "$\\text{Interior Minimum: } f'(0) = 0$" at (-0.45, 1.55) in green, center
-write "$\\text{Corner Maximum } (2, 4)$" at (3.13, 2.7) in orange, center
-write "$\\text{Plateau of Non-Strict Extrema } y = 4$" at (2.1, 5.15) in orange, below
-write "$f(x) = x^2$" at (0.72, 3.05) in teal, right
-
+plot f(x) = -0.35*(x - 1.0)*(x - 6.0) + 2.0, from x = 1.0 to 6.0, in cyan, very thick
+draw a line from (1.0, 0) to (1.0, 2.0), in gray, dashed
+draw a line from (6.0, 0) to (6.0, 2.0), in gray, dashed
+draw a line from (1.0, 2.0) to (6.0, 2.0), in orange, dashed
+plot tangent(x) = 4.19, from x = 2.0 to 5.0, in green, thick
+draw a line from (3.5, 0) to (3.5, 4.19), in gray, dashed
+mark (1.0, 2.0), in orange, large
+mark (6.0, 2.0), in orange, large
+mark (3.5, 4.19), in green, large
+write "$a$" at (1.1, 0.2) in gray, center
+write "$b$" at (6.13, 0.25) in gray, center
+write "$\\xi$" at (3.65, 0.25) in gray, center
+write "$f(a) = f(b)$" at (3.5, 1.7) in orange, center
+write "$\\text{Horizontal Tangent: } f'(\\xi) = 0$" at (3.5, 4.6) in green, center
+```
+```easy-tikz
+title $\text{Lagrange's Finite-Increment Theorem: Parallel Chord and Tangent}$
+xlabel $x$
+ylabel $y$
+show x from 0.0 to 7.5 and y from 0.0 to 6.0
+axes on the edges
+size 12 x 8
+plot f(x) = 0.8 + 2.1*sqrt(x - 0.5), from x = 0.8 to 6.5, in cyan, very thick
+plot secant(x) = 1.95 + 0.59*(x - 0.8), from x = 0.8 to 6.5, in orange, thick, dashed
+plot tangent(x) = 3.65 + 0.59*(x - 3.1), from x = 1.5 to 5.5, in green, thick
+draw a line from (0.8, 0) to (0.8, 1.95), in gray, dashed
+draw a line from (6.5, 0) to (6.5, 5.31), in gray, dashed
+draw a line from (3.1, 0) to (3.1, 3.65), in gray, dashed
+mark (0.8, 1.95), in orange, large
+mark (6.5, 5.31), in orange, large
+mark (3.1, 3.65), in green, large
+write "$a$" at (0.8, 0.4) in gray, center
+write "$b$" at (6.5, 0.4) in gray, center
+write "$\\xi$" at (3.1, 0.4) in gray, center
+write "$\\text{Secant Slope: } \\frac{f(b) - f(a)}{b - a}$" at (4.05, 3.6) in orange, right
+write "$\\text{Parallel Tangent: } f'(\\xi)$" at (2.8, 4.2) in green, left
+```
+```easy-tikz
+title $\text{Cauchy's Theorem: Plane Parametric Chord and Velocity Alignment}$
+xlabel $x(t)$
+ylabel $y(t)$
+show x from 0.0 to 7.0 and y from 0.0 to 6.0
+axes on the edges
+size 12 x 8
+plot f(x) = 1.0 + 0.9*x - 0.08*x^2 + 0.3*sin(1.2*x), from x = 1.0 to 6.0, in cyan, very thick
+draw a line from (1.0, 2.1) to (6.0, 4.4), in orange, very thick, dashed
+plot tangent(x) = 3.8 + 0.46*(x - 3.2), from x = 1.8 to 4.8, in green, thick
+mark (1.0, 2.1), in orange, large
+mark (6.0, 4.4), in orange, large
+mark (3.2, 3.8), in green, large
+write "$A(x(a), y(a))$" at (1.0, 1.6) in orange, center
+write "$B(x(b), y(b))$" at (6.0, 4.9) in orange, center
+write "$\\text{Secant Vector } \\Delta \\vec{r}$" at (4.75, 2.65) in orange, center
+write "$\\text{Tangent Velocity Vector } \\vec{r}'(\\xi)$" at (2.13, 4.2) in green, center
 ```
 
 ### Rolle's Horizontal Tangency on Compact Intervals
@@ -759,10 +884,10 @@ mark (6.0, 4.4), in orange, large
 mark (3.2, 3.8), in green, large
 write "$A(x(a), y(a))$" at (1.0, 1.6) in orange, center
 write "$B(x(b), y(b))$" at (6.0, 4.9) in orange, center
-write "$\\text{Secant Vector } \\Delta \\vec{r}$" at (3.5, 2.8) in orange, center
-write "$\\text{Tangent Velocity Vector } \\vec{r}'(\\xi)$" at (3.2, 4.4) in green, center
-
+write "$\\text{Secant Vector } \\Delta \\vec{r}$" at (4.15, 2.6) in orange, center
+write "$\\text{Tangent Velocity Vector } \\vec{r}'(\\xi)$" at (2.25, 4.45) in green, center
 ```
+
 
 ### Taylor Polynomial Envelopes for Circular Functions
 ```easy-tikz
@@ -777,12 +902,10 @@ plot p1(x) = x, from x = -2.0 to 2.0, in orange, thick
 plot p3(x) = x - (x^3)/6.0, from x = -2.8 to 2.8, in green, thick
 plot p5(x) = x - (x^3)/6.0 + (x^5)/120.0, from x = -3.5 to 3.5, in purple, thick
 raw tool {"type":"points","name":"P1","color":"black","points":"(0.0, 0.0); ","size":"large"}
-write "$f(x) = \\sin(x)$" at (3.2, 0.3) in cyan, right
-write "$P_1(x) = x$" at (1.85, 2.3) in orange, right
-write "$P_3(x) = x - \\frac{x^3}{6}$" at (0.3, -0.3) in green, right
-write "$\\sin(x)$" at (-3.6, 0.9) in teal, center
-write "$P_5(x) = x - \\frac{x^3}{6} + \\frac{x^5}{120}$" at (3.2, 1.8) in purple, right
-
+write "$f(x) = \\sin(x)$" at (1.55, 1.5) in teal, right
+write "$P_1(x) = x$" at (1.05, 2.2) in orange, right
+write "$P_2(x) = x - \\frac{x^3}{6}$" at (0.3, -0.3) in green, right
+write "$P_3(x) = x - \\frac{x^3}{6} + \\frac{x^5}{120}$" at (-4, -1.3) in purple, right
 ```
 
 ---

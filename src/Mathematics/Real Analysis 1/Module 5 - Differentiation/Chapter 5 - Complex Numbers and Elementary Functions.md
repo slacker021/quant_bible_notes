@@ -122,7 +122,7 @@ The geometry of complex arithmetic is visualized in the complex Argand plane:
 title $\text{Geometric Representation of Complex Arithmetic in the Argand Plane}$
 xlabel $\operatorname{Re}(z)$
 ylabel $\operatorname{Im}(z)$
-show x from -1.0 to 6.5 and y from -1.0 to 5.5
+show x from -1.0 to 6.5 and y from -2.0 to 4.5
 axes on the edges
 size 12 x 8
 draw an arrow from (0.0, 0.0) to (3.5, 1.2) in cyan, thick
@@ -143,7 +143,6 @@ write "$\\overline{z}_1 = x_1 - i y_1$" at (3.7, -1.2) in red, right
 write "$\\text{Parallelogram Addition Rule}$" at (2.2, 4.8) in gray, center
 
 ```
-
 The geometric representation illustrates that complex addition conforms to the vector addition parallelogram law in $\mathbb{R}^2$, while conjugation corresponds to specular reflection across the horizontal real axis.
 
 >[!danger]+ Intuition: The Field with Spatial Vision
@@ -268,7 +267,7 @@ draw a line from (0.0, 0.0) to (0.7071, 0.0) in green, thick
 mark (0.7071, 0.7071), in orange, large
 mark (1.0, 0.0), in cyan, large
 mark (-1.0, 0.0), in red, large
-write "$e^{i\\theta} = \\cos(\\theta) + i\\sin(\\theta)$" at (0.75, 0.85) in orange, right
+write "$e^{i\\theta} = \\cos(\\theta) + i\\sin(\\theta)$" at (0.6, 0.95) in orange, right
 write "$\\cos(\\theta)$" at (0.35, -0.15) in green, center
 write "$\\sin(\\theta)$" at (0.75, 0.35) in green, right
 write "$e^{i\\pi} = -1$" at (-1.05, 0.2) in red, left

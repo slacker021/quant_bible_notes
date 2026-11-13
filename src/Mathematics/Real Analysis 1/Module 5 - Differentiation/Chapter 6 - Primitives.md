@@ -1,6 +1,21 @@
 ---
 dg-publish: true
 ---
+```easy-tikz
+title $\text{Phase Portrait of the Oscillatory Primitive and Discontinuous Derivative}$
+xlabel $x$
+ylabel $y$
+show x from -1.316 to 1.684 and y from -1.46 to 1.54
+axes on the edges
+size 12 x 8
+plot f(x) = x^2 * sin(1.0 / (abs(x) + 0.04)), from x = -1.2 to 1.2, in cyan, thick
+plot envelope_pos(x) = x^2, from x = -1.2 to 1.2, in orange, dashed
+plot envelope_neg(x) = -x^2, from x = -1.2 to 1.2, in orange, dashed
+mark (0.0, 0.0), in green, large
+write "$F(x) = x^2 \\sin(1/x)$" at (-1.24, 0.02) in teal, right
+write "$y = \\pm x^2$" at (0.33, 0) in orange, right
+write "$F'(0) = 0 \\text{ exists everywhere}$" at (-0.66, 0.68) in green, right
+```
 # The Concept of the Primitive Mapping
 
 ### Definition and Fundamental Properties of Primitives
@@ -126,9 +141,9 @@ plot f(x) = x^2 * sin(1.0 / (abs(x) + 0.04)), from x = -1.2 to 1.2, in cyan, thi
 plot envelope_pos(x) = x^2, from x = -1.2 to 1.2, in orange, dashed
 plot envelope_neg(x) = -x^2, from x = -1.2 to 1.2, in orange, dashed
 mark (0.0, 0.0), in green, large
-write "$F(x) = x^2 \\sin(1/x)$" at (0.45, 0.95) in cyan, right
-write "$y = \\pm x^2$" at (0.85, 0.65) in orange, right
-write "$F'(0) = 0 \\text{ exists everywhere}$" at (-0.66, 0.68) in green, right
+write "$F(x) = x^2 \\sin(1/x)$" at (-0.49, 0.5) in cyan, right
+write "$y = \\pm x^2$" at (0.5, 0) in orange, right
+write "$F'(0) = 0 \\text{ exists everywhere}$" at (-0.66, -0.5) in green, right
 
 ```
 

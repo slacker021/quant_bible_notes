@@ -1,6 +1,64 @@
 ---
 dg-publish: true
 ---
+```easy-tikz
+title $\text{Geometric Reciprocity of Inverse Function Tangents}$
+xlabel $x$
+ylabel $y$
+show x from -0.5 to 6.5 and y from -0.5 to 6.5
+axes on the edges
+size 12 x 8
+plot f(x) = 0.5*x^2 + 0.5, from x = 0.2 to 3.2, in cyan, very thick
+plot finv(x) = sqrt(max(0, 2*(x - 0.5))), from x = 0.51 to 5.8, in orange, very thick
+plot diag(x) = x, from x = 0 to 6.0, in purple, dashed
+plot tan1(x) = 1.0 + 1.0*(x - 1.0), from x = 0.0 to 3.5, in green, thick
+plot tan2(x) = 1.0 + 1.0*(x - 1.0), from x = 0.0 to 3.5, in green, thick
+draw a line from (1.0, 0) to (1.0, 1.0) in gray, dashed
+draw a line from (0, 1.0) to (1.0, 1.0) in gray, dashed
+raw tool {"type":"points","name":"P1","color":"green","points":"(1.0, 1.0);","size":"large"}
+write "$y_3 = mx$" at (4.75, 6) in purple, right
+write "$y_{1}= f(x)$" at (2.4, 4.5) in teal, left
+write "$y_{2} = f^{-1}(x)$" at (5.3, 2.65) in orange, below
+write "$(x_0, y_0)$" at (1.8, 2.8) in gray, left
+write "$(y_0, x_0)$" at (2.8, 1.7) in gray, right
+write "$\\text{Slope: } m$" at (0.8, 1.6) in green, left
+```
+```easy-tikz
+title $\text{Profiles of the Hyperbolic Functions } \sinh(x) \text{ and } \cosh(x)$
+xlabel $x$
+ylabel $y$
+show x from -3.5 to 3.5 and y from -4.0 to 5.5
+axes on the edges
+size 12 x 8
+plot ch(x) = 0.5*(exp(x) + exp(-x)), from x = -2.3 to 2.3, in cyan, very thick
+plot sh(x) = 0.5*(exp(x) - exp(-x)), from x = -2.3 to 2.3, in orange, very thick
+plot asymp1(x) = 0.5*exp(x) from x = -1.0 to 2.4 in blue, dashed
+plot asymp2(x) = 0.5*exp(-x), from x = -2.4 to 1.0, in purple, dashed
+draw a line from (-3.0, 1.0) to (3.0, 1.0) in gray, dashed
+raw tool {"type":"points","name":"Apex","points":"(0.0, 1.0);","size":"large"}
+write "$y = \\cosh(x)$" at (1.35, 2.7) in teal, left
+write "$y = \\sinh(x)$" at (-0.8, -1.3) in orange, right
+write "$y_{1} = \\frac{1}{2}e^x$" at (2.3, 4.8) in blue, right
+write "$y_{2} = \\frac{1}{2}e^{-x}$" at (-2.3, 4.8) in purple, left
+write "$(0, 1)$" at (-0.03, 1.65) in red, center
+write "$\\cosh^2(x) - \\sinh^2(x) = 1$" at (0.0, -3.2) in green, center
+```
+```easy-tikz
+title $\text{The Cauchy Flat Function } f(x) = \exp(-1/x^2)$
+xlabel $x$
+ylabel $y$
+show x from -3.5 to 3.5 and y from -0.5 to 1.5
+axes on the edges
+size 12 x 8
+plot c(x) = (abs(x) < 0.05 ? 0.0 : exp(-1.0/(x^2))), from x = -3.2 to 3.2, in cyan, very thick
+plot flat(x) = 0.0, from x = -1.2 to 1.2, in green, thick
+draw a line from (-3.0, 1.0) to (3.0, 1.0) in gray, dashed
+raw tool {"type":"points","name":"Origin","points":"(0.0, 0.0);","size":"large"}
+write "$y = \\exp\\left(-\\frac{1}{x^2}\\right)$" at (2.0, 1.15) in cyan, right
+write "$\\text{Asymptote } y = 1$" at (-1, 1.13) in gray, left
+write "$\\text{Infinitely Flat Apex: } f^{(n)}(0) = 0, \\; \\forall n \\in \\mathbb{N}$" at (0.0, -0.3) in green, center
+write "$(0,0)$" at (0.0, 0.15) in red, center
+```
 # Algebraic Infrastructure of Differentiation
 In [[Chapter 1 - Differentiable Functions|Chapter 1]], differentiability was formulated through the lens of local linear approximation: a real-valued mapping is differentiable at an anchor point if its local increment decomposes into a continuous linear transformation and a remainder term that decays strictly faster than the perturbation of the argument. While the difference quotient provides the formal definition of this property, evaluating limits of incremental ratios for every composite, rational, or transcendental mapping encountered in the quantitative sciences is computationally prohibitive and structurally inefficient.
 
