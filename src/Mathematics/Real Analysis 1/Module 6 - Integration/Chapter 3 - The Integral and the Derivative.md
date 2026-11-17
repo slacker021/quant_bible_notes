@@ -310,7 +310,7 @@ raw tool {"type":"points","name":"P3","color":"purple","points":"(5.5, 0.45);"}
 write "$1$" at (1.0, -0.35) in orange, below
 write "$e$" at (2.718, -0.35) in green, below
 write "$x$" at (5.5, -0.35) in red, below
-write "$y = \f\\frac{1}{t}$" at (3.65, 1.15) in teal, right
+write "$y = \\frac{1}{t}$" at (3.65, 1.15) in teal, right
 write "$\\ln e = 1$" at (1.85, 0.8) in green, center
 write "$(1.0, 2.5)$" at (1.6, 2.5) in blue, center
 write "$(e, 1)$" at (2.75, 1.35) in orange, center
