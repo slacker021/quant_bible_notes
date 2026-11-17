@@ -8,7 +8,7 @@ F'(x) = f(x) \quad \forall x \in I \tag{1}
 \end{gather}
 $$
 ---
-# Proposition 1 (Intermediate-Value Property for Derivatives)
+# Proposition 1
 Let $a, b \in I$ with $a < b$, and suppose that the derivative values at the endpoints are unequal:
 $$
 \begin{gather}

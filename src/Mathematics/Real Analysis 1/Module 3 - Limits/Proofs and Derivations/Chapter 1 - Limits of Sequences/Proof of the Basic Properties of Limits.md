@@ -3,6 +3,7 @@ dg-publish: true
 ---
 Let $\{x_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
+---
 # Theorem 1
 Let $\{x_n\}$ be an ultimately constant sequence. By definition, there exist a real number $A \in \mathbb{R}$ and an index $N \in \mathbb{N}$ such that $x_n = A$ for all $n > N$. Let $\varepsilon > 0$ be arbitrary. For every index $n > N$, the absolute difference between $x_n$ and $A$ evaluates to: 
 $$

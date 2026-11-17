@@ -20,7 +20,8 @@ $$
 \end{gather}
 $$
 
-**Simultaneous Convergence:**
+---
+# Simultaneous Convergence
 First, assume that the series $\sum_{n=1}^\infty y_n$ converges to a finite sum $Y \in \mathbb{R}$. By the [[Proof of Arithmetic Properties of Series|scalar multiple rule for series]], the scaled series converges:
 $$
 \begin{gather}
@@ -39,7 +40,8 @@ Because $\sum_{n=1}^\infty \frac{2}{c} x_n = \frac{2}{c} \sum_{n=1}^\infty x_n =
 
 Thus, $\sum_{n=1}^\infty x_n$ converges if and only if $\sum_{n=1}^\infty y_n$ converges.
 
-**Simultaneous Divergence:**
+---
+# Simultaneous Divergence
 Because both series consist of non-negative terms, any divergence must manifest as unbounded growth of the sequence of partial sums toward positive infinity.
 
 Suppose $\sum_{n=1}^\infty y_n$ diverges, so that $\sum_{n=1}^\infty y_n = +\infty$. Because $\frac{c}{2} > 0$, the scaled series also diverges: $\sum_{n=1}^\infty \frac{c}{2} y_n = +\infty$. Because $x_n > \frac{c}{2} y_n$ for all $n > N$ by step 3, the Standard Comparison Test dictates that $\sum_{n=1}^\infty x_n$ diverges.

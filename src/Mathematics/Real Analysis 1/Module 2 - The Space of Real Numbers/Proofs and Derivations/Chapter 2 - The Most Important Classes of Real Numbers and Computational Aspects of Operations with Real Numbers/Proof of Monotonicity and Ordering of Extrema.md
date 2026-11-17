@@ -19,7 +19,6 @@ Step 2 demonstrates that $M_B$ is an upper bound for $A$ and $m_B$ is a lower bo
 $$
 \sup A \le M_B = \sup B \quad \wedge \quad \inf B = m_B \le \inf A \tag{3}
 $$
-
 --------------------------------------------------------------------------------
 # Proposition 2
 Let $X, Y \subset \mathbb{R}$ be non-empty sets such that:
@@ -34,7 +33,6 @@ Because $y_0 \in Y$ was chosen arbitrarily, step 5 holds universally across all 
 $$
 \sup X \le \inf Y \tag{6}
 $$
-
 --------------------------------------------------------------------------------
 # Proposition 3
 Assume in addition to the separation condition of Proposition 2 that either $X \cup Y = \mathbb{R}$, or for every $\varepsilon > 0$ there exist witness elements $x \in X$ and $y \in Y$ satisfying $y - x < \varepsilon$. 
@@ -44,7 +42,7 @@ $$
 \sup X < \inf Y \tag{7}
 $$
 
-**Case 1 (Partition Exhaustion $X \cup Y = \mathbb{R}$):**
+### Case 1
 Define the midpoint:
 $$
 c := \frac{\sup X + \inf Y}{2} \tag{8}
@@ -55,7 +53,7 @@ c \notin (X \cup Y) = \mathbb{R} \tag{9}
 $$
 Step 9 contradicts the premise that $X \cup Y = \mathbb{R}$.
 
-**Case 2 (Arbitrary Proximity $\forall \varepsilon > 0, \, \exists x \in X, y \in Y \text{ such that } y - x < \varepsilon$):**
+### Case 2
 Define the positive scalar $\varepsilon_0 := \inf Y - \sup X > 0$. By hypothesis, there exist witness elements $x_0 \in X$ and $y_0 \in Y$ such that:
 $$
 y_0 - x_0 < \varepsilon_0 \tag{10}
@@ -70,7 +68,6 @@ In both cases, the assumption $\sup X < \inf Y$ produces an impossible contradic
 $$
 \sup X = \inf Y \tag{12}
 $$
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

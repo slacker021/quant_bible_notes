@@ -45,9 +45,9 @@ The action of a function generalizes naturally to entire subsets of the domain a
 $$
 \begin{gather}
 \textbf{Definition: Direct Image and Preimage of Subsets} \\[5mm]
-\text{Let } f: X \to Y \text{ be a mapping. If } A \subseteq X, \text{ the direct image of } A \text{ under } f \text{ is:} \\[3.5mm]
+\text{Let } f: X \to Y \text{ be a mapping. If } A \subseteq X, \text{ the \textit{direct image} of } A \text{ under } f \text{ is:} \\[3.5mm]
 f(A) := \{y \in Y \mid \exists x \in A \, (y = f(x))\} \subseteq Y \\[5mm]
-\text{Conversely, if } B' \subseteq Y, \text{ the preimage (or inverse image) of } B' \text{ under } f \text{ is:} \\[3.5mm]
+\text{Conversely, if } B' \subseteq Y, \text{ the \textit{preimage} (or \textit{inverse image}) of } B' \text{ under } f \text{ is:} \\[3.5mm]
 f^{-1}(B') := \{x \in X \mid f(x) \in B'\} \subseteq X
 \end{gather}
 $$
@@ -58,7 +58,7 @@ To analyze how structural properties, geometries, and dimensions are preserved b
 $$
 \begin{gather}
 \textbf{Definition: Injection (One-to-One)} \\[5mm]
-\text{A mapping } f: X \to Y \text{ is an injection if and only if distinct arguments} \\[2mm]
+\text{A mapping } f: X \to Y \text{ is an \textit{injection} if and only if distinct arguments} \\[2mm]
 \text{in the domain map to distinct values in the codomain:} \\[3.5mm]
 \forall x_1, x_2 \in X \, (x_1 \neq x_2 \implies f(x_1) \neq f(x_2))
 \end{gather}
@@ -74,7 +74,7 @@ $$
 $$
 \begin{gather}
 \textbf{Definition: Surjection (Onto)} \\[5mm]
-\text{A mapping } f: X \to Y \text{ is a surjection if and only if the range is} \\[2mm]
+\text{A mapping } f: X \to Y \text{ is a \textit{surjection} if and only if the range is} \\[2mm]
 \text{identically equal to the codomain:} \\[3.5mm]
 \operatorname{ran}(f) = Y \iff \forall y \in Y \, \exists x \in X \, (f(x) = y)
 \end{gather}
@@ -83,7 +83,7 @@ $$
 $$
 \begin{gather}
 \textbf{Definition: Bijection (One-to-One Correspondence)} \\[5mm]
-\text{A mapping } f: X \to Y \text{ is a bijection if and only if it is simultaneously} \\[2mm]
+\text{A mapping } f: X \to Y \text{ is a \textit{bijection} if and only if it is simultaneously} \\[2mm]
 \text{injective and surjective:} \\[3.5mm]
 (\forall x_1, x_2 \in X \, (f(x_1) = f(x_2) \implies x_1 = x_2)) \wedge (\forall y \in Y \, \exists x \in X \, (f(x) = y))
 \end{gather}
@@ -93,7 +93,7 @@ Bijective mappings establish a one-to-one correspondence between sets, enabling 
 $$
 \begin{gather}
 \textbf{Definition: Inverse Mapping} \\[5mm]
-\text{Let } f: X \to Y \text{ be a bijection. The inverse mapping of } f, \text{ denoted as } \\[2mm]
+\text{Let } f: X \to Y \text{ be a bijection. The \textit{inverse mapping} of } f, \text{ denoted as } \\[2mm]
 f^{-1}: Y \to X, \text{ is the binary relation defined by:} \\[3.5mm]
 f^{-1} := \{(y, x) \in Y \times X \mid (x, y) \in f\}
 \end{gather}
@@ -136,7 +136,7 @@ When operations execute sequentially, functions can be chained together via comp
 $$
 \begin{gather}
 \textbf{Definition: Composition of Mappings} \\[5mm]
-\text{Let } f: X \to Y \text{ and } g: Y \to Z \text{ be mappings. The composition } g \circ f: X \to Z \\[2mm]
+\text{Let } f: X \to Y \text{ and } g: Y \to Z \text{ be mappings. The \textit{composition} } g \circ f: X \to Z \\[2mm]
 \text{is the mapping defined set-theoretically by the relation:} \\[3.5mm]
 g \circ f := \{(x, z) \in X \times Z \mid \exists y \in Y \, ((x, y) \in f \wedge (y, z) \in g)\}
 \end{gather}
@@ -170,7 +170,7 @@ The formalization of bijective mappings allows for the rigorous comparison of th
 $$
 \begin{gather}
 \textbf{Definition: Equipotence (Equinumerosity)} \\[5mm]
-\text{Two sets } X \text{ and } Y \text{ are equipotent, denoted } X \sim Y \text{ or } |X| = |Y|, \\[2mm]
+\text{Two sets } X \text{ and } Y \text{ are \textit{equipotent}, denoted } X \sim Y \text{ or } |X| = |Y|, \\[2mm]
 \text{if and only if there exists a bijective mapping } f: X \to Y.
 \end{gather}
 $$

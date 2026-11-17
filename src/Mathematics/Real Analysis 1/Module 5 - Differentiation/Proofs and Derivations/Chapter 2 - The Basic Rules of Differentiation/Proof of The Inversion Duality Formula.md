@@ -25,7 +25,8 @@ $$
 
 The identity in step 2 is established by mathematical induction on $n \in \mathbb{N}$.
 
-**Base Case ($n = 1$):**
+---
+# Base Case
 For $n = 1$, step 1 gives $g_1(x) = x^0 f(1/x) = f(1/x)$. Differentiating $g_1(x)$ via the [[Proof of The Chain Rule|Chain Rule]] with respect to $x$ yields:
 $$
 \begin{gather}
@@ -35,7 +36,8 @@ $$
 
 Because step 4 matches step 2 for $n = 1$, the base case holds.
 
-**Induction Hypothesis:**
+---
+# Induction Hypothesis
 Assume that for an arbitrary integer $m \ge 1$, the formula holds for $n = m$:
 $$
 \begin{gather}
@@ -43,7 +45,7 @@ g_m^{(m)}(x) = \frac{d^m}{dx^m}\left(x^{m-1} f\left(\frac{1}{x}\right)\right) = 
 \end{gather}
 $$
 
-**Induction Step ($n = m + 1$):**
+### Induction Step 
 Consider the function $g_{m+1}(x) = x^m f(1/x)$. Factoring an explicit power of $x$ relates $g_{m+1}$ to $g_m$:
 $$
 \begin{gather}

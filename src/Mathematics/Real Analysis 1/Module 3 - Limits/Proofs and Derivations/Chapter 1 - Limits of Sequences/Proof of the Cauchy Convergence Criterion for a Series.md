@@ -13,7 +13,7 @@ s_m - s_{n-1} = \sum_{k=1}^m a_k - \sum_{k=1}^{n-1} a_k = \sum_{k=n}^m a_k \tag{
 \end{gather}
 $$
 
-**Necessity:**
+### Necessity
 Assume that the series $\sum_{n=1}^\infty a_n$ converges, so that $\{s_n\}$ is a Cauchy sequence. Given $\varepsilon > 0$, choose an index $N_0 \in \mathbb{N}$ such that $|s_m - s_p| < \varepsilon$ for all $m, p > N_0$, and set $N := N_0 + 1 \in \mathbb{N}$.
 
 For any integers $m, n \in \mathbb{N}$ satisfying $m \ge n > N$, setting $p := n - 1$ ensures that $p \ge N - 1 = N_0$ and $m > N_0$. Applying step 1 yields: 
@@ -23,7 +23,7 @@ $$
 \end{gather}
 $$
 
-**Sufficiency:**
+### Sufficiency
 Conversely, assume that for every $\varepsilon > 0$ there exists an index $N \in \mathbb{N}$ such that step 2 holds for all $m \ge n > N$.
 
 Let $m, p \in \mathbb{N}$ satisfy $m, p > N$. If $m = p$, then $|s_m - s_p| = 0 < \varepsilon$. If $m \neq p$, assume without loss of generality that $m > p$, and set $n := p + 1$. Then $m \ge n = p + 1 > N$, so step 1 and step 2 establish that: 

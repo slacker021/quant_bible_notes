@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $X \subset \mathbb{R}$ be a non-empty set of real numbers that is bounded below.
 
-**Existence:**
+---
+# Existence
 Because $X$ is bounded below, there exists a minorant $m \in \mathbb{R}$ such that: 
 $$
 m \le x \quad \forall x \in X \tag{1}
@@ -52,7 +53,8 @@ i' \le -s \tag{10}
 $$
 Because $i = -s$, step 10 establishes that $i' \le i$. Consequently, no lower bound of $X$ can strictly exceed $i$, confirming that $i = \inf X$.
 
-**Uniqueness:**
+---
+# Uniqueness
 Suppose that $i_1, i_2 \in \mathbb{R}$ are both greatest lower bounds of $X$. 
 
 Because $i_1$ is a greatest lower bound and $i_2$ is a lower bound of $X$, the definition of the infimum requires that:

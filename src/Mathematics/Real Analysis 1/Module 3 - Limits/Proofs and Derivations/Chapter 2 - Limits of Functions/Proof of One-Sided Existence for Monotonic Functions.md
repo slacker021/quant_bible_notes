@@ -3,6 +3,8 @@ dg-publish: true
 ---
 Let $f: (a, b) \to \mathbb{R}$ be a nondecreasing function on the open interval $(a, b)$, and let $x_0 \in (a, b)$ be an arbitrary interior point.
 
+---
+# Left-Hand Limit
 Define the left-hand sub-domain:
 $$
 \begin{gather}
@@ -23,6 +25,8 @@ $$
 \lim_{x \to x_0^-} f(x) = \sup_{x < x_0} f(x) \le f(x_0) \tag{3}
 \end{gather}
 $$
+---
+# Right-Hand Limit
 Next, define the right-hand sub-domain:
 $$
 \begin{gather}

@@ -22,7 +22,8 @@ $$
 
 The invariance assertion $R' = R$ requires showing that the limit superior in step 3 coincides with the limit superior in step 1.
 
-**Evaluation of the Root Factor Limit:**
+---
+# Evaluation of the Root Factor Limit
 Consider the sequence of positive real numbers $u_n := \sqrt[n]{n} = n^{1/n}$ for $n \geq 1$. 
 
 For every $n \geq 2$, the binomial theorem applied to $(1 + \lambda_n)^n$ with $\lambda_n := \sqrt[n]{n} - 1 > 0$ yields:
@@ -43,8 +44,8 @@ $$
 \lim_{n \to \infty} \sqrt[n]{n} = \lim_{n \to \infty} (1 + \lambda_n) = 1 \tag{6}
 \end{gather}
 $$
-
-**Product Rule for the Limit Superior:**
+---
+# Product Rule for the Limit Superior
 Let $(a_n)_{n=1}^\infty$ be a sequence of non-negative real numbers, and let $(b_n)_{n=1}^\infty$ be a sequence of positive real numbers that converges to a strictly positive limit $B \in (0, \infty)$:
 $$
 \begin{gather}
@@ -93,8 +94,8 @@ $$
 $$
 2. Case $S = 0$: For any $\varepsilon > 0$, $a_n < \varepsilon$ for all sufficiently large $n$. Since $b_n < B + 1$, $a_n b_n < \varepsilon (B + 1)$, implying $\limsup_{n \to \infty} (a_n b_n) = 0 = B \cdot 0$.
 3. Case $S = \infty$: For any $M > 0$, there exists a subsequence with $a_{n_k} > M$. Since $b_{n_k} > B/2$ for large $k$, $a_{n_k} b_{n_k} > M B / 2$, which implies $\limsup_{n \to \infty} (a_n b_n) = \infty = B \cdot \infty$.
-
-**Application to Cauchy-Hadamard Reciprocal Radius:**
+---
+# Application to Cauchy-Hadamard Reciprocal Radius
 Decompose the $n$-th root in step 3 using the product of terms:
 $$
 \begin{gather}
@@ -115,8 +116,8 @@ $$
 \frac{1}{R'} = \frac{1}{R} \implies R' = R \tag{16}
 \end{gather}
 $$
-
-**Higher-Order Derivative Invariance:**
+---
+# Higher-Order Derivative Invariance
 By mathematical induction, let $m \in \mathbb{N}$ denote the order of differentiation. The $m$-th derivative series is given by:
 $$
 \begin{gather}

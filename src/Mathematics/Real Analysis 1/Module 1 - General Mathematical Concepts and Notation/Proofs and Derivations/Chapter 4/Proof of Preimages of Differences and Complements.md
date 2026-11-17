@@ -24,7 +24,7 @@ $$
 ---
 # Proposition 2
 
-**Method 1 (Algebraic Reduction via Set Difference):**
+### Method 1 (Algebraic Reduction via Set Difference)
 Because $f: X \to Y$ is a well-defined mapping from domain $X$ into codomain $Y$, every element of $X$ maps into $Y$. Consequently, the preimage of the total codomain is the total domain:
 $$
 \begin{gather}
@@ -42,7 +42,7 @@ f^{-1}(C_Y(A')) &= f^{-1}(Y \setminus A') \\
 $$
 Therefore, $f^{-1}(C_Y(A')) = C_X(f^{-1}(A'))$.
 
-**Method 2 (Pointwise Verification):**
+### Method 2 (Pointwise Verification)
 Alternatively, the identity can be verified directly for an arbitrary element $x \in X$:
 $$
 \begin{aligned}

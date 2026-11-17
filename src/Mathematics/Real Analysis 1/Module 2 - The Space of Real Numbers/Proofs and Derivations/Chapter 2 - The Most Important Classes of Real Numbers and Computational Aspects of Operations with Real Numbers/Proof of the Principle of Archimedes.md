@@ -3,14 +3,15 @@ dg-publish: true
 ---
 Let $h \in \mathbb{R}_{>0}$ be a fixed strictly positive step size, and let $x \in \mathbb{R}$ be an arbitrary real number.
 
-**Equivalent Reformulation:**
+---
+# Equivalent Reformulation
 Dividing the target inequality $(k - 1)h \le x < kh$ by the positive scalar $h > 0$ yields the equivalent condition:
 $$
 k - 1 \le \frac{x}{h} < k \tag{1}
 $$
 It therefore suffices to demonstrate the existence and uniqueness of an integer $k \in \mathbb{Z}$ satisfying step 1.
 
-**Existence:**
+### Existence
 Define the subset $E \subset \mathbb{Z}$ consisting of all integers that strictly exceed the ratio $x/h$:
 $$
 E := \left\{ n \in \mathbb{Z} \ \middle|\ \frac{x}{h} < n \right\} \tag{2}
@@ -40,7 +41,7 @@ $$
 (k - 1)h \le x < kh \tag{7}
 $$
 
-**Uniqueness:**
+### Uniqueness
 Suppose that $k_1, k_2 \in \mathbb{Z}$ both satisfy step 6 with $k_1 < k_2$. Because $k_1$ and $k_2$ are integers, $k_1 < k_2 \implies k_1 \le k_2 - 1$. 
 
 Combining this with the bracketing bounds requires:
@@ -48,7 +49,6 @@ $$
 k_2 - 1 \le \frac{x}{h} < k_1 \le k_2 - 1 \implies k_2 - 1 < k_2 - 1 \tag{8}
 $$
 Step 8 is an impossible contradiction. Therefore, $k_1 = k_2$, confirming that the integer $k \in \mathbb{Z}$ is uniquely determined.
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

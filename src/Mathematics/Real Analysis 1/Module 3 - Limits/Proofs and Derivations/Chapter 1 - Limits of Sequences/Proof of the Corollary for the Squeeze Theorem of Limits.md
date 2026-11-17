@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $\{x_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
-**Forward Direction ($\implies$):**
+---
+# Forward Direction
 Assume that $\lim_{n \to \infty} |x_n| = 0$. By definition of the absolute value on $\mathbb{R}$, every term $x_n$ satisfies the double inequality: 
 $$
 \begin{gather}
@@ -22,8 +23,8 @@ $$
 \lim_{n \to \infty} x_n = 0 \tag{3}
 \end{gather}
 $$
-
-**Reverse Direction ($\impliedby$):**
+---
+# Reverse Direction
 Conversely, assume that $\lim_{n \to \infty} x_n = 0$. Let $\varepsilon > 0$ be arbitrary.
 
 By definition of sequence convergence, there exists an index $N \in \mathbb{N}$ such that for all $n > N$:

@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $X$ and $Y$ be sets, and let $f: X \to Y$ be a mapping.
 
-**Existence:**
+---
+# Existence
 Assume that the mapping $f: X \to Y$ is bijective. By definition, $f$ satisfies two independent structural properties:
 1. Surjectivity: For every element $y \in Y$, there exists an element $x \in X$ such that $f(x) = y$.
 2. Injectivity: For all elements $x_1, x_2 \in X$, the equality $f(x_1) = f(x_2)$ implies $x_1 = x_2$.
@@ -58,7 +59,8 @@ f(g(y)) = f(x) = y = \operatorname{id}_Y(y) \tag{7}
 $$
 Because step 7 holds for every $y \in Y$, the relation $f \circ g = \operatorname{id}_Y$ is verified. Hence, the mapping $g: Y \to X$ is a valid inverse mapping of $f$.
 
-**Uniqueness:**
+---
+# Uniqueness
 Suppose there exist two mappings $g_1: Y \to X$ and $g_2: Y \to X$ that both satisfy the inverse criteria with respect to $f$:
 $$
 \begin{gather}

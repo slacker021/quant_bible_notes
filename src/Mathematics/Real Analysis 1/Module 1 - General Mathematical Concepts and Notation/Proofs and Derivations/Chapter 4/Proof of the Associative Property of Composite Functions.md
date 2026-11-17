@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $X, Y, Z,$ and $W$ be sets, and let $f: X \to Y$, $g: Y \to Z$, and $h: Z \to W$ be mappings.
 
-**Domain and Codomain Agreement:**
+---
+# Domain and Codomain Agreement
 Consider the composite mapping $g \circ f$. Because $f: X \to Y$ and $g: Y \to Z$, the composition $g \circ f$ is a well-defined function mapping $g \circ f: X \to Z$. Composing this resulting function with $h: Z \to W$ yields
 $$
 \begin{gather}
@@ -18,7 +19,8 @@ $$
 $$
 Both composite mappings $h \circ (g \circ f)$ and $(h \circ g) \circ f$ share the common domain $X$ and the common codomain $W$.
 
-**Pointwise Evaluation:**
+---
+# Pointwise Evaluation
 Let $x \in X$ be an arbitrary element of the domain. Evaluating the left-hand composite mapping at $x$ yields: 
 $$
 \begin{aligned}

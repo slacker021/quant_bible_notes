@@ -7,8 +7,8 @@ $$
 \Psi(x) := \begin{cases} \exp\left(-\frac{1}{(1+x)^2} - \frac{1}{(1-x)^2}\right) & \text{if } x \in (-1, 1) \\[3mm] 0 & \text{if } |x| \ge 1 \end{cases} \tag{1}
 \end{gather}
 $$
-
-**Even Parity of the Mapping:**
+---
+# Even Parity of the Mapping
 Evaluating $\Psi$ at $-x$ for any $x \in (-1, 1)$ gives:
 $$
 \begin{gather}
@@ -18,7 +18,7 @@ $$
 
 Because $\Psi(x) = 0 = \Psi(-x)$ for $|x| \ge 1$, $\Psi$ is an even function on $\mathbb{R}$: $\Psi(-x) = \Psi(x)$ for all $x \in \mathbb{R}$.
 
-**Smoothness on Open Subdomains:**
+### Smoothness on Open Subdomains
 1. On the interior interval $(-1, 1)$, the functions $(1+x)^2$ and $(1-x)^2$ are strictly positive and non-vanishing. The argument:
 $$
 \begin{gather}
@@ -29,7 +29,7 @@ is a rational function whose denominator has roots exclusively at $x = \pm 1$. T
 
 2. On the exterior open set $(-\infty, -1) \cup (1, \infty)$, $\Psi(x) \equiv 0$ is identically constant. Thus, all derivatives exist and vanish identically: $\Psi^{(n)}(x) = 0$ for all $n \in \mathbb{N}_0$, confirming that $\Psi \in C^\infty((-\infty, -1) \cup (1, \infty))$.
 
-**Regularity at the Boundary Point $x = 1$:**
+### Regularity at the Boundary Point $x = 1$
 It remains to verify infinite differentiability at the boundary interface $x = 1$. By symmetry from step 2, the behavior at $x = -1$ is completely analogous.
 
 For $x > 1$, $\Psi(x) \equiv 0$, which ensures that all right-handed derivatives at $x = 1$ vanish:
@@ -115,7 +115,8 @@ $$
 
 Thus, $\Psi$ is differentiable to all orders at every point $x \in \mathbb{R}$, proving $\Psi \in C^\infty(\mathbb{R})$.
 
-**Compact Support:**
+---
+# Compact Support
 Because the natural exponential mapping satisfies $\exp(u) > 0$ for all real arguments $u \in \mathbb{R}$, the function $\Psi$ is strictly positive throughout $(-1, 1)$:
 $$
 \begin{gather}

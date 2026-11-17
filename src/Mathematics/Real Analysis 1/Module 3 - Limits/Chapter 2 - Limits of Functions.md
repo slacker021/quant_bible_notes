@@ -11,12 +11,12 @@ The reader may think of this particular chapter as paying homage to that era of 
 ### The Limit Point Precondition
 Prior to evaluating the limiting behavior of a function at a point, the underlying domain must permit an infinite sequence of distinct points to approach the target value arbitrarily closely. Building upon the topological concept of a [[Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers|limit point (or accumulation point)]] established in Module 2, if this precondition fails, the concept of a functional limit becomes mathematically vacuous: 
 $$
-\begin{gather} \textbf{Definition: Limit Point (Accumulation Point) of a Domain} \\[5mm] \text{Let } E \subseteq \mathbb{R}. \text{ A point } a \in \mathbb{R} \text{ is called a limit point (or accumulation point) of } E, \\[2mm] \text{denoted } a \in E', \text{ if every open neighborhood of } a \text{ contains at least one point of } E \text{ distinct from } a\text{:} \\[3.5mm] \forall \delta > 0, \quad \mathring{U}_\delta(a) \cap E \neq \emptyset \\[3.5mm] \text{where } \mathring{U}_\delta(a) := (a - \delta, a + \delta) \setminus \{a\} \text{ denotes the punctured (deleted) } \delta\text{-neighborhood of } a. \end{gather}
+\begin{gather} \textbf{Definition: Limit Point (Accumulation Point) of a Domain} \\[5mm] \text{Let } E \subseteq \mathbb{R}. \text{ A point } a \in \mathbb{R} \text{ is called a \textit{limit point} (or \textit{accumulation point}) of } E, \\[2mm] \text{denoted } a \in E', \text{ if every open neighborhood of } a \text{ contains at least one point of } E \text{ distinct from } a\text{:} \\[3.5mm] \forall \delta > 0, \quad \mathring{U}_\delta(a) \cap E \neq \emptyset \\[3.5mm] \text{where } \mathring{U}_\delta(a) := (a - \delta, a + \delta) \setminus \{a\} \text{ denotes the \textit{punctured (deleted)} } \delta\text{-\textit{neighborhood} of } a. \end{gather}
 $$
 
 It is only with the definition of a limit point that the actual definition of a limit, which is based on the *Cauchy Criterion* mentioned in the last chapter, can be provided:
 $$
-\begin{gather} \textbf{Definition: The Limit of a Function (Cauchy Criterion)} \\[5mm] \text{Let } f: E \to \mathbb{R} \text{ be a real-valued function, and let } a \in E' \text{ be an accumulation point of } E. \\[2mm] \text{The function } f \text{ tends to a real limit } A \in \mathbb{R} \text{ as } x \text{ tends to } a \text{ within } E, \text{ denoted} \\[3.5mm] \lim_{E \ni x \to a} f(x) = A \quad (\text{or simply } \lim_{x \to a} f(x) = A), \\[3.5mm] \text{if for every positive error tolerance } \varepsilon > 0, \text{ there exists a corresponding distance } \delta > 0 \text{ such that} \\[2mm] \text{for all } x \in E, \text{ the condition } 0 < |x - a| < \delta \text{ strictly guarantees that } |f(x) - A| < \varepsilon\text{:} \\[3.5mm] \forall \varepsilon > 0, \ \exists \delta > 0, \ \forall x \in E \ \big(0 < |x - a| < \delta \implies |f(x) - A| < \varepsilon\big). \\[3.5mm] \text{Topologically, for every neighborhood } V(A) \text{ of } A, \text{ there exists a punctured neighborhood } \mathring{U}_E(a) \\[2mm] \text{such that the direct functional image satisfies } f(\mathring{U}_E(a)) \subseteq V(A). \end{gather}
+\begin{gather} \textbf{Definition: The Limit of a Function (Cauchy Criterion)} \\[5mm] \text{Let } f: E \to \mathbb{R} \text{ be a real-valued function, and let } a \in E' \text{ be an accumulation point of } E. \\[2mm] \text{The function } f \text{ tends to a real \textit{limit} } A \in \mathbb{R} \text{ as } x \text{ tends to } a \text{ within } E, \text{ denoted} \\[3.5mm] \lim_{E \ni x \to a} f(x) = A \quad (\text{or simply } \lim_{x \to a} f(x) = A), \\[3.5mm] \text{if for every positive error tolerance } \varepsilon > 0, \text{ there exists a corresponding distance } \delta > 0 \text{ such that} \\[2mm] \text{for all } x \in E, \text{ the condition } 0 < |x - a| < \delta \text{ strictly guarantees that } |f(x) - A| < \varepsilon\text{:} \\[3.5mm] \forall \varepsilon > 0, \ \exists \delta > 0, \ \forall x \in E \ \big(0 < |x - a| < \delta \implies |f(x) - A| < \varepsilon\big). \\[3.5mm] \text{Topologically, for every neighborhood } V(A) \text{ of } A, \text{ there exists a \textit{punctured neighborhood} } \mathring{U}_E(a) \\[2mm] \text{such that the \textit{direct functional image} satisfies } f(\mathring{U}_E(a)) \subseteq V(A). \end{gather}
 $$
 
 >[!danger]+ Intuition: Punctured Neighborhoods and the Elimination of Vacuous Truth
@@ -45,7 +45,7 @@ $$
 # Directional and Infinite Limits
 The definition of a limit of a function, to be more precise, needs to be evaluated from two "sides"—one from the left and another at the right. The existence of the limit of a function, assuming each side exists and has the identical numerical value, is a combination of both sides:
 $$
-\begin{gather} \textbf{Definition: One-Sided Limits} \\[5mm] \text{1. Left-Hand Limit: Let } a \text{ be a limit point of } E \cap (-\infty, a). \text{ Then } \lim_{x \to a^-} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists \delta > 0, \ \forall x \in E \ \big(a - \delta < x < a \implies |f(x) - A| < \varepsilon\big). \\[3.5mm] \text{2. Right-Hand Limit: Let } a \text{ be a limit point of } E \cap (a, +\infty). \text{ Then } \lim_{x \to a^+} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists \delta > 0, \ \forall x \in E \ \big(a < x < a + \delta \implies |f(x) - A| < \varepsilon\big). \end{gather}
+\begin{gather} \textbf{Definition: One-Sided Limits} \\[5mm] \text{1. \textit{Left-Hand Limit}: Let } a \text{ be a limit point of } E \cap (-\infty, a). \text{ Then } \lim_{x \to a^-} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists \delta > 0, \ \forall x \in E \ \big(a - \delta < x < a \implies |f(x) - A| < \varepsilon\big). \\[3.5mm] \text{2. \textit{Right-Hand Limit}: Let } a \text{ be a limit point of } E \cap (a, +\infty). \text{ Then } \lim_{x \to a^+} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists \delta > 0, \ \forall x \in E \ \big(a < x < a + \delta \implies |f(x) - A| < \varepsilon\big). \end{gather}
 $$
 It should be noted that it is possible for one side of the limit to exist but the other to not. However, this would mean that the two-sided limit definition will not hold:
 $$
@@ -55,7 +55,7 @@ $$
 
 Like with the limits of sequences, it is possible to evaluate the asymptotic behavior of a function should the limit become arbitrarily larger or smaller:
 $$
-\begin{gather} \textbf{Definition: Limits at Infinity} \\[5mm] \text{1. Positive Infinity: If } E \text{ is unbounded above, } \lim_{x \to +\infty} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists M \in \mathbb{R}, \ \forall x \in E \ \big(x > M \implies |f(x) - A| < \varepsilon\big). \\[3.5mm] \text{2. Negative Infinity: If } E \text{ is unbounded below, } \lim_{x \to -\infty} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists M \in \mathbb{R}, \ \forall x \in E \ \big(x < M \implies |f(x) - A| < \varepsilon\big). \\[3.5mm] \text{3. Unsigned Infinity: If } E \text{ is unbounded in magnitude, } \lim_{x \to \infty} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists M \in \mathbb{R}, \ \forall x \in E \ \big(|x| > M \implies |f(x) - A| < \varepsilon\big). \end{gather}
+\begin{gather} \textbf{Definition: Limits at Infinity} \\[5mm] \text{1. \textit{Positive Infinity}: If } E \text{ is unbounded above, } \lim_{x \to +\infty} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists M \in \mathbb{R}, \ \forall x \in E \ \big(x > M \implies |f(x) - A| < \varepsilon\big). \\[3.5mm] \text{2. \textit{Negative Infinity}: If } E \text{ is unbounded below, } \lim_{x \to -\infty} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists M \in \mathbb{R}, \ \forall x \in E \ \big(x < M \implies |f(x) - A| < \varepsilon\big). \\[3.5mm] \text{3. \textit{Unsigned Infinity}: If } E \text{ is unbounded in magnitude, } \lim_{x \to \infty} f(x) = A \iff \\[3.5mm] \forall \varepsilon > 0, \ \exists M \in \mathbb{R}, \ \forall x \in E \ \big(|x| > M \implies |f(x) - A| < \varepsilon\big). \end{gather}
 $$
 
 Another thing that makes the limits of functions comparable to the limits of sequences is that they may not exist but the behavior grows infinitely large. Although non-existent, its behavior can still be studied:
@@ -89,7 +89,7 @@ $$
 # Limits Over an Arbitrary Base
 The concepts of two-sided limits, directional limits, limits at infinity, and sequential limits can be derived simultaneously through the topological theory of *filter bases*. This Bourbaki-*Vladimir Antonovich Zorich* architectural abstraction proves theorems on uniqueness, boundedness, arithmetic, and order preservation once and for all over an abstract base $\mathcal{B}$, eliminating redundant proofs across specialized limiting domains:
 $$
-\begin{gather} \textbf{Definition: Filter Base} \\[5mm] \text{A family } \mathcal{B} \text{ of non-empty subsets of a set } X \text{ forms a filter base (or simply base) in } X \text{ if:} \\[3.5mm] \text{1. Non-emptiness: } \forall B \in \mathcal{B}, \quad B \neq \emptyset. \\[2mm] \text{2. Filter Directedness: } \forall B_1, B_2 \in \mathcal{B}, \quad \exists B \in \mathcal{B} \text{ such that } B \subseteq B_1 \cap B_2. \end{gather}
+\begin{gather} \textbf{Definition: Filter Base} \\[5mm] \text{A family } \mathcal{B} \text{ of non-empty subsets of a set } X \text{ forms a \textit{filter base} (or simply \textit{base}) in } X \text{ if:} \\[3.5mm] \text{1. \textit{Non-emptiness}: } \forall B \in \mathcal{B}, \quad B \neq \emptyset. \\[2mm] \text{2. \textit{Filter Directedness}: } \forall B_1, B_2 \in \mathcal{B}, \quad \exists B \in \mathcal{B} \text{ such that } B \subseteq B_1 \cap B_2. \end{gather}
 $$
 
 The canonical mathematical limits correspond to explicit realizations of filter bases in $\mathbb{R}$:
@@ -100,15 +100,15 @@ The canonical mathematical limits correspond to explicit realizations of filter 
 * Sequence base: $\mathcal{B}(\mathbb{N}) := \{\{k \in \mathbb{N} \mid k > n\} \mid n \in \mathbb{N}\}$ corresponds to $n \to \infty$.
 
 $$
-\begin{gather} \textbf{Definition: Limit over a Base} \\[5mm] \text{A number } A \in \mathbb{R} \text{ is the limit of the function } f: X \to \mathbb{R} \text{ over the base } \mathcal{B}, \text{ denoted} \\[3.5mm] \lim_{\mathcal{B}} f(x) = A, \\[3.5mm] \text{if for every neighborhood } V(A) \text{ of } A, \text{ there exists an element } B \in \mathcal{B} \text{ such that } f(B) \subseteq V(A)\text{:} \\[3.5mm] \forall \varepsilon > 0, \ \exists B \in \mathcal{B}, \ \forall x \in B \ \big(|f(x) - A| < \varepsilon\big). \end{gather}
+\begin{gather} \textbf{Definition: Limit over a Base} \\[5mm] \text{A number } A \in \mathbb{R} \text{ is the \textit{limit} of the function } f: X \to \mathbb{R} \text{ \textit{over the base} } \mathcal{B}, \text{ denoted} \\[3.5mm] \lim_{\mathcal{B}} f(x) = A, \\[3.5mm] \text{if for every neighborhood } V(A) \text{ of } A, \text{ there exists an element } B \in \mathcal{B} \text{ such that } f(B) \subseteq V(A)\text{:} \\[3.5mm] \forall \varepsilon > 0, \ \exists B \in \mathcal{B}, \ \forall x \in B \ \big(|f(x) - A| < \varepsilon\big). \end{gather}
 $$
 
 $$
-\begin{gather} \textbf{Definition: Ultimate Properties over a Base} \\[5mm] \text{A property } P(x) \text{ holds ultimately over a base } \mathcal{B} \text{ if there exists an element } B \in \mathcal{B} \\[2mm] \text{such that } P(x) \text{ holds for all } x \in B. \end{gather}
+\begin{gather} \textbf{Definition: Ultimate Properties over a Base} \\[5mm] \text{A property } P(x) \text{ holds \textit{ultimately} over a base } \mathcal{B} \text{ if there exists an element } B \in \mathcal{B} \\[2mm] \text{such that } P(x) \text{ holds for all } x \in B. \end{gather}
 $$
 
 $$
-\begin{gather} \textbf{Definition: Boundedness and Infinitesimals over a Base} \\[5mm] \text{1. A function } f: X \to \mathbb{R} \text{ is ultimately bounded over } \mathcal{B} \text{ if there exist a constant } C > 0 \\[2mm] \text{and an element } B \in \mathcal{B} \text{ such that } |f(x)| \le C \text{ for all } x \in B. \\[3.5mm] \text{2. A function } \alpha: X \to \mathbb{R} \text{ is an infinitesimal over } \mathcal{B} \text{ if } \lim_{\mathcal{B}} \alpha(x) = 0. \end{gather}
+\begin{gather} \textbf{Definition: Boundedness and Infinitesimals over a Base} \\[5mm] \text{1. A function } f: X \to \mathbb{R} \text{ is \textit{ultimately bounded} over } \mathcal{B} \text{ if there exist a constant } C > 0 \\[2mm] \text{and an element } B \in \mathcal{B} \text{ such that } |f(x)| \le C \text{ for all } x \in B. \\[3.5mm] \text{2. A function } \alpha: X \to \mathbb{R} \text{ is an \textit{infinitesimal} over } \mathcal{B} \text{ if } \lim_{\mathcal{B}} \alpha(x) = 0. \end{gather}
 $$
 
 $$
@@ -155,7 +155,7 @@ $$
 >$$ \lim_{x \to 0} x^2 (-1)^{\lfloor 1/|x| \rfloor} = 0. \tag{5} $$
 
 $$
-\begin{gather} \textbf{Definition: Oscillation of a Function} \\[5mm] \text{The oscillation of a function } f: X \to \mathbb{R} \text{ on a subset } E \subseteq X \text{ is defined by:} \\[3.5mm] \omega(f, E) := \sup_{x_1, x_2 \in E} |f(x_1) - f(x_2)|. \end{gather}
+\begin{gather} \textbf{Definition: Oscillation of a Function} \\[5mm] \text{The \textit{oscillation} of a function } f: X \to \mathbb{R} \text{ on a subset } E \subseteq X \text{ is defined by:} \\[3.5mm] \omega(f, E) := \sup_{x_1, x_2 \in E} |f(x_1) - f(x_2)|. \end{gather}
 $$
 
 $$
@@ -180,7 +180,7 @@ $$
 
 Like with the limits of sequences, the use of the [[Chapter 1 - Basic Properties of Real Numbers|ordering]] can be used to compare the behavior of various functions when evaluated via a specific input $x$:
 $$
-\begin{gather} \textbf{Definition: Monotonicity of Numerical Functions} \\[5mm] \text{A function } f: E \to \mathbb{R} \text{ defined on an ordered set } E \subseteq \mathbb{R} \text{ is classified as:} \\[3.5mm] \text{1. Strictly Increasing: } \forall x_1, x_2 \in E, \quad x_1 < x_2 \implies f(x_1) < f(x_2). \\[2mm] \text{2. Nondecreasing: } \forall x_1, x_2 \in E, \quad x_1 < x_2 \implies f(x_1) \le f(x_2). \\[2mm] \text{3. Strictly Decreasing: } \forall x_1, x_2 \in E, \quad x_1 < x_2 \implies f(x_1) > f(x_2). \\[2mm] \text{4. Nonincreasing: } \forall x_1, x_2 \in E, \quad x_1 < x_2 \implies f(x_1) \ge f(x_2). \end{gather}
+\begin{gather} \textbf{Definition: Monotonicity of Numerical Functions} \\[5mm] \text{A function } f: E \to \mathbb{R} \text{ defined on an ordered set } E \subseteq \mathbb{R} \text{ is classified as:} \\[3.5mm] \text{1. \textit{Strictly Increasing}: } \forall x_1, x_2 \in E, \quad x_1 < x_2 \implies f(x_1) < f(x_2). \\[2mm] \text{2. \textit{Nondecreasing}: } \forall x_1, x_2 \in E, \quad x_1 < x_2 \implies f(x_1) \le f(x_2). \\[2mm] \text{3. \textit{Strictly Decreasing}: } \forall x_1, x_2 \in E, \quad x_1 < x_2 \implies f(x_1) > f(x_2). \\[2mm] \text{4. \textit{Nonincreasing}: } \forall x_1, x_2 \in E, \quad x_1 < x_2 \implies f(x_1) \ge f(x_2). \end{gather}
 $$
 
 $$

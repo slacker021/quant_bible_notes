@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $I \subseteq \mathbb{R}$ be a connected non-degenerate interval, and let $f: I \to \mathbb{R}$ be a function differentiable at every point of $I$.
 
-**Necessity ($\implies$):**
+*-*--
+# Necessity
 Assume that $f$ is identically constant on $I$, meaning there exists a scalar $C \in \mathbb{R}$ such that:
 $$
 \begin{gather}
@@ -26,7 +27,8 @@ f'(x_0) = \lim_{I \ni x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = \lim_{I \ni x \
 $$
 Because $x_0 \in I$ was arbitrary, $f'(x) = 0$ for all $x \in I$.
 
-**Sufficiency ($\impliedby$):**
+---
+# Sufficiency
 Assume that the derivative vanishes identically across the interval:
 $$
 \begin{gather}

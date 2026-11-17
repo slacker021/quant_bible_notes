@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$, let $f: E \to \mathbb{R}$, and let $x_0 \in E \cap E'$.
 
-**Necessity ($\implies$ Differentiability implies Existence of Continuous Auxiliary Function):**
+---
+# Necessity
 Assume that $f$ is differentiable at the point $x_0$. 
 
 By the [[Proof of the Equivalence of Differentiability and Derivative Existence|Equivalence of Differentiability and Derivative Existence]], the derivative $f'(x_0) \in \mathbb{R}$ exists as the finite limit of the difference quotient:
@@ -45,7 +46,8 @@ $$
 $$
 Because the limit of $\psi(x)$ at $x_0$ along $E$ coincides with its functional value, $\psi$ is continuous at $x_0$.
 
-**Sufficiency ($\impliedby$ Existence of Continuous Auxiliary Function implies Differentiability):**
+---
+# Sufficiency
 Conversely, suppose there exists a function $\psi: E \to \mathbb{R}$ that is continuous at $x_0$ and satisfies the factorization:
 $$
 \begin{gather}

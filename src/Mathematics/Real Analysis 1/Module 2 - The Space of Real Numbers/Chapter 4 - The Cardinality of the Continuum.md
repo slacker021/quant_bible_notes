@@ -6,10 +6,10 @@ The formalization of [[Chapter 4 - Functions and Cardinality|equipotence]] enabl
 $$
 \begin{gather}
 \textbf{Definition: Countable Set} \\[5mm]
-\text{A set } X \text{ is called countable (or countably infinite) if it is equipotent to the set of natural numbers } \mathbb{N} \text{ (}|X| = \aleph_0\text{).} \\[2mm]
+\text{A set } X \text{ is called \textit{countable} (or \textit{countably infinite}) if it is equipotent to the set of natural numbers } \mathbb{N} \text{ (}|X| = \aleph_0\text{).} \\[2mm]
 \text{Equivalently, there exists a bijective mapping } f: \mathbb{N} \to X, \text{ allowing the} \\[2mm]
 \text{elements of } X \text{ to be indexed as an infinite sequence } x_1, x_2, \dots, x_n, \dots. \\[3.5mm]
-\text{A set that is either finite or countably infinite is called at most countable.}
+\text{A set that is either finite or countably infinite is called \textit{at most countable}.}
 \end{gather}
 $$
 Operating on countable and at most countable sets yields several foundational closure properties under standard set-theoretic operations:
@@ -46,7 +46,7 @@ Given that both the set of integers $\mathbb{Z}$ and the dense set of rational n
 $$
 \begin{gather}
 \textbf{Theorem: Uncountability of the Real Numbers (Cantor's Diagonal Argument)} \\[5mm]
-\text{The set of real numbers } \mathbb{R} \text{ is uncountable.} \\[2mm]
+\text{The set of real numbers } \mathbb{R} \text{ is \textit{uncountable}.} \\[2mm]
 \text{Specifically, neither the open interval } (0, 1) \text{ nor the closed interval } [0, 1] \text{ can be placed} \\[2mm]
 \text{in a bijective correspondence with the set of natural numbers } \mathbb{N}.
 \end{gather}
@@ -58,7 +58,7 @@ $$
 \begin{gather}
 \textbf{Definition: Cardinality of the Continuum} \\[5mm]
 \text{Any set that is equipotent to the set of real numbers } \mathbb{R} \text{ (or equivalently, to } (0, 1) \text{ or } [0, 1]\text{)} \\[2mm]
-\text{is said to have the cardinality of the continuum, denoted by the symbol } \mathfrak{c}.
+\text{is said to have the \textit{cardinality of the continuum}, denoted by the symbol } \mathfrak{c}.
 \end{gather}
 $$
 Because the set of all real numbers $\mathbb{R}$ has the cardinality of the continuum $\mathfrak{c}$, whereas the subset of rational numbers $\mathbb{Q} \subset \mathbb{R}$ is merely countable, it follows that the vast majority of points on the real number line are irrational:

@@ -13,7 +13,8 @@ $$
 r_n \le x < r_n + \frac{1}{q^{n-p}} \tag{2}
 $$
 
-**Base Step ($n = 0$):**
+---
+# Base Step 
 Applying the Principle of Archimedes to $x$ with step size $h = q^p > 0$ yields a unique integer $\alpha_p \in \mathbb{Z}$ satisfying:
 $$
 \alpha_p q^p \le x < (\alpha_p + 1)q^p = \alpha_p q^p + q^p \tag{3}
@@ -28,7 +29,8 @@ r_0 \le x < r_0 + \frac{1}{q^{-p}} \tag{5}
 $$
 This verifies step 2 for $n = 0$.
 
-**Inductive Step:**
+---
+# Inductive Step
 Assume as the inductive hypothesis that for a fixed $k \in \mathbb{N}_0$, the digits $\alpha_p, \dots, \alpha_{p-k} \in \{0, \dots, q - 1\}$ have been uniquely determined such that:
 $$
 r_k \le x < r_k + q^{-(k-p)} \tag{6}
@@ -55,7 +57,6 @@ $$
 r_{n+1} - r_n = \alpha_{p-(n+1)} q^{p-(n+1)} \tag{10}
 $$
 Because $\alpha_{p-(n+1)} \ge 0$ and $q > 0$, step 10 confirms that $r_{n+1} \ge r_n$ for all $n \in \mathbb{N}_0$. Consequently, $\{r_n\}_{n=0}^\infty$ is a monotonically non-decreasing sequence of lower rational approximations.
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

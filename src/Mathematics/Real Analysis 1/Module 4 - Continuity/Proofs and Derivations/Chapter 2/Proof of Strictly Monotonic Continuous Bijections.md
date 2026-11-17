@@ -11,14 +11,16 @@ $$
 $$
 (If $f$ is strictly decreasing, the argument applies symmetrically to $-f$).
 
-**Necessity ($\implies$ Continuity implies Interval Image):**
+---
+# Necessity
 Assume that $f$ is continuous on the interval $I$. 
 
 By the [[Proof of the Image of an Interval under Continuous Mappings]], the continuous image of any interval is an interval. 
 
 Therefore, $J = f(I)$ is an interval.
 
-**Sufficiency ($\impliedby$ Interval Image implies Continuity):**
+---
+# Sufficiency
 Conversely, assume that the image set $J = f(I)$ is an interval. 
 
 It must be established that $f$ is continuous at an arbitrary point $x_0 \in I$. 

@@ -201,7 +201,6 @@ In execution, one assumes that the conclusion $B$ is false ($\neg B$) and demons
 >A contrapositive proof observes the original highway through a rearview mirror. If an observer finds themselves anywhere other than destination $B$ (that is, $\neg B$), it is structurally impossible for them to have departed from starting point $A$ (that is, $\neg A$). Proving that absent destinations imply absent origins proves the forward journey with equal mathematical certainty.
 
 ### Useful Relations
-
 Five fundamental equivalences frequently deployed in deduction are listed below:
 1. $\neg(A \wedge B) \iff (\neg A \lor \neg B)$ (*Augustus De Morgan*'s First Law)
 2. $\neg(A \lor B) \iff (\neg A \wedge \neg B)$ (De Morgan's Second Law)

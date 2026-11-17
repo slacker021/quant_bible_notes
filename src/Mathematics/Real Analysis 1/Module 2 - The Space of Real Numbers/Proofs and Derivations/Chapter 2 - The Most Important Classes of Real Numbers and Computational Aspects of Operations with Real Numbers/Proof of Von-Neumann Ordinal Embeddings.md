@@ -5,7 +5,8 @@ Let $x, y$ be von Neumann ordinals in Zermelo-Fraenkel set theory (ZF). The succ
 
 --------------------------------------------------------------------------------
 # Lemma 1
-**Injectivity of Successor Mappings:**
+
+### Injectivity of Successor Mappings
 Assume that:
 $$
 x^+ = y^+ \iff x \cup \{x\} = y \cup \{y\} \tag{1}
@@ -36,10 +37,10 @@ Thus, no element of $S$ is disjoint from $S$, which contradicts the Axiom of Reg
 $$
 x^+ = y^+ \implies x = y \tag{5}
 $$
-
---------------------------------------------------------------------------------
+---
 # Lemma 2
-**Immediate Successor Property:**
+
+### Immediate Successor Property
 Because $x \in x \cup \{x\} = x^+$, the definition of ordinal ordering confirms that:
 $$
 x < x^+ \tag{6}
@@ -50,7 +51,7 @@ $$
 $$
 Step 7 demonstrates that no ordinal $z$ can satisfy $x < z < x^+$, proving that $x^+$ is the immediate successor of $x$.
 
-**Well-Ordering Principle:**
+### Well-Ordering Principle
 Let $X$ be an arbitrary non-empty set of von Neumann ordinals. 
 
 Applying the Axiom of Regularity directly to $X$ guarantees the existence of an element $x_{\min} \in X$ such that:

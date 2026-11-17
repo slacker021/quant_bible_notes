@@ -17,7 +17,7 @@ This knowledge base makes heavy use of generative artificial intelligence, more 
 - **Errors:** Both the author and lower-level agents take turns checking for errors, whether logical or grammatical. This collaborative proofreading ensures mutual accountability. 
 - **Framework Consistency:** Ensuring that newly introduced modules remain consistent with previously established facts is challenging. The vast differences in notation, conventions, and assumptions across source materials make standardizing integrated information difficult. AI is therefore essential to ensure that newly incorporated material aligns seamlessly with the rest of the framework. 
 
-### Forever Free
+### Free, Forever and Always
 This knowledge base was curated with an explicit commitment to universal accessibility. It operates under an "open science" philosophy, meaning its contents are designed for communal learning and critical inquiry—from personal self-study modules to advanced university coursework. The synthesized material is intended as a foundational resource for discussion. While all forms of intellectual utilization are encouraged, this material is not intended as proprietary intellectual property for commercial or for-profit exploitation. Knowledge in quantitative research should remain freely accessible to the public. 
 
 To maintain this mission of open access, this project neither solicits funds nor accepts donations. The existence of this collection of research notes is predicated purely on the principle of free dissemination. Any external claim to commercialize or sell material from these notes is contrary to the core principles of this resource and should be approached with extreme caution. 

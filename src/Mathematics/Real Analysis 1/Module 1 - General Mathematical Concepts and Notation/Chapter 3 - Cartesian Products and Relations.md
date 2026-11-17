@@ -30,13 +30,13 @@ Once the internal architecture of an individual ordered pair is formalized, the 
 $$
 \begin{gather}
 \textbf{Definition: Cartesian Product} \\[5mm]
-\text{Let } X \text{ and } Y \text{ be sets. The Cartesian product of } X \text{ and } Y \text{ is the set} \\[2mm]
+\text{Let } X \text{ and } Y \text{ be sets. The \textit{Cartesian product} of } X \text{ and } Y \text{ is the set} \\[2mm]
 \text{comprising all ordered pairs } (x, y) \text{ such that } x \in X \text{ and } y \in Y: \\[3.5mm]
 X \times Y := \{(x, y) \mid x \in X \wedge y \in Y\} = \{z \mid \exists x \in X, \exists y \in Y \text{ such that } z = (x, y)\}
 \end{gather}
 $$
 
-The *Cartesian* product (named after *René Descartes*) is fundamentally non-commutative: $X \times Y \neq Y \times X$ in general. Commutative equality is preserved if and only if $(X = Y) \lor (X = \emptyset) \lor (Y = \emptyset)$. When a set is crossed with itself, the shorthand notation $X \times X =: X^2$ is deployed.
+The Cartesian product (named after *René Descartes*) is fundamentally non-commutative: $X \times Y \neq Y \times X$ in general. Commutative equality is preserved if and only if $(X = Y) \lor (X = \emptyset) \lor (Y = \emptyset)$. When a set is crossed with itself, the shorthand notation $X \times X =: X^2$ is deployed.
 
 >[!danger]+ Intuition: The Directional Encryption of Coordinates
 >In ordinary set theory, brackets signify unranked membership: $\{x, y\}$ is identical to $\{y, x\}$. To establish an ordered coordinate system without adding ad-hoc primitives to set theory, Kuratowski devised an internal encryption scheme: the first coordinate is distinguished by being placed inside a dedicated singleton set $\{x\}$, while both coordinates are placed inside the accompanying doubleton $\{x, y\}$. 
@@ -84,13 +84,13 @@ With the Cartesian product established, relationships between distinct sets can 
 $$
 \begin{gather}
 \textbf{Definition: Binary Relation} \\[5mm]
-\text{Let } X \text{ and } Y \text{ be sets. A binary relation } \mathcal{R} \text{ from } X \text{ to } Y \text{ is an arbitrary} \\[2mm]
+\text{Let } X \text{ and } Y \text{ be sets. A \textit{binary relation} } \mathcal{R} \text{ from } X \text{ to } Y \text{ is an arbitrary} \\[2mm]
 \text{subset of their Cartesian product: } \mathcal{R} \subseteq X \times Y. \\[3.5mm]
-\text{The set } X \text{ represents the source set, and } Y \text{ represents the target set.} \\[2mm]
-\text{The active domain and range of the relation are defined respectively as:} \\[3.5mm]
+\text{The set } X \text{ represents the \textit{source set}, and } Y \text{ represents the \textit{target set}.} \\[2mm]
+\text{The \textit{active domain} and \textit{range} of the relation are defined respectively as:} \\[3.5mm]
 \operatorname{dom}(\mathcal{R}) := \{x \in X \mid \exists y \in Y \text{ such that } (x, y) \in \mathcal{R}\} \subseteq X \\[2mm]
 \operatorname{ran}(\mathcal{R}) := \{y \in Y \mid \exists x \in X \text{ such that } (x, y) \in \mathcal{R}\} \subseteq Y \\[3.5mm]
-\text{If } (x, y) \in \mathcal{R}, \text{ relational notation is expressed as } x \mathcal{R} y. \\[2mm]
+\text{If } (x, y) \in \mathcal{R}, \text{ \textit{relational notation} is expressed as } x \mathcal{R} y. \\[2mm]
 \text{If } X = Y, \text{ the subset } \mathcal{R} \subseteq X^2 \text{ is designated a binary relation on } X.
 \end{gather}
 $$
@@ -114,7 +114,7 @@ $$
 \begin{gather}
 \textbf{Definition: Equivalence Class} \\[5mm]
 \text{Let } \mathcal{R} \text{ be an equivalence relation on a set } X. \text{ For any fixed element } x \in X, \\[2mm]
-\text{the equivalence class of } x, \text{ denoted } [x], \text{ is the subset of all elements related to } x: \\[3.5mm]
+\text{the \textit{equivalence class} of } x, \text{ denoted } [x], \text{ is the subset of all elements related to } x: \\[3.5mm]
 [x] := \{y \in X \mid y \mathcal{R} x\}
 \end{gather}
 $$
@@ -123,7 +123,7 @@ The space can also be analyzed from a macro-structural viewpoint through set-the
 $$
 \begin{gather}
 \textbf{Definition: Partition of a Set} \\[5mm]
-\text{Let } X \text{ be a non-empty set. A family } \mathcal{P} \text{ of subsets of } X \text{ is designated a partition of } X \\[2mm]
+\text{Let } X \text{ be a non-empty set. A family } \mathcal{P} \text{ of subsets of } X \text{ is designated a \textit{partition} of } X \\[2mm]
 \text{if and only if the following three conditions are satisfied:} \\[3.5mm]
 \text{1. Non-emptiness: } \forall A \in \mathcal{P} \, (A \neq \emptyset) \\[2mm]
 \text{2. Pairwise Disjointness: } \forall A, B \in \mathcal{P} \, (A \neq B \implies A \cap B = \emptyset) \\[2mm]
@@ -133,7 +133,7 @@ $$
 
 $$
 \begin{gather}
-\textbf{Theorem: Fundamental Theorem of Equivalence Relations} \\[5mm]
+\textbf{Fundamental Theorem of Equivalence Relations: } \\[5mm]
 \text{Let } X \text{ be a non-empty set.} \\[2mm]
 \text{1. If } \mathcal{R} \text{ is an equivalence relation on } X, \text{ the family of equivalence classes} \\[2mm]
 X / \mathcal{R} := \{[x] \mid x \in X\} \text{ forms a valid partition of } X. \\[3.5mm]
@@ -167,7 +167,7 @@ To achieve an environment where every pair of elements can be ranked, a relation
 $$
 \begin{gather}
 \textbf{Definition: Totality (Comparability)} \\[5mm]
-\text{A binary relation } \mathcal{R} \text{ on a set } X \text{ satisfies totality (or comparability) if and only if:} \\[3.5mm]
+\text{A binary relation } \mathcal{R} \text{ on a set } X \text{ satisfies \textit{totality} (or \textit{comparability}) if and only if:} \\[3.5mm]
 \forall x, y \in X \, (x \mathcal{R} y \lor y \mathcal{R} x)
 \end{gather}
 $$

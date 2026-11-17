@@ -23,8 +23,8 @@ $$
 f'(x_0) = \lim_{x \to x_0} Q(x), \qquad f'_+(x_0) = \lim_{x \to x_0^+} Q(x), \qquad f'_-(x_0) = \lim_{x \to x_0^-} Q(x) \tag{3}
 \end{gather}
 $$
-
-**Necessity ($\implies$ Bilateral Derivative implies Equality of One-Sided Derivatives):**
+---
+# Necessity
 Assume that the bilateral derivative $f'(x_0)$ exists as a finite real number $L \in \mathbb{R}$.
 
 By the metric definition of a functional limit, for every tolerance $\varepsilon > 0$, there exists a corresponding distance $\delta \in (0, r)$ such that for all $x \in E$:
@@ -66,8 +66,8 @@ $$
 f'_-(x_0) = f'_+(x_0) = L = f'(x_0) \tag{9}
 \end{gather}
 $$
-
-**Sufficiency ($\impliedby$ Equality of One-Sided Derivatives implies Bilateral Derivative):**
+---
+# Sufficiency
 Conversely, assume that both one-sided derivatives exist and are equal to a common real value $L \in \mathbb{R}$:
 $$
 \begin{gather}

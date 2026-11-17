@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$ and let $f: E \to \mathbb{R}$.
 
-**Necessity ($\implies$ Global Continuity implies Open Preimages):**
+---
+# Necessity
 Assume that the function $f$ is continuous at every point of the domain $E$.
 
 Let $G \subseteq \mathbb{R}$ be an arbitrary open subset of the codomain. Consider the complete preimage:
@@ -56,7 +57,8 @@ $$
 
 Because $\Omega$ is open in $\mathbb{R}$, step 6 proves that $f^{-1}(G)$ is relatively open in $E$.
 
-**Sufficiency ($\impliedby$ Open Preimages implies Global Continuity):**
+---
+# Sufficiency
 Conversely, assume that for every open set $G \subseteq \mathbb{R}$, the preimage $f^{-1}(G)$ is relatively open in $E$:
 $$
 \begin{gather}

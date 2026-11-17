@@ -2,6 +2,8 @@
 dg-publish: true
 ---
 Let $(\mathbb{R}, +, \cdot, \le)$ be the complete ordered field of real numbers, and let $\mathbb{R}_{>0} := \{ x \in \mathbb{R} \mid x > 0 \}$.
+
+---
 # Proposition 1
 Define two subsets $X, Y \subset \mathbb{R}_{>0}$ by:
 $$
@@ -33,6 +35,7 @@ Step 5 implies that $\left(s - \frac{\Delta}{3s}\right) \in Y$. This contradicts
 
 By trichotomy, the only remaining relation is $s^2 = 2$. Uniqueness on $\mathbb{R}_{>0}$ follows directly from step 2, as $0 < s_1 < s_2 \implies s_1^2 < s_2^2$. This unique positive scalar is denoted by $\sqrt{2}$.
 
+---
 # Proposition 2
 Assume for the purpose of contradiction that $\sqrt{2} \in \mathbb{Q}$. 
 

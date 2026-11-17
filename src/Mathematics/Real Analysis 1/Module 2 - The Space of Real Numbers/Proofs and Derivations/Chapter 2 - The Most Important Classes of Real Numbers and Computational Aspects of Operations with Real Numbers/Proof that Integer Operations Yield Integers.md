@@ -13,7 +13,7 @@ For any $z \in \mathbb{Z}$, the additive inverse $-z$ belongs to $\mathbb{Z}$:
 
 Because subtraction is defined as $m - n := m + (-n)$, closure under subtraction follows directly from closure under addition and inversion.
 
-**Closure under Addition:**
+### Closure under Addition
 Let $m, n \in \mathbb{Z}$. Evaluate the sign cases for $m$ and $n$:
 * Case 1: Assume $m = 0$ or $n = 0$. If $m = 0$, $m + n = 0 + n = n \in \mathbb{Z}$. If $n = 0$, $m + n = m + 0 = m \in \mathbb{Z}$.
 * Case 2: Assume $m$ and $n$ share the same sign.
@@ -30,7 +30,8 @@ In all cases, $m + n \in \mathbb{Z}$ and $m - n \in \mathbb{Z}$.
 
 ---
 # Proposition 2
-**Closure under Multiplication:**
+
+### Closure under Multiplication
 Let $m, n \in \mathbb{Z}$. Evaluate the sign cases for $m$ and $n$:
 * Case 1: Assume $m = 0$ or $n = 0$. By the connection axioms, $m \cdot n = 0 \in \mathbb{Z}$.
 * Case 2: Assume $m, n \in \mathbb{N}$. By the multiplicative closure of natural numbers, $m \cdot n \in \mathbb{N} \subset \mathbb{Z}$.

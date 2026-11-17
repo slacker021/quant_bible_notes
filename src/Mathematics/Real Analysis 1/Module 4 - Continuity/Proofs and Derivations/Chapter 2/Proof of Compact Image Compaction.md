@@ -3,14 +3,14 @@ dg-publish: true
 ---
 Let $K \subset \mathbb{R}$ be a compact set (closed and bounded in $\mathbb{R}$), and let $f: K \to \mathbb{R}$ be continuous on $K$. 
 
-By the Heine–Borel Theorem in Euclidean space $\mathbb{R}$, a subset is compact if and only if it is closed and bounded. 
-
-**Boundedness of $f(K)$:**
+---
+# Boundedness of $f(K)$
 By the [[Proof of the Weierstrass Global Boundedness Theorem]], there exists a constant $M_0 > 0$ such that for all $x \in K$, $|f(x)| \le M_0$. 
 
 Consequently, the image set $f(K)$ is bounded in $\mathbb{R}$.
 
-**Closedness of $f(K)$:**
+---
+# Closedness of $f(K)$
 To demonstrate that $f(K)$ is closed, let $\{y_n\}_{n=1}^\infty \subseteq f(K)$ be an arbitrary sequence converging to a real limit point $y_0 \in \mathbb{R}$:
 $$
 \begin{gather}

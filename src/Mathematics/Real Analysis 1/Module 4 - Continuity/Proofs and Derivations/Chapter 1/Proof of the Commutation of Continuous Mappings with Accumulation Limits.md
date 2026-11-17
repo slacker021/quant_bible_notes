@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$, let $f: E \to \mathbb{R}$, and let $a \in E \cap E'$. Because $a \in E'$, every punctured neighborhood of $a$ contains points of $E$.
 
-**Necessity ($\implies$ Continuity implies the Limit Identity):**
+---
+# Sufficiency
 Assume that the mapping $f$ is continuous at the point $a$.
 
 By the metric definition of pointwise continuity, for every positive error tolerance $\varepsilon > 0$, there exists a distance $\delta > 0$ such that for all $x \in E$:
@@ -35,8 +36,8 @@ $$
 \lim_{E \ni x \to a} f(x) = f(a) \tag{4}
 \end{gather}
 $$
-
-**Sufficiency ($\impliedby$ The Limit Identity implies Continuity):**
+---
+# Necessity
 Conversely, assume that the functional limit of $f$ exists at the accumulation point $a$ and equals $f(a)$:
 $$
 \begin{gather}

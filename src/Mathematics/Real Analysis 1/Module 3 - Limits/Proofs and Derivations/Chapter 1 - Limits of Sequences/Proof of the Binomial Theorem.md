@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 ---
-# Lemma 1
+# Lemma 
 For any non-negative integers $n, k \in \mathbb{N} \cup \{0\}$ with $0 \le k \le n$, the binomial coefficient is defined by
 $$
 \begin{gather}
@@ -28,7 +28,7 @@ $$
 $$
 
 ---
-# Theorem 1
+# Theorem 
 Let $x, y \in \mathbb{R}$ be arbitrary real numbers. The algebraic identity
 $$
 \begin{gather}

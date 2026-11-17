@@ -3,6 +3,8 @@ dg-publish: true
 ---
 Let $k \in \mathbb{N} \cup \{0\}$ be a non-negative integer, and let $S_{k}(n) := \sum_{i = 1}^n i^k$ denote the sum of the $k$-th powers of the first $n$ positive integers.
 
+---
+# Recursive Formula for Power Sums
 By the [[Proof of the Binomial Theorem|Binomial Theorem]], the expression $(x + 1)^{k+1}$ expands for any $x \in \mathbb{R}$ as:
 $$
 \begin{gather}
@@ -51,8 +53,11 @@ $$
 S_{k}(n) = \frac{1}{k + 1} \left[ (n + 1)^{k+1} - 1 - \sum_{j = 0}^{k-1} \binom{k+1}{j} S_{j}(n) \right] \tag{8}
 \end{gather}
 $$
+---
+# Polynomial Structure by Strong Induction
 To establish that $S_k(n)$ is a univariate polynomial in $n$ of degree $k + 1$ with leading coefficient $a_{k+1} = \frac{1}{k + 1}$ and vanishing constant term $S_k(0) = 0$, proceed by strong mathematical induction on $k \in \mathbb{N} \cup \{0\}$:
 
+### Base Step
 For the base step $k = 0$, direct summation yields: 
 $$
 \begin{gather}
@@ -61,6 +66,7 @@ S_0(n) = \sum_{i=1}^n i^0 = \sum_{i=1}^n 1 = n \tag{9}
 $$
 which is a polynomial in $n$ of degree $0 + 1 = 1$ with leading coefficient $\frac{1}{0 + 1} = 1$ and zero constant term, verifying the base step.
 
+### Inductive Step
 Assume as the strong inductive hypothesis that for every integer $j \in \{0, 1, \dots, k - 1\}$, the sum $S_j(n)$ is a polynomial in $n$ of degree $j + 1$ with zero constant term. Under this hypothesis, the finite linear combination: 
 $$
 \begin{gather}

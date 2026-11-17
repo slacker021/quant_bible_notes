@@ -3,6 +3,8 @@ dg-publish: true
 ---
 Let $S^1 := \{(u, v) \in \mathbb{R}^2 \mid u^2 + v^2 = 1\}$ be the unit circle in the Euclidean plane centered at the origin $O(0, 0)$. Let $A = (1, 0)$ denote the initial reference point on the Cartesian $u$-axis. For any angle $x \in \mathbb{R}$, wrapping an oriented path of arc length $|x|$ along $S^1$ from $A$ defines the terminal point $P(x) = (\cos x, \sin x)$, with $\tan x = \frac{\sin x}{\cos x}$ defined on $\{x \in \mathbb{R} \mid \cos x \neq 0\}$, as constructed in the [[Proof of Fundamental Geometric Trigonometric Identities]].
 
+---
+# Bounding Inequality on $(0, \frac{\pi}{2})$
 Let $x \in \left(0, \frac{\pi}{2}\right)$ be an arbitrary angle in radians. The terminal point $P = (\cos x, \sin x)$ lies in the first open quadrant of $S^1$. The ray originating from $O$ passing through $P$ intersects the vertical tangent line $u = 1$ to the circle at $A(1, 0)$ at the point:
 $$
 \begin{gather}
@@ -60,6 +62,8 @@ $$
 \cos x < \frac{\sin x}{x} < 1 \quad \forall x \in \left(0, \frac{\pi}{2}\right) \tag{9}
 \end{gather}
 $$
+---
+# Extension to $(-\frac{\pi}{2}, 0)$
 Now let $x \in \left(-\frac{\pi}{2}, 0\right)$, which implies that $-x \in \left(0, \frac{\pi}{2}\right)$. By Theorem 3 of the [[Proof of Fundamental Geometric Trigonometric Identities]], the cosine function is even ($\cos(-x) = \cos x$) and the sine function is odd ($\sin(-x) = -\sin x$). Evaluating the ratio at $-x$ gives:
 $$
 \begin{gather}
@@ -78,6 +82,8 @@ $$
 \cos x < \frac{\sin x}{x} < 1 \quad \forall x \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right) \setminus \{0\} \tag{12}
 \end{gather}
 $$
+---
+# Limit of $\cos x$ as $x \to 0$
 To evaluate the limit of the lower bounding function $\cos x$ as $x \to 0$, consider the Euclidean distance squared between $A(1, 0)$ and $P(\cos x, \sin x)$. By the Pythagorean distance formula:
 $$
 \begin{gather}
@@ -126,6 +132,8 @@ $$
 \lim_{x \to 0} \cos x = 1 \tag{20}
 \end{gather}
 $$
+---
+# Application of the Squeeze Theorem
 Returning to the fundamental bounding inequality in step 12:
 $$
 \begin{gather}

@@ -5,7 +5,8 @@ Let $a, b \in \mathbb{R}_{>0}$ be strictly positive real numbers, and let $m, n 
 
 ---
 # Proposition 1
-**Existence of the Positive Root:**
+
+### Existence of the Positive Root
 Define the candidate set $E \subset \mathbb{R}$ by:
 $$
 \begin{gather}
@@ -58,12 +59,13 @@ Step 7 implies that $(s - \varepsilon)^n > a$. For every $t \in E$, $t^n < a < (
 
 Therefore, by trichotomy, $s^n = a$.
 
-**Uniqueness:**
+### Uniqueness
 If $0 < s_1 < s_2$, the compatibility axioms of an ordered field require $s_1^n < s_2^n$. Thus, there exists a unique positive root, denoted by $\sqrt[n]{a} =: a^{1/n}$.
 
 ---
 # Proposition 2
-**Product and Iterated Radicals:**
+
+### Product and Iterated Radicals
 Set $x := a^{1/n}$ and $y := b^{1/n}$, so that $x^n = a$ and $y^n = b$. By the commutativity and associativity of multiplication:
 $$
 \begin{gather}
@@ -84,7 +86,7 @@ z^{nm} = (z^n)^m = (a^{1/m})^m = a \tag{10}
 $$
 By uniqueness of the $(nm)$-th root, $\sqrt[n]{\sqrt[m]{a}} = \sqrt[nm]{a}$.
 
-**Rational Exponent Power Laws:**
+### Rational Exponent Power Laws
 For $m \in \mathbb{N}$ and $n \in \mathbb{N}$, raising $(a^{1/n})^m$ to the $n$-th power via the integer power laws yields:
 $$
 \begin{gather}

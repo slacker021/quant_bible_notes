@@ -21,8 +21,8 @@ $$
 D := \left\{ \frac{m}{2^k} \ \middle|\ k \in \mathbb{N} \cup \{0\}, \ m \in \{0, 1, \dots, 2^k\} \right\} \tag{3}
 \end{gather}
 $$
-
-**Step 1: Establishing convexity for dyadic coefficients by induction on $k$.**
+---
+# Theorem 1
 For $k = 1$, the non-trivial dyadic point is $\lambda = \frac{1}{2}$, for which step 2 coincides identically with the midpoint hypothesis of step 1.
 
 Assume that for some integer $k \ge 1$, step 2 holds for all dyadic numbers of the form $\lambda = \frac{m}{2^k}$ where $m \in \{0, 1, \dots, 2^k\}$. Consider a dyadic fraction at the next refinement level:
@@ -72,7 +72,8 @@ f\left(\frac{u + v}{2}\right) \le \frac{(1 - \lambda_1) + (1 - \lambda_2)}{2} f(
 $$
 By induction, step 2 holds for all $\lambda \in D$.
 
-**Step 2: Extension to arbitrary real $\lambda \in [0, 1]$ via continuity.**
+---
+# Theorem 2
 Let $\lambda \in [0, 1]$ be an arbitrary real number. The set of dyadic rationals $D$ is dense in the real interval $[0, 1]$. Consequently, there exists a sequence of dyadic numbers $(\lambda_n)_{n=1}^\infty \subset D$ such that:
 $$
 \begin{gather}

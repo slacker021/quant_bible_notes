@@ -3,7 +3,7 @@ dg-publish: true
 ---
 Let $X$ and $Y$ be sets such that $X \times Y \neq \emptyset$, and let $A$ and $B$ be arbitrary non-empty sets.
 
-**Forward Direction:**
+# Forward Direction
 Assume that $(A \subseteq X) \wedge (B \subseteq Y)$, and let $(a, b) \in A \times B$ be an arbitrary element. By the definition of the Cartesian product: 
 $$
 \begin{gather}
@@ -40,7 +40,8 @@ $$
 \end{gather}
 $$
 
-**Reverse Direction:**
+---
+# Reverse Direction
 Assume that $A \times B \subseteq X \times Y$, with $A \neq \emptyset$ and $B \neq \emptyset$. 
 
 To establish that $A \subseteq X$, let $a \in A$ be an arbitrary element. Because $B \neq \emptyset$, there exists at least one witness element $b_0 \in B$. By the definition of the Cartesian product: 

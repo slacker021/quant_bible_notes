@@ -7,11 +7,11 @@ $$
 P(z) = a_n z^n + a_{n-1} z^{n-1} + \cdots + a_1 z + a_0, \quad a_n \neq 0 \tag{1}
 \end{gather}
 $$
-The Fundamental Theorem of Algebra asserts that there exists at least one complex number $z^* \in \mathbb{C}$ such that $P(z^*) = 0$. 
 
 The proof proceeds in two major steps: first, establishing that the continuous real-valued modulus function $|P(z)|$ attains a global minimum on $\mathbb{C}$ through coercivity and compactness; second, demonstrating via the Minimum Modulus Principle (in the style of Argand) that if $|P(z^*)| > 0$, one can strictly decrease the modulus, thereby showing that the global minimum value must be identically zero.
 
-**Existence of a Global Minimum (Coercivity and Compactness):**
+---
+# Existence of a Global Minimum (Coercivity and Compactness)
 Factor the leading term $a_n z^n$ out of $P(z)$ for $z \neq 0$:
 $$
 \begin{gather}
@@ -70,8 +70,8 @@ $$
 |P(z^*)| \leq |P(z)|, \quad \forall z \in \mathbb{C} \tag{10}
 \end{gather}
 $$
-
-**The Minimum Modulus Principle and Argand's Construction:**
+---
+# The Minimum Modulus Principle and Argand's Construction
 Suppose, for the sake of contradiction, that $P(z^*) \neq 0$, so $|P(z^*)| > 0$.
 
 Expand $P(z)$ in powers of $(z - z^*)$ using the Taylor expansion of polynomials about $z^*$:

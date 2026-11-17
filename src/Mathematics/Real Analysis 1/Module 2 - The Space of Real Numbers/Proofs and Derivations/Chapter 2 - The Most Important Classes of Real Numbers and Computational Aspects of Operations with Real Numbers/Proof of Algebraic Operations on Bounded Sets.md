@@ -5,7 +5,8 @@ Let $A, B \subset \mathbb{R}$ be non-empty bounded subsets of the real numbers. 
 
 --------------------------------------------------------------------------------
 # Proposition 1
-**Supremum of the Minkowski Sum:**
+
+### Supremum of the Minkowski Sum
 Denote $M_A := \sup A$ and $M_B := \sup B$. By the definition of an upper bound: 
 $$
 \forall a \in A, \quad a \le M_A \tag{1}
@@ -38,7 +39,7 @@ $$
 \sup(A + B) = M_A + M_B = \sup A + \sup B \tag{8}
 $$
 
-**Infimum of the Minkowski Sum:**
+### Infimum of the Minkowski Sum
 Denote $m_A := \inf A$ and $m_B := \inf B$. By the definition of a lower bound: 
 $$
 a \ge m_A \quad \wedge \quad b \ge m_B \quad \forall a \in A, \, \forall b \in B \tag{9}
@@ -60,7 +61,7 @@ $$
 # Proposition 2
 Let $A, B \subset \mathbb{R}_{\ge 0}$ be non-empty bounded sets of non-negative real numbers.
 
-**Supremum of the Minkowski Product:**
+### Supremum of the Minkowski Product
 Denote $M_A := \sup A$ and $M_B := \sup B$. Because $A, B \subset \mathbb{R}_{\ge 0}$, it follows that $M_A \ge 0$ and $M_B \ge 0$. For all $a \in A$ and $b \in B$, the relations $0 \le a \le M_A$ and $0 \le b \le M_B$ hold. By multiplicative compatibility:
 $$
 a \cdot b \le M_A \cdot M_B \quad \forall a \in A, \, \forall b \in B \tag{13}
@@ -88,7 +89,7 @@ $$
 \sup(A \cdot B) = (\sup A) \cdot (\sup B) \tag{18}
 $$
 
-**Infimum of the Minkowski Product:**
+### Infimum of the Minkowski Product
 Denote $m_A := \inf A \ge 0$ and $m_B := \inf B \ge 0$. For all $a \in A$ and $b \in B$, the product satisfies $a \cdot b \ge m_A \cdot m_B$, proving: 
 $$
 \inf(A \cdot B) \ge m_A \cdot m_B \tag{19}

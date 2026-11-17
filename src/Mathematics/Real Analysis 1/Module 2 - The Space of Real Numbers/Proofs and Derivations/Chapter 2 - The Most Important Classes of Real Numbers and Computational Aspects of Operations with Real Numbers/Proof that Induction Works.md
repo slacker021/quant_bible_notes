@@ -30,7 +30,6 @@ $$
 E = \mathbb{N} \tag{6}
 $$
 Therefore, any subset of $\mathbb{N}$ containing $1$ and closed under succession is identically equal to $\mathbb{N}$.
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

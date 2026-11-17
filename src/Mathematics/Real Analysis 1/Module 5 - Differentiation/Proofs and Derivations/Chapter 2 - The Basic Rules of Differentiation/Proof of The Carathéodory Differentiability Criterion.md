@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$, let $x_0 \in E \cap E'$ be an accumulation point of $E$, and let $f: E \to \mathbb{R}$ be a real-valued mapping.
 
-**Necessity ($\implies$ Differentiability Implies the Existence of a Continuous Auxiliary Factor):**
+---
+# Necessity
 Assume that $f$ is differentiable at the point $x_0$. 
 
 By the definition of the derivative, the limit of the difference quotient as $x$ approaches $x_0$ through $E \setminus \{x_0\}$ exists and defines the finite derivative value $f'(x_0) \in \mathbb{R}$:
@@ -46,7 +47,8 @@ $$
 $$
 demonstrating that $\phi$ is continuous at $x_0$.
 
-**Sufficiency ($\impliedby$ Existence of a Continuous Auxiliary Factor Implies Differentiability):**
+---
+# Sufficiency
 Conversely, assume that there exists an auxiliary function $\phi: E \to \mathbb{R}$ that is continuous at $x_0$ and satisfies:
 $$
 \begin{gather}

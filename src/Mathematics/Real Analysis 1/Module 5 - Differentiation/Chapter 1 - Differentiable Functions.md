@@ -1,62 +1,6 @@
 ---
 dg-publish: true
 ---
-```easy-tikz
-title $\text{The Differential Triangle and Secant-to-Tangent Convergence}$
-xlabel $x$
-ylabel $y$
-show x from 0 to 8.5 and y from 0 to 6.5
-axes on the edges
-size 12 x 8
-plot f(x) = 1.0 + 0.3*x + 0.06*x^2, from x = 1.0 to 7.8, in cyan, very thick
-plot secant(x) = 2.44 + 0.87*(x - 3.0), from x = 1.8 to 7.5, in orange, thick, dashed
-plot tangent(x) = 2.44 + 0.66*(x - 3.0), from x = 1.0 to 7.8, in green, thick
-draw a line from (3.0, 0) to (3.0, 2.44), in gray, dashed
-draw a line from (6.5, 0) to (6.5, 2.44), in gray, dashed
-draw a line from (3.0, 2.44) to (6.5, 2.44), in gray, dashed
-draw a line from (6.5, 2.44) to (6.5, 4.75), in green, very thick
-draw a line from (6.5, 4.75) to (6.5, 5.49), in red, very thick
-mark (3.0, 2.44), in cyan, large
-mark (6.5, 5.49), in orange, large
-mark (6.5, 4.75), in green, large
-write "$x_0$" at (2.7, 0.65) in gray, below
-write "$x_0 + h$" at (7, 0.6) in gray, below
-write "$P(x_0, f(x_0))$" at (2.8, 2.7) in cyan, left
-write "$Q(x_0+h, f(x_0+h))$" at (6.05, 5.8) in orange, left
-write "$\\text{Secant } S_h$" at (4.2, 3.85) in orange
-write "$\\text{Tangent } T$" at (7.25, 4.8) in green, below
-write "$dx = h$" at (4.75, 2.15) in gray, below
-write "$df = f'(x_0)h$" at (4.78, 2.85) in green, right
-write "$o(h)$" at (6.85, 5.7) in red, right
-```
-```easy-tikz
-title $\text{The Differential Triangle and Secant-to-Tangent Convergence}$
-xlabel $x$
-ylabel $y$
-show x from 0 to 8.5 and y from 0 to 6.5
-axes on the edges
-size 12 x 8
-plot f(x) = 1.0 + 0.3*x + 0.06*x^2, from x = 1.0 to 7.8, in cyan, very thick
-plot secant(x) = 2.44 + 0.87*(x - 3.0), from x = 1.8 to 7.5, in orange, thick, dashed
-plot tangent(x) = 2.44 + 0.66*(x - 3.0), from x = 1.0 to 7.8, in green, thick
-draw a line from (3.0, 0) to (3.0, 2.44), in gray, dashed
-draw a line from (6.5, 0) to (6.5, 2.44), in gray, dashed
-draw a line from (3.0, 2.44) to (6.5, 2.44), in gray, dashed
-draw a line from (6.5, 2.44) to (6.5, 4.75), in green, very thick
-draw a line from (6.5, 4.75) to (6.5, 5.49), in red, very thick
-mark (3.0, 2.44), in cyan, large
-mark (6.5, 5.49), in orange, large
-mark (6.5, 4.75), in green, large
-write "$x_0$" at (2.7, 0.65) in gray, below
-write "$x_0 + h$" at (7, 0.6) in gray, below
-write "$P(x_0, f(x_0))$" at (2.8, 2.7) in cyan, left
-write "$Q(x_0+h, f(x_0+h))$" at (6.05, 5.8) in orange, left
-write "$\\text{Secant } S_h$" at (4.2, 3.85) in orange
-write "$\\text{Tangent } T$" at (7.25, 4.95) in green, below
-write "$dx = h$" at (4.75, 2.15) in gray, below
-write "$df = f'(x_0)h$" at (4.78, 2.85) in green, right
-write "$o(h)$" at (6.6, 5.45) in red, right
-```
 # Local Linear Approximation
 The foundational concepts of real analysis established in preceding modules govern how mathematical mappings behave under spatial transformations. In [[Chapter 1 - Basic Definition of Continuity|Module 4]], continuity emerged as the mathematical formulation of proximity preservation: a mapping is continuous if it maps sufficiently close points in a domain to arbitrarily close points in a codomain. Yet, while continuity guarantees stability, it remains qualitatively blind to direction, rate, and dynamical momentum. A continuous curve may turn violently, fracture into infinite directional oscillations, or present vertical precipices that defy physical realization.
 
@@ -163,12 +107,12 @@ $$
 \begin{gather}
 \textbf{Definition: Pointwise Differentiability and the Differential} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } f: E \to \mathbb{R}, \text{ and let } x_0 \in E \cap E'. \\[2mm]
-\text{The function } f \text{ is differentiable at the point } x_0 \text{ if there exists a constant } A(x_0) \in \mathbb{R} \\[2mm]
+\text{The function } f \text{ is \textit{differentiable} at the point } x_0 \text{ if there exists a constant } A(x_0) \in \mathbb{R} \\[2mm]
 \text{such that the functional increment admits the representation:} \\[3.5mm]
 \Delta f(x_0; h) = A(x_0) h + \alpha(x_0; h) \\[3.5mm]
 \text{where the remainder term } \alpha(x_0; h) \text{ satisfies:} \\[2mm]
 \lim_{\substack{h \to 0 \\ x_0 + h \in E}} \frac{\alpha(x_0; h)}{h} = 0 \quad \big(\text{that is, } \alpha(x_0; h) = o(h) \text{ as } h \to 0\big). \\[3.5mm]
-\text{The linear function of } h \text{ given by } h \mapsto A(x_0)h \text{ is called the differential of } f \text{ at } x_0, \\[2mm]
+\text{The linear function of } h \text{ given by } h \mapsto A(x_0)h \text{ is called the \textit{differential} of } f \text{ at } x_0, \\[2mm]
 \text{denoted by the symbol } df(x_0) \text{ or } Df(x_0). \text{ Thus, for each } h \in \mathbb{R}\text{:} \\[3.5mm]
 df(x_0)(h) := A(x_0) h.
 \end{gather}
@@ -251,7 +195,7 @@ $$
 \begin{gather}
 \textbf{Definition: The Derivative} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } f: E \to \mathbb{R}, \text{ and let } x_0 \in E \cap E'. \\[2mm]
-\text{The derivative of } f \text{ at the point } x_0, \text{ denoted by } f'(x_0) \text{ or } \frac{df}{dx}(x_0), \\[2mm]
+\text{The \textit{derivative} of } f \text{ at the point } x_0, \text{ denoted by } f'(x_0) \text{ or } \frac{df}{dx}(x_0), \\[2mm]
 \text{is the limit of the difference quotient as the displacement approaches zero:} \\[3.5mm]
 f'(x_0) := \lim_{\substack{h \to 0 \\ x_0 + h \in E}} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{E \ni x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}
 \end{gather}
@@ -306,9 +250,9 @@ $$
 \begin{gather}
 \textbf{Definition: One-Sided Derivatives} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } f: E \to \mathbb{R}, \text{ and let } x_0 \in E. \\[2mm]
-\text{1. If } x_0 \text{ is a limit point of } E \cap (x_0, \infty), \text{ the right-hand derivative is:} \\[3.5mm]
+\text{1. If } x_0 \text{ is a limit point of } E \cap (x_0, \infty), \text{ the \textit{right-hand derivative} is:} \\[3.5mm]
 f'_+(x_0) := \lim_{\substack{h \to 0^+ \\ x_0 + h \in E}} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{\substack{x \to x_0^+ \\ x \in E}} \frac{f(x) - f(x_0)}{x - x_0}. \\[3.5mm]
-\text{2. If } x_0 \text{ is a limit point of } E \cap (-\infty, x_0), \text{ the left-hand derivative is:} \\[3.5mm]
+\text{2. If } x_0 \text{ is a limit point of } E \cap (-\infty, x_0), \text{ the \textit{left-hand derivative} is:} \\[3.5mm]
 f'_-(x_0) := \lim_{\substack{h \to 0^- \\ x_0 + h \in E}} \frac{f(x_0 + h) - f(x_0)}{h} = \lim_{\substack{x \to x_0^- \\ x \in E}} \frac{f(x) - f(x_0)}{x - x_0}.
 \end{gather}
 $$
@@ -441,7 +385,7 @@ $$
 \begin{gather}
 \textbf{Definition: The Tangent Line} \\[5mm]
 \text{Let } f: E \to \mathbb{R} \text{ be differentiable at } x_0 \in E. \\[2mm]
-\text{The tangent line to the graph of } f \text{ at the point } P(x_0, f(x_0)) \text{ is the straight line} \\[2mm]
+\text{The \textit{tangent line} to the graph of } f \text{ at the point } P(x_0, f(x_0)) \text{ is the straight line} \\[2mm]
 \text{passing through } P \text{ whose slope equals the derivative } f'(x_0)\text{:} \\[3.5mm]
 Y - f(x_0) = f'(x_0)(X - x_0)
 \end{gather}
@@ -474,7 +418,7 @@ $$
 \Delta f(x_0; h) = df(x_0)(h) + \alpha(x_0; h) \tag{29}
 \end{gather}
 $$
-1. **The Differential Increment $df(x_0)(h)$:** Represents the vertical change evaluated along the *tangent line* corresponding to a horizontal advance of $h = dx$. Because the tangent has constant slope $f'(x_0)$, this rise is strictly linear: $f'(x_0)h$.
+1. **The Differential Increment $df(x_0)(h)$:** Represents the vertical change evaluated along the tangent line corresponding to a horizontal advance of $h = dx$. Because the tangent has constant slope $f'(x_0)$, this rise is strictly linear: $f'(x_0)h$.
 2. **The Remainder Gap $\alpha(x_0; h) = o(h)$:** Represents the vertical divergence between the true curve $y = f(x)$ and the tangent line $y = T(x)$.
 3. **The Total Increment $\Delta f(x_0; h)$:** Represents the actual vertical displacement evaluated along the *non-linear curve*.
 
@@ -502,11 +446,11 @@ $$
 \textbf{Definition: Reciprocal Trigonometric Functions and Identities} \\[5mm]
 \text{Let } \sin(x) \text{ and } \cos(x) \text{ be the circular trigonometric functions defined on } \mathbb{R}, \\[2mm]
 \text{and let } \tan(x) := \frac{\sin(x)}{\cos(x)} \text{ be the tangent function defined on } \mathbb{R} \setminus \left\{\frac{\pi}{2} + n\pi \ \middle|\ n \in \mathbb{Z}\right\}. \\[2mm]
-\text{The reciprocal trigonometric functions } \csc(x), \ \sec(x), \text{ and } \cot(x) \text{ are defined} \\[2mm]
+\text{The \textit{reciprocal trigonometric functions} } \csc(x), \ \sec(x), \text{ and } \cot(x) \text{ are defined} \\[2mm]
 \text{on their respective maximal domains by the reciprocal identities:} \\[3.5mm]
-\text{1. Trigonometric Cosecant: } \csc(x) := \frac{1}{\sin(x)} \quad \left(x \in \mathbb{R} \setminus \{n\pi \mid n \in \mathbb{Z}\}\right) \\[3.5mm]
-\text{2. Trigonometric Secant: } \sec(x) := \frac{1}{\cos(x)} \quad \left(x \in \mathbb{R} \setminus \left\{\frac{\pi}{2} + n\pi \ \middle|\ n \in \mathbb{Z}\right\}\right) \\[3.5mm]
-\text{3. Trigonometric Cotangent: } \cot(x) := \frac{\cos(x)}{\sin(x)} = \frac{1}{\tan(x)} \quad \left(x \in \mathbb{R} \setminus \{n\pi \mid n \in \mathbb{Z}\}\right)
+\text{1. \textit{Trigonometric Cosecant}: } \csc(x) := \frac{1}{\sin(x)} \quad \left(x \in \mathbb{R} \setminus \{n\pi \mid n \in \mathbb{Z}\}\right) \\[3.5mm]
+\text{2. \textit{Trigonometric Secant}: } \sec(x) := \frac{1}{\cos(x)} \quad \left(x \in \mathbb{R} \setminus \left\{\frac{\pi}{2} + n\pi \ \middle|\ n \in \mathbb{Z}\right\}\right) \\[3.5mm]
+\text{3. \textit{Trigonometric Cotangent}: } \cot(x) := \frac{\cos(x)}{\sin(x)} = \frac{1}{\tan(x)} \quad \left(x \in \mathbb{R} \setminus \{n\pi \mid n \in \mathbb{Z}\}\right)
 \end{gather}
 $$
 

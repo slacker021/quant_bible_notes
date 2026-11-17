@@ -19,9 +19,8 @@ h(z) := f(z) - g(z) \tag{2}
 $$
 Then $h$ is analytic on $\Omega$, and the zero set $Z(h) := \{z \in \Omega : h(z) = 0\}$ is identical to the coincidence set $E$. Under the stated hypothesis, $z_0 \in Z(h)$ is a limit point of zeros: there exists a sequence of distinct points $(z_k)_{k=1}^\infty \subset Z(h) \setminus \{z_0\}$ such that $\lim_{k \to \infty} z_k = z_0$.
 
-The goal is to prove that $h(z) = 0$ for all $z \in \Omega$, which implies that $f(z) = g(z)$ identically across the entire domain $\Omega$.
-
-**Vanishing of the Local Taylor Coefficients:**
+---
+# Vanishing of the Local Taylor Coefficients
 Since $h$ is analytic at $z_0$, there exists an open disk $B(z_0, r) \subset \Omega$ with $r > 0$ on which $h$ is represented by a convergent power series:
 $$
 \begin{gather}
@@ -88,7 +87,8 @@ c_n = 0, \quad \forall n \in \mathbb{N} \cup \{0\} \tag{11}
 $$
 Substituting step 11 into step 3 demonstrates that $h(z) = 0$ identically for all $z \in B(z_0, r)$.
 
-**Global Propagation via Domain Connectedness:**
+---
+# Global Propagation via Domain Connectedness
 To extend the vanishing of $h$ from the local neighborhood $B(z_0, r)$ to the entirety of the connected domain $\Omega$, partition $\Omega$ into topological subsets. 
 
 Let $A$ denote the set of accumulation points of $Z(h)$ in $\Omega$:

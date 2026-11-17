@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $E$ be an arbitrary set, and let $\emptyset$ denote the empty set.
 
-**Direct Method (Vacuous Truth):**
+---
+# Direct Method (Vacuous Truth)
 By the Axiom of Extensionality and the formal definition of the empty set, $\emptyset$ contains no elements: 
 $$
 \begin{gather}
@@ -34,8 +35,8 @@ $$
 \emptyset \subseteq E \tag{5}
 \end{gather}
 $$
-
-**Indirect Method (Proof by Contradiction):**
+---
+# Indirect Method (Proof by Contradiction)
 Assume the negation of the conclusion:
 $$
 \begin{gather}

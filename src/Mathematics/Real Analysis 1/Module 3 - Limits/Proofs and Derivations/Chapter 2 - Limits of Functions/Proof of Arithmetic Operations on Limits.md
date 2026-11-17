@@ -15,6 +15,7 @@ f(x) = A + \alpha(x) \quad \text{and} \quad g(x) = B + \beta(x) \tag{2}
 $$
 where $\lim_{\mathcal{B}} \alpha(x) = 0$ and $\lim_{\mathcal{B}} \beta(x) = 0$.
 
+---
 # Theorem 1
 The algebraic sum expands as:
 $$

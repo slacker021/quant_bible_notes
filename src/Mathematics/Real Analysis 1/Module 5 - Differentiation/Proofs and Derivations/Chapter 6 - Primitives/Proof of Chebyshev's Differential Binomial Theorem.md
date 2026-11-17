@@ -134,9 +134,6 @@ Specifically for the differential binomial $\omega = z^m (a + b z)^r \, dz$, the
 A rigorous analysis of the Weierstrass gap sequence and the period lattice of the curve $w^s = a + b z^k$ (established by Chebyshev in 1853) shows that the period integrals vanish and the differential decouples into an elementary primitive if and only if at least one of the three exponents $r$, $m + 1 = \frac{p+1}{q}$, or $m + r + 1 = \frac{p+1}{q} + r$ is an integer. 
 
 When none of these three conditions is fulfilled, the primitive is an incomplete Beta function or a hypergeometric integral possessing non-trivial monodromy that cannot be represented as a finite composition of algebraic, logarithmic, and trigonometric functions.
-
-This completes the proof of Chebyshev's Differential Binomial Integration Criterion.
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

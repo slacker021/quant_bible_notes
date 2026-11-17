@@ -25,8 +25,8 @@ $$
 |f(x) - f(a)| < \frac{|f(a)|}{2} \tag{3}
 \end{gather}
 $$
-
-**Case 1 ($f(a) > 0$):**
+---
+# Case 1
 If $f(a) > 0$, then $|f(a)| = f(a)$, and step 3 expands to:
 $$
 \begin{gather}
@@ -43,7 +43,8 @@ $$
 
 Step 5 demonstrates that for all $x \in E \cap (a - \delta_0, a + \delta_0)$, $f(x) > 0 = \operatorname{sgn}(f(a))$ and $|f(x)| \ge \frac{f(a)}{2} > 0$.
 
-**Case 2 ($f(a) < 0$):**
+---
+# Case 2 
 If $f(a) < 0$, then $|f(a)| = -f(a)$, and step 3 expands to:
 $$
 \begin{gather}

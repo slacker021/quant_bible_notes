@@ -5,7 +5,8 @@ Let $x, y \in \mathbb{R}$ be elements of the ordered field of real numbers.
 
 --------------------------------------------------------------------------------
 # Proposition 1
-**Standard Triangle Inequality:**
+
+### Standard Triangle Inequality
 By definition of the absolute value, the relations $-|x| \le x \le |x|$ and $-|y| \le y \le |y|$ hold for all $x, y \in \mathbb{R}$. 
 
 Summing these inequalities via additive compatibility yields:
@@ -17,7 +18,7 @@ $$
 |x + y| \le |x| + |y| \tag{2}
 $$
 
-**Equality Condition:**
+### Equality Condition
 Evaluate the cases of equality based on the signs of $x$ and $y$:
 * Case 1: If $x \ge 0$ and $y \ge 0$, then $x + y \ge 0$. Consequently, $|x + y| = x + y = |x| + |y|$.
 * Case 2: If $x \le 0$ and $y \le 0$, then $x + y \le 0$. Consequently, $|x + y| = -(x + y) = (-x) + (-y) = |x| + |y|$.
@@ -27,9 +28,10 @@ Evaluate the cases of equality based on the signs of $x$ and $y$:
 
 In both sub-cases of Case 3, the inequality is strict. Therefore, $|x + y| = |x| + |y|$ holds if and only if $x \cdot y \ge 0$.
 
---------------------------------------------------------------------------------
+---
 # Proposition 2
-**Difference Form:**
+
+### Difference Form
 Substituting $-y$ in place of $y$ into Proposition 1:
 $$
 |x - y| = |x + (-y)| \le |x| + |-y| \tag{3}
@@ -38,10 +40,10 @@ Because $|-y| = |y|$, step 3 immediately yields:
 $$
 |x - y| \le |x| + |y| \tag{4}
 $$
-
---------------------------------------------------------------------------------
+---
 # Proposition 3
-**Reverse Triangle Inequality:**
+
+### Reverse Triangle Inequality
 Expressing $x$ as the sum $x = (x - y) + y$ and applying Proposition 1:
 $$
 |x| = |(x - y) + y| \le |x - y| + |y| \tag{5}

@@ -9,6 +9,8 @@ x_n := \left(1 + \frac{1}{n}\right)^n \quad \forall n \in \mathbb{N} \tag{1}
 $$
 To establish that the limit $\lim_{n \to \infty} x_n =: e$ exists as a finite real number, it suffices to prove that $\{x_n\}$ is strictly increasing and bounded above in $\mathbb{R}$, which guarantees convergence by the [[Proof of Weierstrass Theorem on Monotonic Sequences|Weierstrass Theorem on Monotonic Sequences]].
 
+---
+# Monotonicity
 For $n = 1$, $x_1 = \left(1 + \frac{1}{1}\right)^1 = 2$. For any integer $n \ge 2$, applying the [[Proof of the Binomial Theorem|Binomial Theorem]] to expand step 1 yields: 
 $$
 \begin{gather}
@@ -35,6 +37,8 @@ $$
 $$
 Consequently, each of the first $n$ summands of $x_n$ is strictly less than the corresponding summand of $x_{n+1}$. Furthermore, $x_{n+1}$ contains an additional strictly positive summand corresponding to $k = n + 1$. Because $x_1 = 2 < 2.25 = x_2$ holds for the base case, it follows that $x_n < x_{n+1}$ for all $n \in \mathbb{N}$, proving that $\{x_n\}$ is strictly increasing.
 
+---
+# Boundedness
 To establish that $\{x_n\}$ is bounded above, observe from step 3 that for all $n \ge 2$ and all $j \in \{1, \dots, k - 1\}$, each factor satisfies $0 < 1 - \frac{j}{n} < 1$. Replacing each such factor with $1$ yields the strict inequality: 
 $$
 \begin{gather}

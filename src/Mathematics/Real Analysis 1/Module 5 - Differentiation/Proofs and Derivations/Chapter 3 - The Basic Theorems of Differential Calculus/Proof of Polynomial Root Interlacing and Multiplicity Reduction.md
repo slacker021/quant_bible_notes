@@ -3,6 +3,7 @@ dg-publish: true
 ---
 Let $P(x) \in \mathbb{R}[x]$ be a non-constant polynomial with real coefficients, having degree $\deg(P) = d \ge 1$.
 
+---
 # Proposition 1
 Let $x_1 < x_2$ be two consecutive real roots of $P(x)$, such that $P(x_1) = 0$, $P(x_2) = 0$, and:
 $$

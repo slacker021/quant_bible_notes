@@ -2,7 +2,9 @@
 dg-publish: true
 ---
 Let $X$ be an arbitrary set.
-**Weak Cardinality Dominance:**
+
+---
+# Weak Cardinality Dominance
 Define the mapping $f: X \to \mathcal{P}(X)$ by assigning to each element $x \in X$ its corresponding singleton set:
 $$
 \begin{gather}
@@ -27,8 +29,8 @@ $$
 |X| \le |\mathcal{P}(X)| \tag{4}
 \end{gather}
 $$
-
-**Strict Cardinality Separation:**
+---
+# Strict Cardinality Separation
 Let $g: X \to \mathcal{P}(X)$ be an arbitrary mapping. To demonstrate that $g$ cannot be surjective, it suffices to construct a subset $D \in \mathcal{P}(X)$ that does not belong to the image $\operatorname{ran}(g)$. 
 
 Construct the diagonal set $D$ consisting of all elements in $X$ that do not belong to the subset assigned to them under $g$:

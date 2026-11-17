@@ -5,7 +5,8 @@ Let $E \subseteq \mathbb{R}$, let $f: E \to \mathbb{R}$, and let $x_0 \in E \cap
 
 Because $x_0$ is an accumulation point of $E$, the origin $0$ is an accumulation point of the shifted set of increments $E - x_0 := \{h \in \mathbb{R} \mid x_0 + h \in E\}$. 
 
-**Necessity (Assertion 1 implies Assertion 2):**
+---
+# Necessity
 Assume that assertion 1 holds: the function $f$ is differentiable at the point $x_0$ with differential $df(x_0)(h) = A(x_0)h$ for some real scalar $A(x_0) \in \mathbb{R}$.
 
 By the definition of pointwise differentiability, the functional increment $\Delta f(x_0; h) := f(x_0 + h) - f(x_0)$ admits the representation:
@@ -48,8 +49,8 @@ $$
 f'(x_0) = A(x_0) \tag{6}
 \end{gather}
 $$
-
-**Sufficiency (Assertion 2 implies Assertion 1):**
+---
+# Sufficiency
 Conversely, assume that assertion 2 holds: the finite derivative $f'(x_0) \in \mathbb{R}$ exists as a real limit:
 $$
 \begin{gather}

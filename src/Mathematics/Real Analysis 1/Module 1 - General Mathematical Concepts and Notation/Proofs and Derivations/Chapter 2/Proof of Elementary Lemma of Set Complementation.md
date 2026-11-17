@@ -6,7 +6,7 @@ Let $M$ be the ambient universal set, and let $A$, $B$, and $S$ be arbitrary sub
 ---
 # Lemma 1
 
-**Necessity:**
+### Necessity
 Assume that $(A \subseteq S) \wedge (B \subseteq S)$, and let $x \in A \cup B$. By the definition of the set union: 
 $$
 \begin{gather}
@@ -27,7 +27,7 @@ $$
 \end{gather}
 $$
 
-**Sufficiency:**
+### Sufficiency
 Assume that $(A \cup B) \subseteq S$. By the elementary definition of the set union, every constituent set is contained within the union:
 $$
 \begin{gather}
@@ -50,7 +50,7 @@ $$
 ---
 # Lemma 2
 
-**Necessity:**
+### Necessity
 Assume that $A \subseteq B$, and let $x \in C_{M}(B)$. By the definition of the set complement: 
 $$
 \begin{gather}
@@ -82,7 +82,7 @@ A \subseteq B \implies C_{M}(B) \subseteq C_{M}(A) \tag{11}
 \end{gather}
 $$
 
-**Sufficiency:**
+### Sufficiency
 Assume that $C_{M}(B) \subseteq C_{M}(A)$, and let $x \in A$. Because $A \subseteq M$, it follows that $x \in M$. To demonstrate that $x \in B$, proceed by contradiction. Assume that: 
 $$
 \begin{gather}
@@ -117,7 +117,7 @@ $$
 ---
 # Lemma 3
 
-**Forward Inclusion:**
+### Forward Inclusion
 Let $x \in C_{M}(C_{M}(A))$. By the definition of the set complement: 
 $$
 \begin{gather}
@@ -149,7 +149,7 @@ C_{M}(C_{M}(A)) \subseteq A \tag{21}
 \end{gather}
 $$
 
-**Reverse Inclusion:**
+### Reverse Inclusion
 Let $x \in A$. Because $A \subseteq M$, it follows that $x \in M$. By the law of non-contradiction, the statement $x \in A$ implies that $x \notin A$ is false, which prevents $x$ from satisfying the defining membership condition of $C_M(A)$:
 $$
 \begin{gather}

@@ -3,10 +3,12 @@ dg-publish: true
 ---
 Let $a, b \in \mathbb{Z}$ and let $p \in \mathbb{N} \setminus \{1\}$ be a prime number. Assume that $p \mid (a \cdot b)$. To establish that $(p \mid a) \lor (p \mid b)$, evaluate two exhaustive cases based on the divisibility of $a$ by $p$:
 
-**Case 1 (Assume $p \mid a$):**
+---
+# Case 1
 If $p \mid a$, the disjunction $(p \mid a) \lor (p \mid b)$ holds immediately.
 
-**Case 2 (Assume $p \nmid a$):**
+---
+# Case 2
 Because $p$ is a prime number, its only positive divisors in $\mathbb{N}$ are $1$ and $p$. Because $p$ does not divide $a$, the greatest common divisor of $a$ and $p$ must be unity:
 $$
 \gcd(a, p) = 1 \tag{1}
@@ -33,9 +35,9 @@ p \mid b \tag{6}
 $$
 Thus, if $p$ does not divide $a$, it must divide $b$, confirming that $p \mid (a \cdot b) \implies (p \mid a) \lor (p \mid b)$.
 
-**Coprime Specialization:**
+---
+# Coprime Specialization
 Suppose $a$ and $b$ are relatively prime ($\gcd(|a|, |b|) = 1$) and $p \mid (a \cdot b)$. By the first part of this lemma, $p$ divides at least one factor. If $p$ divided both $a$ and $b$, then $p$ would be a common divisor of $a$ and $b$, which requires $p \le \gcd(|a|, |b|) = 1$, contradicting the definition of a prime ($p > 1$). Therefore, $p$ divides exactly one of the two factors.
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

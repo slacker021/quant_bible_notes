@@ -7,7 +7,7 @@ $$
 f(x) := \begin{cases} x \sin\left(\dfrac{1}{x}\right) & \text{if } x \neq 0 \\[3mm] 0 & \text{if } x = 0 \end{cases} \qquad \text{and} \qquad g(x) := \begin{cases} x^2 \sin\left(\dfrac{1}{x}\right) & \text{if } x \neq 0 \\[3mm] 0 & \text{if } x = 0 \end{cases} \tag{1}
 \end{gather}
 $$
-
+---
 # Proposition 1
 First, consider the continuity of $f$ on the punctured domain $\mathbb{R} \setminus \{0\}$. For any point $x \neq 0$, the reciprocal function $x \mapsto \frac{1}{x}$ is continuous. Because the circular trigonometric sine function is continuous everywhere on $\mathbb{R}$, the composite function $x \mapsto \sin(1/x)$ is continuous on $\mathbb{R} \setminus \{0\}$. Furthermore, the identity function $x \mapsto x$ is continuous on $\mathbb{R}$. As the product of two continuous functions, $f$ is continuous at every point $x \in \mathbb{R} \setminus \{0\}$.
 

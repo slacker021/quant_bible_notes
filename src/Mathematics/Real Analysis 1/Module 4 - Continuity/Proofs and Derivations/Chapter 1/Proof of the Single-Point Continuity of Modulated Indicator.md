@@ -7,7 +7,7 @@ $$
 f(x) := x \cdot \mathbf{1}_{\mathbb{Q}}(x) = \begin{cases} x, & x \in \mathbb{Q} \\ 0, & x \in \mathbb{R} \setminus \mathbb{Q} \end{cases} \tag{1}
 \end{gather}
 $$
-
+---
 # Proposition 1
 Evaluating $f$ at the origin $x = 0$ yields:
 $$

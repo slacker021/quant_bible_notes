@@ -7,8 +7,8 @@ $$
 f(x) - P(x) = o\big((x - x_0)^n\big) \quad \text{as } E \ni x \to x_0 \tag{1}
 \end{gather}
 $$
-
-**Part 1: Uniqueness of the Asymptotic Polynomial.**
+---
+# Theorem 1
 Suppose there exists another polynomial $Q(x) = \sum_{k=0}^n d_k (x - x_0)^k$ of degree at most $n$ satisfying the identical asymptotic approximation property:
 $$
 \begin{gather}
@@ -91,7 +91,7 @@ a_k = 0 \implies c_k = d_k, \quad \forall k \in \{0, 1, \dots, n\} \tag{13}
 $$
 The polynomial $P(x)$ is thus uniquely determined.
 
-**Part 2: Identification with Taylor Coefficients.**
+# Theorem 2
 Suppose now that $f$ possesses $n$ derivatives at $x_0$. By virtue of [[Proof of the Local Taylor Formula with Peano Remainder|The Local Taylor Formula with Peano Remainder]], the Taylor polynomial:
 $$
 \begin{gather}
