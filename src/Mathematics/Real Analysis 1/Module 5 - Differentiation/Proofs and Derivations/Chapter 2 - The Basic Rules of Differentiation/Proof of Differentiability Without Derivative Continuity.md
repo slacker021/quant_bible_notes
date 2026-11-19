@@ -7,8 +7,8 @@ $$
 f(x) := \begin{cases} x^2 \sin\left(\frac{1}{x}\right) & \text{if } x \neq 0 \\[2mm] 0 & \text{if } x = 0 \end{cases} \tag{1}
 \end{gather}
 $$
-
-**Differentiability on $\mathbb{R} \setminus \{0\}$:**
+---
+# Differentiability on $\mathbb{R} \setminus \{0\}$
 Let $x \in \mathbb{R} \setminus \{0\}$. In an open neighborhood of $x$ not containing the origin, $f$ is the product of the monomial $u(x) = x^2$ and the composite trigonometric mapping $v(x) = \sin(1/x)$. 
 
 By the [[Proof of The Chain Rule|Chain Rule]], the derivative of $v(x)$ with respect to $x$ is:
@@ -33,7 +33,8 @@ f'(x) = 2x \sin\left(\frac{1}{x}\right) + x^2 \left(-\frac{1}{x^2}\cos\left(\fra
 $$
 which exists as a finite real quantity for all $x \neq 0$.
 
-**Differentiability at the Origin $x = 0$:**
+---
+# Differentiability at the Origin $x = 0$
 At the anchor point $x_0 = 0$, the derivative cannot be computed using the product rule formula of step 4 because $\frac{1}{x}$ is undefined at $0$. Instead, evaluate the derivative directly from the limit of the difference quotient.
 
 For any non-zero displacement $h \neq 0$, the difference quotient is:
@@ -70,8 +71,8 @@ $$
 f'(x) = \begin{cases} 2x \sin\left(\frac{1}{x}\right) - \cos\left(\frac{1}{x}\right) & \text{if } x \neq 0 \\[2mm] 0 & \text{if } x = 0 \end{cases} \tag{9}
 \end{gather}
 $$
-
-**Discontinuity of $f'$ at $x = 0$:**
+---
+# Discontinuity of $f'$ at $x = 0$
 To determine whether $f'$ is continuous at $0$, investigate the limit $\lim_{x \to 0} f'(x)$.
 
 For the first component of $f'(x)$ in step 9, the bounding property $|2x \sin(1/x)| \le 2|x|$ guarantees:

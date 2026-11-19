@@ -12,7 +12,7 @@ where $-\infty \le A \le +\infty$.
 Notice that because $g'$ is non-zero everywhere on the interval $(a, b)$, [[Proof of Darboux's Intermediate-Value Theorem for Derivatives|Darboux's Theorem]] guarantees that $g'$ cannot change sign on $(a, b)$. Thus, $g'$ is either strictly positive or strictly negative throughout $(a, b)$, whence $g$ is strictly monotonic.
 
 ---
-# Case 1: The Indeterminate Form [0 / 0]
+# Case 1
 Suppose that:
 $$
 \begin{gather}
@@ -59,7 +59,7 @@ $$
 which establishes the theorem for the indeterminate form $\left[\frac{0}{0}\right]$.
 
 ---
-# Case 2: The Indeterminate Form [* / $\infty$]
+# Case 2
 Suppose that:
 $$
 \begin{gather}
@@ -67,7 +67,7 @@ $$
 \end{gather}
 $$
 
-**Subcase 2A: The limit $A$ is finite ($A \in \mathbb{R}$).**
+### Subcase 2A
 Let $\varepsilon > 0$ be given. Because $\lim_{x \to a^+} \frac{f'(x)}{g'(x)} = A$, there exists a point $c \in (a, b)$ such that for all $t \in (a, c)$:
 $$
 \begin{gather}
@@ -111,7 +111,7 @@ $$
 \end{gather}
 $$
 
-**Subcase 2B: The limit is infinite ($A = +\infty$ or $A = -\infty$).**
+### Subcase 2B
 If $A = +\infty$, for any $M > 0$, there exists $c \in (a, b)$ such that $\frac{f'(t)}{g'(t)} > 2M$ for all $t \in (a, c)$. For any $x \in (a, c)$, Cauchy's theorem gives $\frac{f(x) - f(c)}{g(x) - g(c)} = \frac{f'(\xi)}{g'(\xi)} > 2M$. Multiplying by $\left(1 - \frac{g(c)}{g(x)}\right) \to 1$ and adding $\frac{f(c)}{g(x)} \to 0$ ensures that $\frac{f(x)}{g(x)} > M$ for all $x$ sufficiently close to $a^+$. Hence $\lim_{x \to a^+} \frac{f(x)}{g(x)} = +\infty$. An identical argument with $-f$ establishes the case $A = -\infty$.
 $$
 \begin{gather}

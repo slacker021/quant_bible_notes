@@ -21,16 +21,16 @@ u m b + v (k m) = b \implies m(u b + v k) = b \tag{3}
 $$
 Because $u, b, v, k \in \mathbb{Z}$, the quantity $u b + v k$ is an integer. Consequently, step 3 demonstrates that $m \mid b$.
 
---------------------------------------------------------------------------------
+---
 # Lemma 2
 Let $p \in \mathbb{N}$ be a prime number, and let $a_1, a_2, \dots, a_r \in \mathbb{Z}$. If $p \mid \prod_{j=1}^r a_j$, then $p \mid a_i$ for at least one index $i \in \{1, \dots, r\}$.
 
 Proceed by mathematical induction on the number of factors $r \ge 2$.
 
-**Base Step ($r = 2$):**
+### Base Step
 Assume that $p \mid (a_1 a_2)$. If $p \mid a_1$, the claim holds. Suppose instead that $p \nmid a_1$. Because $p$ is prime, its only positive divisors are $1$ and $p$. Because $p \nmid a_1$, it follows that $\gcd(p, a_1) = 1$. Applying Lemma 1 with $m = p$, $a = a_1$, and $b = a_2$ establishes that $p \mid a_2$.
 
-**Inductive Step:**
+### Inductive Step
 Assume as the inductive hypothesis that the claim holds for any product of $k$ factors ($k \ge 2$). Consider a product of $k + 1$ factors such that $p \mid (a_1 a_2 \cdots a_k a_{k+1})$. Regrouping the product:
 $$
 p \mid \left( \left(\prod_{j=1}^k a_j\right) \cdot a_{k+1} \right) \tag{4}
@@ -39,9 +39,10 @@ Applying the base step ($r = 2$) to step 4 demonstrates that either $p \mid a_{k
 
 By the Principle of Mathematical Induction, Lemma 2 holds for all $r \ge 2$.
 
---------------------------------------------------------------------------------
+---
 # Theorem 1
-**Existence of Prime Factorization:**
+
+### Existence of Prime Factorization
 Let $E \subseteq \mathbb{N}$ be the set of natural numbers defined by:
 $$
 E := \{ n \in \mathbb{N} \mid n = 1 \lor (\forall m \in \mathbb{N}, \, 2 \le m \le n \implies m \text{ is a product of primes}) \} \tag{5}
@@ -58,7 +59,7 @@ which is a product of primes.
 
 In both cases, $n + 1$ is a product of primes, which implies that $(n + 1) \in E$. By the Principle of Mathematical Induction, $E = \mathbb{N}$, establishing that every integer $n > 1$ admits a prime factorization.
 
-**Uniqueness of Prime Factorization:**
+### Uniqueness of Prime Factorization
 Suppose an integer $n > 1$ admits two prime factorizations:
 $$
 n = \prod_{i=1}^k p_i = \prod_{j=1}^l q_j \tag{7}

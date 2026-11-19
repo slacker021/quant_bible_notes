@@ -1,64 +1,6 @@
 ---
 dg-publish: true
 ---
-```easy-tikz
-title $\text{Geometric Reciprocity of Inverse Function Tangents}$
-xlabel $x$
-ylabel $y$
-show x from -0.5 to 6.5 and y from -0.5 to 6.5
-axes on the edges
-size 12 x 8
-plot f(x) = 0.5*x^2 + 0.5, from x = 0.2 to 3.2, in cyan, very thick
-plot finv(x) = sqrt(max(0, 2*(x - 0.5))), from x = 0.51 to 5.8, in orange, very thick
-plot diag(x) = x, from x = 0 to 6.0, in purple, dashed
-plot tan1(x) = 1.0 + 1.0*(x - 1.0), from x = 0.0 to 3.5, in green, thick
-plot tan2(x) = 1.0 + 1.0*(x - 1.0), from x = 0.0 to 3.5, in green, thick
-draw a line from (1.0, 0) to (1.0, 1.0) in gray, dashed
-draw a line from (0, 1.0) to (1.0, 1.0) in gray, dashed
-raw tool {"type":"points","name":"P1","color":"green","points":"(1.0, 1.0);","size":"large"}
-write "$y_3 = mx$" at (4.75, 6) in purple, right
-write "$y_{1}= f(x)$" at (2.4, 4.5) in teal, left
-write "$y_{2} = f^{-1}(x)$" at (5.3, 2.65) in orange, below
-write "$(x_0, y_0)$" at (1.8, 2.8) in gray, left
-write "$(y_0, x_0)$" at (2.8, 1.7) in gray, right
-write "$\\text{Slope: } m$" at (0.8, 1.6) in green, left
-```
-```easy-tikz
-title $\text{Profiles of the Hyperbolic Functions } \sinh(x) \text{ and } \cosh(x)$
-xlabel $x$
-ylabel $y$
-show x from -3.5 to 3.5 and y from -4.0 to 5.5
-axes on the edges
-size 12 x 8
-plot ch(x) = 0.5*(exp(x) + exp(-x)), from x = -2.3 to 2.3, in cyan, very thick
-plot sh(x) = 0.5*(exp(x) - exp(-x)), from x = -2.3 to 2.3, in orange, very thick
-plot asymp1(x) = 0.5*exp(x) from x = -1.0 to 2.4 in blue, dashed
-plot asymp2(x) = 0.5*exp(-x), from x = -2.4 to 1.0, in purple, dashed
-draw a line from (-3.0, 1.0) to (3.0, 1.0) in gray, dashed
-raw tool {"type":"points","name":"Apex","points":"(0.0, 1.0);","size":"large"}
-write "$y = \\cosh(x)$" at (1.35, 2.7) in teal, left
-write "$y = \\sinh(x)$" at (-0.8, -1.3) in orange, right
-write "$y_{1} = \\frac{1}{2}e^x$" at (2.3, 4.8) in blue, right
-write "$y_{2} = \\frac{1}{2}e^{-x}$" at (-2.3, 4.8) in purple, left
-write "$(0, 1)$" at (-0.03, 1.65) in red, center
-write "$\\cosh^2(x) - \\sinh^2(x) = 1$" at (0.0, -3.2) in green, center
-```
-```easy-tikz
-title $\text{The Cauchy Flat Function } f(x) = \exp(-1/x^2)$
-xlabel $x$
-ylabel $y$
-show x from -3.5 to 3.5 and y from -0.5 to 1.5
-axes on the edges
-size 12 x 8
-plot c(x) = (abs(x) < 0.05 ? 0.0 : exp(-1.0/(x^2))), from x = -3.2 to 3.2, in cyan, very thick
-plot flat(x) = 0.0, from x = -1.2 to 1.2, in green, thick
-draw a line from (-3.0, 1.0) to (3.0, 1.0) in gray, dashed
-raw tool {"type":"points","name":"Origin","points":"(0.0, 0.0);","size":"large"}
-write "$y = \\exp\\left(-\\frac{1}{x^2}\\right)$" at (2.0, 1.15) in cyan, right
-write "$\\text{Asymptote } y = 1$" at (-1, 1.13) in gray, left
-write "$\\text{Infinitely Flat Apex: } f^{(n)}(0) = 0, \\; \\forall n \\in \\mathbb{N}$" at (0.0, -0.3) in green, center
-write "$(0,0)$" at (0.0, 0.15) in red, center
-```
 # Algebraic Infrastructure of Differentiation
 In [[Chapter 1 - Differentiable Functions|Chapter 1]], differentiability was formulated through the lens of local linear approximation: a real-valued mapping is differentiable at an anchor point if its local increment decomposes into a continuous linear transformation and a remainder term that decays strictly faster than the perturbation of the argument. While the difference quotient provides the formal definition of this property, evaluating limits of incremental ratios for every composite, rational, or transcendental mapping encountered in the quantitative sciences is computationally prohibitive and structurally inefficient.
 
@@ -310,12 +252,12 @@ $$
 \begin{align}
 & \textbf{Definition: The Six Fundamental Hyperbolic Functions}  \\[5mm]
  & \hspace{0.2in} \text{Let } x \in \mathbb{R}. \text{ The hyperbolic functions are defined analytically as follows:} \\[2mm]
- & \hspace{0.2in} 1. \text{ Hyperbolic Sine: } \sinh(x) := \frac{e^x - e^{-x}}{2}, \quad x \in \mathbb{R} \\[2mm]
- & \hspace{0.2in} 2. \text{ Hyperbolic Cosine: } \cosh(x) := \frac{e^x + e^{-x}}{2}, \quad x \in \mathbb{R} \\[2mm]
- & \hspace{0.2in} 3. \text{ Hyperbolic Tangent: } \tanh(x) := \frac{\sinh(x)}{\cosh(x)} = \frac{e^x - e^{-x}}{e^x + e^{-x}}, \quad x \in \mathbb{R} \\[2mm]
- & \hspace{0.2in} 4. \text{ Hyperbolic Cotangent: } \coth(x) := \frac{\cosh(x)}{\sinh(x)} = \frac{e^x + e^{-x}}{e^x - e^{-x}}, \quad x \in \mathbb{R} \setminus \{0\} \\[2mm]
- & \hspace{0.2in} 5. \text{ Hyperbolic Secant: } \operatorname{sech}(x) := \frac{1}{\cosh(x)} = \frac{2}{e^x + e^{-x}}, \quad x \in \mathbb{R} \\[2mm]
- & \hspace{0.2in} 6. \text{ Hyperbolic Cosecant: } \operatorname{csch}(x) := \frac{1}{\sinh(x)} = \frac{2}{e^x - e^{-x}}, \quad x \in \mathbb{R} \setminus \{0\}
+ & \hspace{0.2in} 1. \text{ \textit{Hyperbolic Sine}: } \sinh(x) := \frac{e^x - e^{-x}}{2}, \quad x \in \mathbb{R} \\[2mm]
+ & \hspace{0.2in} 2. \text{ \textit{Hyperbolic Cosine}: } \cosh(x) := \frac{e^x + e^{-x}}{2}, \quad x \in \mathbb{R} \\[2mm]
+ & \hspace{0.2in} 3. \text{ \textit{Hyperbolic Tangent}: } \tanh(x) := \frac{\sinh(x)}{\cosh(x)} = \frac{e^x - e^{-x}}{e^x + e^{-x}}, \quad x \in \mathbb{R} \\[2mm]
+ & \hspace{0.2in} 4. \text{ \textit{Hyperbolic Cotangent}: } \coth(x) := \frac{\cosh(x)}{\sinh(x)} = \frac{e^x + e^{-x}}{e^x - e^{-x}}, \quad x \in \mathbb{R} \setminus \{0\} \\[2mm]
+ & \hspace{0.2in} 5. \text{ \textit{Hyperbolic Secant}: } \operatorname{sech}(x) := \frac{1}{\cosh(x)} = \frac{2}{e^x + e^{-x}}, \quad x \in \mathbb{R} \\[2mm]
+ & \hspace{0.2in} 6. \text{ \textit{Hyperbolic Cosecant}: } \operatorname{csch}(x) := \frac{1}{\sinh(x)} = \frac{2}{e^x - e^{-x}}, \quad x \in \mathbb{R} \setminus \{0\}
 \end{align}
 $$
 
@@ -355,12 +297,12 @@ $$
 \begin{align}
 & \textbf{Definition: The Six Inverse Circular Functions} \\[5mm]
  & \hspace{0.2in} \text{The canonical inverse circular functions are defined as the principal branch inverses:} \\[2mm]
- & \hspace{0.2in} 1. \text{ Arcsine: } \arcsin: [-1, 1] \to \left[-\frac{\pi}{2}, \frac{\pi}{2}\right], \quad y = \arcsin(x) \iff x = \sin(y) \\[2mm]
- & \hspace{0.2in} 2. \text{ Arccosine: } \arccos: [-1, 1] \to [0, \pi], \quad y = \arccos(x) \iff x = \cos(y) \\[2mm]
- & \hspace{0.2in} 3. \text{ Arctangent: } \arctan: \mathbb{R} \to \left(-\frac{\pi}{2}, \frac{\pi}{2}\right), \quad y = \arctan(x) \iff x = \tan(y) \\[2mm]
- & \hspace{0.2in} 4. \text{ Arccotangent: } \operatorname{arccot}: \mathbb{R} \to (0, \pi), \quad y = \operatorname{arccot}(x) \iff x = \cot(y) \\[2mm]
- & \hspace{0.2in} 5. \text{ Arcsecant: } \operatorname{arcsec}: (-\infty, -1] \cup [1, \infty) \to \left[0, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \pi\right], \quad y = \operatorname{arcsec}(x) \iff x = \sec(y) \\[2mm]
- & \hspace{0.2in} 6. \text{ Arccosecant: } \operatorname{arccsc}: (-\infty, -1] \cup [1, \infty) \to \left[-\frac{\pi}{2}, 0\right) \cup \left(0, \frac{\pi}{2}\right], \quad y = \operatorname{arccsc}(x) \iff x = \csc(y)
+ & \hspace{0.2in} 1. \text{ \textit{Arcsine}: } \arcsin: [-1, 1] \to \left[-\frac{\pi}{2}, \frac{\pi}{2}\right], \quad y = \arcsin(x) \iff x = \sin(y) \\[2mm]
+ & \hspace{0.2in} 2. \text{ \textit{Arccosine}: } \arccos: [-1, 1] \to [0, \pi], \quad y = \arccos(x) \iff x = \cos(y) \\[2mm]
+ & \hspace{0.2in} 3. \text{ \textit{Arctangent}: } \arctan: \mathbb{R} \to \left(-\frac{\pi}{2}, \frac{\pi}{2}\right), \quad y = \arctan(x) \iff x = \tan(y) \\[2mm]
+ & \hspace{0.2in} 4. \text{ \textit{Arccotangent}: } \operatorname{arccot}: \mathbb{R} \to (0, \pi), \quad y = \operatorname{arccot}(x) \iff x = \cot(y) \\[2mm]
+ & \hspace{0.2in} 5. \text{ \textit{Arcsecant}: } \operatorname{arcsec}: (-\infty, -1] \cup [1, \infty) \to \left[0, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \pi\right], \quad y = \operatorname{arcsec}(x) \iff x = \sec(y) \\[2mm]
+ & \hspace{0.2in} 6. \text{ \textit{Arccosecant}: } \operatorname{arccsc}: (-\infty, -1] \cup [1, \infty) \to \left[-\frac{\pi}{2}, 0\right) \cup \left(0, \frac{\pi}{2}\right], \quad y = \operatorname{arccsc}(x) \iff x = \csc(y)
 \end{align}
 $$
 
@@ -397,12 +339,12 @@ $$
 \begin{align}
 & \textbf{Definition: The Six Inverse Hyperbolic Functions} \\[5mm]
  & \hspace{0.2in} \text{The canonical inverse hyperbolic functions are defined as the bijective branch inverses:} \\[2mm]
- & \hspace{0.2in} 1. \text{ Area Hyperbolic Sine: } \operatorname{arsinh}: \mathbb{R} \to \mathbb{R}, \quad y = \operatorname{arsinh}(x) \iff x = \sinh(y) \\[2mm]
- & \hspace{0.2in} 2. \text{ Area Hyperbolic Cosine: } \operatorname{arcosh}: [1, \infty) \to [0, \infty), \quad y = \operatorname{arcosh}(x) \iff x = \cosh(y), \; y \ge 0 \\[2mm]
- & \hspace{0.2in} 3. \text{ Area Hyperbolic Tangent: } \operatorname{artanh}: (-1, 1) \to \mathbb{R}, \quad y = \operatorname{artanh}(x) \iff x = \tanh(y) \\[2mm]
- & \hspace{0.2in} 4. \text{ Area Hyperbolic Cotangent: } \operatorname{arcoth}: (-\infty, -1) \cup (1, \infty) \to \mathbb{R} \setminus \{0\}, \quad y = \operatorname{arcoth}(x) \iff x = \coth(y) \\[2mm]
- & \hspace{0.2in} 5. \text{ Area Hyperbolic Secant: } \operatorname{arsech}: (0, 1] \to [0, \infty), \quad y = \operatorname{arsech}(x) \iff x = \operatorname{sech}(y), \; y \ge 0 \\[2mm]
- & \hspace{0.2in} 6. \text{ Area Hyperbolic Cosecant: } \operatorname{arcsch}: \mathbb{R} \setminus \{0\} \to \mathbb{R} \setminus \{0\}, \quad y = \operatorname{arcsch}(x) \iff x = \operatorname{csch}(y)
+ & \hspace{0.2in} 1. \text{ \textit{Area Hyperbolic Sine}: } \operatorname{arsinh}: \mathbb{R} \to \mathbb{R}, \quad y = \operatorname{arsinh}(x) \iff x = \sinh(y) \\[2mm]
+ & \hspace{0.2in} 2. \text{ \textit{Area Hyperbolic Cosine}: } \operatorname{arcosh}: [1, \infty) \to [0, \infty), \quad y = \operatorname{arcosh}(x) \iff x = \cosh(y), \; y \ge 0 \\[2mm]
+ & \hspace{0.2in} 3. \text{ \textit{Area Hyperbolic Tangent}: } \operatorname{artanh}: (-1, 1) \to \mathbb{R}, \quad y = \operatorname{artanh}(x) \iff x = \tanh(y) \\[2mm]
+ & \hspace{0.2in} 4. \text{ \textit{Area Hyperbolic Cotangent}: } \operatorname{arcoth}: (-\infty, -1) \cup (1, \infty) \to \mathbb{R} \setminus \{0\}, \quad y = \operatorname{arcoth}(x) \iff x = \coth(y) \\[2mm]
+ & \hspace{0.2in} 5. \text{ \textit{Area Hyperbolic Secant}: } \operatorname{arsech}: (0, 1] \to [0, \infty), \quad y = \operatorname{arsech}(x) \iff x = \operatorname{sech}(y), \; y \ge 0 \\[2mm]
+ & \hspace{0.2in} 6. \text{ \textit{Area Hyperbolic Cosecant}: } \operatorname{arcsch}: \mathbb{R} \setminus \{0\} \to \mathbb{R} \setminus \{0\}, \quad y = \operatorname{arcsch}(x) \iff x = \operatorname{csch}(y)
 \end{align}
 $$
 

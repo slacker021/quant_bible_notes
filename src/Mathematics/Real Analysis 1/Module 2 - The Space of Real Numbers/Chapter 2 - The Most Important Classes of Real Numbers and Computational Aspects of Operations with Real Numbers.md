@@ -117,8 +117,8 @@ The study of divisibility within $\mathbb{N}$ isolates the irreducible multiplic
 $$
 \begin{gather}
 \textbf{Definition: Prime and Composite Numbers} \\[5mm]
-\text{A natural number } p \in \mathbb{N} \setminus \{1\} \text{ is called prime if its only divisors in } \mathbb{N} \text{ are } 1 \text{ and } p. \\[2mm]
-\text{An integer } n \in \mathbb{N} \setminus \{1\} \text{ that is not prime is called composite.}
+\text{A natural number } p \in \mathbb{N} \setminus \{1\} \text{ is called \textit{prime} if its only divisors in } \mathbb{N} \text{ are } 1 \text{ and } p. \\[2mm]
+\text{An integer } n \in \mathbb{N} \setminus \{1\} \text{ that is not prime is called \textit{composite}.}
 \end{gather}
 $$
 
@@ -183,7 +183,7 @@ $$
 \begin{gather}
 \textbf{Definition: The Set of Irrational Numbers} \\[5mm]
 \text{Real numbers that do not belong to the set of rational numbers } \mathbb{Q} \text{ are called} \\[2mm]
-\text{irrational numbers. The set of irrational numbers is denoted by } \mathbb{R} \setminus \mathbb{Q} \text{ (or } \mathbb{I}\text{).}
+\text{\textit{irrational numbers}. The set of irrational numbers is denoted by } \mathbb{R} \setminus \mathbb{Q} \text{ (or } \mathbb{I}\text{).}
 \end{gather}
 $$
 
@@ -321,9 +321,9 @@ $$
 $$
 \begin{gather}
 \textbf{Definition: Neighborhood of a Point} \\[5mm]
-\text{Any open interval containing a point } x \in \mathbb{R} \text{ is called a neighborhood of } x. \\[2mm]
+\text{Any open interval containing a point } x \in \mathbb{R} \text{ is called a \textit{neighborhood} of } x. \\[2mm]
 \text{For any radius } \delta \in \mathbb{R}_{>0}, \text{ the symmetric open interval } (x - \delta, x + \delta) \text{ of length } 2\delta \\[2mm]
-\text{centered at } x \text{ is called the } \delta\text{-neighborhood of } x, \text{ denoted } U_\delta(x): \\[3.5mm]
+\text{centered at } x \text{ is called the } \delta\text{-\textit{neighborhood} of } x, \text{ denoted } U_\delta(x): \\[3.5mm]
 U_\delta(x) := \{y \in \mathbb{R} \mid |y - x| < \delta\}
 \end{gather}
 $$
@@ -427,7 +427,7 @@ $$
 \begin{gather}
 \textbf{Definition: Order of a Real Number in Base } q \\[5mm]
 \text{The unique integer } p \in \mathbb{Z} \text{ satisfying } q^p \le x < q^{p+1} \text{ is called} \\[2mm]
-\text{the order (or exponent) of the number } x \text{ in the base } q.
+\text{the \textit{order} (or \textit{exponent}) of the number } x \text{ in the base } q.
 \end{gather}
 $$
 

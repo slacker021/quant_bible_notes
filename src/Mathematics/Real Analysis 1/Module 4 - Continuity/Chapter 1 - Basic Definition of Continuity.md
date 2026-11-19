@@ -14,7 +14,7 @@ Let $E \subseteq \mathbb{R}$ represent an arbitrary non-empty subset of the real
 $$\begin{gather}
 \textbf{Definition: Pointwise Continuity (Metric } \varepsilon\text{-}\delta \textbf{ Formulation)} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } f: E \to \mathbb{R}, \text{ and let } a \in E. \\[2mm]
-\text{The function } f \text{ is continuous at the point } a \text{ if for every positive tolerance } \varepsilon > 0, \\[2mm]
+\text{The function } f \text{ is \textit{continuous} at the point } a \text{ if for every positive tolerance } \varepsilon > 0, \\[2mm]
 \text{there exists a corresponding distance } \delta > 0 \text{ such that for all } x \in E, \\[2mm]
 \text{the condition } |x - a| < \delta \text{ strictly guarantees that } |f(x) - f(a)| < \varepsilon\text{:} \\[3.5mm]
 \forall \varepsilon > 0, \ \exists \delta > 0, \ \forall x \in E \ \big(|x - a| < \delta \implies |f(x) - f(a)| < \varepsilon\big)
@@ -158,8 +158,8 @@ This formulation provides the analytical foundation for the Riemann integrabilit
 Moving from pointwise continuity to continuity on entire domains requires examining how mappings pull back open subsets of the codomain: 
 $$\begin{gather}
 \textbf{Definition: Relative Open and Closed Subsets} \\[5mm]
-\text{Let } E \subseteq \mathbb{R}. \text{ A subset } U \subseteq E \text{ is relatively open in } E \text{ if there exists an open set } G \subseteq \mathbb{R} \\[2mm]
-\text{such that } U = G \cap E. \text{ Similarly, } K \subseteq E \text{ is relatively closed in } E \text{ if } K = F \cap E \text{ for some closed } F \subseteq \mathbb{R}.
+\text{Let } E \subseteq \mathbb{R}. \text{ A subset } U \subseteq E \text{ is \textit{relatively open} in } E \text{ if there exists an open set } G \subseteq \mathbb{R} \\[2mm]
+\text{such that } U = G \cap E. \text{ Similarly, } K \subseteq E \text{ is \textit{relatively closed} in } E \text{ if } K = F \cap E \text{ for some closed } F \subseteq \mathbb{R}.
 \end{gather}$$
 
 $$\begin{gather}
@@ -196,9 +196,9 @@ At interior points of a domain, an argument can approach a target point along tw
 $$\begin{gather}
 \textbf{Definition: Directional Continuity} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } f: E \to \mathbb{R}, \text{ and let } a \in E. \\[3.5mm]
-\text{1. Left-Continuity: If } a \in (E \cap (-\infty, a])', \ f \text{ is left-continuous at } a \text{ if:} \\[2mm]
+\text{1. Left-Continuity: If } a \in (E \cap (-\infty, a])', \ f \text{ is \textit{left-continuous} at } a \text{ if:} \\[2mm]
 \lim_{E \ni x \to a^-} f(x) = f(a) \iff \forall \varepsilon > 0, \ \exists \delta > 0, \ \forall x \in E \ \big(a - \delta < x \le a \implies |f(x) - f(a)| < \varepsilon\big). \\[3.5mm]
-\text{2. Right-Continuity: If } a \in (E \cap [a, \infty))', \ f \text{ is right-continuous at } a \text{ if:} \\[2mm]
+\text{2. Right-Continuity: If } a \in (E \cap [a, \infty))', \ f \text{ is \textit{right-continuous} at } a \text{ if:} \\[2mm]
 \lim_{E \ni x \to a^+} f(x) = f(a) \iff \forall \varepsilon > 0, \ \exists \delta > 0, \ \forall x \in E \ \big(a \le x < a + \delta \implies |f(x) - f(a)| < \varepsilon\big).
 \end{gather}$$
 
@@ -216,7 +216,7 @@ $$\begin{gather}
 \textbf{Definition: The Jump Dislocation Operator} \\[5mm]
 \text{Let } a \in \operatorname{int}(E), \text{ and suppose the one-sided limits } f(a^-) := \lim_{x \to a^-} f(x) \\[2mm]
 \text{and } f(a^+) := \lim_{x \to a^+} f(x) \text{ both exist as finite real numbers.} \\[3.5mm]
-\text{The jump dislocation operator } \Delta f(a) \text{ is defined as the directional difference:} \\[3.5mm]
+\text{The \textit{jump dislocation operator} } \Delta f(a) \text{ is defined as the directional difference:} \\[3.5mm]
 \Delta f(a) := f(a^+) - f(a^-)
 \end{gather}$$
 

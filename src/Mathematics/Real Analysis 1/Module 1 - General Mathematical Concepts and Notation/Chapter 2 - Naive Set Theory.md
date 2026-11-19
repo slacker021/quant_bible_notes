@@ -8,7 +8,7 @@ The initial intuitive formulation of a set, credited to *Georg Cantor*, provides
 $$
 \begin{gather}
 \textbf{Definition: The Naive Concept of a Set} \\[5mm]
-\text{A set is an unordered collection of definite distinct objects of perception or thought.} \\[2mm]
+\text{A \textit{set} is an unordered collection of definite distinct objects of perception or thought.} \\[2mm]
 \text{A set is completely and uniquely determined by the elements that belong to it.}
 \end{gather}
 $$
@@ -109,7 +109,7 @@ A \cap B := \{x \in M \mid (x \in A) \wedge (x \in B)\}
 \\[5mm]
 
 \textbf{Definition: Set Difference} \\[5mm]
-\text{The difference of } A \text{ and } B \text{ (the relative complement of } B \text{ in } A\text{) is the set of} \\[2mm]
+\text{The difference of } A \text{ and } B \text{ (the \textit{relative complement} of } B \text{ in } A\text{) is the set of} \\[2mm]
 \text{elements belonging to } A \text{ that do not belong to } B. \text{ This is formally denoted as:} \\[3.5mm]
 A \setminus B := \{x \in M \mid (x \in A) \wedge (x \notin B)\}
 \end{gather}
@@ -118,7 +118,7 @@ When the relative difference is taken with respect to the entire ambient set $M$
 $$
 \begin{gather}
 \textbf{Definition: Set Complement} \\[5mm]
-\text{Let } A \subseteq M. \text{ The complement of } A \text{ in } M \text{ consists of all elements in } M \\[2mm]
+\text{Let } A \subseteq M. \text{ The \textit{complement} of } A \text{ in } M \text{ consists of all elements in } M \\[2mm]
 \text{that do not belong to } A. \text{ This is denoted as } C_M(A), \text{ } M \setminus A, \text{ or } A^c: \\[3.5mm]
 C_M(A) := \{x \in M \mid x \notin A\}
 \end{gather}
@@ -198,11 +198,11 @@ $$
 \textbf{Axiom: The Principle of Pairing} \\[5mm]
 \text{For any two sets } X \text{ and } Y, \text{ there exists a set } Z \text{ whose elements are strictly } X \text{ and } Y: \\[3.5mm]
 Z = \{X, Y\} \\[3.5mm]
-\text{If } X = Y, \text{ the resulting collection is the singleton set } \{X\}.
+\text{If } X = Y, \text{ the resulting collection is the \textit{singleton set} } \{X\}.
 \\[5mm]
 
 \textbf{Axiom: The Principle of the Power Set} \\[5mm]
-\text{For any set } X, \text{ there exists a set } \mathcal{P}(X), \text{ termed the power set of } X, \\[2mm]
+\text{For any set } X, \text{ there exists a set } \mathcal{P}(X), \text{ termed the \textit{power set} of } X, \\[2mm]
 \text{whose elements are all possible subsets of } X, \text{ and no other objects:} \\[3.5mm]
 Y \in \mathcal{P}(X) \iff Y \subseteq X
 \end{gather}
@@ -212,12 +212,12 @@ To construct infinite collections of objects within axiomatic set theory, founda
 $$
 \begin{gather}
 \textbf{Definition: Successor Set} \\[5mm]
-\text{For any set } X, \text{ the successor set } X^+ \text{ is constructed by adjoining the singleton } \{X\} \text{ to } X: \\[3.5mm]
+\text{For any set } X, \text{ the \textit{successor set} } X^+ \text{ is constructed by adjoining the singleton } \{X\} \text{ to } X: \\[3.5mm]
 X^+ := X \cup \{X\}
 \\[5mm]
 
 \textbf{Definition: Inductive Set} \\[5mm]
-\text{A set } S \text{ is inductive if the empty set belongs to } S, \text{ and the successor of every} \\[2mm]
+\text{A set } S \text{ is \textit{inductive} if the empty set belongs to } S, \text{ and the successor of every} \\[2mm]
 \text{element in } S \text{ also belongs to } S: \\[3.5mm]
 (\emptyset \in S) \wedge (\forall X (X \in S \implies X^+ \in S))
 \end{gather}

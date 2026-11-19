@@ -17,8 +17,8 @@ $$
 f^{-1}(\mathbb{R} \setminus S) = \{x \in E \mid f(x) \in \mathbb{R} \setminus S\} = \{x \in E \mid f(x) \notin S\} = E \setminus f^{-1}(S) \tag{2}
 \end{gather}
 $$
-
-**Necessity ($\implies$ Continuity implies Closed Preimages):**
+---
+# Sufficiency
 Assume that the function $f$ is continuous on $E$.
 
 Let $F \subseteq \mathbb{R}$ be an arbitrary closed subset of the codomain. The complement $G := \mathbb{R} \setminus F$ is an open subset of $\mathbb{R}$. 
@@ -44,8 +44,8 @@ $$
 f^{-1}(F) = E \setminus \big(E \setminus f^{-1}(F)\big) \text{ is relatively closed in } E \tag{5}
 \end{gather}
 $$
-
-**Sufficiency ($\impliedby$ Closed Preimages implies Continuity):**
+---
+# Necessity
 Conversely, assume that for every closed subset $F \subseteq \mathbb{R}$, the complete preimage $f^{-1}(F)$ is relatively closed in $E$.
 
 To verify that $f$ is continuous on $E$, by the [[Proof of the Global Open Preimage Characterization]] it suffices to demonstrate that the complete preimage $f^{-1}(G)$ is relatively open in $E$ for every open set $G \subseteq \mathbb{R}$.

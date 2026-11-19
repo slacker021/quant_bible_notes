@@ -4,9 +4,9 @@ dg-publish: true
 Let $X, Y, X',$ and $Y'$ be arbitrary sets.
 
 ---
-**Method 1 (Mutual Subset Inclusion):**
+# Method 1 (Mutual Subset Inclusion)
 
-**Forward Inclusion:**
+### Forward Inclusion
 Let $(a, b) \in (X \times Y) \cap (X' \times Y')$ be an arbitrary element. By the definition of the set intersection: 
 $$
 \begin{gather}
@@ -44,7 +44,7 @@ $$
 \end{gather}
 $$
 
-**Reverse Inclusion:**
+### Reverse Inclusion
 Let $(a, b) \in (X \cap X') \times (Y \cap Y')$ be an arbitrary element. By the definition of the Cartesian product: 
 $$
 \begin{gather}
@@ -89,7 +89,7 @@ $$
 $$
 
 ---
-**Method 2 (Predicate Logic Equivalence):**
+# Method 2 (Predicate Logic Equivalence)
 The set identity can be verified through a continuous chain of logical equivalences. Let $(a, b)$ be an arbitrary ordered pair:
 $$
 \begin{aligned}

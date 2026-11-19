@@ -11,6 +11,7 @@ S_n := \sum_{k=1}^n a_k \quad \text{and} \quad T_n := \sum_{k=1}^n b_k \tag{1}
 $$
 Because $a_n \ge 0$ and $b_n \ge 0$, both $\{S_n\}$ and $\{T_n\}$ are monotonically nondecreasing sequences in $\mathbb{R}$.
 
+---
 # Theorem 1
 Assume that the dominant series $\sum_{n=1}^\infty b_n$ converges to the finite sum $T \in \mathbb{R}$.
 

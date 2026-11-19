@@ -8,8 +8,7 @@ $$
 $$
 |\alpha| = \Delta(\tilde{x}) \quad \wedge \quad |\beta| = \Delta(\tilde{y}) \tag{2}
 $$
-
---------------------------------------------------------------------------------
+---
 # Proposition 1
 Consider the sum or difference $\tilde{x} \pm \tilde{y}$ approximating $x \pm y$. By definition of the absolute error: 
 $$
@@ -24,7 +23,7 @@ $$
 \Delta(\tilde{x} \pm \tilde{y}) = |\alpha \pm \beta| \le |\alpha| + |\beta| = \Delta(\tilde{x}) + \Delta(\tilde{y}) \tag{5}
 $$
 
---------------------------------------------------------------------------------
+---
 # Proposition 2
 Consider the product $\tilde{x} \cdot \tilde{y}$ approximating $x \cdot y$. By definition of the absolute error: 
 $$
@@ -42,8 +41,7 @@ $$
 &= |\tilde{x}|\Delta(\tilde{y}) + |\tilde{y}|\Delta(\tilde{x}) + \Delta(\tilde{x})\Delta(\tilde{y}) \tag{8}
 \end{align}
 $$
-
---------------------------------------------------------------------------------
+---
 # Proposition 3
 Assume that $\tilde{y} \ne 0$ and the relative error satisfies $\delta(\tilde{y}) = \frac{|\beta|}{|\tilde{y}|} < 1$. 
 

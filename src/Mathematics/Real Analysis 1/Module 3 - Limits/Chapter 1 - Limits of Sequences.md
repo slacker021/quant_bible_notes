@@ -28,9 +28,9 @@ $$
 \text{there exists a natural number } N \in \mathbb{N} \text{ such that for all } n > N, \\[2mm]
 \text{the inequality } |x_n - A| < \varepsilon \text{ holds.} \\[3.5mm]
 \lim_{n \to \infty} x_n = A := \forall \varepsilon > 0 \ \exists N \in \mathbb{N} \ \forall n > N \ (|x_n - A| < \varepsilon) \\[3.5mm]
-\text{If such a limit } A \in \mathbb{R} \text{ exists, the sequence is said to converge (or tend) to } A, \\[2mm]
-\text{and is called a convergent sequence. If a sequence does not possess a finite limit,} \\[2mm]
-\text{it is called a divergent sequence.}
+\text{If such a limit } A \in \mathbb{R} \text{ exists, the sequence is said to \textit{converge} (or \textit{tend}) to } A, \\[2mm]
+\text{and is called a \textit{convergent sequence}. If a sequence does not possess a finite limit,} \\[2mm]
+\text{it is called a \textit{divergent sequence}.}
 \end{gather}
 $$
 
@@ -44,8 +44,8 @@ $$
 \begin{gather}
 \textbf{Definition: Ultimately Constant and Bounded Sequences} \\[5mm]
 \text{If there exist a number } A \text{ and an index } N \in \mathbb{N} \text{ such that } x_{n} = A \text{ for all } n > N, \\[2mm]
-\text{the sequence } \{x_{n}\} \text{ is called ultimately constant.} \\[3.5mm]
-\text{A sequence } \{x_{n}\} \text{ is bounded if there exists a real number } M > 0 \\[2mm]
+\text{the sequence } \{x_{n}\} \text{ is called \textit{ultimately constant}.} \\[3.5mm]
+\text{A sequence } \{x_{n}\} \text{ is \textit{bounded} if there exists a real number } M > 0 \\[2mm]
 \text{such that } |x_{n}| < M \text{ for all } n \in \mathbb{N}.
 \end{gather}
 $$
@@ -90,7 +90,7 @@ $$
 x_{n} < y_{n} \text{ for all } n > N. \\[3.5mm]
 \text{2. Suppose the sequences } \{x_{n}\}, \{y_{n}\}, \text{ and } \{z_{n}\} \text{ satisfy } x_{n} \le y_{n} \le z_{n} \\[2mm]
 \text{for all } n > N \text{ for some } N \in \mathbb{N}. \text{ If } \{x_{n}\} \text{ and } \{z_{n}\} \text{ both converge to the same limit } A, \\[2mm]
-\text{then the intermediate sequence } \{y_{n}\} \text{ also converges to } A \text{ (The Squeeze Theorem).}
+\text{then the intermediate sequence } \{y_{n}\} \text{ also converges to } A \text{ (\textit{The Squeeze Theorem}).}
 \end{gather}
 $$
 (see [[Proof of Inequalities Involving Limits]])
@@ -143,7 +143,7 @@ Relying on an external candidate value $A$ to verify convergence is frequently i
 $$
 \begin{gather}
 \textbf{Definition: Cauchy Sequence} \\[5mm]
-\text{A sequence } \{x_{n}\} \text{ is called a fundamental sequence (or Cauchy sequence) if for every } \varepsilon > 0, \\[2mm]
+\text{A sequence } \{x_{n}\} \text{ is called a \textit{fundamental sequence} (or \textit{Cauchy sequence}) if for every } \varepsilon > 0, \\[2mm]
 \text{there exists an index } N \in \mathbb{N} \text{ such that for all } n > N \text{ and all } m > N, \\[2mm]
 \text{the inequality } |x_{m} - x_{n}| < \varepsilon \text{ holds.} \\[3.5mm]
 (\{x_n\} \text{ is Cauchy}) := \forall \varepsilon > 0 \ \exists N \in \mathbb{N} \ \forall n > N \ \forall m > N \ (|x_m - x_n| < \varepsilon)
@@ -201,7 +201,7 @@ $$
 \textbf{Definition: Subsequence} \\[5mm]
 \text{If } \{x_{n}\} \text{ is a sequence and } n_{1} < n_{2} < \dots < n_{k} < \dots \\[2mm]
 \text{is a strictly increasing sequence of natural numbers, then the sequence } \{x_{n_k}\}_{k \in \mathbb{N}} \text{ given by} \\[2mm]
-x_{n_{1}}, x_{n_{2}}, \dots , x_{n_{k}}, \dots \text{ is called a subsequence of the original sequence } \{x_{n}\}.
+x_{n_{1}}, x_{n_{2}}, \dots , x_{n_{k}}, \dots \text{ is called a \textit{subsequence} of the original sequence } \{x_{n}\}.
 \end{gather}
 $$
 
@@ -221,13 +221,13 @@ While an unbounded sequence may fail to converge to a finite real number, its as
 $$
 \begin{gather}
 \textbf{Definition: Sequences Tending to Infinity} \\[5mm]
-\text{1. A sequence } \{ x_{n} \} \text{ tends to positive infinity if for every real number } c \in \mathbb{R}, \text{ there exists } N \in \mathbb{N} \\[2mm]
+\text{1. A sequence } \{ x_{n} \} \text{ \textit{tends to positive infinity} if for every real number } c \in \mathbb{R}, \text{ there exists } N \in \mathbb{N} \\[2mm]
 \text{such that } x_{n} > c \text{ for all } n > N. \text{ Symbolically:} \\[3.5mm]
 x_{n} \to +\infty := \forall c \in \mathbb{R} \ \exists N \in \mathbb{N} \ \forall n > N \ (x_{n} > c) \\[3.5mm]
-\text{2. A sequence } \{ x_{n} \} \text{ tends to negative infinity if for every real number } c \in \mathbb{R}, \text{ there exists } N \in \mathbb{N} \\[2mm]
+\text{2. A sequence } \{ x_{n} \} \text{ \textit{tends to negative infinity} if for every real number } c \in \mathbb{R}, \text{ there exists } N \in \mathbb{N} \\[2mm]
 \text{such that } x_{n} < c \text{ for all } n > N. \text{ Symbolically:} \\[3.5mm]
 x_{n} \to -\infty := \forall c \in \mathbb{R} \ \exists N \in \mathbb{N} \ \forall n > N \ (x_{n} < c) \\[3.5mm]
-\text{3. A sequence } \{ x_{n} \} \text{ tends to unsigned infinity if for every real number } c \in \mathbb{R}, \text{ there exists } N \in \mathbb{N} \\[2mm]
+\text{3. A sequence } \{ x_{n} \} \text{ \textit{tends to unsigned infinity} if for every real number } c \in \mathbb{R}, \text{ there exists } N \in \mathbb{N} \\[2mm]
 \text{such that } |x_{n}| > c \text{ for all } n > N. \text{ Symbolically:} \\[3.5mm]
 x_{n} \to \infty := \forall c \in \mathbb{R} \ \exists N \in \mathbb{N} \ \forall n > N \ (|x_{n}| > c)
 \end{gather}
@@ -250,10 +250,10 @@ Suppose that $\{x_{k}\}$ is a sequence of real numbers bounded below. For each $
 $$
 \begin{gather}
 \textbf{Definition: Inferior and Superior Limits} \\[5mm]
-\text{1. The quantity } l = \lim_{n \to \infty} \left(\inf_{k \ge n} x_{k}\right) \text{ is called the inferior limit (or limit inferior) of } \{ x_{k} \}, \\[2mm]
+\text{1. The quantity } l = \lim_{n \to \infty} \left(\inf_{k \ge n} x_{k}\right) \text{ is called the \textit{inferior limit} (or \textit{limit inferior}) of } \{ x_{k} \}, \\[2mm]
 \text{denoted by } \liminf_{k \to \infty} x_{k} \text{ or } \underline{\lim}_{k \to \infty} x_k. \text{ If } i_{n} = \inf_{k \ge n} x_k \to +\infty, \text{ then } \liminf_{k \to \infty} x_k := +\infty. \\[2mm]
 \text{If } \{ x_{k} \} \text{ is unbounded below, then } i_{n} = -\infty \text{ for all } n \in \mathbb{N}, \text{ and } \liminf_{k \to \infty} x_k := -\infty. \\[3.5mm]
-\text{2. The quantity } L = \lim_{n \to \infty} \left(\sup_{k \ge n} x_{k}\right) \text{ is called the superior limit (or limit superior) of } \{ x_{k} \}, \\[2mm]
+\text{2. The quantity } L = \lim_{n \to \infty} \left(\sup_{k \ge n} x_{k}\right) \text{ is called the \textit{superior limit} (or \textit{limit superior}) of } \{ x_{k} \}, \\[2mm]
 \text{denoted by } \limsup_{k \to \infty} x_{k} \text{ or } \overline{\lim}_{k \to \infty} x_k. \text{ If } s_{n} = \sup_{k \ge n} x_{k} \to -\infty, \text{ then } \limsup_{k \to \infty} x_k := -\infty. \\[2mm]
 \text{If } \{ x_{k} \} \text{ is unbounded above, then } s_{n} = +\infty \text{ for all } n \in \mathbb{N}, \text{ and } \limsup_{k \to \infty} x_k := +\infty.
 \end{gather}
@@ -263,7 +263,7 @@ The structural meaning of these asymptotic bounds is illuminated by examining th
 $$
 \begin{gather}
 \textbf{Definition: Partial Limit} \\[5mm]
-\text{A real number } a \in \mathbb{R} \text{ (or one of the extended symbols } -\infty \text{ or } +\infty\text{) is called a partial limit} \\[2mm]
+\text{A real number } a \in \mathbb{R} \text{ (or one of the extended symbols } -\infty \text{ or } +\infty\text{) is called a \textit{partial limit}} \\[2mm]
 \text{of a sequence } \{x_n\} \text{ if there exists a subsequence } \{x_{n_k}\} \text{ that converges to } a \text{ (or tends to } -\infty \text{ or } +\infty\text{).}
 \end{gather}
 $$
@@ -302,8 +302,8 @@ $$
 \begin{gather}
 \textbf{Definition: Infinite Series} \\[5mm]
 \text{The formal expression } a_1 + a_2 + \dots + a_n + \dots \text{ is denoted by the symbol } \sum_{n=1}^\infty a_n \\[2mm]
-\text{and is called an infinite series (or simply a series). The numbers } a_n \text{ are the terms of the series,} \\[2mm]
-\text{and the finite sum } s_n := \sum_{k=1}^n a_k \text{ is called the } n\text{-th partial sum of the series.}
+\text{and is called an \textit{infinite series} (or simply a \textit{series}). The numbers } a_n \text{ are the \textit{terms} of the series,} \\[2mm]
+\text{and the finite sum } s_n := \sum_{k=1}^n a_k \text{ is called the } n\text{-th \textit{partial sum} of the series.}
 \end{gather}
 $$
 
@@ -312,8 +312,8 @@ $$
 \begin{gather}
 \textbf{Definition: Convergence and Sum of a Series} \\[5mm]
 \text{If the sequence of partial sums } \{s_n\} \text{ converges to a finite limit } s := \lim_{n \to \infty} s_n, \\[2mm]
-\text{the series is said to converge, and the real number } s \text{ is called the sum of the series,} \\[2mm]
-\text{denoted by } \sum_{n=1}^\infty a_n = s. \text{ If the sequence } \{s_n\} \text{ diverges, the series is said to diverge.}
+\text{the series is said to \textit{converge}, and the real number } s \text{ is called the \textit{sum} of the series,} \\[2mm]
+\text{denoted by } \sum_{n=1}^\infty a_n = s. \text{ If the sequence } \{s_n\} \text{ diverges, the series is said to \textit{diverge}.}
 \end{gather}
 $$
 
@@ -336,8 +336,8 @@ While the vanishing of terms ($\lim_{n \to \infty} a_n = 0$) is a necessary cond
 $$
 \begin{gather}
 \textbf{Definition: Absolute and Conditional Convergence} \\[5mm]
-\text{A series } \sum_{n=1}^\infty a_n \text{ is called absolutely convergent if the series of absolute values } \sum_{n=1}^\infty |a_n| \text{ converges.} \\[2mm]
-\text{If a series } \sum_{n=1}^\infty a_n \text{ converges, but the series } \sum_{n=1}^\infty |a_n| \text{ diverges, the series is called conditionally convergent.}
+\text{A series } \sum_{n=1}^\infty a_n \text{ is called \textit{absolutely convergent} if the series of absolute values } \sum_{n=1}^\infty |a_n| \text{ converges.} \\[2mm]
+\text{If a series } \sum_{n=1}^\infty a_n \text{ converges, but the series } \sum_{n=1}^\infty |a_n| \text{ diverges, the series is called \textit{conditionally convergent}.}
 \end{gather}
 $$
 
@@ -508,11 +508,11 @@ In combinatorics, discrete analysis, and the asymptotic evaluation of polynomial
 $$
 \begin{gather}
 \textbf{Definition: Univariate Polynomial} \\[5mm]
-\text{A univariate polynomial over } \mathbb{R} \text{ is a function } P : \mathbb{R} \rightarrow \mathbb{R} \text{ expressible as a finite linear} \\[2mm]
+\text{A \textit{univariate polynomial} over } \mathbb{R} \text{ is a function } P : \mathbb{R} \rightarrow \mathbb{R} \text{ expressible as a finite linear} \\[2mm]
 \text{combination of non-negative integer powers of a single variable } x\text{:} \\[3.5mm]
 P(x) = a_{n}x^n + a_{n-1}x^{n-1} + \dots + a_{2}x^2 + a_{1}x + a_{0} \\[3.5mm]
-\text{where } n \in \mathbb{N} \cup \{0\} \text{ and } a_0, a_1, \dots, a_n \in \mathbb{R} \text{ are real constants called the coefficients.} \\[2mm]
-\text{If } a_n \neq 0, \text{ the non-negative integer } n \text{ is called the degree of the polynomial.}
+\text{where } n \in \mathbb{N} \cup \{0\} \text{ and } a_0, a_1, \dots, a_n \in \mathbb{R} \text{ are real constants called the \textit{coefficients}.} \\[2mm]
+\text{If } a_n \neq 0, \text{ the non-negative integer } n \text{ is called the \textit{degree} of the polynomial.}
 \end{gather}
 $$
 

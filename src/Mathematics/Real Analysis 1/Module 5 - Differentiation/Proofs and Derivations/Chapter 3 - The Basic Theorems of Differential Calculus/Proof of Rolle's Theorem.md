@@ -19,7 +19,8 @@ M := \sup_{x \in [a, b]} f(x) = f(x_M) \tag{2}
 $$
 By definition of the infimum and supremum, the inequality $m \le M$ holds identically. Two mutually exhaustive cases emerge:
 
-**Case 1: $m = M$.**
+---
+# Case 1
 If the infimum coincides with the supremum, then for every $x \in [a, b]$:
 $$
 \begin{gather}
@@ -34,7 +35,8 @@ f'(\xi) = \lim_{h \to 0} \frac{f(\xi + h) - f(\xi)}{h} = \lim_{h \to 0} \frac{M 
 $$
 In this degenerate scenario, every interior point $\xi \in (a, b)$ serves as a stationary point.
 
-**Case 2: $m < M$.**
+---
+# Case 2
 Assume that the minimum and maximum values are strictly distinct. By hypothesis 3, the function assumes equal values at the endpoints of the interval:
 $$
 \begin{gather}

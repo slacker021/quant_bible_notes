@@ -47,7 +47,7 @@ Therefore, the multiplicative inverse of $x$ is unique and denoted unambiguously
 # Proposition 3
 Let $a \in \mathbb{R} \setminus \{0\}$ and $b \in \mathbb{R}$.
 
-**Existence:**
+### Existence
 Substitute the candidate value $x = b \cdot a^{-1}$ into the left-hand side of the linear equation $a \cdot x = b$. Utilizing the commutativity and associativity of multiplication:
 $$
 \begin{align}
@@ -59,7 +59,7 @@ a \cdot (b \cdot a^{-1}) &= a \cdot (a^{-1} \cdot b) \\[2mm]
 $$
 Thus, $x = b \cdot a^{-1} =: \frac{b}{a}$ satisfies the equation, establishing existence.
 
-**Uniqueness:**
+### Uniqueness
 Let $x \in \mathbb{R}$ be an arbitrary element satisfying $a \cdot x = b$. Because $a \neq 0$, the unique reciprocal $a^{-1}$ exists. Multiplying both sides by $a^{-1}$:
 $$
 \begin{align}

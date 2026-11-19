@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $x_0 \in \mathbb{R}$ be an anchor point, let $n \in \mathbb{N} \cup \{0\}$, and let $(\alpha_0, \alpha_1, \dots, \alpha_n) \in \mathbb{R}^{n+1}$ be an arbitrary sequence of real coefficients.
 
-**Existence of the Interpolating Polynomial:**
+---
+# Existence of the Interpolating Polynomial
 Define the polynomial function $P_n: \mathbb{R} \to \mathbb{R}$ explicitly by the Taylor expansion centered at $x_0$:
 $$
 \begin{gather}
@@ -50,7 +51,8 @@ $$
 
 Because step 6 holds for each $k \in \{0, 1, \dots, n\}$, the polynomial $P_n$ satisfies the jet interpolation conditions.
 
-**Uniqueness of the Interpolating Polynomial:**
+---
+# Uniqueness of the Interpolating Polynomial
 Suppose that $Q_n(x)$ is another polynomial of degree at most $n$ that satisfies the identical jet coordinates at $x_0$:
 $$
 \begin{gather}

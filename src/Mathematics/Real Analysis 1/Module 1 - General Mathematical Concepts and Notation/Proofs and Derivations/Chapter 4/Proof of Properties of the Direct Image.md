@@ -82,7 +82,8 @@ $$
 
 ---
 # Proposition 4
-**Forward Inclusion:**
+
+### Forward Inclusion
 Let $y \in f(A \cup B)$ be an arbitrary element. By the definition of the direct image, there exists an element $x \in A \cup B$ such that $f(x) = y$. By the definition of the set union: 
 $$
 \begin{gather}
@@ -103,7 +104,7 @@ f(A \cup B) \subseteq f(A) \cup f(B) \tag{14}
 \end{gather}
 $$
 
-**Reverse Inclusion:**
+### Reverse Inclusion
 By the elementary definition of the set union, $A \subseteq A \cup B$ and $B \subseteq A \cup B$. Applying the monotonicity property established in Item 1:
 $$
 \begin{gather}

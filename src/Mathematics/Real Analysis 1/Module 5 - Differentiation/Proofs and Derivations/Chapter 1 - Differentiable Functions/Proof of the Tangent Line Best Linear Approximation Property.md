@@ -23,8 +23,8 @@ $$
 \lim_{x \to x_0} \frac{f(x) - L(x)}{x - x_0} = 0 \tag{3}
 \end{gather}
 $$
-
-**Determination and Uniqueness of the Constant Term $c_0$:**
+---
+# Determination and Uniqueness of the Constant Term $c_0$
 Express the difference $f(x) - L(x)$ for $x \neq x_0$ as the product:
 $$
 \begin{gather}
@@ -46,7 +46,8 @@ $$
 $$
 Thus, the zeroth-order coefficient $c_0$ is uniquely determined as $f(x_0)$.
 
-**Determination and Uniqueness of the Slope Coefficient $c_1$:**
+---
+# Determination and Uniqueness of the Slope Coefficient $c_1$
 Substituting the value $c_0 = f(x_0)$ from step 6 into the definition of $L(x)$ gives $L(x) = f(x_0) + c_1(x - x_0)$. The quotient of step 3 then becomes:
 $$
 \begin{gather}
@@ -73,8 +74,8 @@ $$
 c_1 = f'(x_0) \tag{10}
 \end{gather}
 $$
-
-**Sufficiency of the Tangent Function:**
+---
+# Sufficiency of the Tangent Function
 Conversely, assume that $f$ is differentiable at $x_0$, and define the tangent mapping $T: \mathbb{R} \to \mathbb{R}$ by:
 $$
 \begin{gather}

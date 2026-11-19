@@ -7,6 +7,7 @@ $$
 \lim_{x \to a} f(x) = b \quad \text{and} \quad \lim_{y \to b} g(y) = c \tag{1}
 \end{gather}
 $$
+
 ---
 # Proposition 1
 Assume Condition 1 holds: $g$ is continuous at $b$, meaning $g(b) = c = \lim_{y \to b} g(y)$.

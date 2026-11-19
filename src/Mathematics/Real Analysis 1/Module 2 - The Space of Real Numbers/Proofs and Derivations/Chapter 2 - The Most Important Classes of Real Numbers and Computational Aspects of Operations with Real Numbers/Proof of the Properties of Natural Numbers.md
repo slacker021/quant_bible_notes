@@ -5,7 +5,8 @@ Let $\mathbb{R}$ be the ordered field of real numbers, and let $\mathbb{N} \subs
 
 --------------------------------------------------------------------------------
 # Proposition 1
-**Additive Closure:**
+
+### Additive Closure
 Fix an arbitrary natural number $m \in \mathbb{N}$, and define the subset $E_+ \subseteq \mathbb{N}$ by:
 $$
 E_+ := \{ n \in \mathbb{N} \mid (m + n) \in \mathbb{N} \} \tag{1}
@@ -18,7 +19,7 @@ m + (n + 1) = (m + n) + 1 \tag{2}
 $$
 Because $(m + n) \in \mathbb{N}$ and $\mathbb{N}$ is inductive, $((m + n) + 1) \in \mathbb{N}$. Therefore, $(n + 1) \in E_+$. By the Principle of Mathematical Induction, $E_+ = \mathbb{N}$, establishing that $m + n \in \mathbb{N}$ for all $m, n \in \mathbb{N}$.
 
-**Multiplicative Closure:**
+### Multiplicative Closure
 Fix $m \in \mathbb{N}$, and define the subset $E_\cdot \subseteq \mathbb{N}$ by:
 $$
 E_\cdot := \{ n \in \mathbb{N} \mid (m \cdot n) \in \mathbb{N} \} \tag{3}
@@ -41,7 +42,8 @@ By the Principle of Mathematical Induction, $E = \mathbb{N}$, proving that for e
 
 --------------------------------------------------------------------------------
 # Proposition 3
-**Base Step ($n = 1$):**
+
+### Base Step 
 Define the subset $M \subseteq \mathbb{N}$ by:
 $$
 M := \{ x \in \mathbb{N} \mid (x = 1) \lor (x \ge 2) \} \tag{6}
@@ -50,7 +52,7 @@ where $2 := 1 + 1$. By definition, $1 \in M$. If $x \in M$, then either $x = 1$ 
 
 Thus, every $x \in \mathbb{N}$ satisfies $x \ge 1$. For any $x \in \mathbb{N}$ with $x > 1$, $x \ge 2 = 1 + 1$. Because $2 \in \{ x \in \mathbb{N} \mid 1 < x \}$, it follows that $\min \{ x \in \mathbb{N} \mid 1 < x \} = 2$.
 
-**Inductive Step:**
+### Inductive Step
 Define the subset $E \subseteq \mathbb{N}$ by:
 $$
 E := \{ n \in \mathbb{N} \mid \min \{ x \in \mathbb{N} \mid n < x \} = n + 1 \} \tag{7}
@@ -73,7 +75,6 @@ Then $m \in \{ x \in \mathbb{N} \mid n < x \}$. By Proposition 3, the minimal el
 $$
 n + 1 = \min \{ x \in \mathbb{N} \mid n < x \} \le m \tag{9}
 $$
-
 --------------------------------------------------------------------------------
 # Proposition 5
 Assume for the purpose of contradiction that there exists $x \in \mathbb{N}$ such that:

@@ -109,7 +109,6 @@ $$
 is an algebraic rational function of $t$, meaning $\widetilde{R}(t) \in \mathbb{R}(t)$. 
 
 By virtue of the [[Proof of Partial Fraction Decomposition Theorem over the Real Field|Partial Fraction Decomposition Theorem]], every rational function can be integrated explicitly in terms of elementary functions (rational expressions, logarithms, and inverse tangents). Therefore, the Weierstrass substitution transforms any rational trigonometric integral into an algebraically decidable rational integral.
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

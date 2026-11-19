@@ -350,7 +350,7 @@ $$
 \begin{gather}
 \textbf{Theorem: Term-by-Term Differentiation of Power Series} \\[5mm]
   \text{Let } f(z) = \sum_{n=0}^\infty c_n (z - z_0)^n \text{ have radius of convergence } R > 0. \\[2mm]
-  \text{Then } f \text{ is complex differentiable (analytic) at every point of the open disk } B_R(z_0), \\[2mm]
+  \text{Then } f \text{ is \textit{complex differentiable} (\textit{analytic}) at every point of the open disk } B_R(z_0), \\[2mm]
   \text{and its complex derivative } f'(z) = \lim_{w \to z} \frac{f(w) - f(z)}{w - z} \text{ satisfies:} \\[3.5mm]
   f'(z) = \sum_{n=1}^\infty n c_n (z - z_0)^{n-1} \\[3.5mm]
   \text{By induction, } f \text{ is infinitely differentiable on } B_R(z_0), \text{ with } c_n = \frac{f^{(n)}(z_0)}{n!}.
@@ -381,7 +381,7 @@ write "$\\text{Divergence Zone } (|z - z_0| > R)$" at (2, -3.2) in red, center
 ```
 
 ### Uniqueness of Analytic Expansions and Zeros of Analytic Functions
-Functions defined by convergent power series are termed *analytic*. Analytic functions possess an extraordinary degree of structural rigidity: they are completely determined by their values on an arbitrarily small set that contains an accumulation point: 
+Functions defined by convergent power series are termed analytic. Analytic functions possess an extraordinary degree of structural rigidity: they are completely determined by their values on an arbitrarily small set that contains an accumulation point: 
 $$
 \begin{gather}
 \textbf{Theorem: Identity Principle for Analytic Power Series Expansions} \\[5mm]

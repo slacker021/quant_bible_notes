@@ -3,7 +3,7 @@ dg-publish: true
 ---
 Let $x, y \in \mathbb{R}$ be arbitrary elements of the field $(\mathbb{R}, +, \cdot)$.
 
---------------------------------------------------------------------------------
+---
 # Proposition 1
 By the definition of the additive identity element, zero satisfies the equality $0 + 0 = 0$. Multiplying both sides of this equality by $x$ and applying the distributive axiom yields:
 $$
@@ -19,7 +19,7 @@ x \cdot 0 = 0 \tag{3}
 $$
 By the commutativity of multiplication, $0 \cdot x = x \cdot 0 = 0$.
 
---------------------------------------------------------------------------------
+---
 # Proposition 2
 Assume that $x \cdot y = 0$. If $x = 0$, the disjunction $(x = 0) \lor (y = 0)$ holds immediately. Suppose, therefore, that $x \neq 0$.
 
@@ -33,7 +33,7 @@ $$
 $$
 Equating the results of step 4 and step 5 demonstrates that $y = 0$. Thus, $(x \cdot y = 0) \implies (x = 0) \lor (y = 0)$.
 
---------------------------------------------------------------------------------
+---
 # Proposition 3
 By the uniqueness of the additive inverse, an element $w \in \mathbb{R}$ satisfies $w = -x$ if and only if $x + w = 0$. It therefore suffices to demonstrate that the candidate product $(-1) \cdot x$ satisfies this condition.
 
@@ -47,7 +47,7 @@ $$
 $$
 Because $x + (-1) \cdot x = 0$, the product $(-1) \cdot x$ is the additive inverse of $x$. By the uniqueness of the negative, $-x = (-1) \cdot x$.
 
---------------------------------------------------------------------------------
+---
 # Proposition 4
 Applying Proposition 3 directly to the element $-x$ demonstrates that its negative is obtained by scaling by $-1$:
 $$
@@ -59,7 +59,7 @@ $$
 $$
 Equating step 8 and step 9 yields $(-1)(-x) = x$.
 
---------------------------------------------------------------------------------
+---
 # Proposition 5
 To verify the first identity, substitute $-x = (-1) \cdot x$ into the product and apply the associativity and commutativity of multiplication:
 $$

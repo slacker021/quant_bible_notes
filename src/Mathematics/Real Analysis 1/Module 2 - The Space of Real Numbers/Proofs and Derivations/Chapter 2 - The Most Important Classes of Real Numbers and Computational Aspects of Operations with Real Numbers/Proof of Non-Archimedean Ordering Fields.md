@@ -9,14 +9,15 @@ where $P, Q \in \mathbb{Q}[x]$ are non-zero polynomials with leading coefficient
 
 --------------------------------------------------------------------------------
 # Proposition 1
-**Definition and Consistency of the Positivity Cone:**
+
+### Definition and Consistency of the Positivity Cone
 Define the positivity cone $\mathcal{P} \subset \mathbb{Q}(x)$ by declaring $R(x) > 0$ if and only if the product of the leading coefficients of its numerator and denominator is strictly positive in $\mathbb{Q}$:
 $$
 R(x) \in \mathcal{P} \iff a_m \cdot b_n > 0 \tag{2}
 $$
 To verify that this definition is independent of the representative fraction, let $P_1/Q_1 = P_2/Q_2$, meaning $P_1 Q_2 = P_2 Q_1$. Let the leading coefficients be $a^{(1)}, b^{(1)}, a^{(2)}, b^{(2)}$. The equality of polynomials requires $a^{(1)} b^{(2)} = a^{(2)} b^{(1)}$. Multiplying by $b^{(1)} b^{(2)}$ demonstrates that $(a^{(1)} b^{(1)})(b^{(2)})^2 = (a^{(2)} b^{(2)})(b^{(1)})^2$. Because non-zero rational squares are strictly positive, $a^{(1)} b^{(1)}$ and $a^{(2)} b^{(2)}$ share the identical sign, proving consistency.
 
-**Verification of Ordered Field Axioms:**
+### Verification of Ordered Field Axioms
 1. **Trichotomy:** For any $R(x) \in \mathbb{Q}(x)$, either $P(x) = 0$ (so $R(x) = 0$), $a_m b_n > 0$ (so $R(x) \in \mathcal{P}$), or $a_m b_n < 0$ (so $-R(x) \in \mathcal{P}$). Precisely one condition holds.
 2. **Closure under Addition:** Let $R_1 = P_1/Q_1 \in \mathcal{P}$ and $R_2 = P_2/Q_2 \in \mathcal{P}$. Normalizing denominators so that their leading coefficients are positive ($b^{(1)} > 0, b^{(2)} > 0$), it follows from step 2 that $a^{(1)} > 0$ and $a^{(2)} > 0$. The sum evaluates to:
 $$

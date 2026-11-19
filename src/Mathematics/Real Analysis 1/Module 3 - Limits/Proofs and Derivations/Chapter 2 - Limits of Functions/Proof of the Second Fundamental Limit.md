@@ -8,13 +8,8 @@ e := \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n \tag{1}
 \end{gather}
 $$
 
-# Theorem 1
-The continuous compounding function $f(x) := \left(1 + \frac{1}{x}\right)^x$ converges to Euler's number $e$ over the base of unsigned infinity:
-$$
-\begin{gather}
-\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e \tag{2}
-\end{gather}
-$$
+---
+### Limit at Positive Infinity
 First, consider the directional limit along positive infinity ($x \to +\infty$). Let $x \in \mathbb{R}$ with $x > 1$, and let $n := \lfloor x \rfloor \in \mathbb{N}$ denote the integer floor of $x$. By definition of the floor function, $n$ satisfies the bounding relation:
 $$
 \begin{gather}
@@ -94,6 +89,7 @@ $$
 \lim_{x \to +\infty} \left(1 + \frac{1}{x}\right)^x = e \tag{15}
 \end{gather}
 $$
+### Limit at Negative Infinity
 Second, consider the directional limit along negative infinity ($x \to -\infty$). Let $x \in \mathbb{R}$ satisfy $x < -1$. Introduce the coordinate transformation:
 $$
 \begin{gather}
@@ -136,6 +132,7 @@ $$
 \lim_{x \to -\infty} \left(1 + \frac{1}{x}\right)^x = \lim_{y \to +\infty} \left[\left(1 + \frac{1}{y}\right)^y \cdot \left(1 + \frac{1}{y}\right)\right] = e \cdot 1 = e \tag{22}
 \end{gather}
 $$
+### Unsigned Limit at Infinity
 Third, consider the unsigned limit at infinity ($x \to \infty$). Let $\varepsilon > 0$ be given. By step 14, there exists $M_1 > 0$ such that $x > M_1 \implies \left|\left(1 + \frac{1}{x}\right)^x - e\right| < \varepsilon$. By step 22 and the definition of the limit at negative infinity, there exists $M_2 < 0$ such that $x < M_2 \implies \left|\left(1 + \frac{1}{x}\right)^x - e\right| < \varepsilon$. Define the positive magnitude cutoff:
 $$
 \begin{gather}
@@ -178,6 +175,7 @@ $$
 where $f(x) := \left(1 + \frac{1}{x}\right)^x$.
 
 To establish the two-sided limit $\lim_{t \to 0} (1 + t)^{1/t} = e$, examine the one-sided directional limits:
+### Right-Hand Limit
 First, as $t \to 0^+$, $t > 0$, so $h(t) = \frac{1}{t} > 0$. For any positive bound $K > 0$, setting $\delta_1 := \frac{1}{K} > 0$ ensures that for all $t \in (0, \delta_1)$:
 $$
 \begin{gather}
@@ -190,6 +188,7 @@ $$
 \lim_{t \to 0^+} (1 + t)^{1/t} = \lim_{x \to +\infty} \left(1 + \frac{1}{x}\right)^x = e \tag{30}
 \end{gather}
 $$
+### Left-Hand Limit
 Second, as $t \to 0^-$, $t < 0$, so $h(t) = \frac{1}{t} < 0$. For any negative bound $K < 0$, setting $\delta_2 := \frac{1}{|K|} > 0$ ensures that for all $t \in (-\delta_2, 0)$:
 $$
 \begin{gather}

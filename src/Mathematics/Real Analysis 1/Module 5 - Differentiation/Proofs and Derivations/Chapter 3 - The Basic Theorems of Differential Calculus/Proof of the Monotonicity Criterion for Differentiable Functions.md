@@ -3,10 +3,11 @@ dg-publish: true
 ---
 Let $\langle a, b \rangle \subseteq \mathbb{R}$ denote a connected non-degenerate interval (open, closed, or half-open, bounded or unbounded), and let $f: \langle a, b \rangle \to \mathbb{R}$ be a function differentiable at every point of $\langle a, b \rangle$.
 
+---
 # Proposition 1
 The function $f$ is non-decreasing on $\langle a, b \rangle$ if and only if $f'(x) \ge 0$ for all $x \in \langle a, b \rangle$.
 
-**Necessity ($\implies$):**
+### Necessity
 Assume that $f$ is non-decreasing on $\langle a, b \rangle$. Let $x_0 \in \langle a, b \rangle$ be an arbitrary point, and consider any $x \in \langle a, b \rangle \setminus \{x_0\}$.
 - If $x > x_0$, then monotonicity implies $f(x) \ge f(x_0)$, so $x - x_0 > 0$ and $f(x) - f(x_0) \ge 0$;
 - If $x < x_0$, then monotonicity implies $f(x) \le f(x_0)$, so $x - x_0 < 0$ and $f(x) - f(x_0) \le 0$.
@@ -26,7 +27,7 @@ f'(x_0) = \lim_{\langle a, b \rangle \ni x \to x_0} \frac{f(x) - f(x_0)}{x - x_0
 $$
 Because $x_0 \in \langle a, b \rangle$ was arbitrary, $f'(x) \ge 0$ for all $x \in \langle a, b \rangle$.
 
-**Sufficiency ($\impliedby$):**
+### Sufficiency
 Assume that $f'(x) \ge 0$ for all $x \in \langle a, b \rangle$. Let $x_1, x_2 \in \langle a, b \rangle$ be arbitrary points with $x_1 < x_2$.
 
 Because $\langle a, b \rangle$ is a connected interval, the closed compact subinterval $[x_1, x_2]$ is entirely contained within $\langle a, b \rangle$:

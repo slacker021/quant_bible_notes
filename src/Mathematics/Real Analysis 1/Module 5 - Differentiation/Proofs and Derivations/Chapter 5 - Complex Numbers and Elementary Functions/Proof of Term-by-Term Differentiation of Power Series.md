@@ -17,7 +17,8 @@ By the [[Proof of Cauchy-Hadamard Derivative Invariance|Cauchy-Hadamard Derivati
 
 The goal is to prove that $f$ is complex-differentiable at every point $w \in B(z_0, R)$ and that its complex derivative satisfies $f'(w) = g(w)$. Without loss of generality, translate coordinates so that $w = 0$ (or equivalently consider the expansion centered at $z_0 = 0$ for notational clarity).
 
-**Algebraic Decomposition of the Difference Quotient:**
+---
+# Algebraic Decomposition of the Difference Quotient
 Fix an arbitrary point $w \in B(0, R)$. Let $r := |w| < R$, and choose $\rho$ such that $r < \rho < R$. 
 
 Let $h \in \mathbb{C} \setminus \{0\}$ be a non-zero complex increment chosen sufficiently small such that $|w| + |h| \leq \rho < R$. 
@@ -36,7 +37,8 @@ $$
 $$
 Notice that for $n = 1$, the bracketed expression vanishes identically: $\frac{(w+h) - w}{h} - 1 = 0$, so the summation index in step 4 starts at $n = 2$.
 
-**Factoring the Incremental Kernel:**
+---
+# Factoring the Incremental Kernel
 To obtain a sharp estimate for the bracketed difference in step 4, apply the binomial expansion to $(w + h)^n$:
 $$
 \begin{gather}
@@ -81,8 +83,8 @@ $$
 \left| \frac{(w + h)^n - w^n}{h} - n w^{n-1} \right| \leq |h| \frac{n(n-1)}{2} \rho^{n-2} \tag{11}
 \end{gather}
 $$
-
-**Bounding the Remainder Series:**
+---
+# Bounding the Remainder Series
 Substitute the bound of step 11 into the series difference of step 4:
 $$
 \begin{gather}
@@ -103,8 +105,7 @@ $$
 M(\rho) < \infty \tag{14}
 \end{gather}
 $$
-
-**Evaluation of the Complex Derivative Limit:**
+### Evaluation of the Complex Derivative Limit
 Combining step 12 and step 14, for every $h$ satisfying $0 < |h| \leq \rho - |w|$, the error is bounded by:
 $$
 \begin{gather}
@@ -125,7 +126,7 @@ f'(w) = \lim_{h \to 0} \frac{f(w + h) - f(w)}{h} = g(w) = \sum_{n=1}^\infty n c_
 $$
 Because $w \in B(z_0, R)$ was chosen arbitrarily, $f$ is holomorphic on all of $B(z_0, R)$, and its complex derivative is given by the term-by-term differentiated power series.
 
-**Inductive Extension to Derivatives of All Orders:**
+### Inductive Extension to Derivatives of All Orders
 Because the derivative $f'(z)$ is itself represented by a power series with the exact same radius of convergence $R$, this argument applies iteratively to $f^{(k)}(z)$ for every $k \in \mathbb{N}$. 
 
 Consequently, $f$ is infinitely complex-differentiable ($C^\infty$) on $B(z_0, R)$, and the $k$-th derivative is obtained by differentiating term-by-term $k$ times:

@@ -11,7 +11,6 @@ $$
 |c_n (z_0^*)^n| \le M \quad \text{for all } n \in \mathbb{N} \cup \{0\} \tag{1}
 \end{gather}
 $$
-Then for every complex number $z \in \mathbb{C}$ satisfying $|z| < |z_0^*|$, the power series $\sum_{n=0}^\infty c_n z^n$ converges absolutely.
 
 Let $z \in \mathbb{C}$ satisfy $|z| < |z_0^*|$. Because $z_0^* \neq 0$, the ratio:
 $$

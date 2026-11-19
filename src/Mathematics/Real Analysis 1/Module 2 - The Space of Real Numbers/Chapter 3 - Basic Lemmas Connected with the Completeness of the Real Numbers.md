@@ -12,7 +12,7 @@ A foundational application of the natural numbers $\mathbb{N}$ and their inducti
 $$
 \begin{gather}
 \textbf{Definition: Sequence} \\[5mm]
-\text{A function } f : \mathbb{N} \rightarrow X \text{ of a natural-number argument is called a sequence,} \\[2mm]
+\text{A function } f : \mathbb{N} \rightarrow X \text{ of a natural-number argument is called a }\textit{sequence}\text{,} \\[2mm]
 \text{or more specifically, a sequence of elements of the set } X.
 \end{gather}
 $$
@@ -20,7 +20,7 @@ When the elements of the set $X$ are closed numerical intervals in $\mathbb{R}$,
 $$
 \begin{gather}
 \textbf{Definition: Sequence of Nested Intervals} \\[5mm]
-\text{A sequence of closed intervals } I_1, I_2, \dots, I_n, \dots \text{ is called nested if} \\[3.5mm]
+\text{A sequence of closed intervals } I_1, I_2, \dots, I_n, \dots \text{ is called }\textit{nested}\text{ if} \\[3.5mm]
 I_1 \supset I_2 \supset \dots \supset I_n \supset I_{n+1} \supset \dots \\[3.5mm]
 \text{Symbolically, if } I_n = [a_n, b_n], \text{ then for all } n \in \mathbb{N}\text{:} \\[3.5mm]
 a_n \le a_{n+1} \le b_{n+1} \le b_n
@@ -48,10 +48,10 @@ The second major lemma, associated with *Émile Borel* and *Henri Lebesgue*, tra
 $$
 \begin{gather}
 \textbf{Definition: Cover and Subcover} \\[5mm]
-\text{A system } S = \{X\} \text{ of sets } X \text{ is said to cover a set } Y \text{ if } Y \subset \bigcup_{X \in S} X, \\[2mm]
+\text{A system } S = \{X\} \text{ of sets } X \text{ is said to }\textit{cover}\text{ a set } Y \text{ if } Y \subset \bigcup_{X \in S} X, \\[2mm]
 \text{that is, if every element } y \in Y \text{ belongs to at least one of the sets } X \text{ in the system } S. \\[3.5mm]
-\text{A subset } S' \subset S \text{ of a cover } S \text{ of } Y \text{ is called a subcover of } Y \text{ if } S' \text{ itself covers } Y. \\[2mm]
-\text{If every set } U \in S \text{ is an open interval, then } S \text{ is called an open cover of } Y.
+\text{A subset } S' \subset S \text{ of a cover } S \text{ of } Y \text{ is called a }\textit{subcover}\text{ of } Y \text{ if } S' \text{ itself covers } Y. \\[2mm]
+\text{If every set } U \in S \text{ is an open interval, then } S \text{ is called an }\textit{open cover}\text{ of } Y.
 \end{gather}
 $$
 
@@ -75,10 +75,10 @@ The third major lemma, due to *Bernard Bolzano* and *Karl Weierstrass*, characte
 $$
 \begin{gather}
 \textbf{Definition: Neighborhood and Limit Point} \\[5mm]
-\text{An open interval } (a, b) \text{ containing a point } p \in \mathbb{R} \text{ is called a neighborhood of } p. \\[2mm]
+\text{An open interval } (a, b) \text{ containing a point } p \in \mathbb{R} \text{ is called a }\textit{neighborhood}\text{ of } p. \\[2mm]
 \text{For any } \varepsilon > 0, \text{ the open interval } U_\varepsilon(p) := (p - \varepsilon, p + \varepsilon) = \{x \in \mathbb{R} \mid |x - p| < \varepsilon\} \\[2mm]
-\text{is the } \varepsilon\text{-neighborhood of } p, \text{ and } \mathring{U}_\varepsilon(p) := U_\varepsilon(p) \setminus \{p\} \text{ is the deleted } \varepsilon\text{-neighborhood of } p. \\[3.5mm]
-\text{A point } p \in \mathbb{R} \text{ is a limit point (or accumulation point) of a set } X \subset \mathbb{R} \text{ if every} \\[2mm]
+\text{is the }\textit{$\varepsilon$-neighborhood}\text{ of } p, \text{ and } \mathring{U}_\varepsilon(p) := U_\varepsilon(p) \setminus \{p\} \text{ is the }\textit{deleted $\varepsilon$-neighborhood}\text{ of } p. \\[3.5mm]
+\text{A point } p \in \mathbb{R} \text{ is a }\textit{limit point}\text{ (or }\textit{accumulation point}\text{) of a set } X \subset \mathbb{R} \text{ if every} \\[2mm]
 \text{neighborhood of } p \text{ contains infinitely many points of } X. \text{ Equivalently, } p \in \mathbb{R} \text{ is a limit point} \\[2mm]
 \text{of } X \text{ if every deleted } \varepsilon\text{-neighborhood } \mathring{U}_\varepsilon(p) \text{ contains at least one point of } X.
 \end{gather}

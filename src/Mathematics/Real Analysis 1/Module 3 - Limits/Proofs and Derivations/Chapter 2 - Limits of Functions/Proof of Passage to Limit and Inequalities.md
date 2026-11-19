@@ -3,6 +3,7 @@ dg-publish: true
 ---
 Let $\mathcal{B}$ be a base in $X$, and let $f, g, h: X \to \mathbb{R}$.
 
+---
 # Theorem 1
 Assume that $\lim_{\mathcal{B}} f(x) = A$ and $\lim_{\mathcal{B}} g(x) = B$, with $A < B$.
 

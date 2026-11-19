@@ -28,8 +28,8 @@ $$
 f'_-(x_0) = \lim_{E^- \ni x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = f'(x_0) \tag{4}
 \end{gather}
 $$
-
-**Case 1: The point $x_0$ is a local maximum.**
+---
+# Case 1
 Assume that $x_0$ is a local maximum of $f$. Shrinking the neighborhood $U(x_0)$ if necessary, the functional values satisfy:
 $$
 \begin{gather}
@@ -95,8 +95,8 @@ $$
 f'(x_0) = 0 \tag{14}
 \end{gather}
 $$
-
-**Case 2: The point $x_0$ is a local minimum.**
+---
+# Case 2
 Assume that $x_0$ is a local minimum of $f$. Define the auxiliary mapping $g: E \to \mathbb{R}$ by:
 $$
 \begin{gather}

@@ -2,7 +2,9 @@
 dg-publish: true
 ---
 Let $X \subset \mathbb{R}$ be a non-empty set of real numbers that is bounded above.
-**Existence:**
+
+---
+# Existence
 Because $X$ is bounded above, there exists at least one majorant $M \in \mathbb{R}$ such that $x \le M$ for all $x \in X$. Define the set $Y \subset \mathbb{R}$ as the collection of all upper bounds of $X$:
 $$
 Y := \{ y \in \mathbb{R} \mid \forall x \in X, \, x \le y \} \tag{1}
@@ -27,7 +29,8 @@ $$
 $$
 Thus, a least upper bound exists in $\mathbb{R}$.
 
-**Uniqueness:**
+---
+# Uniqueness
 Suppose that $s_1, s_2 \in \mathbb{R}$ are both least upper bounds of $X$. 
 
 Because $s_1$ is a least upper bound and $s_2$ is an upper bound of $X$, the definition of the supremum requires that:

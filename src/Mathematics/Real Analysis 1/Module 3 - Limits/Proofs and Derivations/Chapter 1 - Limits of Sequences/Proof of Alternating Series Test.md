@@ -3,6 +3,8 @@ dg-publish: true
 ---
 Let $\{y_n\}_{n=1}^\infty$ be a sequence of non-negative real numbers that is monotonically nonincreasing ($y_n \ge y_{n+1} \ge 0$ for all $n \in \mathbb{N}$) and satisfies $\lim_{n \to \infty} y_n = 0$. Consider the alternating series $\sum_{n=1}^\infty (-1)^{n+1} y_n$, and let $s_n := \sum_{k=1}^n (-1)^{k+1} y_k$ denote its $n$-th partial sum.
 
+---
+# Convergence of the Alternating Series
 For any index $m \in \mathbb{N}$, the even-indexed partial sum $s_{2m}$ can be grouped as: 
 $$
 \begin{gather}
@@ -57,6 +59,8 @@ $$
 \lim_{n \to \infty} s_n = s = \sum_{n=1}^\infty (-1)^{n+1} y_n \tag{9}
 \end{gather}
 $$
+---
+# Truncation Error Bound
 Finally, by virtue of the monotonic nesting in step 6, the limit $s$ lies between any two consecutive partial sums:
 $$
 \begin{gather}

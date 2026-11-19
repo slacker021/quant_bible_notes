@@ -16,7 +16,8 @@ $$
 
 The proof establishes the behavior of the series across three mutually exclusive regions of the complex plane: the open disk of convergence $|z - z_0| < R$, compact subsets of this open disk, and the exterior domain $|z - z_0| > R$.
 
-**Interior Convergence ($|z - z_0| < R$):**
+---
+# Interior Convergence ($|z - z_0| < R$)
 Consider an arbitrary point $z \in \mathbb{C}$ such that $|z - z_0| < R$. If $R = 0$, this open disk is empty, so assume $R > 0$. 
 
 Choose a real number $\rho$ strictly intermediate between $|z - z_0|$ and $R$:
@@ -49,7 +50,8 @@ valid for every index $n \geq N$. Define $q := \frac{|z - z_0|}{\rho}$. By step 
 
 The geometric series $\sum_{n=0}^\infty q^n$ converges to $\frac{1}{1 - q} < \infty$. By the direct comparison test for real series, step 6 demonstrates that the series of absolute values $\sum_{n=0}^\infty |c_n (z - z_0)^n|$ converges. Consequently, by the Cauchy completeness of $\mathbb{C}$, the power series $\sum_{n=0}^\infty c_n (z - z_0)^n$ converges absolutely at every point $z \in B(z_0, R)$.
 
-**Uniform Convergence on Compact Subsets:**
+---
+# Uniform Convergence on Compact Subsets
 Let $K \subset B(z_0, R)$ be a compact subset of the open convergence disk. Because $K$ is compact and the distance function $z \mapsto |z - z_0|$ is continuous, the supremum of $|z - z_0|$ on $K$ is attained at some point in $K$. Hence:
 $$
 \begin{gather}
@@ -68,7 +70,7 @@ Because $0 \leq \frac{r_K}{\rho_0} < 1$, the terms $M_n := (r_K / \rho_0)^n$ for
 
 By the Weierstrass $M$-test, the series $\sum_{n=0}^\infty c_n (z - z_0)^n$ converges uniformly and absolutely on $K$. Since every closed disk $\overline{B}(z_0, r) = \{z \in \mathbb{C} : |z - z_0| \leq r\}$ with $r < R$ is compact, uniform convergence holds on all closed subdisks strictly inside $B(z_0, R)$.
 
-**Exterior Divergence ($|z - z_0| > R$):**
+### Exterior Divergence ($|z - z_0| > R$)
 Now consider a point $z \in \mathbb{C}$ such that $|z - z_0| > R$. If $R = \infty$, the exterior is empty, so assume $R < \infty$. 
 
 Choose a real number $\rho$ strictly between $R$ and $|z - z_0|$:

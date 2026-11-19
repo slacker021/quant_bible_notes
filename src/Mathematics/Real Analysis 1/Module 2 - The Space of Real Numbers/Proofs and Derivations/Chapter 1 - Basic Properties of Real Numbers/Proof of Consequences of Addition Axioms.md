@@ -45,7 +45,8 @@ Therefore, the additive inverse of $x$ is unique and denoted unambiguously by $-
 
 --------------------------------------------------------------------------------
 # Proposition 3
-**Existence:**
+
+### Existence
 Substitute the candidate value $x = b + (-a)$ into the left-hand side of the linear equation $a + x = b$. By the commutativity and associativity of addition: 
 $$
 \begin{align}
@@ -57,7 +58,7 @@ a + (b + (-a)) &= a + ((-a) + b) \\[2mm]
 $$
 Thus, $x = b + (-a) =: b - a$ satisfies the equation, establishing existence.
 
-**Uniqueness:**
+### Uniqueness
 Let $x \in \mathbb{R}$ be an arbitrary solution satisfying $a + x = b$. Adding the unique additive inverse $(-a)$ to both sides of the equality:
 $$
 \begin{align}

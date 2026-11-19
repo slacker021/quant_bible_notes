@@ -10,7 +10,8 @@ $$
 
 Because the interval of step 1 is a subset of $E$, the point $a$ is an accumulation point of $E$, and is also an accumulation point of both the left-hand trace $E \cap (-\infty, a]$ and the right-hand trace $E \cap [a, +\infty)$.
 
-**Necessity ($\implies$ Two-Sided Continuity implies Directional Continuity):**
+---
+# Necessity
 Assume that the function $f$ is continuous at $a$. 
 
 By definition of metric pointwise continuity, for every positive tolerance $\varepsilon > 0$, there exists a distance $\delta > 0$ such that for all $x \in E$:
@@ -55,7 +56,8 @@ $$
 
 Combining step 5 and step 7 demonstrates that $f$ is simultaneously left-continuous and right-continuous at $a$.
 
-**Sufficiency ($\impliedby$ Directional Continuity implies Two-Sided Continuity):**
+---
+# Sufficiency
 Conversely, assume that $f$ is simultaneously left-continuous and right-continuous at $a$:
 $$
 \begin{gather}

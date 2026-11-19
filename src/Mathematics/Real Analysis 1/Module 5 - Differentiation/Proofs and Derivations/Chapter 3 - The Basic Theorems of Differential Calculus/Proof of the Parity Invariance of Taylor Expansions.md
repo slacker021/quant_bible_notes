@@ -3,6 +3,7 @@ dg-publish: true
 ---
 Let $r > 0$, let the domain $I := (-r, r)$ be a symmetric open interval centered at the origin, and let $f: (-r, r) \to \mathbb{R}$ be a function possessing derivatives up to order $n \ge 1$ at $x_0 = 0$.
 
+---
 # Proposition 1
 Assume that $f$ is an even function on $(-r, r)$, satisfying the symmetry identity:
 $$

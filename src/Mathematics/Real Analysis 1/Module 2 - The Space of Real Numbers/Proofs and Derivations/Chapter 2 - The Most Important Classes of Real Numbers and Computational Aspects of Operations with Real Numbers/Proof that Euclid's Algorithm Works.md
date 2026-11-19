@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $m, n \in \mathbb{N}$ with $m \ge n$. The greatest common divisor $\gcd(m, n)$ is the unique maximal element of the set of common divisors $\operatorname{CD}(m, n) := \{ d \in \mathbb{Z} \mid d \mid m \wedge d \mid n \}$.
 
-**Finite Termination of the Algorithm:**
+---
+# Finite Termination of the Algorithm
 If $n \mid m$, there exists $q_1 \in \mathbb{N}$ such that $m = q_1 n + 0$. The remainder is zero at the initial step, and $\gcd(m, n) = n = 0 \cdot m + 1 \cdot n$. 
 
 If $n \nmid m$, dividing $m$ by $n$ via the Principle of Archimedes yields a unique quotient $q_1 \in \mathbb{N}$ and positive remainder $r_1 \in \mathbb{N}$ satisfying:
@@ -27,7 +28,8 @@ n > r_1 > r_2 > r_3 > \dots > r_k > 0 \tag{3}
 $$
 Because every non-empty subset of $\mathbb{N}$ contains a minimal element by the Well-Ordering Principle, an infinite strictly decreasing sequence of natural numbers cannot exist. Thus, the sequence of positive remainders must be finite, terminating in at most $n$ divisions with a remainder of zero: $r_{k+1} = 0$.
 
-**Invariance of Common Divisors and Identification of the GCD:**
+---
+# Invariance of Common Divisors and Identification of the GCD
 For any integers $a, b \in \mathbb{Z}$, define $\operatorname{CD}(a, b) := \{ d \in \mathbb{Z} \mid d \mid a \wedge d \mid b \}$. From the division identity $a = q b + r$:
 * If $d \in \operatorname{CD}(a, b)$, then $d \mid a$ and $d \mid b$, so $d \mid (a - q b) = r$, which implies $d \in \operatorname{CD}(b, r)$.
 * Conversely, if $d \in \operatorname{CD}(b, r)$, then $d \mid b$ and $d \mid r$, so $d \mid (q b + r) = a$, which implies $d \in \operatorname{CD}(a, b)$.
@@ -64,7 +66,6 @@ $$
 u m + v n = d \tag{9}
 $$
 In particular, if $\gcd(m, n) = 1$, then $u m + v n = 1$. Conversely, if there exist integers $u, v \in \mathbb{Z}$ satisfying $u m + v n = 1$, any common divisor $c \in \operatorname{CD}(m, n)$ must divide $u m + v n = 1$, forcing $c \in \{1, -1\}$, which ensures $\gcd(m, n) = 1$.
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

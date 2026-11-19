@@ -6,7 +6,7 @@ Let $\{a_n\}_{n=1}^\infty$ be a monotonically nonincreasing sequence of non-nega
 
 Because $a_n \ge 0$ and $2^j a_{2^j} \ge 0$ for all indices, both sequences of partial sums $\{S_n\}$ and $\{T_k\}$ are monotonically nondecreasing. By the convergence criterion for series with non-negative terms, each series converges if and only if its sequence of partial sums is bounded above in $\mathbb{R}$.
 
-**Sufficiency:**
+### Sufficiency
 Assume that the condensed series $\sum_{k=0}^\infty 2^k a_{2^k}$ converges, so that its sequence of partial sums is bounded above: there exists a real constant $M > 0$ such that $T_k \le M$ for all $k \in \mathbb{N} \cup \{0\}$.
 
 For any integer $n \in \mathbb{N}$, choose $k \in \mathbb{N}$ sufficiently large that $n \le 2^{k+1} - 1$. Because $a_j \ge 0$, the monotonicity of $\{S_n\}$ implies that $S_n \le S_{2^{k+1}-1}$. Partitioning the partial sum $S_{2^{k+1}-1}$ into dyadic blocks of length $2^m$ for $m \in \{0, 1, \dots, k\}$ yields: 
@@ -29,7 +29,7 @@ S_n \le S_{2^{k+1}-1} \le a_1 + 2 a_2 + 4 a_4 + \dots + 2^k a_{2^k} = T_k \le M 
 $$
 Because $S_n \le M$ holds for all $n \in \mathbb{N}$, the sequence of partial sums $\{S_n\}$ is bounded above in $\mathbb{R}$. Therefore, the series $\sum_{n=1}^\infty a_n$ converges.
 
-**Necessity:**
+### Necessity
 Conversely, assume that the parent series $\sum_{n=1}^\infty a_n$ converges, so that its sequence of partial sums is bounded above: there exists a real constant $L > 0$ such that $S_n \le L$ for all $n \in \mathbb{N}$.
 
 For any $k \in \mathbb{N}$, partition the partial sum $S_{2^k}$ into dyadic blocks terminating at powers of $2$:

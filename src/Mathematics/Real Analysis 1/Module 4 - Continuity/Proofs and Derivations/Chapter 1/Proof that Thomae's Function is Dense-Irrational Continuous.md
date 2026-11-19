@@ -7,7 +7,7 @@ $$
 R(x) := \begin{cases} \frac{1}{q}, & \text{if } x = \frac{p}{q} \in \mathbb{Q} \cap (0, 1) \text{ in lowest terms } (p, q \in \mathbb{N}, \ \gcd(p, q) = 1) \\[2mm] 0, & \text{if } x \in (0, 1) \setminus \mathbb{Q} \end{cases} \tag{1}
 \end{gather}
 $$
-
+---
 # Proposition 1
 Let $a \in \mathbb{Q} \cap (0, 1)$ be an arbitrary rational number within the domain. 
 

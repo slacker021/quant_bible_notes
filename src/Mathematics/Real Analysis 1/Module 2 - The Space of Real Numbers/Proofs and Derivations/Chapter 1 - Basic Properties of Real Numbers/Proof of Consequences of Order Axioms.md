@@ -5,7 +5,8 @@ Let $x, y, z \in \mathbb{R}$ be elements of the ordered field $(\mathbb{R}, +, \
 
 --------------------------------------------------------------------------------
 # Proposition 1
-**Existence:**
+
+### Existence
 By the Totality Axiom of ordering: 
 $$
 \forall x, y \in \mathbb{R}, \quad (x \le y) \lor (y \le x) \tag{1}
@@ -18,16 +19,17 @@ Evaluating the comparability of $x$ and $y$:
 
 Thus, at least one of the three relations $x < y$, $x = y$, or $x > y$ holds.
 
-**Mutual Exclusivity:**
+### Mutual Exclusivity
 * Suppose $x = y$. Then the condition $x \ne y$ is false, which immediately precludes both $x < y$ and $x > y$ by the definition of strict inequality.
 * Suppose $x < y$. By definition, $x \ne y$, which excludes $x = y$. If $x > y$ were also true, then $y \le x$. The conjunction $(x \le y) \wedge (y \le x)$ implies $x = y$ by the Antisymmetry Axiom, directly contradicting $x \ne y$. Hence, $x > y$ cannot hold.
 * Suppose $x > y$. By symmetry, identical reasoning demonstrates that neither $x = y$ nor $x < y$ can hold.
 
 Therefore, precisely one of the three relations holds.
 
---------------------------------------------------------------------------------
+---
 # Proposition 2
-**Assertion 1:**
+
+### Assertion 1
 Assume that $x < y$ and $y \le z$. By the definition of strict inequality, $x < y \implies (x \le y) \wedge (x \ne y)$. Applying the Transitivity Axiom for the non-strict order relation:
 $$
 (x \le y) \wedge (y \le z) \implies x \le z \tag{2}
@@ -42,7 +44,7 @@ $$
 $$
 Step 4 directly contradicts the initial assumption that $x \ne y$. Therefore, $x \ne z$. Because $x \le z$ and $x \ne z$, it follows by definition that $x < z$.
 
-**Assertion 2:**
+### Assertion 2
 Assume that $x \le y$ and $y < z$. By definition, $y < z \implies (y \le z) \wedge (y \ne z)$. By the Transitivity Axiom: 
 $$
 (x \le y) \wedge (y \le z) \implies x \le z \tag{5}

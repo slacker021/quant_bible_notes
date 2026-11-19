@@ -7,7 +7,7 @@ $$
 \Delta^n f(x_0; h^n) := \sum_{j=0}^n (-1)^{n-j} \binom{n}{j} f(x_0 + jh) \tag{1}
 \end{gather}
 $$
-
+---
 # Proposition 1
 The $n$-th forward finite difference admits the representation:
 $$
@@ -19,7 +19,7 @@ for some intermediate point $\xi$ in the open interval $\operatorname{conv}^\cir
 
 The claim is proven by mathematical induction on $n \in \mathbb{N}$.
 
-**Base Case: $n = 1$.**
+### Base Case
 For $n = 1$, the first forward difference is:
 $$
 \begin{gather}
@@ -34,10 +34,10 @@ f(x_0 + h) - f(x_0) = f'(\xi) h \tag{4}
 $$
 Thus, $\Delta^1 f(x_0; h) = f^{(1)}(\xi) h^1$, establishing the base case.
 
-**Induction Hypothesis:**
+### Induction Hypothesis
 Assume that for an integer $m \ge 1$, whenever $g \in C^{m-1}$ has an $m$-th derivative $g^{(m)}$ on the convex hull of its nodes, $\Delta^m g(x_0; h^m) = g^{(m)}(\eta) h^m$ for some intermediate point $\eta$.
 
-**Induction Step:**
+##### Induction Step
 Let $f \in C^m[a, b]$ with $f^{(m+1)}$ existing on $(a, b)$. Define the auxiliary function $F: [a, b - mh] \to \mathbb{R}$ by:
 $$
 \begin{gather}

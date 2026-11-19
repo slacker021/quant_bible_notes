@@ -3,7 +3,8 @@ dg-publish: true
 ---
 Let $q \in \mathbb{N}$ be a fixed natural base with $q > 1$, and let $x \in \mathbb{R}_{>0}$ be an arbitrary strictly positive real number.
 
-**Monotonicity of Integer Powers of the Base:**
+---
+# Monotonicity of Integer Powers of the Base
 Because $q \ge 2$, setting $h = q - 1 \ge 1 > 0$ in Bernoulli's Inequality establishes that for all $n \in \mathbb{N}$:
 $$
 q^n = (1 + (q - 1))^n \ge 1 + n(q - 1) > n(q - 1) \tag{1}
@@ -14,7 +15,8 @@ m < n \implies q^m < q^n \tag{2}
 $$
 Thus, the mapping $m \mapsto q^m$ is strictly monotonically increasing on $\mathbb{Z}$.
 
-**Existence of the Order Bound:**
+---
+# Existence of the Order Bound
 Define the subset $E \subset \mathbb{Z}$ of integer exponents whose powers strictly exceed $x$:
 $$
 E := \{ m \in \mathbb{Z} \mid x < q^m \} \tag{3}
@@ -47,8 +49,8 @@ Setting $p := k - 1 \in \mathbb{Z}$ produces the required bracketing relation:
 $$
 q^p \le x < q^{p+1} \tag{9}
 $$
-
-**Uniqueness:**
+---
+# Uniqueness
 Suppose there exist two distinct integers $p_1, p_2 \in \mathbb{Z}$ satisfying step 9 with $p_1 < p_2$. Because $p_1$ and $p_2$ are integers, $p_1 < p_2 \implies p_1 + 1 \le p_2$. Applying the monotonicity established in step 2:
 $$
 q^{p_1+1} \le q^{p_2} \tag{10}
@@ -58,7 +60,6 @@ $$
 x < q^{p_1+1} \le q^{p_2} \le x \implies x < x \tag{11}
 $$
 Step 11 is an impossible contradiction. Therefore, $p_1 = p_2$, establishing uniqueness.
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

@@ -19,7 +19,7 @@ Let $m \in E$ be an arbitrary element. If $m > n$, the discrete spacing property
 
 Because $n \in E$ and $m \le n$ for all $m \in E$, it follows that $n = \max E$.
 
---------------------------------------------------------------------------------
+---
 # Proposition 2
 Assume for the purpose of contradiction that $\mathbb{N}$ is bounded above in $\mathbb{R}$. 
 
@@ -33,7 +33,7 @@ n_0 < n_0 + 1 \tag{4}
 $$
 Step 4 directly contradicts the condition that $n_0$ is the maximal element of $\mathbb{N}$. Therefore, $\mathbb{N}$ is not bounded above in $\mathbb{R}$.
 
---------------------------------------------------------------------------------
+---
 # Proposition 3
 Let $m, n \in \mathbb{Z}$ satisfy $n < m$. Then $m - n > 0$. Because $\mathbb{Z}$ is closed under subtraction, $m - n$ is a positive integer, meaning $(m - n) \in \mathbb{N}$. Because $1$ is the minimal element of $\mathbb{N}$:
 $$
@@ -45,7 +45,7 @@ s - 1 < n \le s \implies s < n + 1 \tag{6}
 $$
 For every integer $m \in E$, $m \le s < n + 1$, which requires $m < n + 1$. Applying step 5 demonstrates that $m \le n$ for all $m \in E$. Thus, $n = \max E$.
 
---------------------------------------------------------------------------------
+---
 # Proposition 4
 Let $E \subset \mathbb{Z}$ be a non-empty subset of integers that is bounded below in $\mathbb{R}$ by some minorant $b \in \mathbb{R}$, such that $b \le x$ for all $x \in E$. 
 
@@ -71,7 +71,7 @@ $$
 $$
 Therefore, $n^* = \min E$, proving that every non-empty subset of $\mathbb{Z}$ bounded below contains a minimal element.
 
---------------------------------------------------------------------------------
+---
 # Proposition 5
 Because $\mathbb{N} \subset \mathbb{Z}$ and $\mathbb{N}$ is unbounded above in $\mathbb{R}$ by Proposition 2, $\mathbb{Z}$ cannot be bounded above in $\mathbb{R}$. 
 

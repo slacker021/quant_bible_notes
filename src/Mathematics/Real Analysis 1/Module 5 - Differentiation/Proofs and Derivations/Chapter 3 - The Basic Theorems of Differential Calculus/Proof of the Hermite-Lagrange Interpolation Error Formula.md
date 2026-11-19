@@ -16,7 +16,8 @@ $$
 
 Let $x \in I$ be an arbitrary evaluation point. 
 
-**Case 1: $x \in \{x_1, x_2, \dots, x_p\}$.**
+---
+# Case 1
 If $x$ coincides with one of the interpolation nodes, say $x = x_j$ for some $j \in \{1, 2, \dots, p\}$, then because $n_j \ge 1$:
 $$
 \begin{gather}
@@ -31,7 +32,8 @@ $$
 $$
 Both sides of the interpolation error formula vanish identically, and the equality holds for any choice of $\xi \in I$.
 
-**Case 2: $x \notin \{x_1, x_2, \dots, x_p\}$.**
+---
+Case 2
 Assume that $x$ is distinct from all interpolation nodes. Define the monic nodal polynomial $\omega: \mathbb{R} \to \mathbb{R}$ of degree $n$ by:
 $$
 \begin{gather}

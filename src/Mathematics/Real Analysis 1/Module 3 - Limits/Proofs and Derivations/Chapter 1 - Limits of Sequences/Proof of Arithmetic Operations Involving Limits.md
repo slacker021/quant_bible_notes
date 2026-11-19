@@ -3,6 +3,7 @@ dg-publish: true
 ---
 Let $\{x_n\}$ and $\{y_n\}$ be two convergent sequences of real numbers with $\lim_{n \to \infty} x_n = A$ and $\lim_{n \to \infty} y_n = B$.
 
+---
 # Theorem 1
 Let $\varepsilon > 0$ be arbitrary. By the definition of convergence applied to the positive tolerance $\frac{\varepsilon}{2} > 0$, there exists an index $N_1 \in \mathbb{N}$ such that $|x_n - A| < \frac{\varepsilon}{2}$ for all $n > N_1$, and there exists an index $N_2 \in \mathbb{N}$ such that $|y_n - B| < \frac{\varepsilon}{2}$ for all $n > N_2$.
 

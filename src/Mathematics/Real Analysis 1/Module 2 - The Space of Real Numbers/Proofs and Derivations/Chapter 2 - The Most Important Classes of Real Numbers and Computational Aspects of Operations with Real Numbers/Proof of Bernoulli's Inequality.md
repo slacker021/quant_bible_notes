@@ -3,14 +3,16 @@ dg-publish: true
 ---
 Let $x \in \mathbb{R}$ satisfy $x \ge -1$, and let $n \in \mathbb{N}$.
 
-**Base Step:**
+---
+### Base Step
 Let $n = 1$. Evaluating both sides of the inequality:
 $$
 (1 + x)^1 = 1 + x \quad \wedge \quad 1 + (1)x = 1 + x \tag{1}
 $$
 Because both sides are identical, $(1 + x)^1 \ge 1 + (1)x$ holds with equality, establishing the base step.
 
-**Inductive Step:**
+---
+# Inductive Step
 Assume as the inductive hypothesis that the inequality holds for a fixed natural number $k \in \mathbb{N}$:
 $$
 (1 + x)^k \ge 1 + kx \tag{2}
@@ -33,7 +35,8 @@ $$
 $$
 By the Principle of Mathematical Induction, $(1 + x)^n \ge 1 + nx$ holds for all $n \in \mathbb{N}$ and all $x \ge -1$.
 
-**Strict Inequality and Equality Characterization:**
+---
+# Strict Inequality and Equality Characterization
 If $x = 0$, then $(1 + 0)^n = 1 = 1 + n(0)$ for all $n \in \mathbb{N}$. If $n = 1$, equality holds identically by step 1.
 
 Now assume that $n \ge 2$, $x \ne 0$, and $x > -1$. For $n = 2$: 

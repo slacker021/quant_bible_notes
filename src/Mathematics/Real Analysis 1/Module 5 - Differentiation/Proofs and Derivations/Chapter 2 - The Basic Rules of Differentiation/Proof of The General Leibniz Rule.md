@@ -3,9 +3,8 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$ be an open set, let $n \in \mathbb{N}$, and let $u, v: E \to \mathbb{R}$ be $n$-times differentiable functions on $E$.
 
-The proposition is proven by mathematical induction on the order of differentiation $n$.
-
-**Base Case ($n = 1$):**
+---
+# Base Case
 For $n = 1$, $u$ and $v$ are differentiable on $E$. By the [[Proof of The Leibniz Product Rule|Leibniz Product Rule]], the product function $(uv)$ is differentiable on $E$, and its first derivative is given by:
 $$
 \begin{gather}
@@ -22,7 +21,8 @@ $$
 
 Because step 1 and step 2 are identical, the formula holds for $n = 1$.
 
-**Induction Hypothesis:**
+---
+# Induction Hypothesis
 Assume that for an arbitrary integer $m \ge 1$, if $u, v$ are $m$-times differentiable on $E$, then $(uv)$ is $m$-times differentiable on $E$, and its $m$-th derivative satisfies:
 $$
 \begin{gather}
@@ -30,7 +30,7 @@ $$
 \end{gather}
 $$
 
-**Induction Step ($n = m + 1$):**
+### Induction Step
 Suppose that $u$ and $v$ are $(m + 1)$-times differentiable on $E$. Then for each $k \in \{0, 1, \dots, m\}$, the derivative $u^{(k)}$ is differentiable on $E$ with derivative $u^{(k+1)}$, and $v^{(m-k)}$ is differentiable on $E$ with derivative $v^{(m-k+1)}$.
 
 Differentiating both sides of the induction hypothesis in step 3 with respect to $x$ using the [[Proof of The Linearity of Differentiation|Linearity of Differentiation]] gives:

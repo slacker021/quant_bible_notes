@@ -12,7 +12,6 @@ $$
 
 ---
 # Proposition 1
-
 Let $0 < \delta_1 \le \delta_2$. Define the sets of pairs:
 $$
 \begin{gather}
@@ -38,7 +37,6 @@ Because $|f(x) - f(x)| = 0$ for any $x \in E$, $\omega_f(\delta) \ge 0$. Thus, $
 
 ---
 # Proposition 2
-
 Suppose $E = I$ is an interval in $\mathbb{R}$, and let $\delta_1, \delta_2 > 0$. Let $x_1, x_2 \in I$ satisfy $|x_1 - x_2| \le \delta_1 + \delta_2$. 
 
 If $x_1 = x_2$, the inequality $|f(x_1) - f(x_2)| = 0 \le \omega_f(\delta_1) + \omega_f(\delta_2)$ holds immediately because $\omega_f \ge 0$. 
@@ -76,8 +74,7 @@ $$
 ---
 # Proposition 3
 
-**Necessity ($\implies$):** Assume $f$ is uniformly continuous on $E$. 
-
+### Necessity
 Let an arbitrary tolerance $\varepsilon > 0$ be given. By definition of uniform continuity, there exists $\delta > 0$ such that for all $x_1, x_2 \in E$, $|x_1 - x_2| < \delta$ implies $|f(x_1) - f(x_2)| < \frac{\varepsilon}{2}$. Setting $\delta_0 := \frac{\delta}{2} > 0$, any pair $x_1, x_2 \in E$ satisfying $|x_1 - x_2| \le \delta_0 < \delta$ satisfies $|f(x_1) - f(x_2)| < \frac{\varepsilon}{2}$. 
 
 Taking the supremum over all such pairs yields:
@@ -96,8 +93,7 @@ $$
 \end{gather}
 $$
 
-**Sufficiency ($\impliedby$):** Conversely, assume that $\lim_{\delta \to 0^+} \omega_f(\delta) = 0$. 
-
+### Sufficiency
 Let an arbitrary tolerance $\varepsilon > 0$ be given. There exists $\delta > 0$ such that $\omega_f(\delta) < \varepsilon$. 
 
 For any elements $x_1, x_2 \in E$ satisfying $|x_1 - x_2| < \delta$, it follows from the definition of the supremum that:

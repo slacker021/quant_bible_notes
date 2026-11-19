@@ -4,7 +4,7 @@ dg-publish: true
 # Corollary 1
 Let $\{x_n\}$ be a sequence of real numbers with inferior limit $l := \liminf_{n \to \infty} x_n$ and superior limit $L := \limsup_{n \to \infty} x_n$ in the extended real line $\mathbb{R} \cup \{-\infty, +\infty\}$. For each $n \in \mathbb{N}$, denote the tail infimum by $i_n := \inf_{k \ge n} x_k$ and the tail supremum by $s_n := \sup_{k \ge n} x_k$.
 
-**Necessity:**
+### Necessity
 Assume that $\lim_{n \to \infty} x_n = A$, where $A \in \mathbb{R} \cup \{-\infty, +\infty\}$. By definition of sequence convergence (or divergence to $\pm\infty$), every subsequence of $\{x_n\}$ converges (or tends) to $A$. By the [[Proof that the Inferior (Superior) Limit is the Smallest (Largest) of its Partial Limits|Partial Limits Proposition]], both $l$ and $L$ are partial limits of $\{x_n\}$, meaning there exist subsequences converging (or tending) to $l$ and $L$, respectively. By uniqueness of subsequential limits, it follows that:
 $$
 \begin{gather}
@@ -12,7 +12,7 @@ l = L = A \tag{1}
 \end{gather}
 $$
 
-**Sufficiency:**
+### Sufficiency
 Conversely, assume that $l = L = A$ for some $A \in \mathbb{R} \cup \{-\infty, +\infty\}$. By definition of the infimum and supremum over the tail $\{x_k \mid k \ge n\}$, every term $x_n$ satisfies:
 $$
 \begin{gather}
@@ -31,7 +31,7 @@ Evaluating the three cases for $A$:
 # Corollary 2
 Let $\{x_n\}$ be a sequence of real numbers, and let $A \in \mathbb{R}$.
 
-**Necessity:**
+### Necessity
 Assume that $\{x_n\}$ converges to a finite real number $A \in \mathbb{R}$, and let $\{x_{n_k}\}_{k=1}^\infty$ be an arbitrary subsequence of $\{x_n\}$. Let $\varepsilon > 0$ be given.
 
 By definition of convergence, there exists an index $N \in \mathbb{N}$ such that $|x_n - A| < \varepsilon$ for all $n > N$. Because $n_1 < n_2 < \dots < n_k < \dots$ is a strictly increasing sequence of natural numbers, induction establishes that $n_k \ge k$ for all $k \in \mathbb{N}$. Consequently, for all $k > N$, it holds that $n_k \ge k > N$, which implies:
@@ -42,7 +42,7 @@ $$
 $$
 Thus, every subsequence $\{x_{n_k}\}$ converges to the identical limit $A$.
 
-**Sufficiency:**
+### Sufficiency
 Conversely, assume that every subsequence of $\{x_n\}$ converges to a finite real limit $A \in \mathbb{R}$.
 
 First, observe that $\{x_n\}$ must be bounded in $\mathbb{R}$. If $\{x_n\}$ were unbounded, the [[Proof that a Convergent Subsequence or Subsequence Tending to Infinity Can be Constructed From a Sequence of Real Numbers|Lemma on Subsequences and Infinity]] would guarantee the existence of a subsequence tending to $+\infty$ or $-\infty$, contradicting the hypothesis that every subsequence converges to a finite limit.

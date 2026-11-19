@@ -3,6 +3,7 @@ dg-publish: true
 ---
 Let $E \subseteq \mathbb{R}$ be a symmetric domain around the origin, satisfying the property that $x \in E$ if and only if $-x \in E$. Let $f: E \to \mathbb{R}$ be a function differentiable on $E$.
 
+---
 # Corollary 1
 Assume that $f$ is an even function on $E$, satisfying the identity:
 $$

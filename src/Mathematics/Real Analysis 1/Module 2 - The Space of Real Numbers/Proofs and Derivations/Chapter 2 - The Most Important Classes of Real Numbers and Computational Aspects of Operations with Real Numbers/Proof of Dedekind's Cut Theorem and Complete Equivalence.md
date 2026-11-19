@@ -32,7 +32,7 @@ m := \frac{c_1 + c_2}{2} \tag{5}
 $$
 satisfies $c_1 < m < c_2$. Because $m > c_1 \ge x$ for all $x \in X$, $m \notin X$. Concurrently, because $m < c_2 \le y$ for all $y \in Y$, $m \notin Y$. Consequently, $m \notin X \cup Y = \mathbb{F}$, which contradicts the totality of the field. Therefore, $c_1 = c_2$, establishing the existence of a unique cut element.
 
---------------------------------------------------------------------------------
+---
 # Proposition 2
 Assume that Dedekind's Cut Principle holds in $\mathbb{F}$. Let $A \subset \mathbb{F}$ be an arbitrary non-empty subset bounded above by some majorant $b_0 \in \mathbb{F}$. 
 
@@ -44,12 +44,12 @@ $$
 X := \mathbb{F} \setminus Y = \{ x \in \mathbb{F} \mid \exists a \in A \text{ such that } x \le a \} \tag{7}
 $$
 
-**Verification of Dedekind Cut Conditions:**
+### Verification of Dedekind Cut Conditions
 1. **Non-emptiness:** Because $A \ne \emptyset$, choosing $a_0 \in A$ gives $a_0 \le a_0$, so $a_0 \in X$, proving $X \ne \emptyset$. Because $b_0$ is an upper bound of $A$, $a \le b_0 < b_0 + 1$ for all $a \in A$, ensuring $(b_0 + 1) \in Y$, so $Y \ne \emptyset$.
 2. **Disjoint Exhaustive Partition:** By construction, $X \cup Y = \mathbb{F}$ and $X \cap Y = \emptyset$.
 3. **Order Separation:** For any $x \in X$ and $y \in Y$, there exists $a \in A$ such that $x \le a$. Because $y \in Y$, $a < y$. By transitivity, $x < y$.
 
-**Supremum Identification:**
+### Supremum Identification
 By Dedekind's Cut Principle, there exists a unique element $c \in \mathbb{F}$ such that:
 $$
 x \le c \le y \quad \forall x \in X, \, \forall y \in Y \tag{8}

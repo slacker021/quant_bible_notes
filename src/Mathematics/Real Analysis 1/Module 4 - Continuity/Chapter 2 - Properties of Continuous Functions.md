@@ -22,7 +22,7 @@ $$
 \textbf{Definition: Local Sign Preservation} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } f: E \to \mathbb{R}, \text{ and let } a \in E. \\[2mm]
 \text{Suppose } f \text{ is continuous at } a \text{ and } f(a) \ne 0. \\[2mm]
-\text{The function } f \text{ satisfies local sign preservation if there exists an open neighborhood } U(a) \\[2mm]
+\text{The function } f \text{ satisfies \textit{local sign preservation} if there exists an open neighborhood } U(a) \\[2mm]
 \text{and a strictly positive lower bound } c > 0 \text{ such that for all } x \in E \cap U(a)\text{:} \\[3.5mm]
 \operatorname{sgn}(f(x)) = \operatorname{sgn}(f(a)) \quad \text{and} \quad |f(x)| \ge c > 0
 \end{gather}
@@ -194,7 +194,7 @@ The conclusion of step 4 demonstrates that the existence of the root is an inesc
 Shifting the zero axis by an arbitrary constant yields the Darboux Intermediate-Value Theorem: 
 $$
 \begin{gather}
-\textbf{Theorem: The Darboux Intermediate-Value Theorem} \\[5mm]
+\textbf{The Darboux Intermediate-Value Theorem: } \\[5mm]
 \text{Let } I \subseteq \mathbb{R} \text{ be an interval, and let } f: I \to \mathbb{R} \text{ be continuous on } I. \\[2mm]
 \text{Let } a, b \in I \text{ with } a < b, \text{ and assume without loss of generality that } f(a) \ne f(b). \\[2mm]
 \text{For every intermediate value } \gamma \text{ strictly situated between } f(a) \text{ and } f(b), \\[2mm]
@@ -255,7 +255,7 @@ In the equation of step 7, the function is locally bounded at every individual p
 To bridge the chasm between local and global boundedness, the domain must satisfy [[Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers|compactness]]: 
 $$
 \begin{gather}
-\textbf{Theorem: Weierstrass Global Boundedness Theorem} \\[5mm]
+\textbf{Weierstrass Global Boundedness Theorem: } \\[5mm]
 \text{Let } K \subset \mathbb{R} \text{ be a compact set (closed and bounded in } \mathbb{R}\text{), and let } f: K \to \mathbb{R}. \\[2mm]
 \text{If } f \text{ is continuous at every point of } K, \text{ then } f(K) \text{ is bounded in } \mathbb{R}\text{:} \\[3.5mm]
 \exists M \in \mathbb{R}_{>0} \quad \text{such that} \quad \forall x \in K, \quad |f(x)| \le M
@@ -276,7 +276,7 @@ In the equation of step 9, the supremum and infimum are finite, but neither is a
 Weierstrass’s Second Theorem establishes that compactness guarantees the exact attainment of both extremal bounds: 
 $$
 \begin{gather}
-\textbf{Theorem: The Weierstrass Extreme Value Theorem} \\[5mm]
+\textbf{The Weierstrass Extreme Value Theorem: } \\[5mm]
 \text{Let } K \subset \mathbb{R} \text{ be a non-empty compact set, and let } f: K \to \mathbb{R} \text{ be continuous on } K. \\[2mm]
 \text{Then } f \text{ attains its absolute maximum and absolute minimum on } K\text{:} \\[3.5mm]
 \exists x_*, x^* \in K \quad \text{such that} \quad f(x_*) = \inf_{x \in K} f(x) \quad \text{and} \quad f(x^*) = \sup_{x \in K} f(x)

@@ -7,8 +7,8 @@ $$
 f(x) := \begin{cases} \exp\left(-\frac{1}{x^2}\right) & \text{if } x \neq 0 \\[2mm] 0 & \text{if } x = 0 \end{cases} \tag{1}
 \end{gather}
 $$
-
-**Structural Representation of Derivatives on $\mathbb{R} \setminus \{0\}$:**
+---
+# Structural Representation of Derivatives on $\mathbb{R} \setminus \{0\}$
 On the open punctured domain $\mathbb{R} \setminus \{0\}$, $f$ is the composition of the smooth exponential function $\exp(u)$ and the smooth rational function $u(x) = -x^{-2}$. Consequently, $f \in C^\infty(\mathbb{R} \setminus \{0\})$.
 
 To determine the algebraic form of the $n$-th derivative for $x \neq 0$, let $n \in \mathbb{N}_0$. It can be shown by induction that there exists a real polynomial $P_n(t)$ such that:
@@ -54,7 +54,7 @@ P_{n+1}(t) := 2t^3 P_n(t) - t^2 P_n'(t) \tag{7}
 $$
 step 6 takes the form $f^{(n+1)}(x) = P_{n+1}(1/x) \exp(-1/x^2)$, confirming that step 2 holds for all $n \in \mathbb{N}_0$.
 
-**Fundamental Limit of Exponential Flatness:**
+### Fundamental Limit of Exponential Flatness
 Let $k \in \mathbb{R}$ be an arbitrary real exponent. Consider the limit:
 $$
 \begin{gather}
@@ -83,13 +83,15 @@ $$
 \lim_{x \to 0} Q\left(\frac{1}{x}\right) \exp\left(-\frac{1}{x^2}\right) = \sum_{j=0}^m c_j \lim_{x \to 0} \frac{1}{x^j} \exp\left(-\frac{1}{x^2}\right) = 0 \tag{11}
 \end{gather}
 $$
-
-**Existence and Vanishing of Higher Derivatives at $x = 0$:**
+---
+# Existence and Vanishing of Higher Derivatives at $x = 0$
 The property that $f^{(n)}(0) = 0$ for all $n \in \mathbb{N}_0$ is proven by mathematical induction.
 
-*Base Case ($n = 0$):* By definition in step 1, $f(0) = 0$.
+### Base Case ($n = 0$)
+By definition in step 1, $f(0) = 0$.
 
-*Induction Hypothesis:* Assume that for some integer $n \ge 0$, the $n$-th derivative at the origin exists and satisfies $f^{(n)}(0) = 0$.
+### Induction Hypothesis 
+Assume that for some integer $n \ge 0$, the $n$-th derivative at the origin exists and satisfies $f^{(n)}(0) = 0$.
 
 *Induction Step:* Evaluate the $(n+1)$-th derivative at the origin via the limit of the difference quotient:
 $$
@@ -121,7 +123,8 @@ $$
 
 By mathematical induction, $f^{(n)}(0) = 0$ exists and vanishes for every $n \in \mathbb{N}_0$.
 
-**Continuity of Every Derivative on $\mathbb{R}$:**
+---
+# Continuity of Every Derivative on $\mathbb{R}$
 For each $n \in \mathbb{N}_0$, $f^{(n)}$ is continuous on $\mathbb{R} \setminus \{0\}$. At the origin, applying step 11 to $P_n$ gives:
 $$
 \begin{gather}

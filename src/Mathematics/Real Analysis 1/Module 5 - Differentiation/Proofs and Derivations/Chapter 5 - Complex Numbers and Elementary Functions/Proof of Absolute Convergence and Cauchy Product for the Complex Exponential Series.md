@@ -16,8 +16,6 @@ $$
 
 ---
 # Proposition 1
-The power series $\sum_{n=0}^\infty \frac{z^n}{n!}$ converges absolutely for every $z \in \mathbb{C}$, and therefore converges in $(\mathbb{C}, d)$ for all $z \in \mathbb{C}$.
-
 Let $z \in \mathbb{C}$ be arbitrary. If $z = 0$, the series reduces to the single term $\frac{0^0}{0!} = 1$, which converges trivially.
 
 Suppose $z \neq 0$. Consider the series of absolute values $\sum_{n=0}^\infty u_n$, where $u_n := \left|\frac{z^n}{n!}\right| = \frac{|z|^n}{n!}$. For every $n \ge 0$, $u_n > 0$. Consider the ratio of consecutive terms:

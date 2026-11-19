@@ -9,6 +9,7 @@ S_{x, N} := \sum_{n=k}^N x_n \quad \text{and} \quad S_{y, N} := \sum_{n=k}^N y_n
 $$
 By definition of series convergence, $\lim_{N \to \infty} S_{x, N} = X$ and $\lim_{N \to \infty} S_{y, N} = Y$.
 
+---
 # Proposition 1
 Let $c \in \mathbb{R}$ be an arbitrary real constant. For each $N \ge k$, the $N$-th partial sum of the series $\sum_{n=k}^\infty (c \cdot x_n)$ evaluates by the distributive law of $\mathbb{R}$ to: 
 $$

@@ -16,7 +16,8 @@ f\left(\sum_{i=1}^n \alpha_i x_i\right) \le \sum_{i=1}^n \alpha_i f(x_i) \tag{2}
 $$
 is established by mathematical induction on the number of nodes $n$.
 
-**Base Case: $n = 1$ and $n = 2$.**
+---
+# Base Case
 For $n = 1$, step 1 requires $\alpha_1 = 1$. The left-hand side and right-hand side of step 2 both reduce to $f(x_1)$, so equality holds trivially.
 
 For $n = 2$, the weights satisfy $\alpha_1, \alpha_2 \ge 0$ and $\alpha_1 + \alpha_2 = 1$. Step 2 becomes:
@@ -27,7 +28,8 @@ f(\alpha_1 x_1 + \alpha_2 x_2) \le \alpha_1 f(x_1) + \alpha_2 f(x_2) \tag{3}
 $$
 which is the foundational definition of convexity for a function on an interval. If $f$ is strictly convex, $\alpha_1, \alpha_2 > 0$, and $x_1 \neq x_2$, the definition of strict convexity ensures that the inequality in step 3 is strict.
 
-**Induction Hypothesis:**
+---
+# Induction Hypothesis
 Assume that step 2 holds for some integer $k \ge 2$: for any collection of $k$ points $y_1, \dots, y_k \in (a, b)$ and any non-negative weights $\beta_1, \dots, \beta_k \ge 0$ with $\sum_{i=1}^k \beta_i = 1$, the inequality:
 $$
 \begin{gather}
@@ -36,7 +38,7 @@ f\left(\sum_{i=1}^k \beta_i y_i\right) \le \sum_{i=1}^k \beta_i f(y_i) \tag{4}
 $$
 holds. Furthermore, if $f$ is strictly convex and all $\beta_i > 0$, equality holds if and only if $y_1 = \dots = y_k$.
 
-**Induction Step:**
+### Induction Step
 Now consider $k + 1$ points $x_1, \dots, x_{k+1} \in (a, b)$ and non-negative weights $\alpha_1, \dots, \alpha_{k+1} \ge 0$ satisfying $\sum_{i=1}^{k+1} \alpha_i = 1$.
 
 If $\alpha_{k+1} = 1$, then $\alpha_1 = \dots = \alpha_k = 0$, and the inequality reduces to the trivial identity $f(x_{k+1}) \le f(x_{k+1})$. 
@@ -87,7 +89,7 @@ f\left(\sum_{i=1}^{k+1} \alpha_i x_i\right) \le \sum_{i=1}^k \alpha_i f(x_i) + \
 \end{gather}
 $$
 
-**Strict Convexity and Equality Conditions:**
+### Strict Convexity and Equality Conditions
 If $f$ is strictly convex and all $\alpha_i > 0$, equality in step 8 holds if and only if $z = x_{k+1}$. Furthermore, equality in step 9 holds by the induction hypothesis if and only if $x_1 = x_2 = \dots = x_k$. If $x_1 = \dots = x_k$, then $z = \sum_{i=1}^k \frac{\alpha_i}{S_k} x_1 = x_1$. Therefore, equality holds across the entire chain if and only if $x_1 = \dots = x_k = x_{k+1}$.
 
 By mathematical induction, the theorem is established for all $n \in \mathbb{N}$.

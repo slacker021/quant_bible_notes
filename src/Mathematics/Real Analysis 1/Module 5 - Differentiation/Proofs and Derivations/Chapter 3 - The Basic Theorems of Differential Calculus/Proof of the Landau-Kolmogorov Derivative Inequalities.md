@@ -9,6 +9,7 @@ M_0 := \sup_{x \in I} |f(x)|, \qquad M_1 := \sup_{x \in I} |f'(x)|, \qquad M_2 :
 $$
 Assume that $M_0 < \infty$ and $M_2 < \infty$. If $M_2 = 0$, then $f''(x) = 0$ for all $x \in I$, which implies that $f$ is an affine function: $f(x) = c_1 x + c_0$. Because $M_0 < \infty$, the only bounded affine functions on unbounded or non-degenerate domains are constant functions ($c_1 = 0$), whence $M_1 = 0$, and all bounds hold trivially. Thus, assume $M_2 > 0$ and $M_0 > 0$.
 
+---
 # Proposition 1
 Let $I = \mathbb{R}$. Fix an arbitrary point $x \in \mathbb{R}$ and an arbitrary perturbation parameter $h > 0$. 
 

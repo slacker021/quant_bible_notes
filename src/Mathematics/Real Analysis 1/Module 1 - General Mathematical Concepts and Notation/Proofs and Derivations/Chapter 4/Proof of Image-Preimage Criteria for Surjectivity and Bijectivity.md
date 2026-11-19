@@ -6,7 +6,7 @@ Let $f: X \to Y$ be a mapping.
 ---
 # Proposition 1
 
-**Necessity:**
+### Necessity
 Assume that $f: X \to Y$ is surjective, and let $B' \subseteq Y$ be an arbitrary subset. From Proposition 2 of the composition operators, the contraction bound $f(f^{-1}(B')) \subseteq B'$ holds for any mapping $f$. To establish the reverse inclusion $B' \subseteq f(f^{-1}(B'))$, let $y \in B'$ be an arbitrary element. 
 
 Because $f$ is surjective, there exists at least one element $x \in X$ such that $f(x) = y$. Because $f(x) = y \in B'$, the definition of the preimage requires:
@@ -34,7 +34,7 @@ f(f^{-1}(B')) = B' \tag{4}
 \end{gather}
 $$
 
-**Sufficiency:**
+### Sufficiency
 Assume that $f(f^{-1}(B')) = B'$ holds for every subset $B' \subseteq Y$. Selecting the entire codomain $B' = Y$ yields: 
 $$
 \begin{gather}
@@ -58,7 +58,7 @@ Because $f(X) = Y$, every element of the codomain possesses at least one anteced
 ---
 # Proposition 2
 
-**Necessity:**
+### Necessity
 Assume that $f: X \to Y$ is bijective. Because $f$ is surjective, Item 1 guarantees that $f(f^{-1}(B')) = B'$ for all $B' \subseteq Y$. 
 
 Now let $A \subseteq X$ be an arbitrary subset. From Proposition 1 of the composition operators, the expansion bound $A \subseteq f^{-1}(f(A))$ holds for any mapping $f$. To establish the reverse inclusion $f^{-1}(f(A)) \subseteq A$, let $x \in f^{-1}(f(A))$ be an arbitrary element. By the definition of the preimage:
@@ -92,7 +92,7 @@ f^{-1}(f(A)) = A \tag{12}
 \end{gather}
 $$
 
-**Sufficiency:**
+### Sufficiency
 Assume that $f^{-1}(f(A)) = A$ for all $A \subseteq X$ and $f(f^{-1}(B')) = B'$ for all $B' \subseteq Y$. Because $f(f^{-1}(B')) = B'$ holds for all $B' \subseteq Y$, Item 1 confirms that $f$ is surjective.
 
 To establish injectivity, let $x_1, x_2 \in X$ satisfy:

@@ -11,7 +11,8 @@ f(x) = \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!} (x - x_0)^k + r_n(x_0; x) \tag{1}
 $$
 is proven by mathematical induction on the derivative order $n \in \mathbb{N}$.
 
-**Base Case: $n = 1$.**
+---
+# Base Case
 For $n = 1$, the hypothesis states that $f$ is differentiable at $x_0$. By the definition of the derivative established in [[Chapter 1 - Differentiable Functions#The Pointwise Derivative|Chapter 1]]:
 $$
 \begin{gather}
@@ -32,10 +33,11 @@ f(x) - \big(f(x_0) + f'(x_0)(x - x_0)\big) = o(x - x_0) \quad \text{as } x \to x
 $$
 Defining $P_1(x_0; x) := f(x_0) + f'(x_0)(x - x_0)$, step 4 verifies that $r_1(x_0; x) = o(x - x_0)$. The base case $n = 1$ is thus established.
 
-**Induction Hypothesis:**
+---
+# Induction Hypothesis
 Assume that the local Taylor formula holds for an integer $(n - 1) \ge 1$: whenever a function possesses $(n - 1)$ derivatives at $x_0$, its remainder of order $(n - 1)$ satisfies $r_{n-1}(x_0; x) = o((x - x_0)^{n-1})$ as $x \to x_0$.
 
-**Induction Step:**
+### Induction Step
 Let $f$ possess $n$ derivatives at $x_0$. Because the $n$-th derivative $f^{(n)}(x_0)$ exists, the $(n - 1)$-th derivative $f^{(n-1)}$ must exist in an open neighborhood $U(x_0)$ of $x_0$, ensuring that the first derivative $f'(t)$ exists everywhere on $U(x_0)$ and is itself $(n - 1)$ times differentiable at $x_0$.
 
 Define the Taylor polynomial of degree $n$ of $f$ centered at $x_0$:

@@ -8,15 +8,13 @@ The concept of numbers is fundamental, yet achieving a rigorous understanding re
 
 ---
 # Definition of the Set of Real Numbers
-
 $$
 \begin{gather}
 \textbf{Definition: The Set of Real Numbers} \\[5mm]
-\text{A set } \mathbb{R} \text{ is called the set of real numbers, and its elements are real numbers,} \\[2mm]
+\text{A set } \mathbb{R} \text{ is called the \textit{set of real numbers}, and its elements are \textit{real numbers},} \\[2mm]
 \text{if it satisfies the axioms of addition, multiplication, order, and completeness.}
 \end{gather}
 $$
-
 In the realm of real numbers, *addition* and *multiplication* form the two fundamental binary operations. Additionally, the realm of real numbers is *ordered* and *complete*. 
 
 >[!danger]+ Intuition: The Continuous Geometric Number Line and Operational Rigor
@@ -26,24 +24,25 @@ In the realm of real numbers, *addition* and *multiplication* form the two funda
 
 ### The Field Axioms
 The field axioms establish the algebraic mechanics of addition and multiplication upon $\mathbb{R}$, ensuring that elementary arithmetic operations can be inverted and combined consistently:
+
 ##### Axioms of Addition
 $$
 \begin{gather}
 \textbf{Axioms of Addition} \\[5mm]
-\text{An operation } +:\mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}, \text{ which is the operation of addition, is defined, assigning} \\[2mm]
+\text{An operation } +:\mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}, \text{ which is the operation of \textit{addition}, is defined, assigning} \\[2mm]
 \text{to each ordered pair } (x,y) \text{ of elements } x,y \in \mathbb{R} \text{ a certain element } x + y \in \mathbb{R}, \text{ which is the} \\[2mm]
-\text{sum of } x \text{ and } y\text{. This operation satisfies the following conditions:}
+\text{\textit{sum} of } x \text{ and } y\text{. This operation satisfies the following conditions:}
 \end{gather}
 $$
 $$
 \begin{align}
-& \text{1. There is a neutral element or identity element } 0 \text{, such that } \forall x \in \mathbb{R}: \\[3.5mm]
+& \text{1. There is a \textit{neutral element} or \textit{identity element} } 0 \text{, such that } \forall x \in \mathbb{R}: \\[3.5mm]
 & \qquad x + 0 = 0 + x = x \\[3.5mm]
 & \text{2. For every element } x \in \mathbb{R}\text{, there is an element } -x \in \mathbb{R} \text{ such that:} \\[3.5mm]
 & \qquad x + (-x) = (-x) + x = 0 \\[3.5mm] 
-& \text{3. The operation } + \text{ is associative, that is, } \forall x,y,z \in \mathbb{R}: \\[3.5mm]
+& \text{3. The operation } + \text{ is \textit{associative}, that is, } \forall x,y,z \in \mathbb{R}: \\[3.5mm]
 & \qquad x + (y + z) = (x + y) + z \\[3.5mm] 
-& \text{4. The operation } + \text{ is commutative, that is, } \forall x,y \in \mathbb{R}: \\[3.5mm]
+& \text{4. The operation } + \text{ is \textit{commutative}, that is, } \forall x,y \in \mathbb{R}: \\[3.5mm]
 & \qquad x + y = y + x
 \end{align}
 $$
@@ -72,17 +71,17 @@ $$
 $$
 \begin{gather}
 \textbf{Axioms of Multiplication} \\[5mm]
-\text{An operation } \cdot : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}, \text{ which is the operation of multiplication, is defined,} \\[2mm]
+\text{An operation } \cdot : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}, \text{ which is the operation of \textit{multiplication}, is defined,} \\[2mm]
 \text{assigning to each ordered pair } (x,y) \text{ of elements } x,y \in \mathbb{R} \text{ a certain element } x \cdot y \in \mathbb{R}, \\[2mm]
-\text{which is the product of } x \text{ and } y\text{. This operation satisfies the following conditions:}
+\text{which is the \textit{product} of } x \text{ and } y\text{. This operation satisfies the following conditions:}
 \end{gather}
 $$
 $$
 \begin{align}
 & \text{1. There is a neutral element or identity element } 1 \in \mathbb{R} \setminus \{0\} \text{, such that } \forall x \in \mathbb{R}: \\[3.5mm]
 & \qquad x \cdot 1 = 1 \cdot x = x \\[3.5mm]
-& \text{2. For every element } x \in \mathbb{R} \setminus \{0\}\text{, there is an element } x^{-1} \in \mathbb{R} \text{, which is the reciprocal } \\[3.5mm] 
-& \text{or multiplicative inverse of } x \text{ such that:} \\[3.5mm]
+& \text{2. For every element } x \in \mathbb{R} \setminus \{0\}\text{, there is an element } x^{-1} \in \mathbb{R} \text{, which is the \textit{reciprocal} } \\[3.5mm] 
+& \text{or \textit{multiplicative inverse} of } x \text{ such that:} \\[3.5mm]
 & \qquad x \cdot x^{-1} = x^{-1} \cdot x = 1 \\[3.5mm] 
 & \text{3. The operation } \cdot \text{ is associative, that is, } \forall x,y,z \in \mathbb{R}: \\[3.5mm]
 & \qquad x \cdot (y \cdot z) = (x \cdot y ) \cdot z \\[3.5mm] 
@@ -250,7 +249,6 @@ The strict inequality $x < y$ is defined as $(x \le y) \wedge (x \ne y)$. The no
 
 ### The Connection Between Order and Arithmetic Operations
 The algebraic structure of the field and its total order relation are coupled through compatibility axioms:
-
 $$
 \begin{gather}
 \textbf{Axioms: Connection of Order with Addition and Multiplication} \\[5mm]
@@ -424,8 +422,7 @@ $$
 
 ---
 # General Algebraic Properties of Real Numbers
-From the axioms of addition, multiplication, order, and completeness, numerous algebraic properties can be deduced.
-
+From the axioms of addition, multiplication, order, and completeness, numerous algebraic properties can be deduced: 
 $$
 \begin{gather}
 \textbf{Proposition: Consequences of the Addition Axioms} \\[5mm]
@@ -505,19 +502,19 @@ While the set of real numbers is infinite, specific subsets can be bounded from 
 $$
 \begin{gather}
 \textbf{Definition: Bounded Sets} \\[5mm]
-\text{A set } X \subset \mathbb{R} \text{ is bounded above (respectively, bounded below) if there exists a} \\[2mm]
+\text{A set } X \subset \mathbb{R} \text{ is \textit{bounded above} (respectively, \textit{bounded below}) if there exists a} \\[2mm]
 \text{number } c \in \mathbb{R} \text{ such that } x \le c \text{ (respectively, } c \le x \text{) for all } x \in X. \\[3.5mm]
-\text{The number } c \text{ is called an upper bound (majorant) or lower bound (minorant).} \\[2mm]
-\text{A set bounded both above and below is called bounded.}
+\text{The number } c \text{ is called an \textit{upper bound} (\textit{majorant}) or \textit{lower bound} (\textit{minorant}).} \\[2mm]
+\text{A set bounded both above and below is called \textit{bounded}.}
 \end{gather}
 $$
 
 $$
 \begin{gather}
 \textbf{Definition: Maximal and Minimal Elements} \\[5mm]
-\text{An element } a \in X \text{ is the largest or maximal element (denoted } \max X \text{) if:} \\[3.5mm]
+\text{An element } a \in X \text{ is the \textit{largest} or \textit{maximal element} (denoted } \max X \text{) if:} \\[3.5mm]
 (a = \max X) := (a \in X) \wedge \forall x \in X \, (x \le a) \\[3.5mm]
-\text{Similarly, an element } a \in X \text{ is the smallest or minimal element (denoted } \min X \text{) if:} \\[3.5mm]
+\text{Similarly, an element } a \in X \text{ is the \textit{smallest} or \textit{minimal element} (denoted } \min X \text{) if:} \\[3.5mm]
 (a = \min X) := (a \in X) \wedge \forall x \in X \, (a \le x)
 \end{gather}
 $$
@@ -540,10 +537,10 @@ To characterize the boundary of bounded sets that lack extrema, analysis introdu
 $$
 \begin{gather}
 \textbf{Definition: Least Upper Bound and Greatest Lower Bound} \\[5mm]
-\text{The least upper bound (supremum) of a set } X \subset \mathbb{R} \text{ bounded above is denoted } \sup X. \\[2mm]
+\text{The \textit{least upper bound} (\textit{supremum}) of a set } X \subset \mathbb{R} \text{ bounded above is denoted } \sup X. \\[2mm]
 \text{A number } s \in \mathbb{R} \text{ is the supremum of } X \text{ if and only if:} \\[3.5mm]
 (s = \sup X) \iff \big(\forall x \in X \, (x \le s)\big) \wedge \big(\forall s' < s \ \exists x' \in X \, (s' < x')\big) \\[5mm]
-\text{The greatest lower bound (infimum) of a set } X \subset \mathbb{R} \text{ bounded below is denoted } \inf X. \\[2mm]
+\text{The \textit{greatest lower bound} (\textit{infimum}) of a set } X \subset \mathbb{R} \text{ bounded below is denoted } \inf X. \\[2mm]
 \text{A number } i \in \mathbb{R} \text{ is the infimum of } X \text{ if and only if:} \\[3.5mm]
 (i = \inf X) \iff \big(\forall x \in X \, (i \le x)\big) \wedge \big(\forall i' > i \ \exists x' \in X \, (x' < i')\big)
 \end{gather}

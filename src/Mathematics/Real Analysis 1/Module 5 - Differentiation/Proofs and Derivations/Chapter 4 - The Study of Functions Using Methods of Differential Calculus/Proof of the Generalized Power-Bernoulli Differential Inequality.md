@@ -81,12 +81,11 @@ $$
 x^\alpha - \alpha x + \alpha - 1 < 0 \tag{12}
 \end{gather}
 $$
-
 ---
 # Proposition 2
 Suppose that $\alpha < 0$ or $\alpha > 1$.
 
-**Case 1: $\alpha > 1$.**
+### Case 1
 In this case, $\alpha - 1 > 0$. The mapping $x \mapsto x^{\alpha - 1}$ is strictly increasing on $(0, \infty)$. Therefore:
 $$
 \begin{gather}
@@ -111,7 +110,7 @@ $$
 \end{gather}
 $$
 
-**Case 2: $\alpha < 0$.**
+### Case 2
 In this case, $\alpha - 1 < -1 < 0$. The mapping $x \mapsto x^{\alpha - 1}$ is strictly decreasing on $(0, \infty)$. Therefore:
 $$
 \begin{gather}

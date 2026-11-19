@@ -5,8 +5,8 @@ Let $(\mathbb{R}, +, \cdot, \le)$ and $(\mathbb{R}', +', \cdot', \le')$ be compl
 $$
 f(x + y) = f(x) +' f(y), \quad f(x \cdot y) = f(x) \cdot' f(y), \quad (x \le y \implies f(x) \le' f(y)) \tag{1}
 $$
-
-**Preservation of Identity Elements:**
+---
+# Preservation of Identity Elements
 Because $0 + 0 = 0$ in $\mathbb{R}$, applying the additive homomorphism property gives:
 $$
 f(0) = f(0 + 0) = f(0) +' f(0) \tag{2}
@@ -31,8 +31,8 @@ Step 6 contradicts the premise that $f$ is non-trivial. Therefore:
 $$
 f(1) = 1' \tag{7}
 $$
-
-**Restriction to Integers and Rational Numbers:**
+---
+# Restriction to Integers and Rational Numbers
 For any natural number $n \in \mathbb{N}$, mathematical induction utilizing step 1 and step 7 demonstrates that:
 $$
 f(n) = f\left(\sum_{k=1}^n 1\right) = \sum_{k=1}^n f(1) = \sum_{k=1}^n 1' =: n' \in \mathbb{N}' \tag{8}
@@ -50,7 +50,6 @@ $$
 f(r_2) -' f(r_1) = f(r_2 - r_1) >' 0' \iff f(r_1) <' f(r_2) \tag{10}
 $$
 Thus, the restriction $f|_{\mathbb{Q}}: \mathbb{Q} \to \mathbb{Q}'$ is a strictly order-preserving field isomorphism from $\mathbb{Q}$ onto the rational subfield $\mathbb{Q}' \subset \mathbb{R}'$.
-
 $$
 \begin{gather}
 \textbf{Q.E.D.}

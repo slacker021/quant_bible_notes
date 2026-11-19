@@ -16,7 +16,8 @@ $$
 
 The claim that there exists an intermediate point $\xi \in (x_0, x_n)$ satisfying $f^{(n)}(\xi) = 0$ is proven by mathematical induction on the derivative order $n \in \mathbb{N}$.
 
-**Base Case: $n = 1$.**
+---
+# Base Case
 For $n = 1$, the hypothesis states that $f \in C^0[a, b]$ and $f'(x)$ exists on $(a, b)$, with $f(x_0) = f(x_1) = 0$ for $x_0 < x_1$. 
 
 Restricting the domain of $f$ to the closed compact subinterval $[x_0, x_1] \subseteq [a, b]$:
@@ -32,10 +33,11 @@ f'(\xi) = 0 \tag{3}
 $$
 The base case $n = 1$ is thus established.
 
-**Induction Hypothesis:**
+---
+# Induction Hypothesis
 Assume that for some integer $m \ge 1$, whenever a function $g \in C^{m-1}[\alpha, \beta]$ possesses an $m$-th derivative $g^{(m)}$ on $(\alpha, \beta)$ and vanishes at $(m + 1)$ distinct points $\alpha \le y_0 < y_1 < \dots < y_m \le \beta$, there exists a point $\xi \in (y_0, y_m)$ such that $g^{(m)}(\xi) = 0$.
 
-**Induction Step:**
+### Induction Step
 Let $f \in C^m[a, b]$ be a function such that $f^{(m+1)}(x)$ exists on $(a, b)$, and suppose $f$ vanishes at $(m + 2)$ distinct points:
 $$
 \begin{gather}

@@ -2,7 +2,7 @@
 dg-publish: true
 ---
 Let $x, y, u,$ and $v$ be arbitrary mathematical objects.
-**Sufficiency:**
+# Sufficiency
 Assume that $(x = u) \wedge (y = v)$. Substituting $u$ for $x$ and $v$ for $y$ directly into the Kuratowski definition of the ordered pair $(x, y)$ yields: 
 $$
 \begin{gather}
@@ -22,7 +22,8 @@ $$
 \end{gather}
 $$
 
-**Necessity:**
+---
+# Necessity
 Assume that $(x, y) = (u, v)$. By the Kuratowski definition of ordered pairs, this equality translates to the set identity:
 $$
 \begin{gather}
@@ -31,7 +32,7 @@ $$
 $$
 To establish that $x = u$ and $y = v$, evaluate two exhaustive cases based on whether $x$ equals $y$:
 
-**Case 1: Assume $x = y$.**
+### Case 1
 If $x = y$, the left-hand set simplifies to: 
 $$
 \begin{gather}
@@ -62,7 +63,7 @@ x = u \quad \wedge \quad y = v \tag{9}
 \end{gather}
 $$
 
-**Case 2: Assume $x \neq y$.**
+### Case 2
 Because $x \neq y$, the set $\{x\}$ contains exactly one element while $\{x, y\}$ contains exactly two distinct elements. Thus, the collection $\{\{x\}, \{x, y\}\}$ contains two distinct member sets:
 $$
 \begin{gather}
